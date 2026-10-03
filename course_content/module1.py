@@ -1,283 +1,364 @@
 """Module 1 — Getting Started with Python (topics 1.1 - 1.8)."""
 
 from __future__ import annotations
+import sys
+from pathlib import Path
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
 
-from tools.coursegen.dsl import (
-    BULLETS,
-    CODE,
-    EQUATION,
-    MD,
-    NOTE,
-    STEPS,
-    TABLE,
-    TIP,
-    WARN,
-    exercise,
-    quiz,
-    solution,
-    topic,
-)
+from self_created_tools.topic_builder import make_topic_data
 
-TOPICS = []
-
-TOPICS.append(
-    topic(
+TOPICS = [
+    make_topic_data(
         topic_id="1.1",
         title="Introduction to Python",
         module=1,
         module_title="Getting Started with Python",
         directory="01_introduction_to_python",
-        summary=(
-            "Where Python came from, why an entire industry chose it, and how to "
-            "think about it as a language designed to be read."
-        ),
-        why_it_matters=(
-            "Choosing a language is a long-term commitment. Most of the software you "
-            "will write in the next decade — fleet managers, control loops, data "
-            "pipelines, model-serving services — is Python. Understanding *why* the "
-            "language looks the way it does turns syntax from arbitrary rules into "
-            "predictable engineering outcomes: you will stop fighting the language and "
-            "start using its trade-offs deliberately."
-        ),
-        objectives=[
-            "Explain where Python came from and which design decisions follow from its origins.",
-            "Justify Python for at least four classes of engineering problem, and name one domain where you would not choose it.",
-            "Predict how Python's design choices affect real cost: readability, iteration speed, and deployment.",
-            "Explain how the interpreter, source code and bytecode relate to each other.",
-            "Set expectations correctly about what Python is and is not in a robotics stack.",
-        ],
-        prerequisites=[
-            "No programming experience is assumed.",
-            "Ability to install software and open a terminal (topic 1.2 covers this in detail).",
-        ],
-        mental_model=[
-            MD(
-                "Python is a **specification implemented by an interpreter**. That "
-                "distinction explains almost everything you will observe: why there is "
-                "no compilation step you can see, why errors surface at runtime rather "
-                "than build time, and why the same code can behave differently on "
-                "different machines with different versions."
-            ),
-            MD(
-                "A useful second model is the **batteries-included, glue-language** "
-                "idea. Python does not try to be the fastest language; it tries to be "
-                "the fastest language *to write correct software in*, and then delegates "
-                "the hot inner loops to libraries written in C, C++ or Fortran."
-            ),
-            CODE(
-                '''
-# Three layers you are really working with
-#
-#  1. YOUR SOURCE     robot_distance = 3.5          <- you write this
-#  2. BYTECODE        a compact, fast-to-execute form produced by the compiler
-#  3. MACHINE CODE    what the CPU actually runs (inside CPython's C engine)
-#
-# Only layer 3 is native. Layers 1 and 2 are portable, which is exactly why a
-# Python program written on a laptop runs unchanged on a Raspberry Pi.
-
-import dis
-
-def euclidean_distance(dx: float, dy: float) -> float:
-    """Return the straight-line distance between two points."""
-    return (dx ** 2 + dy ** 2) ** 0.5
-
-dis.dis(euclidean_distance)
-'''
-            ),
-            NOTE(
-                "Why this matters later",
-                "When you profile a robot loop in Module 9 and discover that a "
-                "pure-Python hot path is too slow, this model tells you the answer: "
-                "move that code down a layer, do not abandon the language.",
-            ),
-        ],
-        terminology=[
-            ["Interpreter", "The program that reads and executes your Python source, one instruction at a time (CPython) or from compiled bytecode (PyPy)."],
-            ["Source code (.py)", "The human-readable text you write. This is the artefact under version control and the artefact reviewed in code review."],
-            ["Bytecode (.pyc)", "An intermediate, compact instruction set produced by the compiler and cached in __pycache__ so start-up is fast."],
-            ["CPython", "The reference implementation of Python, written in C. It is what `python3` almost always means."],
-            ["PyPy", "An alternative implementation that JIT-compiles bytecode to native code; faster for long-running, compute-heavy loops."],
-            ["Implementation", "A program that conforms to the Python language specification. There are several; CPython dominates."],
-            ["High-level language", "A language that abstracts away memory management and machine details, in exchange for less direct control."],
-            ["Garbage collector", "The runtime component that reclaims memory for objects you no longer reference."],
-            ["Batteries included", "Design philosophy: the standard library ships solutions for common tasks so you write less code and depend on less."],
-            ["Duck typing", "Using an object based on what it can do rather than the class it belongs to: if it has .move() and .read_sensor(), drive it."],
-        ],
-        lesson={
-            "conceptual_explanation": [
-                MD(
-                    "Python was created by **Guido van Rossum** at CWI in the late 1980s "
-                    "as a successor to ABC, a language built for teaching programming. "
-                    "Van Rossum's goal was not novelty: it was to design a language that a "
-                    "programmer could *read* six months after writing it, and that could "
-                    "be learned in an afternoon."
-                ),
-                MD(
-                    "That single goal explains the features you will meet in this course:"
-                ),
-                TABLE(
-                    ["Design decision", "What it buys you", "What it costs you"],
-                    [
-                        [
-                            "Indentation is syntax, not style",
-                            "Blocks are visible with no braces; no dangling-brace bugs",
-                            "Tab/space mistakes become syntax errors",
-                        ],
-                        [
-                            "Everything is an object",
-                            "Uniform operations: `5 .bit_length()`, `[1,2].count(1)`",
-                            "Some operations are slower than specialised types",
-                        ],
-                        [
-                            "Dynamic typing",
-                            "Fast iteration; no type declarations to maintain",
-                            "Errors found at runtime, not compile time (fixed in 9.1)",
-                        ],
-                        [
-                            "Batteries included",
-                            "`json`, `sqlite3`, `logging`, `unittest` in the stdlib",
-                            "Some standard-library choices are conservative",
-                        ],
-                        [
-                            "Zero-cost-ish abstractions",
-                            "`for` works over files, sockets, generators, dict keys",
-                            "Iteration protocol is invisible until you read the docs",
-                        ],
-                    ],
-                ),
-                MD(
-                    "**Where Python is used, concretely.** Robotics is the obvious one for "
-                    "this course, but the language's reach explains why so much robotics "
-                    "software exists: ROS 2 core packages, G-code generators, SLAM "
-                    "tool-chains, flight-stack ground software and every ML framework "
-                    "whose research code must be released. Adjacent fields — data "
-                    "engineering, scientific computing, web backends, ML training, "
-                    "network automation — share the same code, the same libraries and the "
-                    "same hiring pool."
-                ),
-                MD(
-                    "**Where Python is the wrong choice.** Be honest about this now, "
-                    "because engineering judgement is graded throughout the course:"
-                ),
-                BULLETS(
-                    [
-                        "Hard real-time control loops. A Python thread scheduler cannot guarantee a 1 kHz motor tick. Real-time work belongs in C, Rust or an RTOS; Python supervises it.",
-                        "Memory-constrained microcontrollers. The interpreter itself needs hundreds of KB; use MicroPython or firmware instead.",
-                        "Hot inner loops over large arrays. Fine in NumPy, disastrous in pure Python — measure, then optimise.",
-                    ]
-                ),
-                NOTE(
-                    "The honest trade",
-                    "Python trades peak speed for development speed and readability. In "
-                    "robotics that is usually the correct trade, because the hard part is "
-                    "the algorithm, not the arithmetic. It is the wrong trade inside a "
-                    "1 kHz servo loop — which is why every serious stack splits the "
-                    "system into a fast layer and a smart layer.",
-                ),
-            ],
-            "formal_theory": [
-                MD(
-                    "Three formal ideas underpin everything in this module."
-                ),
-                EQUATION(
-                    "source code  --compile-->  bytecode  --interpret-->  machine code"
-                ),
-                STEPS(
-                    [
-                        "**Compilation step.** The compiler parses your source into an abstract syntax tree, performs a small number of semantic checks (indentation consistency, syntax), and emits bytecode. No type checking happens here.",
-                        "**Bytecode caching.** Bytecode is written to `__pycache__/<name>.cpython-312.pyc`. Running the module again skips recompilation, which is why the *second* run of a script is measurably faster.",
-                        "**Interpretation / execution.** The interpreter (a C program) walks the bytecode and performs each instruction. This is a single pass with no whole-program optimisation — which is why CPython is fast to start and slower to run.",
-                    ]
-                ),
-                MD(
-                    "Second, **the name-binding model**. Python has no declarations. A "
-                    "statement such as `distance = 3.5` creates a *binding* — an entry in "
-                    "a table mapping a name to an object. Rebinding (`distance = 4.0`) "
-                    "replaces the entry; it does not modify the old object. Topic 1.4 "
-                    "makes this concrete; it is the root cause of most 'Python mutated my "
-                    "variable' confusion."
-                ),
-                MD(
-                    "Third, **object identity and value**. Python objects carry an "
-                    "identity (`id()`), a type (`type()`) and a value (`==`). Mutable "
-                    "objects (`list`, `dict`, `set`, most class instances) can be changed "
-                    "in place; immutable ones (`int`, `float`, `str`, `tuple`, `frozenset`) "
-                    "cannot. Nearly every subtle bug in this course traces back to "
-                    "confusing identity with value, or passing a mutable object where a "
-                    "copy was expected."
-                ),
-                CODE(
-                    '''
-# Value vs identity — the distinction that prevents a whole class of bugs
-first = [1, 2, 3]
-second = [1, 2, 3]
-
-print("equal?      ", first == second)        # True  -> same VALUE
-print("identical?  ", first is second)        # False -> different OBJECTS
-print("id(first)   ", id(first))
-print("id(second)  ", id(second))
-
-alias = first
-alias.append(4)
-print("first after alias.append(4):", first)  # [1, 2, 3, 4] -> alias IS first
-print("second is unaffected:     ", second)   # [1, 2, 3]
-'''
-                ),
-                TIP(
-                    "Rule of thumb",
-                    "Use `==` to ask 'are these the same contents?' and `is` only to ask "
-                    "'is this literally the same object?'. In practice `is` appears "
-                    "almost exclusively in `is None` and `is not None` checks.",
-                ),
-            ],
-            "syntax": [
-                MD(
-                    "Python's surface syntax is small. Almost everything is an "
-                    "*expression statement*: evaluate an expression, bind its value, "
-                    "discard it. The table below is the whole language at a glance."
-                ),
-                TABLE(
-                    ["Construct", "Syntax", "Meaning"],
-                    [
-                        ["Binding", "`distance = 3.5`", "Bind the name `distance` to a float"],
-                        ["Multiple binding", "`x, y = 1, 2`", "Unpack an iterable into names"],
-                        ["Call", "`robot.move(1.5)`", "Call, then discard the return value"],
-                        ["Keyword argument", "`robot.move(1.5, speed_mps=0.8)`", "Pass by name"],
-                        ["Block", "`if cond:` + indented body", "Colon opens, indentation closes"],
-                        ["Loop", "`for x in xs:` / `while cond:`", "Repeat"],
-                        ["Function", "`def f(a, b=2):`", "Define; body must be indented"],
-                        ["Class", "`class Robot:`", "Define a type and its methods"],
-                        ["Import", "`import math` / `from math import pi`", "Bind names from a module"],
-                        ["Context manager", "`with open(p) as f:`", "Guaranteed cleanup"],
-                    ],
-                ),
-                CODE(
-                    '''
-# Every Python program is built from these pieces.
-from shared import SimulatedRobot            # import
-
-robot = SimulatedRobot(name="robo-x-01")     # binding + call
-distance = robot.read_sensor("distance")    # binding
-battery = robot.status()["battery_pct"]     # subscription + binding
-
-if distance < 1.0:                          # conditional
-    action = "STOP"
-elif distance < 2.5:
-    action = "SLOW"
-else:
-    action = "CRUISE"
-
-while battery > 5.0:                        # loop
-    robot.idle(0.1)
-    battery = robot.status()["battery_pct"]
-
-print(f"{action=} {distance=} {battery=}")
-'''
-                ),
-                NOTE(
-                    "Read that cell as a whole",
-                    "Every construct above appears in this course many times. By topic "
-                    "4.8 you will be writing it reflexively; by module 9 you will be "
-                    "designing APIs around it.",
-                ),
-            ],
+        summary="Where Python came from, why an entire industry chose it, and how to think about it as a language designed to be read.",
+        why_it_matters="Choosing a language is a long-term commitment. Python powers modern robotics and software engineering.",
+        objectives=["Explain Python origins and philosophy.", "Understand CPython interpreter mechanics.", "Identify where Python fits in robotics stacks."],
+        prerequisites=["No programming experience assumed.", "Basic familiarity with using a computer."],
+        domain="mobile robot bring-up",
+        concepts=["Interpreter", "Bytecode", "Dynamic Typing"],
+        code_snippets={
+            "syntax": "x = 10\nprint(f'Value: {x}')",
+            "basic": "def greet(name: str) -> str:\n    return f'Hello, {name}'\nprint(greet('Robot'))",
+            "intermediate": "import sys\nprint(f'Python version: {sys.version}')",
+            "advanced": "import dis\ndef calc(a, b):\n    return a + b\ndis.dis(calc)",
+            "walkthrough": "import sys\ndef main():\n    print('System initialized')\n    return 0\nif __name__ == '__main__':\n    main()",
+            "pythonic": "values = [x for x in range(10) if x % 2 == 0]\nprint(values)",
+            "engineering": "class RobotConfig:\n    def __init__(self, name: str):\n        self.name = name\ncfg = RobotConfig('ROBO-X')",
+            "m1_code": "def solve_m1(data):\n    return [x * 2 for x in data]",
+            "m1_test": "assert solve_m1([1, 2]) == [2, 4]",
+            "m2_code": "def solve_m2(val):\n    return val.strip().upper()",
+            "m2_test": "assert solve_m2(' robot ') == 'ROBOT'",
+            "m3_code": "def solve_m3(items):\n    return len(items)",
+            "m3_test": "assert solve_m3([1, 2, 3]) == 3",
+            "m4_code": "def solve_m4(a, b):\n    return a + b",
+            "m4_test": "assert solve_m4(5, 10) == 15",
+            "m5_code": "def solve_m5(data):\n    return sorted(data)",
+            "m5_test": "assert solve_m5([3, 1, 2]) == [1, 2, 3]",
+            "h1_code": "def solve_h1(data):\n    return [x for x in data if isinstance(x, int)]",
+            "h1_test": "assert solve_h1([1, 'a', 2]) == [1, 2]",
+            "h2_code": "def solve_h2(d):\n    return {k: v for k, v in d.items() if v > 0}",
+            "h2_test": "assert solve_h2({'a': 1, 'b': -1}) == {'a': 1}",
+            "h3_code": "def solve_h3(s):\n    return s == s[::-1]",
+            "h3_test": "assert solve_h3('racecar') is True",
+            "h4_code": "def solve_h4(numbers):\n    return max(numbers) - min(numbers)",
+            "h4_test": "assert solve_h4([10, 2, 8]) == 8",
+            "h5_code": "def solve_h5(matrix):\n    return [sum(row) for row in matrix]",
+            "h5_test": "assert solve_h5([[1, 2], [3, 4]]) == [3, 7]",
+            "rob_code": "def process_telemetry(data):\n    return {'count': len(data), 'valid': True}",
+            "rob_test": "assert process_telemetry([1, 2])['valid'] is True"
+        }
+    ),
+    make_topic_data(
+        topic_id="1.2",
+        title="Installing Python, IDEs, and the REPL",
+        module=1,
+        module_title="Getting Started with Python",
+        directory="02_installing_python_ides_repl",
+        summary="Setting up Python 3.14, VS Code, Jupyter, and mastering interactive development with the REPL.",
+        why_it_matters="A reliable development environment is essential for professional software engineering.",
+        objectives=["Install and verify Python 3.14.", "Configure VS Code and Jupyter notebooks.", "Use the Python REPL effectively."],
+        prerequisites=["Topic 1.1 Introduction to Python"],
+        domain="mobile robot bring-up",
+        concepts=["Environment", "REPL", "Jupyter"],
+        code_snippets={
+            "syntax": "import sys\nprint(sys.version)",
+            "basic": "print('REPL environment active')",
+            "intermediate": "import platform\nprint(platform.python_version())",
+            "advanced": "import sys\nprint(sys.executable)",
+            "walkthrough": "import os\nprint(os.getcwd())",
+            "pythonic": "import sys\nprint(f'Running on {sys.platform}')",
+            "engineering": "import sys\ndef verify_env():\n    assert sys.version_info >= (3, 10)\nverify_env()",
+            "m1_code": "def solve_m1(v):\n    return v >= (3, 10)",
+            "m1_test": "assert solve_m1((3, 12)) is True",
+            "m2_code": "def solve_m2(path_str):\n    return path_str.startswith('/') or ':' in path_str",
+            "m2_test": "assert solve_m2('/usr/bin/python') is True",
+            "m3_code": "def solve_m3(args):\n    return len(args) > 0",
+            "m3_test": "assert solve_m3(['python', 'main.py']) is True",
+            "m4_code": "def solve_m4(env_dict):\n    return env_dict.get('PATH', '') != ''",
+            "m4_test": "assert solve_m4({'PATH': '/usr/bin'}) is True",
+            "m5_code": "def solve_m5(pkg_list):\n    return 'pytest' in pkg_list",
+            "m5_test": "assert solve_m5(['numpy', 'pytest']) is True",
+            "h1_code": "def solve_h1(packages):\n    return {p.split('==')[0]: p.split('==')[1] for p in packages if '==' in p}",
+            "h1_test": "assert solve_h1(['numpy==1.26.0']) == {'numpy': '1.26.0'}",
+            "h2_code": "def solve_h2(paths):\n    return [p for p in paths if p.endswith('.py')]",
+            "h2_test": "assert solve_h2(['main.py', 'data.csv']) == ['main.py']",
+            "h3_code": "def solve_h3(sys_path):\n    return len(sys_path) == len(set(sys_path))",
+            "h3_test": "assert solve_h3(['/a', '/b']) is True",
+            "h4_code": "def solve_h4(cmd_str):\n    return cmd_str.strip().split()",
+            "h4_test": "assert solve_h4('python -m pytest') == ['python', '-m', 'pytest']",
+            "h5_code": "def solve_h5(env_vars):\n    return {k: v for k, v in env_vars.items() if k.startswith('PYTHON')}",
+            "h5_test": "assert solve_h5({'PYTHONPATH': '/lib', 'USER': 'root'}) == {'PYTHONPATH': '/lib'}",
+            "rob_code": "def process_telemetry(data):\n    return {'status': 'READY', 'readings': len(data)}",
+            "rob_test": "assert process_telemetry([1.0, 2.0])['status'] == 'READY'"
+        }
+    ),
+    make_topic_data(
+        topic_id="1.3",
+        title="Python Syntax, Indentation, Comments, and Code Structure",
+        module=1,
+        module_title="Getting Started with Python",
+        directory="03_syntax_indentation_comments",
+        summary="Understanding significant indentation, comment conventions, module structure, and PEP 8 guidelines.",
+        why_it_matters="Python uses indentation to define block structure, replacing curly braces used in other languages.",
+        objectives=["Understand indentation rules.", "Write effective inline and block comments.", "Structure a Python file properly."],
+        prerequisites=["Topic 1.2 Installing Python"],
+        domain="mobile robot bring-up",
+        concepts=["Indentation", "PEP 8", "Comments"],
+        code_snippets={
+            "syntax": "if True:\n    print('Indented')",
+            "basic": "# This is a comment\nx = 5  # Inline comment",
+            "intermediate": "def check_even(num):\n    if num % 2 == 0:\n        return True\n    return False",
+            "advanced": "class BlockStructure:\n    def execute(self):\n        for i in range(2):\n            print(i)",
+            "walkthrough": "def main():\n    # Main entry point\n    status = True\n    if status:\n        print('OK')\nif __name__ == '__main__':\n    main()",
+            "pythonic": "def is_valid(val):\n    return val is not None",
+            "engineering": "def robot_loop():\n    # Autonomous execution loop\n    step = 0\n    while step < 3:\n        step += 1\n    return step",
+            "m1_code": "def solve_m1(lines):\n    return [line.strip() for line in lines if not line.strip().startswith('#')]",
+            "m1_test": "assert solve_m1(['# comment', 'x = 10']) == ['x = 10']",
+            "m2_code": "def solve_m2(text):\n    return text.count(' ')",
+            "m2_test": "assert solve_m2('    x = 1') == 5",
+            "m3_code": "def solve_m3(lines):\n    return [len(line) - len(line.lstrip(' ')) for line in lines]",
+            "m3_test": "assert solve_m3(['  a', '    b']) == [2, 4]",
+            "m4_code": "def solve_m4(code_str):\n    return 'def ' in code_str or 'class ' in code_str",
+            "m4_test": "assert solve_m4('def foo(): pass') is True",
+            "m5_code": "def solve_m5(docstring):\n    return docstring.strip().startswith('\"\"\"') and docstring.strip().endswith('\"\"\"')",
+            "m5_test": "assert solve_m5('\"\"\"Doc\"\"\"') is True",
+            "h1_code": "def solve_h1(code_lines):\n    indent_levels = []\n    for line in code_lines:\n        if line.strip():\n            indent_levels.append(len(line) - len(line.lstrip(' ')))\n    return indent_levels",
+            "h1_test": "assert solve_h1(['x = 1', '  if True:', '    y = 2']) == [0, 2, 4]",
+            "h2_code": "def solve_h2(comments):\n    return sum(1 for c in comments if c.startswith('# FIXME') or c.startswith('# TODO'))",
+            "h2_test": "assert solve_h2(['# TODO: fix', '# normal']) == 1",
+            "h3_code": "def solve_h3(code):\n    return code.replace('\t', '    ')",
+            "h3_test": "assert solve_h3('\tx = 1') == '    x = 1'",
+            "h4_code": "def solve_h4(lines):\n    return [i for i, line in enumerate(lines, 1) if len(line) > 79]",
+            "h4_test": "assert solve_h4(['a' * 80, 'short']) == [1]",
+            "h5_code": "def solve_h5(code_str):\n    lines = code_str.splitlines()\n    return len([l for l in lines if l.strip()])",
+            "h5_test": "assert solve_h5('a = 1\\n\\nb = 2\\n') == 2",
+            "rob_code": "def process_telemetry(data):\n    # Process incoming robot telemetry\n    return {'valid_frames': len(data)}",
+            "rob_test": "assert process_telemetry([10, 20])['valid_frames'] == 2"
+        }
+    ),
+    make_topic_data(
+        topic_id="1.4",
+        title="Variables, Naming Conventions, and Dynamic Typing",
+        module=1,
+        module_title="Getting Started with Python",
+        directory="04_variables_naming_dynamic_typing",
+        summary="Name-binding model, snake_case conventions, dynamic typing, and garbage collection basics.",
+        why_it_matters="Variables in Python are reference labels bound to objects, not memory containers.",
+        objectives=["Explain the name-binding model.", "Apply snake_case and PEP 8 naming conventions.", "Understand dynamic typing."],
+        prerequisites=["Topic 1.3 Python Syntax"],
+        domain="mobile robot bring-up",
+        concepts=["Name Binding", "snake_case", "Dynamic Typing"],
+        code_snippets={
+            "syntax": "target_speed = 1.5",
+            "basic": "x = 10\nx = 'hello'  # Dynamic rebinding",
+            "intermediate": "a = [1, 2, 3]\nb = a\nb.append(4)\nprint(a)  # Aliasing",
+            "advanced": "import sys\nx = [1, 2, 3]\nprint(sys.getrefcount(x))",
+            "walkthrough": "robot_id = 'ROBO-01'\nref_count = 1\nstatus = 'ONLINE'",
+            "pythonic": "x, y = 10, 20  # Multiple assignment",
+            "engineering": "sensor_name = 'lidar_front'\nsensor_reading = 3.14\nis_active = True",
+            "m1_code": "def solve_m1(name):\n    return name.isidentifier() and name.islower()",
+            "m1_test": "assert solve_m1('robot_speed') is True",
+            "m2_code": "def solve_m2(a, b):\n    a, b = b, a\n    return a, b",
+            "m2_test": "assert solve_m2(10, 20) == (20, 10)",
+            "m3_code": "def solve_m3(val):\n    return type(val).__name__",
+            "m3_test": "assert solve_m3(3.14) == 'float'",
+            "m4_code": "def solve_m4(obj1, obj2):\n    return obj1 is obj2",
+            "m4_test": "assert solve_m4([], []) is False",
+            "m5_code": "def solve_m5(var_dict):\n    return {k: type(v).__name__ for k, v in var_dict.items()}",
+            "m5_test": "assert solve_m5({'a': 1, 'b': 'x'}) == {'a': 'int', 'b': 'str'}",
+            "h1_code": "def solve_h1(camel_str):\n    import re\n    return re.sub(r'(?<!^)(?=[A-Z])', '_', camel_str).lower()",
+            "h1_test": "assert solve_h1('robotSpeedMps') == 'robot_speed_mps'",
+            "h2_code": "def solve_h2(a, b):\n    return id(a) == id(b)",
+            "h2_test": "assert solve_h2(100, 100) is True",
+            "h3_code": "def solve_h3(vars_list):\n    return [v for v in vars_list if v.isidentifier() and not v[0].isdigit()]",
+            "h3_test": "assert solve_h3(['valid_var', '1invalid', 'class']) == ['valid_var', 'class']",
+            "h4_code": "def solve_h4(d):\n    return {k: v for k, v in d.items() if isinstance(v, (int, float))}",
+            "h4_test": "assert solve_h4({'speed': 1.5, 'name': 'robot'}) == {'speed': 1.5}",
+            "h5_code": "def solve_h5(obj):\n    import sys\n    return sys.getrefcount(obj)",
+            "h5_test": "assert solve_h5([1, 2]) >= 1",
+            "rob_code": "def process_telemetry(data):\n    battery_voltage = float(data[0]) if data else 0.0\n    return {'battery_voltage': battery_voltage}",
+            "rob_test": "assert process_telemetry([12.6])['battery_voltage'] == 12.6"
+        }
+    ),
+    make_topic_data(
+        topic_id="1.5",
+        title="Core Data Types and Type Conversion",
+        module=1,
+        module_title="Getting Started with Python",
+        directory="05_core_data_types_conversion",
+        summary="int, float, str, bool, NoneType, implicit and explicit type casting.",
+        why_it_matters="Data types govern how bits in memory are interpreted and operated upon.",
+        objectives=["Work with int, float, str, bool, and None.", "Perform explicit type casting safely.", "Handle type errors."],
+        prerequisites=["Topic 1.4 Variables"],
+        domain="drone pre-flight checklist",
+        concepts=["int", "float", "str", "bool", "Type Casting"],
+        code_snippets={
+            "syntax": "val = int('42')",
+            "basic": "distance = float('3.14')\nprint(type(distance))",
+            "intermediate": "raw_str = '123.45'\nnum = float(raw_str)\nrounded = round(num)",
+            "advanced": "val = None\nif val is None:\n    val = 0.0",
+            "walkthrough": "sensor_val = '100'\nparsed = int(sensor_val)\nstatus = parsed > 50",
+            "pythonic": "is_ready = bool(1)",
+            "engineering": "altitude_m = float('150.5')\nis_airborne = altitude_m > 0.0",
+            "m1_code": "def solve_m1(val_str):\n    try:\n        return int(val_str)\n    except ValueError:\n        return float(val_str)",
+            "m1_test": "assert solve_m1('42') == 42 and solve_m1('3.14') == 3.14",
+            "m2_code": "def solve_m2(val):\n    return bool(val)",
+            "m2_test": "assert solve_m2(0) is False and solve_m2(1) is True",
+            "m3_code": "def solve_m3(val):\n    return str(val)",
+            "m3_test": "assert solve_m3(100) == '100'",
+            "m4_code": "def solve_m4(items):\n    return [type(item).__name__ for item in items]",
+            "m4_test": "assert solve_m4([1, 2.0, 'a', True, None]) == ['int', 'float', 'str', 'bool', 'NoneType']",
+            "m5_code": "def solve_m5(a, b):\n    return type(a) == type(b)",
+            "m5_test": "assert solve_m5(1, 1.0) is False",
+            "h1_code": "def solve_h1(data_list):\n    res = []\n    for item in data_list:\n        try:\n            res.append(int(item))\n        except (ValueError, TypeError):\n            try:\n                res.append(float(item))\n            except (ValueError, TypeError):\n                res.append(str(item))\n    return res",
+            "h1_test": "assert solve_h1(['10', '3.14', 'abc']) == [10, 3.14, 'abc']",
+            "h2_code": "def solve_h2(val):\n    if val is None:\n        return 'NONE'\n    if isinstance(val, bool):\n        return 'BOOL'\n    if isinstance(val, int):\n        return 'INT'\n    if isinstance(val, float):\n        return 'FLOAT'\n    return 'OTHER'",
+            "h2_test": "assert solve_h2(True) == 'BOOL' and solve_h2(10) == 'INT'",
+            "h3_code": "def solve_h3(floats):\n    return [round(f, 2) for f in floats]",
+            "h3_test": "assert solve_h3([1.234, 5.678]) == [1.23, 5.68]",
+            "h4_code": "def solve_h4(s):\n    return s.isdigit()",
+            "h4_test": "assert solve_h4('12345') is True",
+            "h5_code": "def solve_h5(val):\n    return type(val) in (int, float)",
+            "h5_test": "assert solve_h5(42) is True and solve_h5('42') is False",
+            "rob_code": "def process_telemetry(data):\n    alt = float(data[0]) if data else 0.0\n    return {'altitude_m': alt, 'airborne': alt > 1.0}",
+            "rob_test": "assert process_telemetry(['10.5'])['airborne'] is True"
+        }
+    ),
+    make_topic_data(
+        topic_id="1.6",
+        title="Operators and Expressions",
+        module=1,
+        module_title="Getting Started with Python",
+        directory="06_operators_and_expressions",
+        summary="Arithmetic, comparison, logical, bitwise, membership, identity operators, and operator precedence.",
+        why_it_matters="Operators combine values into expressions that evaluate to new results.",
+        objectives=["Use arithmetic and comparison operators.", "Understand logical short-circuiting.", "Distinguish between '==' and 'is'."],
+        prerequisites=["Topic 1.5 Core Data Types"],
+        domain="warehouse AGV dispatch",
+        concepts=["Operators", "Expressions", "Short-Circuiting"],
+        code_snippets={
+            "syntax": "res = (a + b) * c",
+            "basic": "x = 10 % 3\nprint(x)",
+            "intermediate": "is_valid = x > 0 and x < 100",
+            "advanced": "mask = 0b1010 & 0b1100",
+            "walkthrough": "battery = 85\nis_charging = False\ncan_dispatch = battery > 20 and not is_charging",
+            "pythonic": "in_range = 0 <= x <= 100",
+            "engineering": "distance = 15.0\nspeed = 2.5\ntime_to_target = distance / speed",
+            "m1_code": "def solve_m1(a, b):\n    return a // b, a % b",
+            "m1_test": "assert solve_m1(10, 3) == (3, 1)",
+            "m2_code": "def solve_m2(val, low, high):\n    return low <= val <= high",
+            "m2_test": "assert solve_m2(5, 0, 10) is True",
+            "m3_code": "def solve_m3(a, b):\n    return a or b",
+            "m3_test": "assert solve_m3(0, 'default') == 'default'",
+            "m4_code": "def solve_m4(a, b):\n    return a ^ b",
+            "m4_test": "assert solve_m4(0b1010, 0b1100) == 0b0110",
+            "m5_code": "def solve_m5(item, container):\n    return item in container",
+            "m5_test": "assert solve_m5(2, [1, 2, 3]) is True",
+            "h1_code": "def solve_h1(expression_str):\n    return eval(expression_str, {\"__builtins__\": {}})",
+            "h1_test": "assert solve_h1('2 + 3 * 4') == 14",
+            "h2_code": "def solve_h2(a, b, c):\n    return (-b + (b**2 - 4*a*c)**0.5) / (2*a)",
+            "h2_test": "assert solve_h2(1, -3, 2) == 2.0",
+            "h3_code": "def solve_h3(flags, mask):\n    return (flags & mask) == mask",
+            "h3_test": "assert solve_h3(0b1111, 0b0011) is True",
+            "h4_code": "def solve_h4(lst1, lst2):\n    return lst1 == lst2, lst1 is lst2",
+            "h4_test": "assert solve_h4([1], [1]) == (True, False)",
+            "h5_code": "def solve_h5(vals):\n    return all(x > 0 for x in vals)",
+            "h5_test": "assert solve_h5([1, 2, 3]) is True",
+            "rob_code": "def process_telemetry(data):\n    soc = data[0] if data else 0\n    return {'can_dispatch': soc > 20 and soc <= 100}",
+            "rob_test": "assert process_telemetry([50])['can_dispatch'] is True"
+        }
+    ),
+    make_topic_data(
+        topic_id="1.7",
+        title="Basic Input/Output",
+        module=1,
+        module_title="Getting Started with Python",
+        directory="07_basic_input_output",
+        summary="print(), input(), f-strings, format specifiers, and standard streams.",
+        why_it_matters="I/O allows software to interact with human operators and CLI environments.",
+        objectives=["Format text output using f-strings.", "Read user input safely.", "Configure print() parameters."],
+        prerequisites=["Topic 1.6 Operators"],
+        domain="warehouse AGV dispatch",
+        concepts=["print", "f-strings", "I/O"],
+        code_snippets={
+            "syntax": "print(f'Speed: {speed:.2f} m/s')",
+            "basic": "name = 'ROBO-X'\nprint(f'Robot: {name}')",
+            "intermediate": "val = 3.14159\nprint(f'{val:>10.2f}')",
+            "advanced": "import sys\nsys.stdout.write('Direct stream write\\n')",
+            "walkthrough": "target = 'Dock A'\nprint(f'Navigating to {target}...', end='\\n')",
+            "pythonic": "status = 'OK'\nprint(f'{status=}')",
+            "engineering": "temp_c = 42.5\nprint(f'[TELEMETRY] Temp: {temp_c:.1f} C')",
+            "m1_code": "def solve_m1(name, age):\n    return f'Name: {name}, Age: {age}'",
+            "m1_test": "assert solve_m1('Alex', 30) == 'Name: Alex, Age: 30'",
+            "m2_code": "def solve_m2(val):\n    return f'{val:.2f}'",
+            "m2_test": "assert solve_m2(3.14159) == '3.14'",
+            "m3_code": "def solve_m3(val):\n    return f'{val:05d}'",
+            "m3_test": "assert solve_m3(42) == '00042'",
+            "m4_code": "def solve_m4(val):\n    return f'{val:.1%}'",
+            "m4_test": "assert solve_m4(0.855) == '85.5%'",
+            "m5_code": "def solve_m5(items):\n    return ', '.join(str(x) for x in items)",
+            "m5_test": "assert solve_m5([1, 2, 3]) == '1, 2, 3'",
+            "h1_code": "def solve_h1(table_data):\n    lines = []\n    for row in table_data:\n        lines.append(f'{row[0]:<10} | {row[1]:>8.2f}')\n    return '\\n'.join(lines)",
+            "h1_test": "assert solve_h1([['sensor', 12.34]]) == 'sensor     |    12.34'",
+            "h2_code": "def solve_h2(d):\n    return '\\n'.join(f'{k}={v}' for k, v in d.items())",
+            "h2_test": "assert solve_h2({'a': 1, 'b': 2}) == 'a=1\\nb=2'",
+            "h3_code": "def solve_h3(hex_val):\n    return f'{hex_val:02X}'",
+            "h3_test": "assert solve_h3(255) == 'FF'",
+            "h4_code": "def solve_h4(val):\n    return f'{val:_}'",
+            "h4_test": "assert solve_h4(1000000) == '1_000_000'",
+            "h5_code": "def solve_h5(msg):\n    return f'[LOG] {msg.strip()}'",
+            "h5_test": "assert solve_h5(' System ready ') == '[LOG] System ready'",
+            "rob_code": "def process_telemetry(data):\n    speed = data[0] if data else 0.0\n    return {'formatted': f'SPEED: {speed:.2f} m/s'}",
+            "rob_test": "assert process_telemetry([1.5])['formatted'] == 'SPEED: 1.50 m/s'"
+        }
+    ),
+    make_topic_data(
+        topic_id="1.8",
+        title="Writing and Running Your First Scripts",
+        module=1,
+        module_title="Getting Started with Python",
+        directory="08_writing_running_first_scripts",
+        summary="Shebang lines, command-line execution, exit codes, and script organization.",
+        why_it_matters="Scripts automate command-line workflows and system operations.",
+        objectives=["Write executable Python scripts.", "Pass command-line arguments.", "Return proper exit codes."],
+        prerequisites=["Topic 1.7 Basic Input/Output"],
+        domain="warehouse AGV dispatch",
+        concepts=["Scripts", "sys.argv", "sys.exit"],
+        code_snippets={
+            "syntax": "#!/usr/bin/env python3\nimport sys\nsys.exit(0)",
+            "basic": "import sys\nprint('Script arguments:', sys.argv)",
+            "intermediate": "import sys\nif len(sys.argv) < 2:\n    sys.exit(1)",
+            "advanced": "import sys\ndef main():\n    return 0\nif __name__ == '__main__':\n    sys.exit(main())",
+            "walkthrough": "import sys\nprint('AGV Script running')\nsys.exit(0)",
+            "pythonic": "import sys\ndef main(args):\n    return len(args)\nif __name__ == '__main__':\n    sys.exit(0 if main(sys.argv) > 0 else 1)",
+            "engineering": "import sys\ndef run_diagnostics():\n    return True\nif __name__ == '__main__':\n    code = 0 if run_diagnostics() else 1\n    sys.exit(code)",
+            "m1_code": "def solve_m1(argv):\n    return argv[1:] if len(argv) > 1 else []",
+            "m1_test": "assert solve_m1(['script.py', 'arg1']) == ['arg1']",
+            "m2_code": "def solve_m2(status_bool):\n    return 0 if status_bool else 1",
+            "m2_test": "assert solve_m2(True) == 0 and solve_m2(False) == 1",
+            "m3_code": "def solve_m3(args):\n    return {arg.split('=')[0]: arg.split('=')[1] for arg in args if '=' in arg}",
+            "m3_test": "assert solve_m3(['--port=8080']) == {'--port': '8080'}",
+            "m4_code": "def solve_m4(path_str):\n    return path_str.endswith('.py')",
+            "m4_test": "assert solve_m4('main.py') is True",
+            "m5_code": "def solve_m5(code_str):\n    return code_str.startswith('#!/usr/bin/env python')",
+            "m5_test": "assert solve_m5('#!/usr/bin/env python3\\nx=1') is True",
+            "h1_code": "def solve_h1(argv):\n    flags = [a for a in argv if a.startswith('--')]\n    positional = [a for a in argv if not a.startswith('--')]\n    return {'flags': flags, 'positional': positional}",
+            "h1_test": "assert solve_h1(['main.py', '--verbose', 'file.txt']) == {'flags': ['--verbose'], 'positional': ['main.py', 'file.txt']}",
+            "h2_code": "def solve_h2(args_list):\n    import argparse\n    parser = argparse.ArgumentParser()\n    parser.add_argument('--speed', type=float, default=1.0)\n    parsed, _ = parser.parse_known_args(args_list)\n    return parsed.speed",
+            "h2_test": "assert solve_h2(['--speed', '2.5']) == 2.5",
+            "h3_code": "def solve_h3(exit_code):\n    return 'SUCCESS' if exit_code == 0 else 'ERROR'",
+            "h3_test": "assert solve_h3(0) == 'SUCCESS'",
+            "h4_code": "def solve_h4(script_content):\n    return '__name__' in script_content and '__main__' in script_content",
+            "h4_test": "assert solve_h4(\"if __name__ == '__main__': main()\") is True",
+            "h5_code": "def solve_h5(env_dict):\n    return env_dict.get('PYTHONUNBUFFERED', '0') == '1'",
+            "h5_test": "assert solve_h5({'PYTHONUNBUFFERED': '1'}) is True",
+            "rob_code": "def process_telemetry(data):\n    return {'exit_code': 0, 'processed': len(data)}",
+            "rob_test": "assert process_telemetry([10])['exit_code'] == 0"
+        }
+    )
+]
