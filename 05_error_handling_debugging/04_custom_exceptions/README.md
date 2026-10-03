@@ -36,16 +36,16 @@ Custom exception classes convey domain-specific failure contexts.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Custom Exceptions Medium Exercise 1 | MEDIUM | Custom Exceptions, Inheritance |
-| 2 | Custom Exceptions Medium Exercise 2 | MEDIUM | Custom Exceptions, Inheritance |
-| 3 | Custom Exceptions Medium Exercise 3 | MEDIUM | Custom Exceptions, Inheritance |
-| 4 | Custom Exceptions Medium Exercise 4 | MEDIUM | Custom Exceptions, Inheritance |
-| 5 | Custom Exceptions Medium Exercise 5 | MEDIUM | Custom Exceptions, Inheritance |
-| 6 | Custom Exceptions Hard Exercise 1 | HARD | Custom Exceptions, Inheritance |
-| 7 | Custom Exceptions Hard Exercise 2 | HARD | Custom Exceptions, Inheritance |
-| 8 | Custom Exceptions Hard Exercise 3 | HARD | Custom Exceptions, Inheritance |
-| 9 | Custom Exceptions Hard Exercise 4 | HARD | Custom Exceptions, Inheritance |
-| 10 | Custom Exceptions Hard Exercise 5 | HARD | Custom Exceptions, Inheritance |
+| 1 | Custom Exceptions Medium Task 1 | MEDIUM | Custom Exceptions, Inheritance |
+| 2 | Custom Exceptions Medium Task 2 | MEDIUM | Custom Exceptions, Inheritance |
+| 3 | Custom Exceptions Medium Task 3 | MEDIUM | Custom Exceptions, Inheritance |
+| 4 | Custom Exceptions Medium Task 4 | MEDIUM | Custom Exceptions, Inheritance |
+| 5 | Custom Exceptions Medium Task 5 | MEDIUM | Custom Exceptions, Inheritance |
+| 6 | Custom Exceptions Hard Task 1 | HARD | Custom Exceptions, Inheritance |
+| 7 | Custom Exceptions Hard Task 2 | HARD | Custom Exceptions, Inheritance |
+| 8 | Custom Exceptions Hard Task 3 | HARD | Custom Exceptions, Inheritance |
+| 9 | Custom Exceptions Hard Task 4 | HARD | Custom Exceptions, Inheritance |
+| 10 | Custom Exceptions Hard Task 5 | HARD | Custom Exceptions, Inheritance |
 
 ## Robotics challenge — ROBO-X Challenge: Custom Exceptions Controller
 

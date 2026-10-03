@@ -36,16 +36,16 @@ Object-oriented programming structures state and behavior into cohesive entities
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | OOP Fundamentals Medium Exercise 1 | MEDIUM | Class, Instance, __init__ |
-| 2 | OOP Fundamentals Medium Exercise 2 | MEDIUM | Class, Instance, __init__ |
-| 3 | OOP Fundamentals Medium Exercise 3 | MEDIUM | Class, Instance, __init__ |
-| 4 | OOP Fundamentals Medium Exercise 4 | MEDIUM | Class, Instance, __init__ |
-| 5 | OOP Fundamentals Medium Exercise 5 | MEDIUM | Class, Instance, __init__ |
-| 6 | OOP Fundamentals Hard Exercise 1 | HARD | Class, Instance, __init__, self |
-| 7 | OOP Fundamentals Hard Exercise 2 | HARD | Class, Instance, __init__, self |
-| 8 | OOP Fundamentals Hard Exercise 3 | HARD | Class, Instance, __init__, self |
-| 9 | OOP Fundamentals Hard Exercise 4 | HARD | Class, Instance, __init__, self |
-| 10 | OOP Fundamentals Hard Exercise 5 | HARD | Class, Instance, __init__, self |
+| 1 | OOP Fundamentals Medium Task 1 | MEDIUM | Class, Instance, __init__ |
+| 2 | OOP Fundamentals Medium Task 2 | MEDIUM | Class, Instance, __init__ |
+| 3 | OOP Fundamentals Medium Task 3 | MEDIUM | Class, Instance, __init__ |
+| 4 | OOP Fundamentals Medium Task 4 | MEDIUM | Class, Instance, __init__ |
+| 5 | OOP Fundamentals Medium Task 5 | MEDIUM | Class, Instance, __init__ |
+| 6 | OOP Fundamentals Hard Task 1 | HARD | Class, Instance, __init__, self |
+| 7 | OOP Fundamentals Hard Task 2 | HARD | Class, Instance, __init__, self |
+| 8 | OOP Fundamentals Hard Task 3 | HARD | Class, Instance, __init__, self |
+| 9 | OOP Fundamentals Hard Task 4 | HARD | Class, Instance, __init__, self |
+| 10 | OOP Fundamentals Hard Task 5 | HARD | Class, Instance, __init__, self |
 
 ## Robotics challenge — ROBO-X Challenge: OOP Fundamentals Controller
 

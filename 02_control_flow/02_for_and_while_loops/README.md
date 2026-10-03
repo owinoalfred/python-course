@@ -36,16 +36,16 @@ Loops automate repeating tasks and enable continuous sensor processing.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | for Loops and while Loops Medium Exercise 1 | MEDIUM | for loop, while loop, Iteration |
-| 2 | for Loops and while Loops Medium Exercise 2 | MEDIUM | for loop, while loop, Iteration |
-| 3 | for Loops and while Loops Medium Exercise 3 | MEDIUM | for loop, while loop, Iteration |
-| 4 | for Loops and while Loops Medium Exercise 4 | MEDIUM | for loop, while loop, Iteration |
-| 5 | for Loops and while Loops Medium Exercise 5 | MEDIUM | for loop, while loop, Iteration |
-| 6 | for Loops and while Loops Hard Exercise 1 | HARD | for loop, while loop, Iteration |
-| 7 | for Loops and while Loops Hard Exercise 2 | HARD | for loop, while loop, Iteration |
-| 8 | for Loops and while Loops Hard Exercise 3 | HARD | for loop, while loop, Iteration |
-| 9 | for Loops and while Loops Hard Exercise 4 | HARD | for loop, while loop, Iteration |
-| 10 | for Loops and while Loops Hard Exercise 5 | HARD | for loop, while loop, Iteration |
+| 1 | for Loops and while Loops Medium Task 1 | MEDIUM | for loop, while loop, Iteration |
+| 2 | for Loops and while Loops Medium Task 2 | MEDIUM | for loop, while loop, Iteration |
+| 3 | for Loops and while Loops Medium Task 3 | MEDIUM | for loop, while loop, Iteration |
+| 4 | for Loops and while Loops Medium Task 4 | MEDIUM | for loop, while loop, Iteration |
+| 5 | for Loops and while Loops Medium Task 5 | MEDIUM | for loop, while loop, Iteration |
+| 6 | for Loops and while Loops Hard Task 1 | HARD | for loop, while loop, Iteration |
+| 7 | for Loops and while Loops Hard Task 2 | HARD | for loop, while loop, Iteration |
+| 8 | for Loops and while Loops Hard Task 3 | HARD | for loop, while loop, Iteration |
+| 9 | for Loops and while Loops Hard Task 4 | HARD | for loop, while loop, Iteration |
+| 10 | for Loops and while Loops Hard Task 5 | HARD | for loop, while loop, Iteration |
 
 ## Robotics challenge — ROBO-X Challenge: for Loops and while Loops Controller
 

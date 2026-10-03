@@ -36,16 +36,16 @@ pathlib provides object-oriented, cross-platform filesystem paths.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Working with Paths Medium Exercise 1 | MEDIUM | pathlib, Path, glob |
-| 2 | Working with Paths Medium Exercise 2 | MEDIUM | pathlib, Path, glob |
-| 3 | Working with Paths Medium Exercise 3 | MEDIUM | pathlib, Path, glob |
-| 4 | Working with Paths Medium Exercise 4 | MEDIUM | pathlib, Path, glob |
-| 5 | Working with Paths Medium Exercise 5 | MEDIUM | pathlib, Path, glob |
-| 6 | Working with Paths Hard Exercise 1 | HARD | pathlib, Path, glob |
-| 7 | Working with Paths Hard Exercise 2 | HARD | pathlib, Path, glob |
-| 8 | Working with Paths Hard Exercise 3 | HARD | pathlib, Path, glob |
-| 9 | Working with Paths Hard Exercise 4 | HARD | pathlib, Path, glob |
-| 10 | Working with Paths Hard Exercise 5 | HARD | pathlib, Path, glob |
+| 1 | Working with Paths Medium Task 1 | MEDIUM | pathlib, Path, glob |
+| 2 | Working with Paths Medium Task 2 | MEDIUM | pathlib, Path, glob |
+| 3 | Working with Paths Medium Task 3 | MEDIUM | pathlib, Path, glob |
+| 4 | Working with Paths Medium Task 4 | MEDIUM | pathlib, Path, glob |
+| 5 | Working with Paths Medium Task 5 | MEDIUM | pathlib, Path, glob |
+| 6 | Working with Paths Hard Task 1 | HARD | pathlib, Path, glob |
+| 7 | Working with Paths Hard Task 2 | HARD | pathlib, Path, glob |
+| 8 | Working with Paths Hard Task 3 | HARD | pathlib, Path, glob |
+| 9 | Working with Paths Hard Task 4 | HARD | pathlib, Path, glob |
+| 10 | Working with Paths Hard Task 5 | HARD | pathlib, Path, glob |
 
 ## Robotics challenge — ROBO-X Challenge: Working with Paths Controller
 

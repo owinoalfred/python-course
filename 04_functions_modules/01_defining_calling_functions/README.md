@@ -36,16 +36,16 @@ Functions encapsulate reusable blocks of logic.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Defining and Calling Functions Medium Exercise 1 | MEDIUM | Functions, def, Docstrings |
-| 2 | Defining and Calling Functions Medium Exercise 2 | MEDIUM | Functions, def, Docstrings |
-| 3 | Defining and Calling Functions Medium Exercise 3 | MEDIUM | Functions, def, Docstrings |
-| 4 | Defining and Calling Functions Medium Exercise 4 | MEDIUM | Functions, def, Docstrings |
-| 5 | Defining and Calling Functions Medium Exercise 5 | MEDIUM | Functions, def, Docstrings |
-| 6 | Defining and Calling Functions Hard Exercise 1 | HARD | Functions, def, Docstrings |
-| 7 | Defining and Calling Functions Hard Exercise 2 | HARD | Functions, def, Docstrings |
-| 8 | Defining and Calling Functions Hard Exercise 3 | HARD | Functions, def, Docstrings |
-| 9 | Defining and Calling Functions Hard Exercise 4 | HARD | Functions, def, Docstrings |
-| 10 | Defining and Calling Functions Hard Exercise 5 | HARD | Functions, def, Docstrings |
+| 1 | Defining and Calling Functions Medium Task 1 | MEDIUM | Functions, def, Docstrings |
+| 2 | Defining and Calling Functions Medium Task 2 | MEDIUM | Functions, def, Docstrings |
+| 3 | Defining and Calling Functions Medium Task 3 | MEDIUM | Functions, def, Docstrings |
+| 4 | Defining and Calling Functions Medium Task 4 | MEDIUM | Functions, def, Docstrings |
+| 5 | Defining and Calling Functions Medium Task 5 | MEDIUM | Functions, def, Docstrings |
+| 6 | Defining and Calling Functions Hard Task 1 | HARD | Functions, def, Docstrings |
+| 7 | Defining and Calling Functions Hard Task 2 | HARD | Functions, def, Docstrings |
+| 8 | Defining and Calling Functions Hard Task 3 | HARD | Functions, def, Docstrings |
+| 9 | Defining and Calling Functions Hard Task 4 | HARD | Functions, def, Docstrings |
+| 10 | Defining and Calling Functions Hard Task 5 | HARD | Functions, def, Docstrings |
 
 ## Robotics challenge — ROBO-X Challenge: Defining and Calling Functions Controller
 

@@ -36,16 +36,16 @@ ORMs map database tables directly to Python classes, providing high-level data a
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | ORMs Medium Exercise 1 | MEDIUM | ORM, SQLAlchemy, Declarative Base |
-| 2 | ORMs Medium Exercise 2 | MEDIUM | ORM, SQLAlchemy, Declarative Base |
-| 3 | ORMs Medium Exercise 3 | MEDIUM | ORM, SQLAlchemy, Declarative Base |
-| 4 | ORMs Medium Exercise 4 | MEDIUM | ORM, SQLAlchemy, Declarative Base |
-| 5 | ORMs Medium Exercise 5 | MEDIUM | ORM, SQLAlchemy, Declarative Base |
-| 6 | ORMs Hard Exercise 1 | HARD | ORM, SQLAlchemy, Declarative Base, Session |
-| 7 | ORMs Hard Exercise 2 | HARD | ORM, SQLAlchemy, Declarative Base, Session |
-| 8 | ORMs Hard Exercise 3 | HARD | ORM, SQLAlchemy, Declarative Base, Session |
-| 9 | ORMs Hard Exercise 4 | HARD | ORM, SQLAlchemy, Declarative Base, Session |
-| 10 | ORMs Hard Exercise 5 | HARD | ORM, SQLAlchemy, Declarative Base, Session |
+| 1 | ORMs Medium Task 1 | MEDIUM | ORM, SQLAlchemy, Declarative Base |
+| 2 | ORMs Medium Task 2 | MEDIUM | ORM, SQLAlchemy, Declarative Base |
+| 3 | ORMs Medium Task 3 | MEDIUM | ORM, SQLAlchemy, Declarative Base |
+| 4 | ORMs Medium Task 4 | MEDIUM | ORM, SQLAlchemy, Declarative Base |
+| 5 | ORMs Medium Task 5 | MEDIUM | ORM, SQLAlchemy, Declarative Base |
+| 6 | ORMs Hard Task 1 | HARD | ORM, SQLAlchemy, Declarative Base, Session |
+| 7 | ORMs Hard Task 2 | HARD | ORM, SQLAlchemy, Declarative Base, Session |
+| 8 | ORMs Hard Task 3 | HARD | ORM, SQLAlchemy, Declarative Base, Session |
+| 9 | ORMs Hard Task 4 | HARD | ORM, SQLAlchemy, Declarative Base, Session |
+| 10 | ORMs Hard Task 5 | HARD | ORM, SQLAlchemy, Declarative Base, Session |
 
 ## Robotics challenge — ROBO-X Challenge: ORMs Controller
 

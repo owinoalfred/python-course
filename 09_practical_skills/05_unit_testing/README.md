@@ -36,16 +36,16 @@ Automated unit testing prevents regressions and validates component specificatio
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Unit Testing Medium Exercise 1 | MEDIUM | pytest, Unit Testing, Fixtures |
-| 2 | Unit Testing Medium Exercise 2 | MEDIUM | pytest, Unit Testing, Fixtures |
-| 3 | Unit Testing Medium Exercise 3 | MEDIUM | pytest, Unit Testing, Fixtures |
-| 4 | Unit Testing Medium Exercise 4 | MEDIUM | pytest, Unit Testing, Fixtures |
-| 5 | Unit Testing Medium Exercise 5 | MEDIUM | pytest, Unit Testing, Fixtures |
-| 6 | Unit Testing Hard Exercise 1 | HARD | pytest, Unit Testing, Fixtures, Mocking |
-| 7 | Unit Testing Hard Exercise 2 | HARD | pytest, Unit Testing, Fixtures, Mocking |
-| 8 | Unit Testing Hard Exercise 3 | HARD | pytest, Unit Testing, Fixtures, Mocking |
-| 9 | Unit Testing Hard Exercise 4 | HARD | pytest, Unit Testing, Fixtures, Mocking |
-| 10 | Unit Testing Hard Exercise 5 | HARD | pytest, Unit Testing, Fixtures, Mocking |
+| 1 | Unit Testing Medium Task 1 | MEDIUM | pytest, Unit Testing, Fixtures |
+| 2 | Unit Testing Medium Task 2 | MEDIUM | pytest, Unit Testing, Fixtures |
+| 3 | Unit Testing Medium Task 3 | MEDIUM | pytest, Unit Testing, Fixtures |
+| 4 | Unit Testing Medium Task 4 | MEDIUM | pytest, Unit Testing, Fixtures |
+| 5 | Unit Testing Medium Task 5 | MEDIUM | pytest, Unit Testing, Fixtures |
+| 6 | Unit Testing Hard Task 1 | HARD | pytest, Unit Testing, Fixtures, Mocking |
+| 7 | Unit Testing Hard Task 2 | HARD | pytest, Unit Testing, Fixtures, Mocking |
+| 8 | Unit Testing Hard Task 3 | HARD | pytest, Unit Testing, Fixtures, Mocking |
+| 9 | Unit Testing Hard Task 4 | HARD | pytest, Unit Testing, Fixtures, Mocking |
+| 10 | Unit Testing Hard Task 5 | HARD | pytest, Unit Testing, Fixtures, Mocking |
 
 ## Robotics challenge — ROBO-X Challenge: Unit Testing Controller
 

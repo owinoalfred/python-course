@@ -36,16 +36,16 @@ File operations persist runtime state, logs, and telemetry data across program r
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | File Operations Medium Exercise 1 | MEDIUM | File I/O, open(), with statement |
-| 2 | File Operations Medium Exercise 2 | MEDIUM | File I/O, open(), with statement |
-| 3 | File Operations Medium Exercise 3 | MEDIUM | File I/O, open(), with statement |
-| 4 | File Operations Medium Exercise 4 | MEDIUM | File I/O, open(), with statement |
-| 5 | File Operations Medium Exercise 5 | MEDIUM | File I/O, open(), with statement |
-| 6 | File Operations Hard Exercise 1 | HARD | File I/O, open(), with statement, Context Managers |
-| 7 | File Operations Hard Exercise 2 | HARD | File I/O, open(), with statement, Context Managers |
-| 8 | File Operations Hard Exercise 3 | HARD | File I/O, open(), with statement, Context Managers |
-| 9 | File Operations Hard Exercise 4 | HARD | File I/O, open(), with statement, Context Managers |
-| 10 | File Operations Hard Exercise 5 | HARD | File I/O, open(), with statement, Context Managers |
+| 1 | File Operations Medium Task 1 | MEDIUM | File I/O, open(), with statement |
+| 2 | File Operations Medium Task 2 | MEDIUM | File I/O, open(), with statement |
+| 3 | File Operations Medium Task 3 | MEDIUM | File I/O, open(), with statement |
+| 4 | File Operations Medium Task 4 | MEDIUM | File I/O, open(), with statement |
+| 5 | File Operations Medium Task 5 | MEDIUM | File I/O, open(), with statement |
+| 6 | File Operations Hard Task 1 | HARD | File I/O, open(), with statement, Context Managers |
+| 7 | File Operations Hard Task 2 | HARD | File I/O, open(), with statement, Context Managers |
+| 8 | File Operations Hard Task 3 | HARD | File I/O, open(), with statement, Context Managers |
+| 9 | File Operations Hard Task 4 | HARD | File I/O, open(), with statement, Context Managers |
+| 10 | File Operations Hard Task 5 | HARD | File I/O, open(), with statement, Context Managers |
 
 ## Robotics challenge — ROBO-X Challenge: File Operations Controller
 

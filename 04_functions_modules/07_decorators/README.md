@@ -36,16 +36,16 @@ Decorators inject cross-cutting concerns like logging, timing, and security chec
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Decorators Medium Exercise 1 | MEDIUM | Decorators, @wraps, Meta-programming |
-| 2 | Decorators Medium Exercise 2 | MEDIUM | Decorators, @wraps, Meta-programming |
-| 3 | Decorators Medium Exercise 3 | MEDIUM | Decorators, @wraps, Meta-programming |
-| 4 | Decorators Medium Exercise 4 | MEDIUM | Decorators, @wraps, Meta-programming |
-| 5 | Decorators Medium Exercise 5 | MEDIUM | Decorators, @wraps, Meta-programming |
-| 6 | Decorators Hard Exercise 1 | HARD | Decorators, @wraps, Meta-programming |
-| 7 | Decorators Hard Exercise 2 | HARD | Decorators, @wraps, Meta-programming |
-| 8 | Decorators Hard Exercise 3 | HARD | Decorators, @wraps, Meta-programming |
-| 9 | Decorators Hard Exercise 4 | HARD | Decorators, @wraps, Meta-programming |
-| 10 | Decorators Hard Exercise 5 | HARD | Decorators, @wraps, Meta-programming |
+| 1 | Decorators Medium Task 1 | MEDIUM | Decorators, @wraps, Meta-programming |
+| 2 | Decorators Medium Task 2 | MEDIUM | Decorators, @wraps, Meta-programming |
+| 3 | Decorators Medium Task 3 | MEDIUM | Decorators, @wraps, Meta-programming |
+| 4 | Decorators Medium Task 4 | MEDIUM | Decorators, @wraps, Meta-programming |
+| 5 | Decorators Medium Task 5 | MEDIUM | Decorators, @wraps, Meta-programming |
+| 6 | Decorators Hard Task 1 | HARD | Decorators, @wraps, Meta-programming |
+| 7 | Decorators Hard Task 2 | HARD | Decorators, @wraps, Meta-programming |
+| 8 | Decorators Hard Task 3 | HARD | Decorators, @wraps, Meta-programming |
+| 9 | Decorators Hard Task 4 | HARD | Decorators, @wraps, Meta-programming |
+| 10 | Decorators Hard Task 5 | HARD | Decorators, @wraps, Meta-programming |
 
 ## Robotics challenge — ROBO-X Challenge: Decorators Controller
 

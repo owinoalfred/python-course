@@ -36,16 +36,16 @@ Functional tools allow declarative transformation pipelines.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Lambda Functions and Functional Tools Medium Exercise 1 | MEDIUM | lambda, map, filter |
-| 2 | Lambda Functions and Functional Tools Medium Exercise 2 | MEDIUM | lambda, map, filter |
-| 3 | Lambda Functions and Functional Tools Medium Exercise 3 | MEDIUM | lambda, map, filter |
-| 4 | Lambda Functions and Functional Tools Medium Exercise 4 | MEDIUM | lambda, map, filter |
-| 5 | Lambda Functions and Functional Tools Medium Exercise 5 | MEDIUM | lambda, map, filter |
-| 6 | Lambda Functions and Functional Tools Hard Exercise 1 | HARD | lambda, map, filter, reduce |
-| 7 | Lambda Functions and Functional Tools Hard Exercise 2 | HARD | lambda, map, filter, reduce |
-| 8 | Lambda Functions and Functional Tools Hard Exercise 3 | HARD | lambda, map, filter, reduce |
-| 9 | Lambda Functions and Functional Tools Hard Exercise 4 | HARD | lambda, map, filter, reduce |
-| 10 | Lambda Functions and Functional Tools Hard Exercise 5 | HARD | lambda, map, filter, reduce |
+| 1 | Lambda Functions and Functional Tools Medium Task 1 | MEDIUM | lambda, map, filter |
+| 2 | Lambda Functions and Functional Tools Medium Task 2 | MEDIUM | lambda, map, filter |
+| 3 | Lambda Functions and Functional Tools Medium Task 3 | MEDIUM | lambda, map, filter |
+| 4 | Lambda Functions and Functional Tools Medium Task 4 | MEDIUM | lambda, map, filter |
+| 5 | Lambda Functions and Functional Tools Medium Task 5 | MEDIUM | lambda, map, filter |
+| 6 | Lambda Functions and Functional Tools Hard Task 1 | HARD | lambda, map, filter, reduce |
+| 7 | Lambda Functions and Functional Tools Hard Task 2 | HARD | lambda, map, filter, reduce |
+| 8 | Lambda Functions and Functional Tools Hard Task 3 | HARD | lambda, map, filter, reduce |
+| 9 | Lambda Functions and Functional Tools Hard Task 4 | HARD | lambda, map, filter, reduce |
+| 10 | Lambda Functions and Functional Tools Hard Task 5 | HARD | lambda, map, filter, reduce |
 
 ## Robotics challenge — ROBO-X Challenge: Lambda Functions and Functional Tools Controller
 

@@ -36,16 +36,16 @@ Magic methods allow custom classes to integrate seamlessly with Python built-in 
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Special / Magic Methods Medium Exercise 1 | MEDIUM | Dunder Methods, __str__, __repr__ |
-| 2 | Special / Magic Methods Medium Exercise 2 | MEDIUM | Dunder Methods, __str__, __repr__ |
-| 3 | Special / Magic Methods Medium Exercise 3 | MEDIUM | Dunder Methods, __str__, __repr__ |
-| 4 | Special / Magic Methods Medium Exercise 4 | MEDIUM | Dunder Methods, __str__, __repr__ |
-| 5 | Special / Magic Methods Medium Exercise 5 | MEDIUM | Dunder Methods, __str__, __repr__ |
-| 6 | Special / Magic Methods Hard Exercise 1 | HARD | Dunder Methods, __str__, __repr__, Operator Overloading |
-| 7 | Special / Magic Methods Hard Exercise 2 | HARD | Dunder Methods, __str__, __repr__, Operator Overloading |
-| 8 | Special / Magic Methods Hard Exercise 3 | HARD | Dunder Methods, __str__, __repr__, Operator Overloading |
-| 9 | Special / Magic Methods Hard Exercise 4 | HARD | Dunder Methods, __str__, __repr__, Operator Overloading |
-| 10 | Special / Magic Methods Hard Exercise 5 | HARD | Dunder Methods, __str__, __repr__, Operator Overloading |
+| 1 | Special / Magic Methods Medium Task 1 | MEDIUM | Dunder Methods, __str__, __repr__ |
+| 2 | Special / Magic Methods Medium Task 2 | MEDIUM | Dunder Methods, __str__, __repr__ |
+| 3 | Special / Magic Methods Medium Task 3 | MEDIUM | Dunder Methods, __str__, __repr__ |
+| 4 | Special / Magic Methods Medium Task 4 | MEDIUM | Dunder Methods, __str__, __repr__ |
+| 5 | Special / Magic Methods Medium Task 5 | MEDIUM | Dunder Methods, __str__, __repr__ |
+| 6 | Special / Magic Methods Hard Task 1 | HARD | Dunder Methods, __str__, __repr__, Operator Overloading |
+| 7 | Special / Magic Methods Hard Task 2 | HARD | Dunder Methods, __str__, __repr__, Operator Overloading |
+| 8 | Special / Magic Methods Hard Task 3 | HARD | Dunder Methods, __str__, __repr__, Operator Overloading |
+| 9 | Special / Magic Methods Hard Task 4 | HARD | Dunder Methods, __str__, __repr__, Operator Overloading |
+| 10 | Special / Magic Methods Hard Task 5 | HARD | Dunder Methods, __str__, __repr__, Operator Overloading |
 
 ## Robotics challenge — ROBO-X Challenge: Special / Magic Methods Controller
 

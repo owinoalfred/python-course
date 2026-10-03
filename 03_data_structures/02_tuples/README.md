@@ -36,16 +36,16 @@ Tuples provide immutable sequence guarantees and efficient fixed structure memor
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Tuples Medium Exercise 1 | MEDIUM | Tuple, Immutability, Unpacking |
-| 2 | Tuples Medium Exercise 2 | MEDIUM | Tuple, Immutability, Unpacking |
-| 3 | Tuples Medium Exercise 3 | MEDIUM | Tuple, Immutability, Unpacking |
-| 4 | Tuples Medium Exercise 4 | MEDIUM | Tuple, Immutability, Unpacking |
-| 5 | Tuples Medium Exercise 5 | MEDIUM | Tuple, Immutability, Unpacking |
-| 6 | Tuples Hard Exercise 1 | HARD | Tuple, Immutability, Unpacking |
-| 7 | Tuples Hard Exercise 2 | HARD | Tuple, Immutability, Unpacking |
-| 8 | Tuples Hard Exercise 3 | HARD | Tuple, Immutability, Unpacking |
-| 9 | Tuples Hard Exercise 4 | HARD | Tuple, Immutability, Unpacking |
-| 10 | Tuples Hard Exercise 5 | HARD | Tuple, Immutability, Unpacking |
+| 1 | Tuples Medium Task 1 | MEDIUM | Tuple, Immutability, Unpacking |
+| 2 | Tuples Medium Task 2 | MEDIUM | Tuple, Immutability, Unpacking |
+| 3 | Tuples Medium Task 3 | MEDIUM | Tuple, Immutability, Unpacking |
+| 4 | Tuples Medium Task 4 | MEDIUM | Tuple, Immutability, Unpacking |
+| 5 | Tuples Medium Task 5 | MEDIUM | Tuple, Immutability, Unpacking |
+| 6 | Tuples Hard Task 1 | HARD | Tuple, Immutability, Unpacking |
+| 7 | Tuples Hard Task 2 | HARD | Tuple, Immutability, Unpacking |
+| 8 | Tuples Hard Task 3 | HARD | Tuple, Immutability, Unpacking |
+| 9 | Tuples Hard Task 4 | HARD | Tuple, Immutability, Unpacking |
+| 10 | Tuples Hard Task 5 | HARD | Tuple, Immutability, Unpacking |
 
 ## Robotics challenge — ROBO-X Challenge: Tuples Controller
 

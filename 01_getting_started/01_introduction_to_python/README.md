@@ -37,16 +37,16 @@ Choosing a language is a long-term commitment. Python powers modern robotics and
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Introduction to Python Medium Exercise 1 | MEDIUM | Interpreter, Bytecode, Dynamic Typing |
-| 2 | Introduction to Python Medium Exercise 2 | MEDIUM | Interpreter, Bytecode, Dynamic Typing |
-| 3 | Introduction to Python Medium Exercise 3 | MEDIUM | Interpreter, Bytecode, Dynamic Typing |
-| 4 | Introduction to Python Medium Exercise 4 | MEDIUM | Interpreter, Bytecode, Dynamic Typing |
-| 5 | Introduction to Python Medium Exercise 5 | MEDIUM | Interpreter, Bytecode, Dynamic Typing |
-| 6 | Introduction to Python Hard Exercise 1 | HARD | Interpreter, Bytecode, Dynamic Typing |
-| 7 | Introduction to Python Hard Exercise 2 | HARD | Interpreter, Bytecode, Dynamic Typing |
-| 8 | Introduction to Python Hard Exercise 3 | HARD | Interpreter, Bytecode, Dynamic Typing |
-| 9 | Introduction to Python Hard Exercise 4 | HARD | Interpreter, Bytecode, Dynamic Typing |
-| 10 | Introduction to Python Hard Exercise 5 | HARD | Interpreter, Bytecode, Dynamic Typing |
+| 1 | Introduction to Python Medium Task 1 | MEDIUM | Interpreter, Bytecode, Dynamic Typing |
+| 2 | Introduction to Python Medium Task 2 | MEDIUM | Interpreter, Bytecode, Dynamic Typing |
+| 3 | Introduction to Python Medium Task 3 | MEDIUM | Interpreter, Bytecode, Dynamic Typing |
+| 4 | Introduction to Python Medium Task 4 | MEDIUM | Interpreter, Bytecode, Dynamic Typing |
+| 5 | Introduction to Python Medium Task 5 | MEDIUM | Interpreter, Bytecode, Dynamic Typing |
+| 6 | Introduction to Python Hard Task 1 | HARD | Interpreter, Bytecode, Dynamic Typing |
+| 7 | Introduction to Python Hard Task 2 | HARD | Interpreter, Bytecode, Dynamic Typing |
+| 8 | Introduction to Python Hard Task 3 | HARD | Interpreter, Bytecode, Dynamic Typing |
+| 9 | Introduction to Python Hard Task 4 | HARD | Interpreter, Bytecode, Dynamic Typing |
+| 10 | Introduction to Python Hard Task 5 | HARD | Interpreter, Bytecode, Dynamic Typing |
 
 ## Robotics challenge — ROBO-X Challenge: Introduction to Python Controller
 

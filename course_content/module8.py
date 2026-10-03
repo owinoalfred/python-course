@@ -16,7 +16,7 @@ TOPICS = [
         objectives=["Understand relational database concepts.", "Write basic SQL SELECT queries.", "Design relational schema."],
         prerequisites=["Module 7 Working with Data"], domain="fleet operations centre", concepts=["Databases", "SQL", "Relational Model"],
         code_snippets={
-            "syntax": "SELECT * FROM robots WHERE status = 'ACTIVE';", "basic": "query = 'SELECT id, battery FROM fleet;'",
+            "syntax": "# SQL Syntax Example:\n# SELECT * FROM robots WHERE status = 'ACTIVE';", "basic": "query = 'SELECT id, battery FROM fleet;'",
             "intermediate": "schema = '''\nCREATE TABLE fleet (\n    id INTEGER PRIMARY KEY,\n    name TEXT NOT NULL\n);\n'''",
             "advanced": "query = '''\nSELECT fleet.name, AVG(telemetry.val)\nFROM fleet JOIN telemetry ON fleet.id = telemetry.robot_id\nGROUP BY fleet.name;\n'''",
             "walkthrough": "query = 'SELECT * FROM robots WHERE battery_pct > 20.0'\nprint('SQL Query:', query)",
@@ -114,7 +114,7 @@ TOPICS = [
         objectives=["Identify SQL injection risks.", "Use parameterized placeholders (?).", "Never concatenate untrusted user input into SQL."],
         prerequisites=["Topic 8.4 CRUD Operations"], domain="fleet operations centre", concepts=["SQL Injection", "Parameterized Queries", "Placeholders"],
         code_snippets={
-            "syntax": "# SAFE:\nconn.execute('SELECT * FROM users WHERE name = ?', (username,))\n# UNSAFE: f'SELECT * FROM users WHERE name = \"{username}\"'",
+            "syntax": "# SAFE:\n# conn.execute('SELECT * FROM users WHERE name = ?', (username,))\n# UNSAFE: f'SELECT * FROM users WHERE name = \"{username}\"'",
             "basic": "import sqlite3\nconn = sqlite3.connect(':memory:')\nconn.execute('CREATE TABLE t (name TEXT)')\nuser_input = \"admin' OR '1'='1\"\n# Parameterized query handles quotes safely\nconn.execute('SELECT * FROM t WHERE name = ?', (user_input,))",
             "intermediate": "import sqlite3\nconn = sqlite3.connect(':memory:')\nconn.execute('CREATE TABLE t (id INT, val TEXT)')\nparams = {'id': 1, 'val': 'test'}\nconn.execute('INSERT INTO t VALUES (:id, :val)', params)",
             "advanced": "def safe_query(conn, table_name, param_val):\n    # Note: table names cannot be parameterized, validate table_name against whitelist!\n    if not table_name.isidentifier(): raise ValueError('Invalid table')\n    return conn.execute(f'SELECT * FROM {table_name} WHERE col = ?', (param_val,)).fetchall()",

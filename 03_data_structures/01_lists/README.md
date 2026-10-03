@@ -36,16 +36,16 @@ Lists are the primary ordered collection structure in Python.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Lists Medium Exercise 1 | MEDIUM | List, Slicing, Mutability |
-| 2 | Lists Medium Exercise 2 | MEDIUM | List, Slicing, Mutability |
-| 3 | Lists Medium Exercise 3 | MEDIUM | List, Slicing, Mutability |
-| 4 | Lists Medium Exercise 4 | MEDIUM | List, Slicing, Mutability |
-| 5 | Lists Medium Exercise 5 | MEDIUM | List, Slicing, Mutability |
-| 6 | Lists Hard Exercise 1 | HARD | List, Slicing, Mutability |
-| 7 | Lists Hard Exercise 2 | HARD | List, Slicing, Mutability |
-| 8 | Lists Hard Exercise 3 | HARD | List, Slicing, Mutability |
-| 9 | Lists Hard Exercise 4 | HARD | List, Slicing, Mutability |
-| 10 | Lists Hard Exercise 5 | HARD | List, Slicing, Mutability |
+| 1 | Lists Medium Task 1 | MEDIUM | List, Slicing, Mutability |
+| 2 | Lists Medium Task 2 | MEDIUM | List, Slicing, Mutability |
+| 3 | Lists Medium Task 3 | MEDIUM | List, Slicing, Mutability |
+| 4 | Lists Medium Task 4 | MEDIUM | List, Slicing, Mutability |
+| 5 | Lists Medium Task 5 | MEDIUM | List, Slicing, Mutability |
+| 6 | Lists Hard Task 1 | HARD | List, Slicing, Mutability |
+| 7 | Lists Hard Task 2 | HARD | List, Slicing, Mutability |
+| 8 | Lists Hard Task 3 | HARD | List, Slicing, Mutability |
+| 9 | Lists Hard Task 4 | HARD | List, Slicing, Mutability |
+| 10 | Lists Hard Task 5 | HARD | List, Slicing, Mutability |
 
 ## Robotics challenge — ROBO-X Challenge: Lists Controller
 

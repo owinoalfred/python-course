@@ -36,16 +36,16 @@ CRUD operations are the primary database interaction primitives.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | CRUD Operations Medium Exercise 1 | MEDIUM | CRUD, INSERT, SELECT |
-| 2 | CRUD Operations Medium Exercise 2 | MEDIUM | CRUD, INSERT, SELECT |
-| 3 | CRUD Operations Medium Exercise 3 | MEDIUM | CRUD, INSERT, SELECT |
-| 4 | CRUD Operations Medium Exercise 4 | MEDIUM | CRUD, INSERT, SELECT |
-| 5 | CRUD Operations Medium Exercise 5 | MEDIUM | CRUD, INSERT, SELECT |
-| 6 | CRUD Operations Hard Exercise 1 | HARD | CRUD, INSERT, SELECT, UPDATE, DELETE |
-| 7 | CRUD Operations Hard Exercise 2 | HARD | CRUD, INSERT, SELECT, UPDATE, DELETE |
-| 8 | CRUD Operations Hard Exercise 3 | HARD | CRUD, INSERT, SELECT, UPDATE, DELETE |
-| 9 | CRUD Operations Hard Exercise 4 | HARD | CRUD, INSERT, SELECT, UPDATE, DELETE |
-| 10 | CRUD Operations Hard Exercise 5 | HARD | CRUD, INSERT, SELECT, UPDATE, DELETE |
+| 1 | CRUD Operations Medium Task 1 | MEDIUM | CRUD, INSERT, SELECT |
+| 2 | CRUD Operations Medium Task 2 | MEDIUM | CRUD, INSERT, SELECT |
+| 3 | CRUD Operations Medium Task 3 | MEDIUM | CRUD, INSERT, SELECT |
+| 4 | CRUD Operations Medium Task 4 | MEDIUM | CRUD, INSERT, SELECT |
+| 5 | CRUD Operations Medium Task 5 | MEDIUM | CRUD, INSERT, SELECT |
+| 6 | CRUD Operations Hard Task 1 | HARD | CRUD, INSERT, SELECT, UPDATE, DELETE |
+| 7 | CRUD Operations Hard Task 2 | HARD | CRUD, INSERT, SELECT, UPDATE, DELETE |
+| 8 | CRUD Operations Hard Task 3 | HARD | CRUD, INSERT, SELECT, UPDATE, DELETE |
+| 9 | CRUD Operations Hard Task 4 | HARD | CRUD, INSERT, SELECT, UPDATE, DELETE |
+| 10 | CRUD Operations Hard Task 5 | HARD | CRUD, INSERT, SELECT, UPDATE, DELETE |
 
 ## Robotics challenge — ROBO-X Challenge: CRUD Operations Controller
 

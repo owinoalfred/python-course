@@ -36,16 +36,16 @@ finally blocks guarantee resource cleanup regardless of execution success or err
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Exception Handling Medium Exercise 1 | MEDIUM | try, except, finally |
-| 2 | Exception Handling Medium Exercise 2 | MEDIUM | try, except, finally |
-| 3 | Exception Handling Medium Exercise 3 | MEDIUM | try, except, finally |
-| 4 | Exception Handling Medium Exercise 4 | MEDIUM | try, except, finally |
-| 5 | Exception Handling Medium Exercise 5 | MEDIUM | try, except, finally |
-| 6 | Exception Handling Hard Exercise 1 | HARD | try, except, finally, else |
-| 7 | Exception Handling Hard Exercise 2 | HARD | try, except, finally, else |
-| 8 | Exception Handling Hard Exercise 3 | HARD | try, except, finally, else |
-| 9 | Exception Handling Hard Exercise 4 | HARD | try, except, finally, else |
-| 10 | Exception Handling Hard Exercise 5 | HARD | try, except, finally, else |
+| 1 | Exception Handling Medium Task 1 | MEDIUM | try, except, finally |
+| 2 | Exception Handling Medium Task 2 | MEDIUM | try, except, finally |
+| 3 | Exception Handling Medium Task 3 | MEDIUM | try, except, finally |
+| 4 | Exception Handling Medium Task 4 | MEDIUM | try, except, finally |
+| 5 | Exception Handling Medium Task 5 | MEDIUM | try, except, finally |
+| 6 | Exception Handling Hard Task 1 | HARD | try, except, finally, else |
+| 7 | Exception Handling Hard Task 2 | HARD | try, except, finally, else |
+| 8 | Exception Handling Hard Task 3 | HARD | try, except, finally, else |
+| 9 | Exception Handling Hard Task 4 | HARD | try, except, finally, else |
+| 10 | Exception Handling Hard Task 5 | HARD | try, except, finally, else |
 
 ## Robotics challenge — ROBO-X Challenge: Exception Handling Controller
 

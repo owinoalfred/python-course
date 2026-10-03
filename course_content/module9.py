@@ -164,7 +164,7 @@ TOPICS = [
         objectives=["Organize code into src/ package layout.", "Configure pyproject.toml with setuptools build-backend.", "Build installable wheels."],
         prerequisites=["Topic 9.6 Code Style"], domain="robotics-as-a-service platform", concepts=["Project Structure", "pyproject.toml", "Packaging", "Wheels"],
         code_snippets={
-            "syntax": "# pyproject.toml structure:\n[build-system]\nrequires = [\"setuptools>=61.0\"]\nbuild-backend = \"setuptools.build_meta\"",
+            "syntax": "# pyproject.toml configuration structure:\n# [build-system]\n# requires = [\"setuptools>=61.0\"]\n# build-backend = \"setuptools.build_meta\"",
             "basic": "def check_src_layout(root_dir):\n    from pathlib import Path\n    return (Path(root_dir) / 'src').exists()",
             "intermediate": "def generate_pyproject_toml(project_name, version):\n    return f'''[build-system]\nrequires = [\"setuptools>=61.0\"]\nbuild-backend = \"setuptools.build_meta\"\n\n[project]\nname = \"{project_name}\"\nversion = \"{version}\"\n'''",
             "advanced": "def is_valid_package_name(name):\n    import re\n    return bool(re.match(r'^[a-zA-Z0-9_-]+$', name))",

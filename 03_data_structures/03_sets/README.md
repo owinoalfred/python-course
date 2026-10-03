@@ -36,16 +36,16 @@ Sets provide O(1) membership testing and set-theoretic mathematical operations.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Sets Medium Exercise 1 | MEDIUM | Set, Uniqueness, Set Operations |
-| 2 | Sets Medium Exercise 2 | MEDIUM | Set, Uniqueness, Set Operations |
-| 3 | Sets Medium Exercise 3 | MEDIUM | Set, Uniqueness, Set Operations |
-| 4 | Sets Medium Exercise 4 | MEDIUM | Set, Uniqueness, Set Operations |
-| 5 | Sets Medium Exercise 5 | MEDIUM | Set, Uniqueness, Set Operations |
-| 6 | Sets Hard Exercise 1 | HARD | Set, Uniqueness, Set Operations |
-| 7 | Sets Hard Exercise 2 | HARD | Set, Uniqueness, Set Operations |
-| 8 | Sets Hard Exercise 3 | HARD | Set, Uniqueness, Set Operations |
-| 9 | Sets Hard Exercise 4 | HARD | Set, Uniqueness, Set Operations |
-| 10 | Sets Hard Exercise 5 | HARD | Set, Uniqueness, Set Operations |
+| 1 | Sets Medium Task 1 | MEDIUM | Set, Uniqueness, Set Operations |
+| 2 | Sets Medium Task 2 | MEDIUM | Set, Uniqueness, Set Operations |
+| 3 | Sets Medium Task 3 | MEDIUM | Set, Uniqueness, Set Operations |
+| 4 | Sets Medium Task 4 | MEDIUM | Set, Uniqueness, Set Operations |
+| 5 | Sets Medium Task 5 | MEDIUM | Set, Uniqueness, Set Operations |
+| 6 | Sets Hard Task 1 | HARD | Set, Uniqueness, Set Operations |
+| 7 | Sets Hard Task 2 | HARD | Set, Uniqueness, Set Operations |
+| 8 | Sets Hard Task 3 | HARD | Set, Uniqueness, Set Operations |
+| 9 | Sets Hard Task 4 | HARD | Set, Uniqueness, Set Operations |
+| 10 | Sets Hard Task 5 | HARD | Set, Uniqueness, Set Operations |
 
 ## Robotics challenge — ROBO-X Challenge: Sets Controller
 

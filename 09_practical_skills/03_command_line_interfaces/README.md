@@ -36,16 +36,16 @@ Command-line interfaces allow automation and configuration of python tools.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Command-Line Interfaces Medium Exercise 1 | MEDIUM | argparse, CLI, Subcommands |
-| 2 | Command-Line Interfaces Medium Exercise 2 | MEDIUM | argparse, CLI, Subcommands |
-| 3 | Command-Line Interfaces Medium Exercise 3 | MEDIUM | argparse, CLI, Subcommands |
-| 4 | Command-Line Interfaces Medium Exercise 4 | MEDIUM | argparse, CLI, Subcommands |
-| 5 | Command-Line Interfaces Medium Exercise 5 | MEDIUM | argparse, CLI, Subcommands |
-| 6 | Command-Line Interfaces Hard Exercise 1 | HARD | argparse, CLI, Subcommands |
-| 7 | Command-Line Interfaces Hard Exercise 2 | HARD | argparse, CLI, Subcommands |
-| 8 | Command-Line Interfaces Hard Exercise 3 | HARD | argparse, CLI, Subcommands |
-| 9 | Command-Line Interfaces Hard Exercise 4 | HARD | argparse, CLI, Subcommands |
-| 10 | Command-Line Interfaces Hard Exercise 5 | HARD | argparse, CLI, Subcommands |
+| 1 | Command-Line Interfaces Medium Task 1 | MEDIUM | argparse, CLI, Subcommands |
+| 2 | Command-Line Interfaces Medium Task 2 | MEDIUM | argparse, CLI, Subcommands |
+| 3 | Command-Line Interfaces Medium Task 3 | MEDIUM | argparse, CLI, Subcommands |
+| 4 | Command-Line Interfaces Medium Task 4 | MEDIUM | argparse, CLI, Subcommands |
+| 5 | Command-Line Interfaces Medium Task 5 | MEDIUM | argparse, CLI, Subcommands |
+| 6 | Command-Line Interfaces Hard Task 1 | HARD | argparse, CLI, Subcommands |
+| 7 | Command-Line Interfaces Hard Task 2 | HARD | argparse, CLI, Subcommands |
+| 8 | Command-Line Interfaces Hard Task 3 | HARD | argparse, CLI, Subcommands |
+| 9 | Command-Line Interfaces Hard Task 4 | HARD | argparse, CLI, Subcommands |
+| 10 | Command-Line Interfaces Hard Task 5 | HARD | argparse, CLI, Subcommands |
 
 ## Robotics challenge — ROBO-X Challenge: Command-Line Interfaces Controller
 

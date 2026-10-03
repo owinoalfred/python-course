@@ -36,16 +36,16 @@ Scripts automate command-line workflows and system operations.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Writing and Running Your First Scripts Medium Exercise 1 | MEDIUM | Scripts, sys.argv, sys.exit |
-| 2 | Writing and Running Your First Scripts Medium Exercise 2 | MEDIUM | Scripts, sys.argv, sys.exit |
-| 3 | Writing and Running Your First Scripts Medium Exercise 3 | MEDIUM | Scripts, sys.argv, sys.exit |
-| 4 | Writing and Running Your First Scripts Medium Exercise 4 | MEDIUM | Scripts, sys.argv, sys.exit |
-| 5 | Writing and Running Your First Scripts Medium Exercise 5 | MEDIUM | Scripts, sys.argv, sys.exit |
-| 6 | Writing and Running Your First Scripts Hard Exercise 1 | HARD | Scripts, sys.argv, sys.exit |
-| 7 | Writing and Running Your First Scripts Hard Exercise 2 | HARD | Scripts, sys.argv, sys.exit |
-| 8 | Writing and Running Your First Scripts Hard Exercise 3 | HARD | Scripts, sys.argv, sys.exit |
-| 9 | Writing and Running Your First Scripts Hard Exercise 4 | HARD | Scripts, sys.argv, sys.exit |
-| 10 | Writing and Running Your First Scripts Hard Exercise 5 | HARD | Scripts, sys.argv, sys.exit |
+| 1 | Writing and Running Your First Scripts Medium Task 1 | MEDIUM | Scripts, sys.argv, sys.exit |
+| 2 | Writing and Running Your First Scripts Medium Task 2 | MEDIUM | Scripts, sys.argv, sys.exit |
+| 3 | Writing and Running Your First Scripts Medium Task 3 | MEDIUM | Scripts, sys.argv, sys.exit |
+| 4 | Writing and Running Your First Scripts Medium Task 4 | MEDIUM | Scripts, sys.argv, sys.exit |
+| 5 | Writing and Running Your First Scripts Medium Task 5 | MEDIUM | Scripts, sys.argv, sys.exit |
+| 6 | Writing and Running Your First Scripts Hard Task 1 | HARD | Scripts, sys.argv, sys.exit |
+| 7 | Writing and Running Your First Scripts Hard Task 2 | HARD | Scripts, sys.argv, sys.exit |
+| 8 | Writing and Running Your First Scripts Hard Task 3 | HARD | Scripts, sys.argv, sys.exit |
+| 9 | Writing and Running Your First Scripts Hard Task 4 | HARD | Scripts, sys.argv, sys.exit |
+| 10 | Writing and Running Your First Scripts Hard Task 5 | HARD | Scripts, sys.argv, sys.exit |
 
 ## Robotics challenge — ROBO-X Challenge: Writing and Running Your First Scripts Controller
 

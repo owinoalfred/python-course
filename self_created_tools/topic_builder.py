@@ -139,13 +139,31 @@ def make_topic_data(
         ]
     }
 
+    # Medium exercise descriptions per topic
+    med_descriptions = [
+        f"Design a multi-step data processing function `solve_m1` that applies core concepts of {title} to validate raw inputs.",
+        f"Implement `solve_m2` to transform complex structured records using {title} in {domain}.",
+        f"Develop `solve_m3` to filter boundary states and sanitize inputs using {title}.",
+        f"Construct `solve_m4` to perform multi-variable aggregation using {title}.",
+        f"Build `solve_m5` to compute statistical metrics and state summaries using {title}."
+    ]
+
+    # Hard exercise descriptions per topic
+    hard_descriptions = [
+        f"Build an advanced algorithmic solver `solve_h1` that handles recursive, nested, or edge-case conditions using {title}.",
+        f"Implement `solve_h2` to construct a fault-tolerant state manager or parser using {title}.",
+        f"Develop `solve_h3` to solve a high-performance filtering or search algorithm using {title}.",
+        f"Design `solve_h4` to handle multi-threaded, asynchronous, or structured data transformations using {title}.",
+        f"Construct `solve_h5` to build a production-grade component or pipeline using {title} with comprehensive assertions."
+    ]
+
     # Build 5 MEDIUM + 5 HARD exercises
     exercises_list = []
     solutions_list = []
 
     for i in range(1, 6):
         ex_num = i
-        ex_title = f"{title} Medium Exercise {i}"
+        ex_title = f"{title} Medium Task {i}"
         ex_code = code_snippets.get(f"m{i}_code", f"def solve_m{i}(data):\n    return data")
         ex_test = code_snippets.get(f"m{i}_test", f"assert solve_m{i}([1, 2]) == [1, 2]")
 
@@ -153,34 +171,34 @@ def make_topic_data(
             number=ex_num,
             title=ex_title,
             difficulty="MEDIUM",
-            learning_objectives=[f"Apply {title} to solve a multi-step problem."],
-            concepts_tested=concepts[:3],
-            problem_statement=f"Implement a function that processes data using {title} concepts.",
-            requirements=[f"Must use {title} correctly.", "Must handle valid and edge-case inputs."],
-            constraints=["Do not use external third-party libraries unless specified."],
-            input_description="List or dict of raw input values.",
-            expected_output="Processed output matching problem constraints.",
-            example_input="[10, 20, 30]",
-            example_output="[10, 20, 30]",
-            edge_cases=["Empty input structure.", "None values.", "Boundary numerical values."],
-            hints=["Break down the problem into smaller steps.", "Check edge cases first."],
-            success_criteria=["Function returns expected results and passes all assertions."],
-            optional_extension="Optimize for memory efficiency."
+            learning_objectives=[f"Apply {title} to solve multi-step problems in {domain}."],
+            concepts_tested=concepts[:3] if len(concepts)>=3 else concepts,
+            problem_statement=med_descriptions[i-1],
+            requirements=[f"Must use {title} correctly.", "Must handle valid and edge-case inputs.", "Must maintain code readability and follow PEP 8."],
+            constraints=["Do not use external third-party libraries unless specified.", "Execution must complete efficiently without infinite loops."],
+            input_description="Structured input payload (list, dict, string, or numerical values).",
+            expected_output="Validated or processed output matching task specifications.",
+            example_input="Sample raw input payload.",
+            example_output="Expected output matching problem specification.",
+            edge_cases=["Empty input structures ([], {}, '').", "None and null values.", "Boundary numerical values and unexpected types."],
+            hints=["Break down the problem into smaller logical steps.", "Check edge cases and input bounds first."],
+            success_criteria=["Function returns correct result on all test cases.", "Passes edge-case assertion verifications."],
+            optional_extension="Optimize for memory efficiency and add explicit type annotations."
         ))
 
         solutions_list.append(solution(
             number=ex_num,
             code=ex_code,
-            explanation=f"This solution demonstrates {title} by iterating and transforming inputs.",
+            explanation=f"Reference implementation for {ex_title}. Demonstrates {title} by validating and transforming inputs.",
             complexity="Time Complexity: O(N), Space Complexity: O(1)",
-            edge_cases="Handles empty lists and None values safely.",
-            alternative_approaches="Could also be implemented using generator expressions.",
+            edge_cases="Handles empty structures and invalid types safely.",
+            alternative_approaches="Could be refactored using functional primitives or generator expressions.",
             testing=ex_test
         ))
 
     for i in range(1, 6):
         ex_num = i + 5
-        ex_title = f"{title} Hard Exercise {i}"
+        ex_title = f"{title} Hard Task {i}"
         ex_code = code_snippets.get(f"h{i}_code", f"def solve_h{i}(data):\n    if not data:\n        return []\n    return [x for x in data if x is not None]")
         ex_test = code_snippets.get(f"h{i}_test", f"assert solve_h{i}([1, None, 2]) == [1, 2]")
 
@@ -188,28 +206,28 @@ def make_topic_data(
             number=ex_num,
             title=ex_title,
             difficulty="HARD",
-            learning_objectives=[f"Design a robust, fault-tolerant algorithm using {title}."],
+            learning_objectives=[f"Design robust, fault-tolerant algorithms using {title} in {domain}."],
             concepts_tested=concepts,
-            problem_statement=f"Build an advanced data processor using {title} with error handling and validation.",
-            requirements=["Must satisfy strict constraints.", "Must pass edge-case verification."],
-            constraints=["Time complexity must be O(N) or better."],
-            input_description="Complex nested structure or stream.",
-            expected_output="Validated and transformed output data.",
-            example_input="[1, None, 3, 4]",
-            example_output="[1, 3, 4]",
-            edge_cases=["Malformed input.", "Large dataset scale.", "Type mismatch."],
-            hints=["Use input validation early.", "Consider exception handling."],
-            success_criteria=["Handles error states gracefully and produces correct output."],
-            optional_extension="Add comprehensive type hints and docstrings."
+            problem_statement=hard_descriptions[i-1],
+            requirements=["Must satisfy strict performance and safety constraints.", "Must pass edge-case verification and error state handling.", "Must adhere to production code style standards."],
+            constraints=["Time complexity must be optimal O(N) or better.", "Must handle invalid inputs without uncaught exceptions."],
+            input_description="Complex or nested input structure, stream, or schema.",
+            expected_output="Validated, transformed, and error-handled output dataset.",
+            example_input="Sample complex input payload with potential edge cases.",
+            example_output="Validated and sanitized output payload.",
+            edge_cases=["Malformed input structures.", "Large dataset scale.", "Type mismatches and missing keys."],
+            hints=["Validate inputs early before processing.", "Use proper error handling or defensive conditions."],
+            success_criteria=["Handles error states gracefully.", "Passes all verification assertions."],
+            optional_extension="Add comprehensive docstrings, type hints, and logging."
         ))
 
         solutions_list.append(solution(
             number=ex_num,
             code=ex_code,
-            explanation=f"Advanced solution applying {title} with safety assertions.",
+            explanation=f"Advanced reference solution for {ex_title}. Demonstrates robust application of {title}.",
             complexity="Time Complexity: O(N), Space Complexity: O(N)",
-            edge_cases="Validates input types and ignores malformed elements.",
-            alternative_approaches="Can use imperative filtering loops.",
+            edge_cases="Validates input types and safely handles malformed or missing elements.",
+            alternative_approaches="Can be implemented using declarative or object-oriented design patterns.",
             testing=ex_test
         ))
 

@@ -36,16 +36,16 @@ Systematic debugging skills reduce mean time to resolution.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Debugging Techniques Medium Exercise 1 | MEDIUM | pdb, breakpoint(), Inspection |
-| 2 | Debugging Techniques Medium Exercise 2 | MEDIUM | pdb, breakpoint(), Inspection |
-| 3 | Debugging Techniques Medium Exercise 3 | MEDIUM | pdb, breakpoint(), Inspection |
-| 4 | Debugging Techniques Medium Exercise 4 | MEDIUM | pdb, breakpoint(), Inspection |
-| 5 | Debugging Techniques Medium Exercise 5 | MEDIUM | pdb, breakpoint(), Inspection |
-| 6 | Debugging Techniques Hard Exercise 1 | HARD | pdb, breakpoint(), Inspection |
-| 7 | Debugging Techniques Hard Exercise 2 | HARD | pdb, breakpoint(), Inspection |
-| 8 | Debugging Techniques Hard Exercise 3 | HARD | pdb, breakpoint(), Inspection |
-| 9 | Debugging Techniques Hard Exercise 4 | HARD | pdb, breakpoint(), Inspection |
-| 10 | Debugging Techniques Hard Exercise 5 | HARD | pdb, breakpoint(), Inspection |
+| 1 | Debugging Techniques Medium Task 1 | MEDIUM | pdb, breakpoint(), Inspection |
+| 2 | Debugging Techniques Medium Task 2 | MEDIUM | pdb, breakpoint(), Inspection |
+| 3 | Debugging Techniques Medium Task 3 | MEDIUM | pdb, breakpoint(), Inspection |
+| 4 | Debugging Techniques Medium Task 4 | MEDIUM | pdb, breakpoint(), Inspection |
+| 5 | Debugging Techniques Medium Task 5 | MEDIUM | pdb, breakpoint(), Inspection |
+| 6 | Debugging Techniques Hard Task 1 | HARD | pdb, breakpoint(), Inspection |
+| 7 | Debugging Techniques Hard Task 2 | HARD | pdb, breakpoint(), Inspection |
+| 8 | Debugging Techniques Hard Task 3 | HARD | pdb, breakpoint(), Inspection |
+| 9 | Debugging Techniques Hard Task 4 | HARD | pdb, breakpoint(), Inspection |
+| 10 | Debugging Techniques Hard Task 5 | HARD | pdb, breakpoint(), Inspection |
 
 ## Robotics challenge — ROBO-X Challenge: Debugging Techniques Controller
 

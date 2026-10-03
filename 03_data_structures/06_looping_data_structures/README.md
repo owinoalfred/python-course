@@ -36,16 +36,16 @@ Selecting the correct iteration pattern prevents bugs and optimizes runtime.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Looping Through Data Structures Medium Exercise 1 | MEDIUM | Iteration Patterns, Nested Iteration |
-| 2 | Looping Through Data Structures Medium Exercise 2 | MEDIUM | Iteration Patterns, Nested Iteration |
-| 3 | Looping Through Data Structures Medium Exercise 3 | MEDIUM | Iteration Patterns, Nested Iteration |
-| 4 | Looping Through Data Structures Medium Exercise 4 | MEDIUM | Iteration Patterns, Nested Iteration |
-| 5 | Looping Through Data Structures Medium Exercise 5 | MEDIUM | Iteration Patterns, Nested Iteration |
-| 6 | Looping Through Data Structures Hard Exercise 1 | HARD | Iteration Patterns, Nested Iteration |
-| 7 | Looping Through Data Structures Hard Exercise 2 | HARD | Iteration Patterns, Nested Iteration |
-| 8 | Looping Through Data Structures Hard Exercise 3 | HARD | Iteration Patterns, Nested Iteration |
-| 9 | Looping Through Data Structures Hard Exercise 4 | HARD | Iteration Patterns, Nested Iteration |
-| 10 | Looping Through Data Structures Hard Exercise 5 | HARD | Iteration Patterns, Nested Iteration |
+| 1 | Looping Through Data Structures Medium Task 1 | MEDIUM | Iteration Patterns, Nested Iteration |
+| 2 | Looping Through Data Structures Medium Task 2 | MEDIUM | Iteration Patterns, Nested Iteration |
+| 3 | Looping Through Data Structures Medium Task 3 | MEDIUM | Iteration Patterns, Nested Iteration |
+| 4 | Looping Through Data Structures Medium Task 4 | MEDIUM | Iteration Patterns, Nested Iteration |
+| 5 | Looping Through Data Structures Medium Task 5 | MEDIUM | Iteration Patterns, Nested Iteration |
+| 6 | Looping Through Data Structures Hard Task 1 | HARD | Iteration Patterns, Nested Iteration |
+| 7 | Looping Through Data Structures Hard Task 2 | HARD | Iteration Patterns, Nested Iteration |
+| 8 | Looping Through Data Structures Hard Task 3 | HARD | Iteration Patterns, Nested Iteration |
+| 9 | Looping Through Data Structures Hard Task 4 | HARD | Iteration Patterns, Nested Iteration |
+| 10 | Looping Through Data Structures Hard Task 5 | HARD | Iteration Patterns, Nested Iteration |
 
 ## Robotics challenge — ROBO-X Challenge: Looping Through Data Structures Controller
 

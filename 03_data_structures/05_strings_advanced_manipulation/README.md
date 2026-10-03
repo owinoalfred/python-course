@@ -36,16 +36,16 @@ Strings process text protocols, logs, serializations, and command inputs.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Strings and Advanced String Manipulation Medium Exercise 1 | MEDIUM | Strings, Immutability, Log Parsing |
-| 2 | Strings and Advanced String Manipulation Medium Exercise 2 | MEDIUM | Strings, Immutability, Log Parsing |
-| 3 | Strings and Advanced String Manipulation Medium Exercise 3 | MEDIUM | Strings, Immutability, Log Parsing |
-| 4 | Strings and Advanced String Manipulation Medium Exercise 4 | MEDIUM | Strings, Immutability, Log Parsing |
-| 5 | Strings and Advanced String Manipulation Medium Exercise 5 | MEDIUM | Strings, Immutability, Log Parsing |
-| 6 | Strings and Advanced String Manipulation Hard Exercise 1 | HARD | Strings, Immutability, Log Parsing |
-| 7 | Strings and Advanced String Manipulation Hard Exercise 2 | HARD | Strings, Immutability, Log Parsing |
-| 8 | Strings and Advanced String Manipulation Hard Exercise 3 | HARD | Strings, Immutability, Log Parsing |
-| 9 | Strings and Advanced String Manipulation Hard Exercise 4 | HARD | Strings, Immutability, Log Parsing |
-| 10 | Strings and Advanced String Manipulation Hard Exercise 5 | HARD | Strings, Immutability, Log Parsing |
+| 1 | Strings and Advanced String Manipulation Medium Task 1 | MEDIUM | Strings, Immutability, Log Parsing |
+| 2 | Strings and Advanced String Manipulation Medium Task 2 | MEDIUM | Strings, Immutability, Log Parsing |
+| 3 | Strings and Advanced String Manipulation Medium Task 3 | MEDIUM | Strings, Immutability, Log Parsing |
+| 4 | Strings and Advanced String Manipulation Medium Task 4 | MEDIUM | Strings, Immutability, Log Parsing |
+| 5 | Strings and Advanced String Manipulation Medium Task 5 | MEDIUM | Strings, Immutability, Log Parsing |
+| 6 | Strings and Advanced String Manipulation Hard Task 1 | HARD | Strings, Immutability, Log Parsing |
+| 7 | Strings and Advanced String Manipulation Hard Task 2 | HARD | Strings, Immutability, Log Parsing |
+| 8 | Strings and Advanced String Manipulation Hard Task 3 | HARD | Strings, Immutability, Log Parsing |
+| 9 | Strings and Advanced String Manipulation Hard Task 4 | HARD | Strings, Immutability, Log Parsing |
+| 10 | Strings and Advanced String Manipulation Hard Task 5 | HARD | Strings, Immutability, Log Parsing |
 
 ## Robotics challenge — ROBO-X Challenge: Strings and Advanced String Manipulation Controller
 

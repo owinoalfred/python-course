@@ -36,16 +36,16 @@ A reliable development environment is essential for professional software engine
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Installing Python, IDEs, and the REPL Medium Exercise 1 | MEDIUM | Environment, REPL, Jupyter |
-| 2 | Installing Python, IDEs, and the REPL Medium Exercise 2 | MEDIUM | Environment, REPL, Jupyter |
-| 3 | Installing Python, IDEs, and the REPL Medium Exercise 3 | MEDIUM | Environment, REPL, Jupyter |
-| 4 | Installing Python, IDEs, and the REPL Medium Exercise 4 | MEDIUM | Environment, REPL, Jupyter |
-| 5 | Installing Python, IDEs, and the REPL Medium Exercise 5 | MEDIUM | Environment, REPL, Jupyter |
-| 6 | Installing Python, IDEs, and the REPL Hard Exercise 1 | HARD | Environment, REPL, Jupyter |
-| 7 | Installing Python, IDEs, and the REPL Hard Exercise 2 | HARD | Environment, REPL, Jupyter |
-| 8 | Installing Python, IDEs, and the REPL Hard Exercise 3 | HARD | Environment, REPL, Jupyter |
-| 9 | Installing Python, IDEs, and the REPL Hard Exercise 4 | HARD | Environment, REPL, Jupyter |
-| 10 | Installing Python, IDEs, and the REPL Hard Exercise 5 | HARD | Environment, REPL, Jupyter |
+| 1 | Installing Python, IDEs, and the REPL Medium Task 1 | MEDIUM | Environment, REPL, Jupyter |
+| 2 | Installing Python, IDEs, and the REPL Medium Task 2 | MEDIUM | Environment, REPL, Jupyter |
+| 3 | Installing Python, IDEs, and the REPL Medium Task 3 | MEDIUM | Environment, REPL, Jupyter |
+| 4 | Installing Python, IDEs, and the REPL Medium Task 4 | MEDIUM | Environment, REPL, Jupyter |
+| 5 | Installing Python, IDEs, and the REPL Medium Task 5 | MEDIUM | Environment, REPL, Jupyter |
+| 6 | Installing Python, IDEs, and the REPL Hard Task 1 | HARD | Environment, REPL, Jupyter |
+| 7 | Installing Python, IDEs, and the REPL Hard Task 2 | HARD | Environment, REPL, Jupyter |
+| 8 | Installing Python, IDEs, and the REPL Hard Task 3 | HARD | Environment, REPL, Jupyter |
+| 9 | Installing Python, IDEs, and the REPL Hard Task 4 | HARD | Environment, REPL, Jupyter |
+| 10 | Installing Python, IDEs, and the REPL Hard Task 5 | HARD | Environment, REPL, Jupyter |
 
 ## Robotics challenge — ROBO-X Challenge: Installing Python, IDEs, and the REPL Controller
 

@@ -36,16 +36,16 @@ I/O allows software to interact with human operators and CLI environments.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Basic Input/Output Medium Exercise 1 | MEDIUM | print, f-strings, I/O |
-| 2 | Basic Input/Output Medium Exercise 2 | MEDIUM | print, f-strings, I/O |
-| 3 | Basic Input/Output Medium Exercise 3 | MEDIUM | print, f-strings, I/O |
-| 4 | Basic Input/Output Medium Exercise 4 | MEDIUM | print, f-strings, I/O |
-| 5 | Basic Input/Output Medium Exercise 5 | MEDIUM | print, f-strings, I/O |
-| 6 | Basic Input/Output Hard Exercise 1 | HARD | print, f-strings, I/O |
-| 7 | Basic Input/Output Hard Exercise 2 | HARD | print, f-strings, I/O |
-| 8 | Basic Input/Output Hard Exercise 3 | HARD | print, f-strings, I/O |
-| 9 | Basic Input/Output Hard Exercise 4 | HARD | print, f-strings, I/O |
-| 10 | Basic Input/Output Hard Exercise 5 | HARD | print, f-strings, I/O |
+| 1 | Basic Input/Output Medium Task 1 | MEDIUM | print, f-strings, I/O |
+| 2 | Basic Input/Output Medium Task 2 | MEDIUM | print, f-strings, I/O |
+| 3 | Basic Input/Output Medium Task 3 | MEDIUM | print, f-strings, I/O |
+| 4 | Basic Input/Output Medium Task 4 | MEDIUM | print, f-strings, I/O |
+| 5 | Basic Input/Output Medium Task 5 | MEDIUM | print, f-strings, I/O |
+| 6 | Basic Input/Output Hard Task 1 | HARD | print, f-strings, I/O |
+| 7 | Basic Input/Output Hard Task 2 | HARD | print, f-strings, I/O |
+| 8 | Basic Input/Output Hard Task 3 | HARD | print, f-strings, I/O |
+| 9 | Basic Input/Output Hard Task 4 | HARD | print, f-strings, I/O |
+| 10 | Basic Input/Output Hard Task 5 | HARD | print, f-strings, I/O |
 
 ## Robotics challenge — ROBO-X Challenge: Basic Input/Output Controller
 

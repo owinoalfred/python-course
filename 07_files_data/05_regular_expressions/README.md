@@ -36,16 +36,16 @@ Regular expressions parse complex text patterns in logs and telemetry strings.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Regular Expressions Medium Exercise 1 | MEDIUM | Regex, re, Pattern Matching |
-| 2 | Regular Expressions Medium Exercise 2 | MEDIUM | Regex, re, Pattern Matching |
-| 3 | Regular Expressions Medium Exercise 3 | MEDIUM | Regex, re, Pattern Matching |
-| 4 | Regular Expressions Medium Exercise 4 | MEDIUM | Regex, re, Pattern Matching |
-| 5 | Regular Expressions Medium Exercise 5 | MEDIUM | Regex, re, Pattern Matching |
-| 6 | Regular Expressions Hard Exercise 1 | HARD | Regex, re, Pattern Matching |
-| 7 | Regular Expressions Hard Exercise 2 | HARD | Regex, re, Pattern Matching |
-| 8 | Regular Expressions Hard Exercise 3 | HARD | Regex, re, Pattern Matching |
-| 9 | Regular Expressions Hard Exercise 4 | HARD | Regex, re, Pattern Matching |
-| 10 | Regular Expressions Hard Exercise 5 | HARD | Regex, re, Pattern Matching |
+| 1 | Regular Expressions Medium Task 1 | MEDIUM | Regex, re, Pattern Matching |
+| 2 | Regular Expressions Medium Task 2 | MEDIUM | Regex, re, Pattern Matching |
+| 3 | Regular Expressions Medium Task 3 | MEDIUM | Regex, re, Pattern Matching |
+| 4 | Regular Expressions Medium Task 4 | MEDIUM | Regex, re, Pattern Matching |
+| 5 | Regular Expressions Medium Task 5 | MEDIUM | Regex, re, Pattern Matching |
+| 6 | Regular Expressions Hard Task 1 | HARD | Regex, re, Pattern Matching |
+| 7 | Regular Expressions Hard Task 2 | HARD | Regex, re, Pattern Matching |
+| 8 | Regular Expressions Hard Task 3 | HARD | Regex, re, Pattern Matching |
+| 9 | Regular Expressions Hard Task 4 | HARD | Regex, re, Pattern Matching |
+| 10 | Regular Expressions Hard Task 5 | HARD | Regex, re, Pattern Matching |
 
 ## Robotics challenge — ROBO-X Challenge: Regular Expressions Controller
 

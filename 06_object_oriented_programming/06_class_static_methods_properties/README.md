@@ -36,16 +36,16 @@ Properties and class methods offer clean factory constructors and attribute enca
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Class Methods, Static Methods, and Properties Medium Exercise 1 | MEDIUM | classmethod, staticmethod, property |
-| 2 | Class Methods, Static Methods, and Properties Medium Exercise 2 | MEDIUM | classmethod, staticmethod, property |
-| 3 | Class Methods, Static Methods, and Properties Medium Exercise 3 | MEDIUM | classmethod, staticmethod, property |
-| 4 | Class Methods, Static Methods, and Properties Medium Exercise 4 | MEDIUM | classmethod, staticmethod, property |
-| 5 | Class Methods, Static Methods, and Properties Medium Exercise 5 | MEDIUM | classmethod, staticmethod, property |
-| 6 | Class Methods, Static Methods, and Properties Hard Exercise 1 | HARD | classmethod, staticmethod, property |
-| 7 | Class Methods, Static Methods, and Properties Hard Exercise 2 | HARD | classmethod, staticmethod, property |
-| 8 | Class Methods, Static Methods, and Properties Hard Exercise 3 | HARD | classmethod, staticmethod, property |
-| 9 | Class Methods, Static Methods, and Properties Hard Exercise 4 | HARD | classmethod, staticmethod, property |
-| 10 | Class Methods, Static Methods, and Properties Hard Exercise 5 | HARD | classmethod, staticmethod, property |
+| 1 | Class Methods, Static Methods, and Properties Medium Task 1 | MEDIUM | classmethod, staticmethod, property |
+| 2 | Class Methods, Static Methods, and Properties Medium Task 2 | MEDIUM | classmethod, staticmethod, property |
+| 3 | Class Methods, Static Methods, and Properties Medium Task 3 | MEDIUM | classmethod, staticmethod, property |
+| 4 | Class Methods, Static Methods, and Properties Medium Task 4 | MEDIUM | classmethod, staticmethod, property |
+| 5 | Class Methods, Static Methods, and Properties Medium Task 5 | MEDIUM | classmethod, staticmethod, property |
+| 6 | Class Methods, Static Methods, and Properties Hard Task 1 | HARD | classmethod, staticmethod, property |
+| 7 | Class Methods, Static Methods, and Properties Hard Task 2 | HARD | classmethod, staticmethod, property |
+| 8 | Class Methods, Static Methods, and Properties Hard Task 3 | HARD | classmethod, staticmethod, property |
+| 9 | Class Methods, Static Methods, and Properties Hard Task 4 | HARD | classmethod, staticmethod, property |
+| 10 | Class Methods, Static Methods, and Properties Hard Task 5 | HARD | classmethod, staticmethod, property |
 
 ## Robotics challenge — ROBO-X Challenge: Class Methods, Static Methods, and Properties Controller
 

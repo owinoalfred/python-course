@@ -36,16 +36,16 @@ Accurate timestamping and timezone handling are critical for robot telemetry str
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Dates and Times Medium Exercise 1 | MEDIUM | datetime, timedelta, ISO-8601 |
-| 2 | Dates and Times Medium Exercise 2 | MEDIUM | datetime, timedelta, ISO-8601 |
-| 3 | Dates and Times Medium Exercise 3 | MEDIUM | datetime, timedelta, ISO-8601 |
-| 4 | Dates and Times Medium Exercise 4 | MEDIUM | datetime, timedelta, ISO-8601 |
-| 5 | Dates and Times Medium Exercise 5 | MEDIUM | datetime, timedelta, ISO-8601 |
-| 6 | Dates and Times Hard Exercise 1 | HARD | datetime, timedelta, ISO-8601, Timezone |
-| 7 | Dates and Times Hard Exercise 2 | HARD | datetime, timedelta, ISO-8601, Timezone |
-| 8 | Dates and Times Hard Exercise 3 | HARD | datetime, timedelta, ISO-8601, Timezone |
-| 9 | Dates and Times Hard Exercise 4 | HARD | datetime, timedelta, ISO-8601, Timezone |
-| 10 | Dates and Times Hard Exercise 5 | HARD | datetime, timedelta, ISO-8601, Timezone |
+| 1 | Dates and Times Medium Task 1 | MEDIUM | datetime, timedelta, ISO-8601 |
+| 2 | Dates and Times Medium Task 2 | MEDIUM | datetime, timedelta, ISO-8601 |
+| 3 | Dates and Times Medium Task 3 | MEDIUM | datetime, timedelta, ISO-8601 |
+| 4 | Dates and Times Medium Task 4 | MEDIUM | datetime, timedelta, ISO-8601 |
+| 5 | Dates and Times Medium Task 5 | MEDIUM | datetime, timedelta, ISO-8601 |
+| 6 | Dates and Times Hard Task 1 | HARD | datetime, timedelta, ISO-8601, Timezone |
+| 7 | Dates and Times Hard Task 2 | HARD | datetime, timedelta, ISO-8601, Timezone |
+| 8 | Dates and Times Hard Task 3 | HARD | datetime, timedelta, ISO-8601, Timezone |
+| 9 | Dates and Times Hard Task 4 | HARD | datetime, timedelta, ISO-8601, Timezone |
+| 10 | Dates and Times Hard Task 5 | HARD | datetime, timedelta, ISO-8601, Timezone |
 
 ## Robotics challenge — ROBO-X Challenge: Dates and Times Controller
 

@@ -36,16 +36,16 @@ Establishing clean database schemas prevents data corruption and type mismatch.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Connecting to Databases and Creating Tables Medium Exercise 1 | MEDIUM | Connection, Cursor, Schema |
-| 2 | Connecting to Databases and Creating Tables Medium Exercise 2 | MEDIUM | Connection, Cursor, Schema |
-| 3 | Connecting to Databases and Creating Tables Medium Exercise 3 | MEDIUM | Connection, Cursor, Schema |
-| 4 | Connecting to Databases and Creating Tables Medium Exercise 4 | MEDIUM | Connection, Cursor, Schema |
-| 5 | Connecting to Databases and Creating Tables Medium Exercise 5 | MEDIUM | Connection, Cursor, Schema |
-| 6 | Connecting to Databases and Creating Tables Hard Exercise 1 | HARD | Connection, Cursor, Schema, Foreign Keys |
-| 7 | Connecting to Databases and Creating Tables Hard Exercise 2 | HARD | Connection, Cursor, Schema, Foreign Keys |
-| 8 | Connecting to Databases and Creating Tables Hard Exercise 3 | HARD | Connection, Cursor, Schema, Foreign Keys |
-| 9 | Connecting to Databases and Creating Tables Hard Exercise 4 | HARD | Connection, Cursor, Schema, Foreign Keys |
-| 10 | Connecting to Databases and Creating Tables Hard Exercise 5 | HARD | Connection, Cursor, Schema, Foreign Keys |
+| 1 | Connecting to Databases and Creating Tables Medium Task 1 | MEDIUM | Connection, Cursor, Schema |
+| 2 | Connecting to Databases and Creating Tables Medium Task 2 | MEDIUM | Connection, Cursor, Schema |
+| 3 | Connecting to Databases and Creating Tables Medium Task 3 | MEDIUM | Connection, Cursor, Schema |
+| 4 | Connecting to Databases and Creating Tables Medium Task 4 | MEDIUM | Connection, Cursor, Schema |
+| 5 | Connecting to Databases and Creating Tables Medium Task 5 | MEDIUM | Connection, Cursor, Schema |
+| 6 | Connecting to Databases and Creating Tables Hard Task 1 | HARD | Connection, Cursor, Schema, Foreign Keys |
+| 7 | Connecting to Databases and Creating Tables Hard Task 2 | HARD | Connection, Cursor, Schema, Foreign Keys |
+| 8 | Connecting to Databases and Creating Tables Hard Task 3 | HARD | Connection, Cursor, Schema, Foreign Keys |
+| 9 | Connecting to Databases and Creating Tables Hard Task 4 | HARD | Connection, Cursor, Schema, Foreign Keys |
+| 10 | Connecting to Databases and Creating Tables Hard Task 5 | HARD | Connection, Cursor, Schema, Foreign Keys |
 
 ## Robotics challenge — ROBO-X Challenge: Connecting to Databases and Creating Tables Controller
 

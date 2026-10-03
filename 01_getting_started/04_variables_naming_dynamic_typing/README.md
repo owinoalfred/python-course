@@ -36,16 +36,16 @@ Variables in Python are reference labels bound to objects, not memory containers
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Variables, Naming Conventions, and Dynamic Typing Medium Exercise 1 | MEDIUM | Name Binding, snake_case, Dynamic Typing |
-| 2 | Variables, Naming Conventions, and Dynamic Typing Medium Exercise 2 | MEDIUM | Name Binding, snake_case, Dynamic Typing |
-| 3 | Variables, Naming Conventions, and Dynamic Typing Medium Exercise 3 | MEDIUM | Name Binding, snake_case, Dynamic Typing |
-| 4 | Variables, Naming Conventions, and Dynamic Typing Medium Exercise 4 | MEDIUM | Name Binding, snake_case, Dynamic Typing |
-| 5 | Variables, Naming Conventions, and Dynamic Typing Medium Exercise 5 | MEDIUM | Name Binding, snake_case, Dynamic Typing |
-| 6 | Variables, Naming Conventions, and Dynamic Typing Hard Exercise 1 | HARD | Name Binding, snake_case, Dynamic Typing |
-| 7 | Variables, Naming Conventions, and Dynamic Typing Hard Exercise 2 | HARD | Name Binding, snake_case, Dynamic Typing |
-| 8 | Variables, Naming Conventions, and Dynamic Typing Hard Exercise 3 | HARD | Name Binding, snake_case, Dynamic Typing |
-| 9 | Variables, Naming Conventions, and Dynamic Typing Hard Exercise 4 | HARD | Name Binding, snake_case, Dynamic Typing |
-| 10 | Variables, Naming Conventions, and Dynamic Typing Hard Exercise 5 | HARD | Name Binding, snake_case, Dynamic Typing |
+| 1 | Variables, Naming Conventions, and Dynamic Typing Medium Task 1 | MEDIUM | Name Binding, snake_case, Dynamic Typing |
+| 2 | Variables, Naming Conventions, and Dynamic Typing Medium Task 2 | MEDIUM | Name Binding, snake_case, Dynamic Typing |
+| 3 | Variables, Naming Conventions, and Dynamic Typing Medium Task 3 | MEDIUM | Name Binding, snake_case, Dynamic Typing |
+| 4 | Variables, Naming Conventions, and Dynamic Typing Medium Task 4 | MEDIUM | Name Binding, snake_case, Dynamic Typing |
+| 5 | Variables, Naming Conventions, and Dynamic Typing Medium Task 5 | MEDIUM | Name Binding, snake_case, Dynamic Typing |
+| 6 | Variables, Naming Conventions, and Dynamic Typing Hard Task 1 | HARD | Name Binding, snake_case, Dynamic Typing |
+| 7 | Variables, Naming Conventions, and Dynamic Typing Hard Task 2 | HARD | Name Binding, snake_case, Dynamic Typing |
+| 8 | Variables, Naming Conventions, and Dynamic Typing Hard Task 3 | HARD | Name Binding, snake_case, Dynamic Typing |
+| 9 | Variables, Naming Conventions, and Dynamic Typing Hard Task 4 | HARD | Name Binding, snake_case, Dynamic Typing |
+| 10 | Variables, Naming Conventions, and Dynamic Typing Hard Task 5 | HARD | Name Binding, snake_case, Dynamic Typing |
 
 ## Robotics challenge — ROBO-X Challenge: Variables, Naming Conventions, and Dynamic Typing Controller
 

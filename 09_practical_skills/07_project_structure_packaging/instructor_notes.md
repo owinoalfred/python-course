@@ -1,0 +1,50 @@
+# Instructor notes — 9.7 Project Structure and Packaging
+
+**Module 9: Intermediate Practical Skills and Best Practices**
+
+## Teaching objectives
+
+- Teach core concept of Project Structure and Packaging.
+- Guide students through edge cases.
+
+## Likely misconceptions
+
+| Misconception | Correction to drive home |
+| --- | --- |
+| Thinking Project Structure and Packaging is static | Clarify dynamic runtime execution in CPython |
+
+## Difficult concepts
+
+- Understanding edge-case handling in Project Structure and Packaging.
+
+## Demonstration suggestions
+
+- Live demo of Project Structure and Packaging in python REPL.
+
+## Discussion questions
+
+- Why is Project Structure and Packaging preferred in this context?
+
+## Common student errors
+
+| Error | Why it happens | Intervention |
+| --- | --- | --- |
+| IndexError / KeyError in Project Structure and Packaging | Accessing elements without bounds check | Add length check or try-except |
+
+## Recommended pacing
+
+2 hours lecture + 3 hours lab exercises.
+
+## Extension activities
+
+- Advanced optimization profiling.
+
+## Assessment advice
+
+Evaluate against rubric.md.
+
+## Differentiation
+
+**If students are struggling:** Provide starter template.
+
+**If students finish early:** Have student write custom benchmark script.

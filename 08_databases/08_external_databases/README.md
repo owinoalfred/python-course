@@ -36,16 +36,16 @@ Production fleet deployments connect to external scaled databases like PostgreSQ
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | External Databases Medium Exercise 1 | MEDIUM | PostgreSQL, MySQL, psycopg2 |
-| 2 | External Databases Medium Exercise 2 | MEDIUM | PostgreSQL, MySQL, psycopg2 |
-| 3 | External Databases Medium Exercise 3 | MEDIUM | PostgreSQL, MySQL, psycopg2 |
-| 4 | External Databases Medium Exercise 4 | MEDIUM | PostgreSQL, MySQL, psycopg2 |
-| 5 | External Databases Medium Exercise 5 | MEDIUM | PostgreSQL, MySQL, psycopg2 |
-| 6 | External Databases Hard Exercise 1 | HARD | PostgreSQL, MySQL, psycopg2, Connection Pooling |
-| 7 | External Databases Hard Exercise 2 | HARD | PostgreSQL, MySQL, psycopg2, Connection Pooling |
-| 8 | External Databases Hard Exercise 3 | HARD | PostgreSQL, MySQL, psycopg2, Connection Pooling |
-| 9 | External Databases Hard Exercise 4 | HARD | PostgreSQL, MySQL, psycopg2, Connection Pooling |
-| 10 | External Databases Hard Exercise 5 | HARD | PostgreSQL, MySQL, psycopg2, Connection Pooling |
+| 1 | External Databases Medium Task 1 | MEDIUM | PostgreSQL, MySQL, psycopg2 |
+| 2 | External Databases Medium Task 2 | MEDIUM | PostgreSQL, MySQL, psycopg2 |
+| 3 | External Databases Medium Task 3 | MEDIUM | PostgreSQL, MySQL, psycopg2 |
+| 4 | External Databases Medium Task 4 | MEDIUM | PostgreSQL, MySQL, psycopg2 |
+| 5 | External Databases Medium Task 5 | MEDIUM | PostgreSQL, MySQL, psycopg2 |
+| 6 | External Databases Hard Task 1 | HARD | PostgreSQL, MySQL, psycopg2, Connection Pooling |
+| 7 | External Databases Hard Task 2 | HARD | PostgreSQL, MySQL, psycopg2, Connection Pooling |
+| 8 | External Databases Hard Task 3 | HARD | PostgreSQL, MySQL, psycopg2, Connection Pooling |
+| 9 | External Databases Hard Task 4 | HARD | PostgreSQL, MySQL, psycopg2, Connection Pooling |
+| 10 | External Databases Hard Task 5 | HARD | PostgreSQL, MySQL, psycopg2, Connection Pooling |
 
 ## Robotics challenge — ROBO-X Challenge: External Databases Controller
 
