@@ -1,0 +1,31 @@
+# ---------------------------------------------------------------------------
+# Python Master Course - runtime requirements
+#
+# Install into a virtual environment:
+#     python -m venv .venv
+#     source .venv/bin/activate          (Windows: .venv\Scripts\activate)
+#     python -m pip install -r requirements.txt
+# ---------------------------------------------------------------------------
+
+# --- Core scientific + data stack (Modules 7-9, capstones) -----------------
+numpy>=1.26
+pandas>=2.1
+matplotlib>=3.8
+seaborn>=0.13
+
+# --- Databases (Module 8) ---------------------------------------------------
+SQLAlchemy>=2.0
+
+# --- HTTP / APIs (Module 9, capstone 05) ------------------------------------
+requests>=2.31
+
+# --- Notebooks ---------------------------------------------------------------
+notebook>=7.0
+jupyterlab>=4.0
+nbformat>=5.9
+nbclient>=0.9
+ipykernel>=6.29
+
+# --- Validation + testing tooling -------------------------------------------
+pytest>=8.0
+PyYAML>=6.0
