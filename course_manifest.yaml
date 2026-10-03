@@ -13,7 +13,7 @@ course:
   project: ROBO-X
   python_requires: ">=3.10"
   module_count: 9
-  topic_count: 13
+  topic_count: 65
 
 required_notebooks:
     - "lesson.ipynb"
@@ -324,56 +324,1148 @@ modules:
     title: "Core Data Structures"
     directory: "03_data_structures"
     robo_x_milestone: "M3"
-    topic_count: 0
+    topic_count: 8
     topics:
+      - id: "3.1"
+        title: "Lists"
+        directory: "03_data_structures/01_lists"
+        prerequisites: ["Module"]
+        learning_objectives: ["Manipulate", "Master", "Understand"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "03_data_structures/01_lists/lesson.ipynb"
+          - "03_data_structures/01_lists/mini_project.ipynb"
+          - "03_data_structures/01_lists/exercises.ipynb"
+          - "03_data_structures/01_lists/research.ipynb"
+          - "03_data_structures/01_lists/quiz.ipynb"
+          - "03_data_structures/01_lists/robotics_challenge.ipynb"
+          - "03_data_structures/01_lists/solution.ipynb"
+        mini_project: "03_data_structures/01_lists/mini_project.ipynb"
+        research_task: "How does the performance of Lists scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Lists Controller"
+        robo_x_milestone: "M3"
+      - id: "3.2"
+        title: "Tuples"
+        directory: "03_data_structures/02_tuples"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Work", "Master", "Use"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "03_data_structures/02_tuples/lesson.ipynb"
+          - "03_data_structures/02_tuples/mini_project.ipynb"
+          - "03_data_structures/02_tuples/exercises.ipynb"
+          - "03_data_structures/02_tuples/research.ipynb"
+          - "03_data_structures/02_tuples/quiz.ipynb"
+          - "03_data_structures/02_tuples/robotics_challenge.ipynb"
+          - "03_data_structures/02_tuples/solution.ipynb"
+        mini_project: "03_data_structures/02_tuples/mini_project.ipynb"
+        research_task: "How does the performance of Tuples scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Tuples Controller"
+        robo_x_milestone: "M3"
+      - id: "3.3"
+        title: "Sets"
+        directory: "03_data_structures/03_sets"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Perform", "Deduplicate", "Understand"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "03_data_structures/03_sets/lesson.ipynb"
+          - "03_data_structures/03_sets/mini_project.ipynb"
+          - "03_data_structures/03_sets/exercises.ipynb"
+          - "03_data_structures/03_sets/research.ipynb"
+          - "03_data_structures/03_sets/quiz.ipynb"
+          - "03_data_structures/03_sets/robotics_challenge.ipynb"
+          - "03_data_structures/03_sets/solution.ipynb"
+        mini_project: "03_data_structures/03_sets/mini_project.ipynb"
+        research_task: "How does the performance of Sets scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Sets Controller"
+        robo_x_milestone: "M3"
+      - id: "3.4"
+        title: "Dictionaries"
+        directory: "03_data_structures/04_dictionaries"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Work", "Use", "Understand"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "03_data_structures/04_dictionaries/lesson.ipynb"
+          - "03_data_structures/04_dictionaries/mini_project.ipynb"
+          - "03_data_structures/04_dictionaries/exercises.ipynb"
+          - "03_data_structures/04_dictionaries/research.ipynb"
+          - "03_data_structures/04_dictionaries/quiz.ipynb"
+          - "03_data_structures/04_dictionaries/robotics_challenge.ipynb"
+          - "03_data_structures/04_dictionaries/solution.ipynb"
+        mini_project: "03_data_structures/04_dictionaries/mini_project.ipynb"
+        research_task: "How does the performance of Dictionaries scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Dictionaries Controller"
+        robo_x_milestone: "M3"
+      - id: "3.5"
+        title: "Strings and Advanced String Manipulation"
+        directory: "03_data_structures/05_strings_advanced_manipulation"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Master", "Parse", "Format"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "03_data_structures/05_strings_advanced_manipulation/lesson.ipynb"
+          - "03_data_structures/05_strings_advanced_manipulation/mini_project.ipynb"
+          - "03_data_structures/05_strings_advanced_manipulation/exercises.ipynb"
+          - "03_data_structures/05_strings_advanced_manipulation/research.ipynb"
+          - "03_data_structures/05_strings_advanced_manipulation/quiz.ipynb"
+          - "03_data_structures/05_strings_advanced_manipulation/robotics_challenge.ipynb"
+          - "03_data_structures/05_strings_advanced_manipulation/solution.ipynb"
+        mini_project: "03_data_structures/05_strings_advanced_manipulation/mini_project.ipynb"
+        research_task: "How does the performance of Strings and Advanced String Manipulation scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Strings and Advanced String Manipulation Controller"
+        robo_x_milestone: "M3"
+      - id: "3.6"
+        title: "Looping Through Data Structures"
+        directory: "03_data_structures/06_looping_data_structures"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Iterate", "Safely", "Process"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "03_data_structures/06_looping_data_structures/lesson.ipynb"
+          - "03_data_structures/06_looping_data_structures/mini_project.ipynb"
+          - "03_data_structures/06_looping_data_structures/exercises.ipynb"
+          - "03_data_structures/06_looping_data_structures/research.ipynb"
+          - "03_data_structures/06_looping_data_structures/quiz.ipynb"
+          - "03_data_structures/06_looping_data_structures/robotics_challenge.ipynb"
+          - "03_data_structures/06_looping_data_structures/solution.ipynb"
+        mini_project: "03_data_structures/06_looping_data_structures/mini_project.ipynb"
+        research_task: "How does the performance of Looping Through Data Structures scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Looping Through Data Structures Controller"
+        robo_x_milestone: "M3"
+      - id: "3.7"
+        title: "Comprehensions"
+        directory: "03_data_structures/07_comprehensions"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Write", "Construct", "Understand"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "03_data_structures/07_comprehensions/lesson.ipynb"
+          - "03_data_structures/07_comprehensions/mini_project.ipynb"
+          - "03_data_structures/07_comprehensions/exercises.ipynb"
+          - "03_data_structures/07_comprehensions/research.ipynb"
+          - "03_data_structures/07_comprehensions/quiz.ipynb"
+          - "03_data_structures/07_comprehensions/robotics_challenge.ipynb"
+          - "03_data_structures/07_comprehensions/solution.ipynb"
+        mini_project: "03_data_structures/07_comprehensions/mini_project.ipynb"
+        research_task: "How does the performance of Comprehensions scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Comprehensions Controller"
+        robo_x_milestone: "M3"
+      - id: "3.8"
+        title: "collections Module"
+        directory: "03_data_structures/08_collections_module"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Count", "Handle", "Use"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "03_data_structures/08_collections_module/lesson.ipynb"
+          - "03_data_structures/08_collections_module/mini_project.ipynb"
+          - "03_data_structures/08_collections_module/exercises.ipynb"
+          - "03_data_structures/08_collections_module/research.ipynb"
+          - "03_data_structures/08_collections_module/quiz.ipynb"
+          - "03_data_structures/08_collections_module/robotics_challenge.ipynb"
+          - "03_data_structures/08_collections_module/solution.ipynb"
+        mini_project: "03_data_structures/08_collections_module/mini_project.ipynb"
+        research_task: "How does the performance of collections Module scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: collections Module Controller"
+        robo_x_milestone: "M3"
 
   - number: 4
     id: M4
     title: "Functions and Modules"
     directory: "04_functions_modules"
     robo_x_milestone: "M4"
-    topic_count: 0
+    topic_count: 9
     topics:
+      - id: "4.1"
+        title: "Defining and Calling Functions"
+        directory: "04_functions_modules/01_defining_calling_functions"
+        prerequisites: ["Module"]
+        learning_objectives: ["Define", "Invoke", "Write"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "04_functions_modules/01_defining_calling_functions/lesson.ipynb"
+          - "04_functions_modules/01_defining_calling_functions/mini_project.ipynb"
+          - "04_functions_modules/01_defining_calling_functions/exercises.ipynb"
+          - "04_functions_modules/01_defining_calling_functions/research.ipynb"
+          - "04_functions_modules/01_defining_calling_functions/quiz.ipynb"
+          - "04_functions_modules/01_defining_calling_functions/robotics_challenge.ipynb"
+          - "04_functions_modules/01_defining_calling_functions/solution.ipynb"
+        mini_project: "04_functions_modules/01_defining_calling_functions/mini_project.ipynb"
+        research_task: "How does the performance of Defining and Calling Functions scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Defining and Calling Functions Controller"
+        robo_x_milestone: "M4"
+      - id: "4.2"
+        title: "Parameters and Arguments"
+        directory: "04_functions_modules/02_parameters_and_arguments"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Use", "Unpack", "Enforce"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "04_functions_modules/02_parameters_and_arguments/lesson.ipynb"
+          - "04_functions_modules/02_parameters_and_arguments/mini_project.ipynb"
+          - "04_functions_modules/02_parameters_and_arguments/exercises.ipynb"
+          - "04_functions_modules/02_parameters_and_arguments/research.ipynb"
+          - "04_functions_modules/02_parameters_and_arguments/quiz.ipynb"
+          - "04_functions_modules/02_parameters_and_arguments/robotics_challenge.ipynb"
+          - "04_functions_modules/02_parameters_and_arguments/solution.ipynb"
+        mini_project: "04_functions_modules/02_parameters_and_arguments/mini_project.ipynb"
+        research_task: "How does the performance of Parameters and Arguments scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Parameters and Arguments Controller"
+        robo_x_milestone: "M4"
+      - id: "4.3"
+        title: "Return Values, Scope, and Closures"
+        directory: "04_functions_modules/03_return_values_scope_closures"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Understand", "Use", "Construct"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "04_functions_modules/03_return_values_scope_closures/lesson.ipynb"
+          - "04_functions_modules/03_return_values_scope_closures/mini_project.ipynb"
+          - "04_functions_modules/03_return_values_scope_closures/exercises.ipynb"
+          - "04_functions_modules/03_return_values_scope_closures/research.ipynb"
+          - "04_functions_modules/03_return_values_scope_closures/quiz.ipynb"
+          - "04_functions_modules/03_return_values_scope_closures/robotics_challenge.ipynb"
+          - "04_functions_modules/03_return_values_scope_closures/solution.ipynb"
+        mini_project: "04_functions_modules/03_return_values_scope_closures/mini_project.ipynb"
+        research_task: "How does the performance of Return Values, Scope, and Closures scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Return Values, Scope, and Closures Controller"
+        robo_x_milestone: "M4"
+      - id: "4.4"
+        title: "Advanced Function Concepts"
+        directory: "04_functions_modules/04_advanced_function_concepts"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Pass", "Implement", "Write"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "04_functions_modules/04_advanced_function_concepts/lesson.ipynb"
+          - "04_functions_modules/04_advanced_function_concepts/mini_project.ipynb"
+          - "04_functions_modules/04_advanced_function_concepts/exercises.ipynb"
+          - "04_functions_modules/04_advanced_function_concepts/research.ipynb"
+          - "04_functions_modules/04_advanced_function_concepts/quiz.ipynb"
+          - "04_functions_modules/04_advanced_function_concepts/robotics_challenge.ipynb"
+          - "04_functions_modules/04_advanced_function_concepts/solution.ipynb"
+        mini_project: "04_functions_modules/04_advanced_function_concepts/mini_project.ipynb"
+        research_task: "How does the performance of Advanced Function Concepts scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Advanced Function Concepts Controller"
+        robo_x_milestone: "M4"
+      - id: "4.5"
+        title: "Lambda Functions and Functional Tools"
+        directory: "04_functions_modules/05_lambda_functional_tools"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Write", "Transform", "Aggregate"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "04_functions_modules/05_lambda_functional_tools/lesson.ipynb"
+          - "04_functions_modules/05_lambda_functional_tools/mini_project.ipynb"
+          - "04_functions_modules/05_lambda_functional_tools/exercises.ipynb"
+          - "04_functions_modules/05_lambda_functional_tools/research.ipynb"
+          - "04_functions_modules/05_lambda_functional_tools/quiz.ipynb"
+          - "04_functions_modules/05_lambda_functional_tools/robotics_challenge.ipynb"
+          - "04_functions_modules/05_lambda_functional_tools/solution.ipynb"
+        mini_project: "04_functions_modules/05_lambda_functional_tools/mini_project.ipynb"
+        research_task: "How does the performance of Lambda Functions and Functional Tools scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Lambda Functions and Functional Tools Controller"
+        robo_x_milestone: "M4"
+      - id: "4.6"
+        title: "Generators"
+        directory: "04_functions_modules/06_generators"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Write", "Understand", "Use"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "04_functions_modules/06_generators/lesson.ipynb"
+          - "04_functions_modules/06_generators/mini_project.ipynb"
+          - "04_functions_modules/06_generators/exercises.ipynb"
+          - "04_functions_modules/06_generators/research.ipynb"
+          - "04_functions_modules/06_generators/quiz.ipynb"
+          - "04_functions_modules/06_generators/robotics_challenge.ipynb"
+          - "04_functions_modules/06_generators/solution.ipynb"
+        mini_project: "04_functions_modules/06_generators/mini_project.ipynb"
+        research_task: "How does the performance of Generators scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Generators Controller"
+        robo_x_milestone: "M4"
+      - id: "4.7"
+        title: "Decorators"
+        directory: "04_functions_modules/07_decorators"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Write", "Preserve", "Pass"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "04_functions_modules/07_decorators/lesson.ipynb"
+          - "04_functions_modules/07_decorators/mini_project.ipynb"
+          - "04_functions_modules/07_decorators/exercises.ipynb"
+          - "04_functions_modules/07_decorators/research.ipynb"
+          - "04_functions_modules/07_decorators/quiz.ipynb"
+          - "04_functions_modules/07_decorators/robotics_challenge.ipynb"
+          - "04_functions_modules/07_decorators/solution.ipynb"
+        mini_project: "04_functions_modules/07_decorators/mini_project.ipynb"
+        research_task: "How does the performance of Decorators scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Decorators Controller"
+        robo_x_milestone: "M4"
+      - id: "4.8"
+        title: "Modules and Packages"
+        directory: "04_functions_modules/08_modules_and_packages"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Import", "Structure", "Understand"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "04_functions_modules/08_modules_and_packages/lesson.ipynb"
+          - "04_functions_modules/08_modules_and_packages/mini_project.ipynb"
+          - "04_functions_modules/08_modules_and_packages/exercises.ipynb"
+          - "04_functions_modules/08_modules_and_packages/research.ipynb"
+          - "04_functions_modules/08_modules_and_packages/quiz.ipynb"
+          - "04_functions_modules/08_modules_and_packages/robotics_challenge.ipynb"
+          - "04_functions_modules/08_modules_and_packages/solution.ipynb"
+        mini_project: "04_functions_modules/08_modules_and_packages/mini_project.ipynb"
+        research_task: "How does the performance of Modules and Packages scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Modules and Packages Controller"
+        robo_x_milestone: "M4"
+      - id: "4.9"
+        title: "Virtual Environments and Package Management"
+        directory: "04_functions_modules/09_virtual_environments_packaging"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Create", "Manage", "Configure"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "04_functions_modules/09_virtual_environments_packaging/lesson.ipynb"
+          - "04_functions_modules/09_virtual_environments_packaging/mini_project.ipynb"
+          - "04_functions_modules/09_virtual_environments_packaging/exercises.ipynb"
+          - "04_functions_modules/09_virtual_environments_packaging/research.ipynb"
+          - "04_functions_modules/09_virtual_environments_packaging/quiz.ipynb"
+          - "04_functions_modules/09_virtual_environments_packaging/robotics_challenge.ipynb"
+          - "04_functions_modules/09_virtual_environments_packaging/solution.ipynb"
+        mini_project: "04_functions_modules/09_virtual_environments_packaging/mini_project.ipynb"
+        research_task: "How does the performance of Virtual Environments and Package Management scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Virtual Environments and Package Management Controller"
+        robo_x_milestone: "M4"
 
   - number: 5
     id: M5
     title: "Error Handling and Debugging"
     directory: "05_error_handling_debugging"
     robo_x_milestone: "M5"
-    topic_count: 0
+    topic_count: 6
     topics:
+      - id: "5.1"
+        title: "Exceptions vs Errors"
+        directory: "05_error_handling_debugging/01_exceptions_vs_errors"
+        prerequisites: ["Module"]
+        learning_objectives: ["Identify", "Understand", "Parse"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "05_error_handling_debugging/01_exceptions_vs_errors/lesson.ipynb"
+          - "05_error_handling_debugging/01_exceptions_vs_errors/mini_project.ipynb"
+          - "05_error_handling_debugging/01_exceptions_vs_errors/exercises.ipynb"
+          - "05_error_handling_debugging/01_exceptions_vs_errors/research.ipynb"
+          - "05_error_handling_debugging/01_exceptions_vs_errors/quiz.ipynb"
+          - "05_error_handling_debugging/01_exceptions_vs_errors/robotics_challenge.ipynb"
+          - "05_error_handling_debugging/01_exceptions_vs_errors/solution.ipynb"
+        mini_project: "05_error_handling_debugging/01_exceptions_vs_errors/mini_project.ipynb"
+        research_task: "How does the performance of Exceptions vs Errors scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Exceptions vs Errors Controller"
+        robo_x_milestone: "M5"
+      - id: "5.2"
+        title: "Exception Handling"
+        directory: "05_error_handling_debugging/02_exception_handling"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Construct", "Avoid", "Clean"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "05_error_handling_debugging/02_exception_handling/lesson.ipynb"
+          - "05_error_handling_debugging/02_exception_handling/mini_project.ipynb"
+          - "05_error_handling_debugging/02_exception_handling/exercises.ipynb"
+          - "05_error_handling_debugging/02_exception_handling/research.ipynb"
+          - "05_error_handling_debugging/02_exception_handling/quiz.ipynb"
+          - "05_error_handling_debugging/02_exception_handling/robotics_challenge.ipynb"
+          - "05_error_handling_debugging/02_exception_handling/solution.ipynb"
+        mini_project: "05_error_handling_debugging/02_exception_handling/mini_project.ipynb"
+        research_task: "How does the performance of Exception Handling scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Exception Handling Controller"
+        robo_x_milestone: "M5"
+      - id: "5.3"
+        title: "Advanced Exception Handling"
+        directory: "05_error_handling_debugging/03_advanced_exception_handling"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Work", "Suppress", "Chain"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "05_error_handling_debugging/03_advanced_exception_handling/lesson.ipynb"
+          - "05_error_handling_debugging/03_advanced_exception_handling/mini_project.ipynb"
+          - "05_error_handling_debugging/03_advanced_exception_handling/exercises.ipynb"
+          - "05_error_handling_debugging/03_advanced_exception_handling/research.ipynb"
+          - "05_error_handling_debugging/03_advanced_exception_handling/quiz.ipynb"
+          - "05_error_handling_debugging/03_advanced_exception_handling/robotics_challenge.ipynb"
+          - "05_error_handling_debugging/03_advanced_exception_handling/solution.ipynb"
+        mini_project: "05_error_handling_debugging/03_advanced_exception_handling/mini_project.ipynb"
+        research_task: "How does the performance of Advanced Exception Handling scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Advanced Exception Handling Controller"
+        robo_x_milestone: "M5"
+      - id: "5.4"
+        title: "Custom Exceptions"
+        directory: "05_error_handling_debugging/04_custom_exceptions"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Derive", "Design", "Attach"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "05_error_handling_debugging/04_custom_exceptions/lesson.ipynb"
+          - "05_error_handling_debugging/04_custom_exceptions/mini_project.ipynb"
+          - "05_error_handling_debugging/04_custom_exceptions/exercises.ipynb"
+          - "05_error_handling_debugging/04_custom_exceptions/research.ipynb"
+          - "05_error_handling_debugging/04_custom_exceptions/quiz.ipynb"
+          - "05_error_handling_debugging/04_custom_exceptions/robotics_challenge.ipynb"
+          - "05_error_handling_debugging/04_custom_exceptions/solution.ipynb"
+        mini_project: "05_error_handling_debugging/04_custom_exceptions/mini_project.ipynb"
+        research_task: "How does the performance of Custom Exceptions scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Custom Exceptions Controller"
+        robo_x_milestone: "M5"
+      - id: "5.5"
+        title: "Debugging Techniques"
+        directory: "05_error_handling_debugging/05_debugging_techniques"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Use", "Inspect", "Perform"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "05_error_handling_debugging/05_debugging_techniques/lesson.ipynb"
+          - "05_error_handling_debugging/05_debugging_techniques/mini_project.ipynb"
+          - "05_error_handling_debugging/05_debugging_techniques/exercises.ipynb"
+          - "05_error_handling_debugging/05_debugging_techniques/research.ipynb"
+          - "05_error_handling_debugging/05_debugging_techniques/quiz.ipynb"
+          - "05_error_handling_debugging/05_debugging_techniques/robotics_challenge.ipynb"
+          - "05_error_handling_debugging/05_debugging_techniques/solution.ipynb"
+        mini_project: "05_error_handling_debugging/05_debugging_techniques/mini_project.ipynb"
+        research_task: "How does the performance of Debugging Techniques scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Debugging Techniques Controller"
+        robo_x_milestone: "M5"
+      - id: "5.6"
+        title: "Introduction to Logging"
+        directory: "05_error_handling_debugging/06_intro_to_logging"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Configure", "Use", "Add"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "05_error_handling_debugging/06_intro_to_logging/lesson.ipynb"
+          - "05_error_handling_debugging/06_intro_to_logging/mini_project.ipynb"
+          - "05_error_handling_debugging/06_intro_to_logging/exercises.ipynb"
+          - "05_error_handling_debugging/06_intro_to_logging/research.ipynb"
+          - "05_error_handling_debugging/06_intro_to_logging/quiz.ipynb"
+          - "05_error_handling_debugging/06_intro_to_logging/robotics_challenge.ipynb"
+          - "05_error_handling_debugging/06_intro_to_logging/solution.ipynb"
+        mini_project: "05_error_handling_debugging/06_intro_to_logging/mini_project.ipynb"
+        research_task: "How does the performance of Introduction to Logging scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Introduction to Logging Controller"
+        robo_x_milestone: "M5"
 
   - number: 6
     id: M6
     title: "Object-Oriented Programming"
     directory: "06_object_oriented_programming"
     robo_x_milestone: "M6"
-    topic_count: 0
+    topic_count: 8
     topics:
+      - id: "6.1"
+        title: "OOP Fundamentals"
+        directory: "06_object_oriented_programming/01_oop_fundamentals"
+        prerequisites: ["Module"]
+        learning_objectives: ["Define", "Instantiate", "Manage"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "06_object_oriented_programming/01_oop_fundamentals/lesson.ipynb"
+          - "06_object_oriented_programming/01_oop_fundamentals/mini_project.ipynb"
+          - "06_object_oriented_programming/01_oop_fundamentals/exercises.ipynb"
+          - "06_object_oriented_programming/01_oop_fundamentals/research.ipynb"
+          - "06_object_oriented_programming/01_oop_fundamentals/quiz.ipynb"
+          - "06_object_oriented_programming/01_oop_fundamentals/robotics_challenge.ipynb"
+          - "06_object_oriented_programming/01_oop_fundamentals/solution.ipynb"
+        mini_project: "06_object_oriented_programming/01_oop_fundamentals/mini_project.ipynb"
+        research_task: "How does the performance of OOP Fundamentals scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: OOP Fundamentals Controller"
+        robo_x_milestone: "M6"
+      - id: "6.2"
+        title: "Encapsulation and Access Modifiers"
+        directory: "06_object_oriented_programming/02_encapsulation_access_modifiers"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Use", "Understand", "Enforce"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "06_object_oriented_programming/02_encapsulation_access_modifiers/lesson.ipynb"
+          - "06_object_oriented_programming/02_encapsulation_access_modifiers/mini_project.ipynb"
+          - "06_object_oriented_programming/02_encapsulation_access_modifiers/exercises.ipynb"
+          - "06_object_oriented_programming/02_encapsulation_access_modifiers/research.ipynb"
+          - "06_object_oriented_programming/02_encapsulation_access_modifiers/quiz.ipynb"
+          - "06_object_oriented_programming/02_encapsulation_access_modifiers/robotics_challenge.ipynb"
+          - "06_object_oriented_programming/02_encapsulation_access_modifiers/solution.ipynb"
+        mini_project: "06_object_oriented_programming/02_encapsulation_access_modifiers/mini_project.ipynb"
+        research_task: "How does the performance of Encapsulation and Access Modifiers scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Encapsulation and Access Modifiers Controller"
+        robo_x_milestone: "M6"
+      - id: "6.3"
+        title: "Inheritance"
+        directory: "06_object_oriented_programming/03_inheritance"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Subclass", "Use", "Understand"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "06_object_oriented_programming/03_inheritance/lesson.ipynb"
+          - "06_object_oriented_programming/03_inheritance/mini_project.ipynb"
+          - "06_object_oriented_programming/03_inheritance/exercises.ipynb"
+          - "06_object_oriented_programming/03_inheritance/research.ipynb"
+          - "06_object_oriented_programming/03_inheritance/quiz.ipynb"
+          - "06_object_oriented_programming/03_inheritance/robotics_challenge.ipynb"
+          - "06_object_oriented_programming/03_inheritance/solution.ipynb"
+        mini_project: "06_object_oriented_programming/03_inheritance/mini_project.ipynb"
+        research_task: "How does the performance of Inheritance scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Inheritance Controller"
+        robo_x_milestone: "M6"
+      - id: "6.4"
+        title: "Polymorphism and Abstraction"
+        directory: "06_object_oriented_programming/04_polymorphism_abstraction"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Override", "Use", "Define"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "06_object_oriented_programming/04_polymorphism_abstraction/lesson.ipynb"
+          - "06_object_oriented_programming/04_polymorphism_abstraction/mini_project.ipynb"
+          - "06_object_oriented_programming/04_polymorphism_abstraction/exercises.ipynb"
+          - "06_object_oriented_programming/04_polymorphism_abstraction/research.ipynb"
+          - "06_object_oriented_programming/04_polymorphism_abstraction/quiz.ipynb"
+          - "06_object_oriented_programming/04_polymorphism_abstraction/robotics_challenge.ipynb"
+          - "06_object_oriented_programming/04_polymorphism_abstraction/solution.ipynb"
+        mini_project: "06_object_oriented_programming/04_polymorphism_abstraction/mini_project.ipynb"
+        research_task: "How does the performance of Polymorphism and Abstraction scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Polymorphism and Abstraction Controller"
+        robo_x_milestone: "M6"
+      - id: "6.5"
+        title: "Special / Magic Methods"
+        directory: "06_object_oriented_programming/05_special_magic_methods"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Implement", "Overload", "Implement"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "06_object_oriented_programming/05_special_magic_methods/lesson.ipynb"
+          - "06_object_oriented_programming/05_special_magic_methods/mini_project.ipynb"
+          - "06_object_oriented_programming/05_special_magic_methods/exercises.ipynb"
+          - "06_object_oriented_programming/05_special_magic_methods/research.ipynb"
+          - "06_object_oriented_programming/05_special_magic_methods/quiz.ipynb"
+          - "06_object_oriented_programming/05_special_magic_methods/robotics_challenge.ipynb"
+          - "06_object_oriented_programming/05_special_magic_methods/solution.ipynb"
+        mini_project: "06_object_oriented_programming/05_special_magic_methods/mini_project.ipynb"
+        research_task: "How does the performance of Special / Magic Methods scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Special / Magic Methods Controller"
+        robo_x_milestone: "M6"
+      - id: "6.6"
+        title: "Class Methods, Static Methods, and Properties"
+        directory: "06_object_oriented_programming/06_class_static_methods_properties"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Create", "Define", "Manage"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "06_object_oriented_programming/06_class_static_methods_properties/lesson.ipynb"
+          - "06_object_oriented_programming/06_class_static_methods_properties/mini_project.ipynb"
+          - "06_object_oriented_programming/06_class_static_methods_properties/exercises.ipynb"
+          - "06_object_oriented_programming/06_class_static_methods_properties/research.ipynb"
+          - "06_object_oriented_programming/06_class_static_methods_properties/quiz.ipynb"
+          - "06_object_oriented_programming/06_class_static_methods_properties/robotics_challenge.ipynb"
+          - "06_object_oriented_programming/06_class_static_methods_properties/solution.ipynb"
+        mini_project: "06_object_oriented_programming/06_class_static_methods_properties/mini_project.ipynb"
+        research_task: "How does the performance of Class Methods, Static Methods, and Properties scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Class Methods, Static Methods, and Properties Controller"
+        robo_x_milestone: "M6"
+      - id: "6.7"
+        title: "Composition vs Inheritance"
+        directory: "06_object_oriented_programming/07_composition_vs_inheritance"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Distinguish", "Compose", "Refactor"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "06_object_oriented_programming/07_composition_vs_inheritance/lesson.ipynb"
+          - "06_object_oriented_programming/07_composition_vs_inheritance/mini_project.ipynb"
+          - "06_object_oriented_programming/07_composition_vs_inheritance/exercises.ipynb"
+          - "06_object_oriented_programming/07_composition_vs_inheritance/research.ipynb"
+          - "06_object_oriented_programming/07_composition_vs_inheritance/quiz.ipynb"
+          - "06_object_oriented_programming/07_composition_vs_inheritance/robotics_challenge.ipynb"
+          - "06_object_oriented_programming/07_composition_vs_inheritance/solution.ipynb"
+        mini_project: "06_object_oriented_programming/07_composition_vs_inheritance/mini_project.ipynb"
+        research_task: "How does the performance of Composition vs Inheritance scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Composition vs Inheritance Controller"
+        robo_x_milestone: "M6"
+      - id: "6.8"
+        title: "SOLID Design Principles"
+        directory: "06_object_oriented_programming/08_solid_design_principles"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Apply", "Design", "Apply"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "06_object_oriented_programming/08_solid_design_principles/lesson.ipynb"
+          - "06_object_oriented_programming/08_solid_design_principles/mini_project.ipynb"
+          - "06_object_oriented_programming/08_solid_design_principles/exercises.ipynb"
+          - "06_object_oriented_programming/08_solid_design_principles/research.ipynb"
+          - "06_object_oriented_programming/08_solid_design_principles/quiz.ipynb"
+          - "06_object_oriented_programming/08_solid_design_principles/robotics_challenge.ipynb"
+          - "06_object_oriented_programming/08_solid_design_principles/solution.ipynb"
+        mini_project: "06_object_oriented_programming/08_solid_design_principles/mini_project.ipynb"
+        research_task: "How does the performance of SOLID Design Principles scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: SOLID Design Principles Controller"
+        robo_x_milestone: "M6"
 
   - number: 7
     id: M7
     title: "File Handling and Working with Data"
     directory: "07_files_data"
     robo_x_milestone: "M7"
-    topic_count: 0
+    topic_count: 6
     topics:
+      - id: "7.1"
+        title: "File Operations"
+        directory: "07_files_data/01_file_operations"
+        prerequisites: ["Module"]
+        learning_objectives: ["Open", "Use", "Read"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "07_files_data/01_file_operations/lesson.ipynb"
+          - "07_files_data/01_file_operations/mini_project.ipynb"
+          - "07_files_data/01_file_operations/exercises.ipynb"
+          - "07_files_data/01_file_operations/research.ipynb"
+          - "07_files_data/01_file_operations/quiz.ipynb"
+          - "07_files_data/01_file_operations/robotics_challenge.ipynb"
+          - "07_files_data/01_file_operations/solution.ipynb"
+        mini_project: "07_files_data/01_file_operations/mini_project.ipynb"
+        research_task: "How does the performance of File Operations scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: File Operations Controller"
+        robo_x_milestone: "M7"
+      - id: "7.2"
+        title: "Working with Paths"
+        directory: "07_files_data/02_working_with_paths"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Create", "Check", "Glob"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "07_files_data/02_working_with_paths/lesson.ipynb"
+          - "07_files_data/02_working_with_paths/mini_project.ipynb"
+          - "07_files_data/02_working_with_paths/exercises.ipynb"
+          - "07_files_data/02_working_with_paths/research.ipynb"
+          - "07_files_data/02_working_with_paths/quiz.ipynb"
+          - "07_files_data/02_working_with_paths/robotics_challenge.ipynb"
+          - "07_files_data/02_working_with_paths/solution.ipynb"
+        mini_project: "07_files_data/02_working_with_paths/mini_project.ipynb"
+        research_task: "How does the performance of Working with Paths scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Working with Paths Controller"
+        robo_x_milestone: "M7"
+      - id: "7.3"
+        title: "JSON and CSV"
+        directory: "07_files_data/03_json_and_csv"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Serialize", "Read", "Handle"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "07_files_data/03_json_and_csv/lesson.ipynb"
+          - "07_files_data/03_json_and_csv/mini_project.ipynb"
+          - "07_files_data/03_json_and_csv/exercises.ipynb"
+          - "07_files_data/03_json_and_csv/research.ipynb"
+          - "07_files_data/03_json_and_csv/quiz.ipynb"
+          - "07_files_data/03_json_and_csv/robotics_challenge.ipynb"
+          - "07_files_data/03_json_and_csv/solution.ipynb"
+        mini_project: "07_files_data/03_json_and_csv/mini_project.ipynb"
+        research_task: "How does the performance of JSON and CSV scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: JSON and CSV Controller"
+        robo_x_milestone: "M7"
+      - id: "7.4"
+        title: "Error Handling in File Operations"
+        directory: "07_files_data/04_error_handling_file_operations"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Catch", "Implement", "Safely"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "07_files_data/04_error_handling_file_operations/lesson.ipynb"
+          - "07_files_data/04_error_handling_file_operations/mini_project.ipynb"
+          - "07_files_data/04_error_handling_file_operations/exercises.ipynb"
+          - "07_files_data/04_error_handling_file_operations/research.ipynb"
+          - "07_files_data/04_error_handling_file_operations/quiz.ipynb"
+          - "07_files_data/04_error_handling_file_operations/robotics_challenge.ipynb"
+          - "07_files_data/04_error_handling_file_operations/solution.ipynb"
+        mini_project: "07_files_data/04_error_handling_file_operations/mini_project.ipynb"
+        research_task: "How does the performance of Error Handling in File Operations scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Error Handling in File Operations Controller"
+        robo_x_milestone: "M7"
+      - id: "7.5"
+        title: "Regular Expressions"
+        directory: "07_files_data/05_regular_expressions"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Search", "Extract", "Replace"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "07_files_data/05_regular_expressions/lesson.ipynb"
+          - "07_files_data/05_regular_expressions/mini_project.ipynb"
+          - "07_files_data/05_regular_expressions/exercises.ipynb"
+          - "07_files_data/05_regular_expressions/research.ipynb"
+          - "07_files_data/05_regular_expressions/quiz.ipynb"
+          - "07_files_data/05_regular_expressions/robotics_challenge.ipynb"
+          - "07_files_data/05_regular_expressions/solution.ipynb"
+        mini_project: "07_files_data/05_regular_expressions/mini_project.ipynb"
+        research_task: "How does the performance of Regular Expressions scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Regular Expressions Controller"
+        robo_x_milestone: "M7"
+      - id: "7.6"
+        title: "Core Data Libraries"
+        directory: "07_files_data/06_core_data_libraries"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Process", "Manipulate", "Plot"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "07_files_data/06_core_data_libraries/lesson.ipynb"
+          - "07_files_data/06_core_data_libraries/mini_project.ipynb"
+          - "07_files_data/06_core_data_libraries/exercises.ipynb"
+          - "07_files_data/06_core_data_libraries/research.ipynb"
+          - "07_files_data/06_core_data_libraries/quiz.ipynb"
+          - "07_files_data/06_core_data_libraries/robotics_challenge.ipynb"
+          - "07_files_data/06_core_data_libraries/solution.ipynb"
+        mini_project: "07_files_data/06_core_data_libraries/mini_project.ipynb"
+        research_task: "How does the performance of Core Data Libraries scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Core Data Libraries Controller"
+        robo_x_milestone: "M7"
 
   - number: 8
     id: M8
     title: "Databases"
     directory: "08_databases"
     robo_x_milestone: "M8"
-    topic_count: 0
+    topic_count: 8
     topics:
+      - id: "8.1"
+        title: "Introduction to Databases"
+        directory: "08_databases/01_intro_to_databases"
+        prerequisites: ["Module"]
+        learning_objectives: ["Understand", "Write", "Design"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "08_databases/01_intro_to_databases/lesson.ipynb"
+          - "08_databases/01_intro_to_databases/mini_project.ipynb"
+          - "08_databases/01_intro_to_databases/exercises.ipynb"
+          - "08_databases/01_intro_to_databases/research.ipynb"
+          - "08_databases/01_intro_to_databases/quiz.ipynb"
+          - "08_databases/01_intro_to_databases/robotics_challenge.ipynb"
+          - "08_databases/01_intro_to_databases/solution.ipynb"
+        mini_project: "08_databases/01_intro_to_databases/mini_project.ipynb"
+        research_task: "How does the performance of Introduction to Databases scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Introduction to Databases Controller"
+        robo_x_milestone: "M8"
+      - id: "8.2"
+        title: "SQLite"
+        directory: "08_databases/02_sqlite"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Connect", "Execute", "Use"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "08_databases/02_sqlite/lesson.ipynb"
+          - "08_databases/02_sqlite/mini_project.ipynb"
+          - "08_databases/02_sqlite/exercises.ipynb"
+          - "08_databases/02_sqlite/research.ipynb"
+          - "08_databases/02_sqlite/quiz.ipynb"
+          - "08_databases/02_sqlite/robotics_challenge.ipynb"
+          - "08_databases/02_sqlite/solution.ipynb"
+        mini_project: "08_databases/02_sqlite/mini_project.ipynb"
+        research_task: "How does the performance of SQLite scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: SQLite Controller"
+        robo_x_milestone: "M8"
+      - id: "8.3"
+        title: "Connecting to Databases and Creating Tables"
+        directory: "08_databases/03_connecting_creating_tables"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Establish", "Use", "Define"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "08_databases/03_connecting_creating_tables/lesson.ipynb"
+          - "08_databases/03_connecting_creating_tables/mini_project.ipynb"
+          - "08_databases/03_connecting_creating_tables/exercises.ipynb"
+          - "08_databases/03_connecting_creating_tables/research.ipynb"
+          - "08_databases/03_connecting_creating_tables/quiz.ipynb"
+          - "08_databases/03_connecting_creating_tables/robotics_challenge.ipynb"
+          - "08_databases/03_connecting_creating_tables/solution.ipynb"
+        mini_project: "08_databases/03_connecting_creating_tables/mini_project.ipynb"
+        research_task: "How does the performance of Connecting to Databases and Creating Tables scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Connecting to Databases and Creating Tables Controller"
+        robo_x_milestone: "M8"
+      - id: "8.4"
+        title: "CRUD Operations"
+        directory: "08_databases/04_crud_operations"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Execute", "Fetch", "Handle"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "08_databases/04_crud_operations/lesson.ipynb"
+          - "08_databases/04_crud_operations/mini_project.ipynb"
+          - "08_databases/04_crud_operations/exercises.ipynb"
+          - "08_databases/04_crud_operations/research.ipynb"
+          - "08_databases/04_crud_operations/quiz.ipynb"
+          - "08_databases/04_crud_operations/robotics_challenge.ipynb"
+          - "08_databases/04_crud_operations/solution.ipynb"
+        mini_project: "08_databases/04_crud_operations/mini_project.ipynb"
+        research_task: "How does the performance of CRUD Operations scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: CRUD Operations Controller"
+        robo_x_milestone: "M8"
+      - id: "8.5"
+        title: "Parameterized Queries and SQL Injection"
+        directory: "08_databases/05_parameterized_queries"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Identify", "Use", "Never"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "08_databases/05_parameterized_queries/lesson.ipynb"
+          - "08_databases/05_parameterized_queries/mini_project.ipynb"
+          - "08_databases/05_parameterized_queries/exercises.ipynb"
+          - "08_databases/05_parameterized_queries/research.ipynb"
+          - "08_databases/05_parameterized_queries/quiz.ipynb"
+          - "08_databases/05_parameterized_queries/robotics_challenge.ipynb"
+          - "08_databases/05_parameterized_queries/solution.ipynb"
+        mini_project: "08_databases/05_parameterized_queries/mini_project.ipynb"
+        research_task: "How does the performance of Parameterized Queries and SQL Injection scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Parameterized Queries and SQL Injection Controller"
+        robo_x_milestone: "M8"
+      - id: "8.6"
+        title: "Transactions"
+        directory: "08_databases/06_transactions"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Understand", "Commit", "Use"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "08_databases/06_transactions/lesson.ipynb"
+          - "08_databases/06_transactions/mini_project.ipynb"
+          - "08_databases/06_transactions/exercises.ipynb"
+          - "08_databases/06_transactions/research.ipynb"
+          - "08_databases/06_transactions/quiz.ipynb"
+          - "08_databases/06_transactions/robotics_challenge.ipynb"
+          - "08_databases/06_transactions/solution.ipynb"
+        mini_project: "08_databases/06_transactions/mini_project.ipynb"
+        research_task: "How does the performance of Transactions scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Transactions Controller"
+        robo_x_milestone: "M8"
+      - id: "8.7"
+        title: "ORMs"
+        directory: "08_databases/07_orms"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Define", "Manage", "Understand"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "08_databases/07_orms/lesson.ipynb"
+          - "08_databases/07_orms/mini_project.ipynb"
+          - "08_databases/07_orms/exercises.ipynb"
+          - "08_databases/07_orms/research.ipynb"
+          - "08_databases/07_orms/quiz.ipynb"
+          - "08_databases/07_orms/robotics_challenge.ipynb"
+          - "08_databases/07_orms/solution.ipynb"
+        mini_project: "08_databases/07_orms/mini_project.ipynb"
+        research_task: "How does the performance of ORMs scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: ORMs Controller"
+        robo_x_milestone: "M8"
+      - id: "8.8"
+        title: "External Databases"
+        directory: "08_databases/08_external_databases"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Understand", "Configure", "Deploy"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "08_databases/08_external_databases/lesson.ipynb"
+          - "08_databases/08_external_databases/mini_project.ipynb"
+          - "08_databases/08_external_databases/exercises.ipynb"
+          - "08_databases/08_external_databases/research.ipynb"
+          - "08_databases/08_external_databases/quiz.ipynb"
+          - "08_databases/08_external_databases/robotics_challenge.ipynb"
+          - "08_databases/08_external_databases/solution.ipynb"
+        mini_project: "08_databases/08_external_databases/mini_project.ipynb"
+        research_task: "How does the performance of External Databases scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: External Databases Controller"
+        robo_x_milestone: "M8"
 
   - number: 9
     id: M9
     title: "Intermediate Practical Skills and Best Practices"
     directory: "09_practical_skills"
     robo_x_milestone: "M9"
-    topic_count: 0
+    topic_count: 7
     topics:
+      - id: "9.1"
+        title: "Type Hints"
+        directory: "09_practical_skills/01_type_hints"
+        prerequisites: ["Module"]
+        learning_objectives: ["Annotate", "Use", "Run"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "09_practical_skills/01_type_hints/lesson.ipynb"
+          - "09_practical_skills/01_type_hints/mini_project.ipynb"
+          - "09_practical_skills/01_type_hints/exercises.ipynb"
+          - "09_practical_skills/01_type_hints/research.ipynb"
+          - "09_practical_skills/01_type_hints/quiz.ipynb"
+          - "09_practical_skills/01_type_hints/robotics_challenge.ipynb"
+          - "09_practical_skills/01_type_hints/solution.ipynb"
+        mini_project: "09_practical_skills/01_type_hints/mini_project.ipynb"
+        research_task: "How does the performance of Type Hints scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Type Hints Controller"
+        robo_x_milestone: "M9"
+      - id: "9.2"
+        title: "Dates and Times"
+        directory: "09_practical_skills/02_dates_and_times"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Parse", "Perform", "Handle"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "09_practical_skills/02_dates_and_times/lesson.ipynb"
+          - "09_practical_skills/02_dates_and_times/mini_project.ipynb"
+          - "09_practical_skills/02_dates_and_times/exercises.ipynb"
+          - "09_practical_skills/02_dates_and_times/research.ipynb"
+          - "09_practical_skills/02_dates_and_times/quiz.ipynb"
+          - "09_practical_skills/02_dates_and_times/robotics_challenge.ipynb"
+          - "09_practical_skills/02_dates_and_times/solution.ipynb"
+        mini_project: "09_practical_skills/02_dates_and_times/mini_project.ipynb"
+        research_task: "How does the performance of Dates and Times scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Dates and Times Controller"
+        robo_x_milestone: "M9"
+      - id: "9.3"
+        title: "Command-Line Interfaces"
+        directory: "09_practical_skills/03_command_line_interfaces"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Build", "Define", "Parse"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "09_practical_skills/03_command_line_interfaces/lesson.ipynb"
+          - "09_practical_skills/03_command_line_interfaces/mini_project.ipynb"
+          - "09_practical_skills/03_command_line_interfaces/exercises.ipynb"
+          - "09_practical_skills/03_command_line_interfaces/research.ipynb"
+          - "09_practical_skills/03_command_line_interfaces/quiz.ipynb"
+          - "09_practical_skills/03_command_line_interfaces/robotics_challenge.ipynb"
+          - "09_practical_skills/03_command_line_interfaces/solution.ipynb"
+        mini_project: "09_practical_skills/03_command_line_interfaces/mini_project.ipynb"
+        research_task: "How does the performance of Command-Line Interfaces scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Command-Line Interfaces Controller"
+        robo_x_milestone: "M9"
+      - id: "9.4"
+        title: "HTTP Requests and APIs"
+        directory: "09_practical_skills/04_http_requests_apis"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Make", "Parse", "Handle"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "09_practical_skills/04_http_requests_apis/lesson.ipynb"
+          - "09_practical_skills/04_http_requests_apis/mini_project.ipynb"
+          - "09_practical_skills/04_http_requests_apis/exercises.ipynb"
+          - "09_practical_skills/04_http_requests_apis/research.ipynb"
+          - "09_practical_skills/04_http_requests_apis/quiz.ipynb"
+          - "09_practical_skills/04_http_requests_apis/robotics_challenge.ipynb"
+          - "09_practical_skills/04_http_requests_apis/solution.ipynb"
+        mini_project: "09_practical_skills/04_http_requests_apis/mini_project.ipynb"
+        research_task: "How does the performance of HTTP Requests and APIs scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: HTTP Requests and APIs Controller"
+        robo_x_milestone: "M9"
+      - id: "9.5"
+        title: "Unit Testing"
+        directory: "09_practical_skills/05_unit_testing"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Write", "Use", "Mock"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "09_practical_skills/05_unit_testing/lesson.ipynb"
+          - "09_practical_skills/05_unit_testing/mini_project.ipynb"
+          - "09_practical_skills/05_unit_testing/exercises.ipynb"
+          - "09_practical_skills/05_unit_testing/research.ipynb"
+          - "09_practical_skills/05_unit_testing/quiz.ipynb"
+          - "09_practical_skills/05_unit_testing/robotics_challenge.ipynb"
+          - "09_practical_skills/05_unit_testing/solution.ipynb"
+        mini_project: "09_practical_skills/05_unit_testing/mini_project.ipynb"
+        research_task: "How does the performance of Unit Testing scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Unit Testing Controller"
+        robo_x_milestone: "M9"
+      - id: "9.6"
+        title: "Code Style and Best Practices"
+        directory: "09_practical_skills/06_code_style_best_practices"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Adhere", "Use", "Refactor"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "09_practical_skills/06_code_style_best_practices/lesson.ipynb"
+          - "09_practical_skills/06_code_style_best_practices/mini_project.ipynb"
+          - "09_practical_skills/06_code_style_best_practices/exercises.ipynb"
+          - "09_practical_skills/06_code_style_best_practices/research.ipynb"
+          - "09_practical_skills/06_code_style_best_practices/quiz.ipynb"
+          - "09_practical_skills/06_code_style_best_practices/robotics_challenge.ipynb"
+          - "09_practical_skills/06_code_style_best_practices/solution.ipynb"
+        mini_project: "09_practical_skills/06_code_style_best_practices/mini_project.ipynb"
+        research_task: "How does the performance of Code Style and Best Practices scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Code Style and Best Practices Controller"
+        robo_x_milestone: "M9"
+      - id: "9.7"
+        title: "Project Structure and Packaging"
+        directory: "09_practical_skills/07_project_structure_packaging"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Organize", "Configure", "Build"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "09_practical_skills/07_project_structure_packaging/lesson.ipynb"
+          - "09_practical_skills/07_project_structure_packaging/mini_project.ipynb"
+          - "09_practical_skills/07_project_structure_packaging/exercises.ipynb"
+          - "09_practical_skills/07_project_structure_packaging/research.ipynb"
+          - "09_practical_skills/07_project_structure_packaging/quiz.ipynb"
+          - "09_practical_skills/07_project_structure_packaging/robotics_challenge.ipynb"
+          - "09_practical_skills/07_project_structure_packaging/solution.ipynb"
+        mini_project: "09_practical_skills/07_project_structure_packaging/mini_project.ipynb"
+        research_task: "How does the performance of Project Structure and Packaging scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Project Structure and Packaging Controller"
+        robo_x_milestone: "M9"
 
 capstones:
   - directory: "10_capstone_projects/project_01_robot_monitor"
