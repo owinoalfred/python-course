@@ -36,16 +36,16 @@ Multi-dimensional data structures and grids require nested iteration patterns.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Nested Loops and Common Patterns Medium Exercise 1 | MEDIUM | Nested Loops, Matrices, Accumulators |
-| 2 | Nested Loops and Common Patterns Medium Exercise 2 | MEDIUM | Nested Loops, Matrices, Accumulators |
-| 3 | Nested Loops and Common Patterns Medium Exercise 3 | MEDIUM | Nested Loops, Matrices, Accumulators |
-| 4 | Nested Loops and Common Patterns Medium Exercise 4 | MEDIUM | Nested Loops, Matrices, Accumulators |
-| 5 | Nested Loops and Common Patterns Medium Exercise 5 | MEDIUM | Nested Loops, Matrices, Accumulators |
-| 6 | Nested Loops and Common Patterns Hard Exercise 1 | HARD | Nested Loops, Matrices, Accumulators |
-| 7 | Nested Loops and Common Patterns Hard Exercise 2 | HARD | Nested Loops, Matrices, Accumulators |
-| 8 | Nested Loops and Common Patterns Hard Exercise 3 | HARD | Nested Loops, Matrices, Accumulators |
-| 9 | Nested Loops and Common Patterns Hard Exercise 4 | HARD | Nested Loops, Matrices, Accumulators |
-| 10 | Nested Loops and Common Patterns Hard Exercise 5 | HARD | Nested Loops, Matrices, Accumulators |
+| 1 | Nested Loops and Common Patterns Medium Task 1 | MEDIUM | Nested Loops, Matrices, Accumulators |
+| 2 | Nested Loops and Common Patterns Medium Task 2 | MEDIUM | Nested Loops, Matrices, Accumulators |
+| 3 | Nested Loops and Common Patterns Medium Task 3 | MEDIUM | Nested Loops, Matrices, Accumulators |
+| 4 | Nested Loops and Common Patterns Medium Task 4 | MEDIUM | Nested Loops, Matrices, Accumulators |
+| 5 | Nested Loops and Common Patterns Medium Task 5 | MEDIUM | Nested Loops, Matrices, Accumulators |
+| 6 | Nested Loops and Common Patterns Hard Task 1 | HARD | Nested Loops, Matrices, Accumulators |
+| 7 | Nested Loops and Common Patterns Hard Task 2 | HARD | Nested Loops, Matrices, Accumulators |
+| 8 | Nested Loops and Common Patterns Hard Task 3 | HARD | Nested Loops, Matrices, Accumulators |
+| 9 | Nested Loops and Common Patterns Hard Task 4 | HARD | Nested Loops, Matrices, Accumulators |
+| 10 | Nested Loops and Common Patterns Hard Task 5 | HARD | Nested Loops, Matrices, Accumulators |
 
 ## Robotics challenge — ROBO-X Challenge: Nested Loops and Common Patterns Controller
 

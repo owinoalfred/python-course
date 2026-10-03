@@ -36,16 +36,16 @@ Consistent code style improves code maintainability across engineering teams.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Code Style and Best Practices Medium Exercise 1 | MEDIUM | PEP 8, Code Style, Refactoring |
-| 2 | Code Style and Best Practices Medium Exercise 2 | MEDIUM | PEP 8, Code Style, Refactoring |
-| 3 | Code Style and Best Practices Medium Exercise 3 | MEDIUM | PEP 8, Code Style, Refactoring |
-| 4 | Code Style and Best Practices Medium Exercise 4 | MEDIUM | PEP 8, Code Style, Refactoring |
-| 5 | Code Style and Best Practices Medium Exercise 5 | MEDIUM | PEP 8, Code Style, Refactoring |
-| 6 | Code Style and Best Practices Hard Exercise 1 | HARD | PEP 8, Code Style, Refactoring, Clean Code |
-| 7 | Code Style and Best Practices Hard Exercise 2 | HARD | PEP 8, Code Style, Refactoring, Clean Code |
-| 8 | Code Style and Best Practices Hard Exercise 3 | HARD | PEP 8, Code Style, Refactoring, Clean Code |
-| 9 | Code Style and Best Practices Hard Exercise 4 | HARD | PEP 8, Code Style, Refactoring, Clean Code |
-| 10 | Code Style and Best Practices Hard Exercise 5 | HARD | PEP 8, Code Style, Refactoring, Clean Code |
+| 1 | Code Style and Best Practices Medium Task 1 | MEDIUM | PEP 8, Code Style, Refactoring |
+| 2 | Code Style and Best Practices Medium Task 2 | MEDIUM | PEP 8, Code Style, Refactoring |
+| 3 | Code Style and Best Practices Medium Task 3 | MEDIUM | PEP 8, Code Style, Refactoring |
+| 4 | Code Style and Best Practices Medium Task 4 | MEDIUM | PEP 8, Code Style, Refactoring |
+| 5 | Code Style and Best Practices Medium Task 5 | MEDIUM | PEP 8, Code Style, Refactoring |
+| 6 | Code Style and Best Practices Hard Task 1 | HARD | PEP 8, Code Style, Refactoring, Clean Code |
+| 7 | Code Style and Best Practices Hard Task 2 | HARD | PEP 8, Code Style, Refactoring, Clean Code |
+| 8 | Code Style and Best Practices Hard Task 3 | HARD | PEP 8, Code Style, Refactoring, Clean Code |
+| 9 | Code Style and Best Practices Hard Task 4 | HARD | PEP 8, Code Style, Refactoring, Clean Code |
+| 10 | Code Style and Best Practices Hard Task 5 | HARD | PEP 8, Code Style, Refactoring, Clean Code |
 
 ## Robotics challenge — ROBO-X Challenge: Code Style and Best Practices Controller
 

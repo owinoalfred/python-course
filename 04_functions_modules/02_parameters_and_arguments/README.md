@@ -36,16 +36,16 @@ Flexible parameter signatures allow APIs to handle diverse invocation options.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Parameters and Arguments Medium Exercise 1 | MEDIUM | Parameters, *args, **kwargs |
-| 2 | Parameters and Arguments Medium Exercise 2 | MEDIUM | Parameters, *args, **kwargs |
-| 3 | Parameters and Arguments Medium Exercise 3 | MEDIUM | Parameters, *args, **kwargs |
-| 4 | Parameters and Arguments Medium Exercise 4 | MEDIUM | Parameters, *args, **kwargs |
-| 5 | Parameters and Arguments Medium Exercise 5 | MEDIUM | Parameters, *args, **kwargs |
-| 6 | Parameters and Arguments Hard Exercise 1 | HARD | Parameters, *args, **kwargs |
-| 7 | Parameters and Arguments Hard Exercise 2 | HARD | Parameters, *args, **kwargs |
-| 8 | Parameters and Arguments Hard Exercise 3 | HARD | Parameters, *args, **kwargs |
-| 9 | Parameters and Arguments Hard Exercise 4 | HARD | Parameters, *args, **kwargs |
-| 10 | Parameters and Arguments Hard Exercise 5 | HARD | Parameters, *args, **kwargs |
+| 1 | Parameters and Arguments Medium Task 1 | MEDIUM | Parameters, *args, **kwargs |
+| 2 | Parameters and Arguments Medium Task 2 | MEDIUM | Parameters, *args, **kwargs |
+| 3 | Parameters and Arguments Medium Task 3 | MEDIUM | Parameters, *args, **kwargs |
+| 4 | Parameters and Arguments Medium Task 4 | MEDIUM | Parameters, *args, **kwargs |
+| 5 | Parameters and Arguments Medium Task 5 | MEDIUM | Parameters, *args, **kwargs |
+| 6 | Parameters and Arguments Hard Task 1 | HARD | Parameters, *args, **kwargs |
+| 7 | Parameters and Arguments Hard Task 2 | HARD | Parameters, *args, **kwargs |
+| 8 | Parameters and Arguments Hard Task 3 | HARD | Parameters, *args, **kwargs |
+| 9 | Parameters and Arguments Hard Task 4 | HARD | Parameters, *args, **kwargs |
+| 10 | Parameters and Arguments Hard Task 5 | HARD | Parameters, *args, **kwargs |
 
 ## Robotics challenge — ROBO-X Challenge: Parameters and Arguments Controller
 

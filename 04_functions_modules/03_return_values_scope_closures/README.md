@@ -36,16 +36,16 @@ Understanding variable scope and closures prevents state leak bugs.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Return Values, Scope, and Closures Medium Exercise 1 | MEDIUM | Scope, LEGB, Closures |
-| 2 | Return Values, Scope, and Closures Medium Exercise 2 | MEDIUM | Scope, LEGB, Closures |
-| 3 | Return Values, Scope, and Closures Medium Exercise 3 | MEDIUM | Scope, LEGB, Closures |
-| 4 | Return Values, Scope, and Closures Medium Exercise 4 | MEDIUM | Scope, LEGB, Closures |
-| 5 | Return Values, Scope, and Closures Medium Exercise 5 | MEDIUM | Scope, LEGB, Closures |
-| 6 | Return Values, Scope, and Closures Hard Exercise 1 | HARD | Scope, LEGB, Closures |
-| 7 | Return Values, Scope, and Closures Hard Exercise 2 | HARD | Scope, LEGB, Closures |
-| 8 | Return Values, Scope, and Closures Hard Exercise 3 | HARD | Scope, LEGB, Closures |
-| 9 | Return Values, Scope, and Closures Hard Exercise 4 | HARD | Scope, LEGB, Closures |
-| 10 | Return Values, Scope, and Closures Hard Exercise 5 | HARD | Scope, LEGB, Closures |
+| 1 | Return Values, Scope, and Closures Medium Task 1 | MEDIUM | Scope, LEGB, Closures |
+| 2 | Return Values, Scope, and Closures Medium Task 2 | MEDIUM | Scope, LEGB, Closures |
+| 3 | Return Values, Scope, and Closures Medium Task 3 | MEDIUM | Scope, LEGB, Closures |
+| 4 | Return Values, Scope, and Closures Medium Task 4 | MEDIUM | Scope, LEGB, Closures |
+| 5 | Return Values, Scope, and Closures Medium Task 5 | MEDIUM | Scope, LEGB, Closures |
+| 6 | Return Values, Scope, and Closures Hard Task 1 | HARD | Scope, LEGB, Closures |
+| 7 | Return Values, Scope, and Closures Hard Task 2 | HARD | Scope, LEGB, Closures |
+| 8 | Return Values, Scope, and Closures Hard Task 3 | HARD | Scope, LEGB, Closures |
+| 9 | Return Values, Scope, and Closures Hard Task 4 | HARD | Scope, LEGB, Closures |
+| 10 | Return Values, Scope, and Closures Hard Task 5 | HARD | Scope, LEGB, Closures |
 
 ## Robotics challenge — ROBO-X Challenge: Return Values, Scope, and Closures Controller
 

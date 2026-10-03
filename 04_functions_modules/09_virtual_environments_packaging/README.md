@@ -36,16 +36,16 @@ Isolated virtual environments prevent dependency version conflicts.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Virtual Environments and Package Management Medium Exercise 1 | MEDIUM | venv, pip, pyproject.toml |
-| 2 | Virtual Environments and Package Management Medium Exercise 2 | MEDIUM | venv, pip, pyproject.toml |
-| 3 | Virtual Environments and Package Management Medium Exercise 3 | MEDIUM | venv, pip, pyproject.toml |
-| 4 | Virtual Environments and Package Management Medium Exercise 4 | MEDIUM | venv, pip, pyproject.toml |
-| 5 | Virtual Environments and Package Management Medium Exercise 5 | MEDIUM | venv, pip, pyproject.toml |
-| 6 | Virtual Environments and Package Management Hard Exercise 1 | HARD | venv, pip, pyproject.toml |
-| 7 | Virtual Environments and Package Management Hard Exercise 2 | HARD | venv, pip, pyproject.toml |
-| 8 | Virtual Environments and Package Management Hard Exercise 3 | HARD | venv, pip, pyproject.toml |
-| 9 | Virtual Environments and Package Management Hard Exercise 4 | HARD | venv, pip, pyproject.toml |
-| 10 | Virtual Environments and Package Management Hard Exercise 5 | HARD | venv, pip, pyproject.toml |
+| 1 | Virtual Environments and Package Management Medium Task 1 | MEDIUM | venv, pip, pyproject.toml |
+| 2 | Virtual Environments and Package Management Medium Task 2 | MEDIUM | venv, pip, pyproject.toml |
+| 3 | Virtual Environments and Package Management Medium Task 3 | MEDIUM | venv, pip, pyproject.toml |
+| 4 | Virtual Environments and Package Management Medium Task 4 | MEDIUM | venv, pip, pyproject.toml |
+| 5 | Virtual Environments and Package Management Medium Task 5 | MEDIUM | venv, pip, pyproject.toml |
+| 6 | Virtual Environments and Package Management Hard Task 1 | HARD | venv, pip, pyproject.toml |
+| 7 | Virtual Environments and Package Management Hard Task 2 | HARD | venv, pip, pyproject.toml |
+| 8 | Virtual Environments and Package Management Hard Task 3 | HARD | venv, pip, pyproject.toml |
+| 9 | Virtual Environments and Package Management Hard Task 4 | HARD | venv, pip, pyproject.toml |
+| 10 | Virtual Environments and Package Management Hard Task 5 | HARD | venv, pip, pyproject.toml |
 
 ## Robotics challenge — ROBO-X Challenge: Virtual Environments and Package Management Controller
 

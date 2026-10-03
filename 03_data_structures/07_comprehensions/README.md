@@ -36,16 +36,16 @@ Comprehensions provide concise, highly optimized syntax for transforming collect
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Comprehensions Medium Exercise 1 | MEDIUM | Comprehensions, Generator Expressions |
-| 2 | Comprehensions Medium Exercise 2 | MEDIUM | Comprehensions, Generator Expressions |
-| 3 | Comprehensions Medium Exercise 3 | MEDIUM | Comprehensions, Generator Expressions |
-| 4 | Comprehensions Medium Exercise 4 | MEDIUM | Comprehensions, Generator Expressions |
-| 5 | Comprehensions Medium Exercise 5 | MEDIUM | Comprehensions, Generator Expressions |
-| 6 | Comprehensions Hard Exercise 1 | HARD | Comprehensions, Generator Expressions |
-| 7 | Comprehensions Hard Exercise 2 | HARD | Comprehensions, Generator Expressions |
-| 8 | Comprehensions Hard Exercise 3 | HARD | Comprehensions, Generator Expressions |
-| 9 | Comprehensions Hard Exercise 4 | HARD | Comprehensions, Generator Expressions |
-| 10 | Comprehensions Hard Exercise 5 | HARD | Comprehensions, Generator Expressions |
+| 1 | Comprehensions Medium Task 1 | MEDIUM | Comprehensions, Generator Expressions |
+| 2 | Comprehensions Medium Task 2 | MEDIUM | Comprehensions, Generator Expressions |
+| 3 | Comprehensions Medium Task 3 | MEDIUM | Comprehensions, Generator Expressions |
+| 4 | Comprehensions Medium Task 4 | MEDIUM | Comprehensions, Generator Expressions |
+| 5 | Comprehensions Medium Task 5 | MEDIUM | Comprehensions, Generator Expressions |
+| 6 | Comprehensions Hard Task 1 | HARD | Comprehensions, Generator Expressions |
+| 7 | Comprehensions Hard Task 2 | HARD | Comprehensions, Generator Expressions |
+| 8 | Comprehensions Hard Task 3 | HARD | Comprehensions, Generator Expressions |
+| 9 | Comprehensions Hard Task 4 | HARD | Comprehensions, Generator Expressions |
+| 10 | Comprehensions Hard Task 5 | HARD | Comprehensions, Generator Expressions |
 
 ## Robotics challenge — ROBO-X Challenge: Comprehensions Controller
 

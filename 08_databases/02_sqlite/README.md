@@ -36,16 +36,16 @@ SQLite provides zero-configuration, serverless, self-contained SQL storage.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | SQLite Medium Exercise 1 | MEDIUM | SQLite, sqlite3, In-Memory Database |
-| 2 | SQLite Medium Exercise 2 | MEDIUM | SQLite, sqlite3, In-Memory Database |
-| 3 | SQLite Medium Exercise 3 | MEDIUM | SQLite, sqlite3, In-Memory Database |
-| 4 | SQLite Medium Exercise 4 | MEDIUM | SQLite, sqlite3, In-Memory Database |
-| 5 | SQLite Medium Exercise 5 | MEDIUM | SQLite, sqlite3, In-Memory Database |
-| 6 | SQLite Hard Exercise 1 | HARD | SQLite, sqlite3, In-Memory Database |
-| 7 | SQLite Hard Exercise 2 | HARD | SQLite, sqlite3, In-Memory Database |
-| 8 | SQLite Hard Exercise 3 | HARD | SQLite, sqlite3, In-Memory Database |
-| 9 | SQLite Hard Exercise 4 | HARD | SQLite, sqlite3, In-Memory Database |
-| 10 | SQLite Hard Exercise 5 | HARD | SQLite, sqlite3, In-Memory Database |
+| 1 | SQLite Medium Task 1 | MEDIUM | SQLite, sqlite3, In-Memory Database |
+| 2 | SQLite Medium Task 2 | MEDIUM | SQLite, sqlite3, In-Memory Database |
+| 3 | SQLite Medium Task 3 | MEDIUM | SQLite, sqlite3, In-Memory Database |
+| 4 | SQLite Medium Task 4 | MEDIUM | SQLite, sqlite3, In-Memory Database |
+| 5 | SQLite Medium Task 5 | MEDIUM | SQLite, sqlite3, In-Memory Database |
+| 6 | SQLite Hard Task 1 | HARD | SQLite, sqlite3, In-Memory Database |
+| 7 | SQLite Hard Task 2 | HARD | SQLite, sqlite3, In-Memory Database |
+| 8 | SQLite Hard Task 3 | HARD | SQLite, sqlite3, In-Memory Database |
+| 9 | SQLite Hard Task 4 | HARD | SQLite, sqlite3, In-Memory Database |
+| 10 | SQLite Hard Task 5 | HARD | SQLite, sqlite3, In-Memory Database |
 
 ## Robotics challenge — ROBO-X Challenge: SQLite Controller
 

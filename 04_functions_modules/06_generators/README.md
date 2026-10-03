@@ -36,16 +36,16 @@ Generators stream data lazily with O(1) memory footprint.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Generators Medium Exercise 1 | MEDIUM | Generators, yield, Lazy Evaluation |
-| 2 | Generators Medium Exercise 2 | MEDIUM | Generators, yield, Lazy Evaluation |
-| 3 | Generators Medium Exercise 3 | MEDIUM | Generators, yield, Lazy Evaluation |
-| 4 | Generators Medium Exercise 4 | MEDIUM | Generators, yield, Lazy Evaluation |
-| 5 | Generators Medium Exercise 5 | MEDIUM | Generators, yield, Lazy Evaluation |
-| 6 | Generators Hard Exercise 1 | HARD | Generators, yield, Lazy Evaluation |
-| 7 | Generators Hard Exercise 2 | HARD | Generators, yield, Lazy Evaluation |
-| 8 | Generators Hard Exercise 3 | HARD | Generators, yield, Lazy Evaluation |
-| 9 | Generators Hard Exercise 4 | HARD | Generators, yield, Lazy Evaluation |
-| 10 | Generators Hard Exercise 5 | HARD | Generators, yield, Lazy Evaluation |
+| 1 | Generators Medium Task 1 | MEDIUM | Generators, yield, Lazy Evaluation |
+| 2 | Generators Medium Task 2 | MEDIUM | Generators, yield, Lazy Evaluation |
+| 3 | Generators Medium Task 3 | MEDIUM | Generators, yield, Lazy Evaluation |
+| 4 | Generators Medium Task 4 | MEDIUM | Generators, yield, Lazy Evaluation |
+| 5 | Generators Medium Task 5 | MEDIUM | Generators, yield, Lazy Evaluation |
+| 6 | Generators Hard Task 1 | HARD | Generators, yield, Lazy Evaluation |
+| 7 | Generators Hard Task 2 | HARD | Generators, yield, Lazy Evaluation |
+| 8 | Generators Hard Task 3 | HARD | Generators, yield, Lazy Evaluation |
+| 9 | Generators Hard Task 4 | HARD | Generators, yield, Lazy Evaluation |
+| 10 | Generators Hard Task 5 | HARD | Generators, yield, Lazy Evaluation |
 
 ## Robotics challenge — ROBO-X Challenge: Generators Controller
 

@@ -36,16 +36,16 @@ Conditionals enable software to make dynamic execution choices based on runtime 
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Conditional Statements Medium Exercise 1 | MEDIUM | if/elif/else, Truthiness, Boolean Logic |
-| 2 | Conditional Statements Medium Exercise 2 | MEDIUM | if/elif/else, Truthiness, Boolean Logic |
-| 3 | Conditional Statements Medium Exercise 3 | MEDIUM | if/elif/else, Truthiness, Boolean Logic |
-| 4 | Conditional Statements Medium Exercise 4 | MEDIUM | if/elif/else, Truthiness, Boolean Logic |
-| 5 | Conditional Statements Medium Exercise 5 | MEDIUM | if/elif/else, Truthiness, Boolean Logic |
-| 6 | Conditional Statements Hard Exercise 1 | HARD | if/elif/else, Truthiness, Boolean Logic |
-| 7 | Conditional Statements Hard Exercise 2 | HARD | if/elif/else, Truthiness, Boolean Logic |
-| 8 | Conditional Statements Hard Exercise 3 | HARD | if/elif/else, Truthiness, Boolean Logic |
-| 9 | Conditional Statements Hard Exercise 4 | HARD | if/elif/else, Truthiness, Boolean Logic |
-| 10 | Conditional Statements Hard Exercise 5 | HARD | if/elif/else, Truthiness, Boolean Logic |
+| 1 | Conditional Statements Medium Task 1 | MEDIUM | if/elif/else, Truthiness, Boolean Logic |
+| 2 | Conditional Statements Medium Task 2 | MEDIUM | if/elif/else, Truthiness, Boolean Logic |
+| 3 | Conditional Statements Medium Task 3 | MEDIUM | if/elif/else, Truthiness, Boolean Logic |
+| 4 | Conditional Statements Medium Task 4 | MEDIUM | if/elif/else, Truthiness, Boolean Logic |
+| 5 | Conditional Statements Medium Task 5 | MEDIUM | if/elif/else, Truthiness, Boolean Logic |
+| 6 | Conditional Statements Hard Task 1 | HARD | if/elif/else, Truthiness, Boolean Logic |
+| 7 | Conditional Statements Hard Task 2 | HARD | if/elif/else, Truthiness, Boolean Logic |
+| 8 | Conditional Statements Hard Task 3 | HARD | if/elif/else, Truthiness, Boolean Logic |
+| 9 | Conditional Statements Hard Task 4 | HARD | if/elif/else, Truthiness, Boolean Logic |
+| 10 | Conditional Statements Hard Task 5 | HARD | if/elif/else, Truthiness, Boolean Logic |
 
 ## Robotics challenge — ROBO-X Challenge: Conditional Statements Controller
 

@@ -36,16 +36,16 @@ Logging replaces ephemeral print statements with structured runtime audit trails
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Introduction to Logging Medium Exercise 1 | MEDIUM | logging, LogLevels, Handlers |
-| 2 | Introduction to Logging Medium Exercise 2 | MEDIUM | logging, LogLevels, Handlers |
-| 3 | Introduction to Logging Medium Exercise 3 | MEDIUM | logging, LogLevels, Handlers |
-| 4 | Introduction to Logging Medium Exercise 4 | MEDIUM | logging, LogLevels, Handlers |
-| 5 | Introduction to Logging Medium Exercise 5 | MEDIUM | logging, LogLevels, Handlers |
-| 6 | Introduction to Logging Hard Exercise 1 | HARD | logging, LogLevels, Handlers |
-| 7 | Introduction to Logging Hard Exercise 2 | HARD | logging, LogLevels, Handlers |
-| 8 | Introduction to Logging Hard Exercise 3 | HARD | logging, LogLevels, Handlers |
-| 9 | Introduction to Logging Hard Exercise 4 | HARD | logging, LogLevels, Handlers |
-| 10 | Introduction to Logging Hard Exercise 5 | HARD | logging, LogLevels, Handlers |
+| 1 | Introduction to Logging Medium Task 1 | MEDIUM | logging, LogLevels, Handlers |
+| 2 | Introduction to Logging Medium Task 2 | MEDIUM | logging, LogLevels, Handlers |
+| 3 | Introduction to Logging Medium Task 3 | MEDIUM | logging, LogLevels, Handlers |
+| 4 | Introduction to Logging Medium Task 4 | MEDIUM | logging, LogLevels, Handlers |
+| 5 | Introduction to Logging Medium Task 5 | MEDIUM | logging, LogLevels, Handlers |
+| 6 | Introduction to Logging Hard Task 1 | HARD | logging, LogLevels, Handlers |
+| 7 | Introduction to Logging Hard Task 2 | HARD | logging, LogLevels, Handlers |
+| 8 | Introduction to Logging Hard Task 3 | HARD | logging, LogLevels, Handlers |
+| 9 | Introduction to Logging Hard Task 4 | HARD | logging, LogLevels, Handlers |
+| 10 | Introduction to Logging Hard Task 5 | HARD | logging, LogLevels, Handlers |
 
 ## Robotics challenge — ROBO-X Challenge: Introduction to Logging Controller
 

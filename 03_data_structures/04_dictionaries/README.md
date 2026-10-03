@@ -36,16 +36,16 @@ Dictionaries enable efficient key-based lookup for state management and configur
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Dictionaries Medium Exercise 1 | MEDIUM | Dictionary, Key-Value, Hash Table |
-| 2 | Dictionaries Medium Exercise 2 | MEDIUM | Dictionary, Key-Value, Hash Table |
-| 3 | Dictionaries Medium Exercise 3 | MEDIUM | Dictionary, Key-Value, Hash Table |
-| 4 | Dictionaries Medium Exercise 4 | MEDIUM | Dictionary, Key-Value, Hash Table |
-| 5 | Dictionaries Medium Exercise 5 | MEDIUM | Dictionary, Key-Value, Hash Table |
-| 6 | Dictionaries Hard Exercise 1 | HARD | Dictionary, Key-Value, Hash Table |
-| 7 | Dictionaries Hard Exercise 2 | HARD | Dictionary, Key-Value, Hash Table |
-| 8 | Dictionaries Hard Exercise 3 | HARD | Dictionary, Key-Value, Hash Table |
-| 9 | Dictionaries Hard Exercise 4 | HARD | Dictionary, Key-Value, Hash Table |
-| 10 | Dictionaries Hard Exercise 5 | HARD | Dictionary, Key-Value, Hash Table |
+| 1 | Dictionaries Medium Task 1 | MEDIUM | Dictionary, Key-Value, Hash Table |
+| 2 | Dictionaries Medium Task 2 | MEDIUM | Dictionary, Key-Value, Hash Table |
+| 3 | Dictionaries Medium Task 3 | MEDIUM | Dictionary, Key-Value, Hash Table |
+| 4 | Dictionaries Medium Task 4 | MEDIUM | Dictionary, Key-Value, Hash Table |
+| 5 | Dictionaries Medium Task 5 | MEDIUM | Dictionary, Key-Value, Hash Table |
+| 6 | Dictionaries Hard Task 1 | HARD | Dictionary, Key-Value, Hash Table |
+| 7 | Dictionaries Hard Task 2 | HARD | Dictionary, Key-Value, Hash Table |
+| 8 | Dictionaries Hard Task 3 | HARD | Dictionary, Key-Value, Hash Table |
+| 9 | Dictionaries Hard Task 4 | HARD | Dictionary, Key-Value, Hash Table |
+| 10 | Dictionaries Hard Task 5 | HARD | Dictionary, Key-Value, Hash Table |
 
 ## Robotics challenge — ROBO-X Challenge: Dictionaries Controller
 

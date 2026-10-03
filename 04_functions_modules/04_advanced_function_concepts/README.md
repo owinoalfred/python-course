@@ -36,16 +36,16 @@ Functions are first-class objects in Python and can be passed as arguments.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Advanced Function Concepts Medium Exercise 1 | MEDIUM | Higher-Order Functions, Recursion |
-| 2 | Advanced Function Concepts Medium Exercise 2 | MEDIUM | Higher-Order Functions, Recursion |
-| 3 | Advanced Function Concepts Medium Exercise 3 | MEDIUM | Higher-Order Functions, Recursion |
-| 4 | Advanced Function Concepts Medium Exercise 4 | MEDIUM | Higher-Order Functions, Recursion |
-| 5 | Advanced Function Concepts Medium Exercise 5 | MEDIUM | Higher-Order Functions, Recursion |
-| 6 | Advanced Function Concepts Hard Exercise 1 | HARD | Higher-Order Functions, Recursion |
-| 7 | Advanced Function Concepts Hard Exercise 2 | HARD | Higher-Order Functions, Recursion |
-| 8 | Advanced Function Concepts Hard Exercise 3 | HARD | Higher-Order Functions, Recursion |
-| 9 | Advanced Function Concepts Hard Exercise 4 | HARD | Higher-Order Functions, Recursion |
-| 10 | Advanced Function Concepts Hard Exercise 5 | HARD | Higher-Order Functions, Recursion |
+| 1 | Advanced Function Concepts Medium Task 1 | MEDIUM | Higher-Order Functions, Recursion |
+| 2 | Advanced Function Concepts Medium Task 2 | MEDIUM | Higher-Order Functions, Recursion |
+| 3 | Advanced Function Concepts Medium Task 3 | MEDIUM | Higher-Order Functions, Recursion |
+| 4 | Advanced Function Concepts Medium Task 4 | MEDIUM | Higher-Order Functions, Recursion |
+| 5 | Advanced Function Concepts Medium Task 5 | MEDIUM | Higher-Order Functions, Recursion |
+| 6 | Advanced Function Concepts Hard Task 1 | HARD | Higher-Order Functions, Recursion |
+| 7 | Advanced Function Concepts Hard Task 2 | HARD | Higher-Order Functions, Recursion |
+| 8 | Advanced Function Concepts Hard Task 3 | HARD | Higher-Order Functions, Recursion |
+| 9 | Advanced Function Concepts Hard Task 4 | HARD | Higher-Order Functions, Recursion |
+| 10 | Advanced Function Concepts Hard Task 5 | HARD | Higher-Order Functions, Recursion |
 
 ## Robotics challenge — ROBO-X Challenge: Advanced Function Concepts Controller
 

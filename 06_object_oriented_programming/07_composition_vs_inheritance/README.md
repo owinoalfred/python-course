@@ -36,16 +36,16 @@ Favoring composition over inheritance produces loosely coupled, flexible designs
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Composition vs Inheritance Medium Exercise 1 | MEDIUM | Composition, Inheritance, HAS-A |
-| 2 | Composition vs Inheritance Medium Exercise 2 | MEDIUM | Composition, Inheritance, HAS-A |
-| 3 | Composition vs Inheritance Medium Exercise 3 | MEDIUM | Composition, Inheritance, HAS-A |
-| 4 | Composition vs Inheritance Medium Exercise 4 | MEDIUM | Composition, Inheritance, HAS-A |
-| 5 | Composition vs Inheritance Medium Exercise 5 | MEDIUM | Composition, Inheritance, HAS-A |
-| 6 | Composition vs Inheritance Hard Exercise 1 | HARD | Composition, Inheritance, HAS-A, IS-A |
-| 7 | Composition vs Inheritance Hard Exercise 2 | HARD | Composition, Inheritance, HAS-A, IS-A |
-| 8 | Composition vs Inheritance Hard Exercise 3 | HARD | Composition, Inheritance, HAS-A, IS-A |
-| 9 | Composition vs Inheritance Hard Exercise 4 | HARD | Composition, Inheritance, HAS-A, IS-A |
-| 10 | Composition vs Inheritance Hard Exercise 5 | HARD | Composition, Inheritance, HAS-A, IS-A |
+| 1 | Composition vs Inheritance Medium Task 1 | MEDIUM | Composition, Inheritance, HAS-A |
+| 2 | Composition vs Inheritance Medium Task 2 | MEDIUM | Composition, Inheritance, HAS-A |
+| 3 | Composition vs Inheritance Medium Task 3 | MEDIUM | Composition, Inheritance, HAS-A |
+| 4 | Composition vs Inheritance Medium Task 4 | MEDIUM | Composition, Inheritance, HAS-A |
+| 5 | Composition vs Inheritance Medium Task 5 | MEDIUM | Composition, Inheritance, HAS-A |
+| 6 | Composition vs Inheritance Hard Task 1 | HARD | Composition, Inheritance, HAS-A, IS-A |
+| 7 | Composition vs Inheritance Hard Task 2 | HARD | Composition, Inheritance, HAS-A, IS-A |
+| 8 | Composition vs Inheritance Hard Task 3 | HARD | Composition, Inheritance, HAS-A, IS-A |
+| 9 | Composition vs Inheritance Hard Task 4 | HARD | Composition, Inheritance, HAS-A, IS-A |
+| 10 | Composition vs Inheritance Hard Task 5 | HARD | Composition, Inheritance, HAS-A, IS-A |
 
 ## Robotics challenge — ROBO-X Challenge: Composition vs Inheritance Controller
 

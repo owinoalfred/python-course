@@ -36,16 +36,16 @@ APIs connect robot systems to cloud backends and web services.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | HTTP Requests and APIs Medium Exercise 1 | MEDIUM | requests, REST API, HTTP Methods |
-| 2 | HTTP Requests and APIs Medium Exercise 2 | MEDIUM | requests, REST API, HTTP Methods |
-| 3 | HTTP Requests and APIs Medium Exercise 3 | MEDIUM | requests, REST API, HTTP Methods |
-| 4 | HTTP Requests and APIs Medium Exercise 4 | MEDIUM | requests, REST API, HTTP Methods |
-| 5 | HTTP Requests and APIs Medium Exercise 5 | MEDIUM | requests, REST API, HTTP Methods |
-| 6 | HTTP Requests and APIs Hard Exercise 1 | HARD | requests, REST API, HTTP Methods |
-| 7 | HTTP Requests and APIs Hard Exercise 2 | HARD | requests, REST API, HTTP Methods |
-| 8 | HTTP Requests and APIs Hard Exercise 3 | HARD | requests, REST API, HTTP Methods |
-| 9 | HTTP Requests and APIs Hard Exercise 4 | HARD | requests, REST API, HTTP Methods |
-| 10 | HTTP Requests and APIs Hard Exercise 5 | HARD | requests, REST API, HTTP Methods |
+| 1 | HTTP Requests and APIs Medium Task 1 | MEDIUM | requests, REST API, HTTP Methods |
+| 2 | HTTP Requests and APIs Medium Task 2 | MEDIUM | requests, REST API, HTTP Methods |
+| 3 | HTTP Requests and APIs Medium Task 3 | MEDIUM | requests, REST API, HTTP Methods |
+| 4 | HTTP Requests and APIs Medium Task 4 | MEDIUM | requests, REST API, HTTP Methods |
+| 5 | HTTP Requests and APIs Medium Task 5 | MEDIUM | requests, REST API, HTTP Methods |
+| 6 | HTTP Requests and APIs Hard Task 1 | HARD | requests, REST API, HTTP Methods |
+| 7 | HTTP Requests and APIs Hard Task 2 | HARD | requests, REST API, HTTP Methods |
+| 8 | HTTP Requests and APIs Hard Task 3 | HARD | requests, REST API, HTTP Methods |
+| 9 | HTTP Requests and APIs Hard Task 4 | HARD | requests, REST API, HTTP Methods |
+| 10 | HTTP Requests and APIs Hard Task 5 | HARD | requests, REST API, HTTP Methods |
 
 ## Robotics challenge — ROBO-X Challenge: HTTP Requests and APIs Controller
 

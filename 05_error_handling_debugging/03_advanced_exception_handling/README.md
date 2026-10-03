@@ -36,16 +36,16 @@ Exception groups handle concurrent or batched errors in modern Python.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Advanced Exception Handling Medium Exercise 1 | MEDIUM | ExceptionGroup, except*, suppress |
-| 2 | Advanced Exception Handling Medium Exercise 2 | MEDIUM | ExceptionGroup, except*, suppress |
-| 3 | Advanced Exception Handling Medium Exercise 3 | MEDIUM | ExceptionGroup, except*, suppress |
-| 4 | Advanced Exception Handling Medium Exercise 4 | MEDIUM | ExceptionGroup, except*, suppress |
-| 5 | Advanced Exception Handling Medium Exercise 5 | MEDIUM | ExceptionGroup, except*, suppress |
-| 6 | Advanced Exception Handling Hard Exercise 1 | HARD | ExceptionGroup, except*, suppress |
-| 7 | Advanced Exception Handling Hard Exercise 2 | HARD | ExceptionGroup, except*, suppress |
-| 8 | Advanced Exception Handling Hard Exercise 3 | HARD | ExceptionGroup, except*, suppress |
-| 9 | Advanced Exception Handling Hard Exercise 4 | HARD | ExceptionGroup, except*, suppress |
-| 10 | Advanced Exception Handling Hard Exercise 5 | HARD | ExceptionGroup, except*, suppress |
+| 1 | Advanced Exception Handling Medium Task 1 | MEDIUM | ExceptionGroup, except*, suppress |
+| 2 | Advanced Exception Handling Medium Task 2 | MEDIUM | ExceptionGroup, except*, suppress |
+| 3 | Advanced Exception Handling Medium Task 3 | MEDIUM | ExceptionGroup, except*, suppress |
+| 4 | Advanced Exception Handling Medium Task 4 | MEDIUM | ExceptionGroup, except*, suppress |
+| 5 | Advanced Exception Handling Medium Task 5 | MEDIUM | ExceptionGroup, except*, suppress |
+| 6 | Advanced Exception Handling Hard Task 1 | HARD | ExceptionGroup, except*, suppress |
+| 7 | Advanced Exception Handling Hard Task 2 | HARD | ExceptionGroup, except*, suppress |
+| 8 | Advanced Exception Handling Hard Task 3 | HARD | ExceptionGroup, except*, suppress |
+| 9 | Advanced Exception Handling Hard Task 4 | HARD | ExceptionGroup, except*, suppress |
+| 10 | Advanced Exception Handling Hard Task 5 | HARD | ExceptionGroup, except*, suppress |
 
 ## Robotics challenge — ROBO-X Challenge: Advanced Exception Handling Controller
 

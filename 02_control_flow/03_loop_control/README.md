@@ -36,16 +36,16 @@ Loop control constructs alter execution flow during iteration.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Loop Control Medium Exercise 1 | MEDIUM | break, continue, loop-else |
-| 2 | Loop Control Medium Exercise 2 | MEDIUM | break, continue, loop-else |
-| 3 | Loop Control Medium Exercise 3 | MEDIUM | break, continue, loop-else |
-| 4 | Loop Control Medium Exercise 4 | MEDIUM | break, continue, loop-else |
-| 5 | Loop Control Medium Exercise 5 | MEDIUM | break, continue, loop-else |
-| 6 | Loop Control Hard Exercise 1 | HARD | break, continue, loop-else |
-| 7 | Loop Control Hard Exercise 2 | HARD | break, continue, loop-else |
-| 8 | Loop Control Hard Exercise 3 | HARD | break, continue, loop-else |
-| 9 | Loop Control Hard Exercise 4 | HARD | break, continue, loop-else |
-| 10 | Loop Control Hard Exercise 5 | HARD | break, continue, loop-else |
+| 1 | Loop Control Medium Task 1 | MEDIUM | break, continue, loop-else |
+| 2 | Loop Control Medium Task 2 | MEDIUM | break, continue, loop-else |
+| 3 | Loop Control Medium Task 3 | MEDIUM | break, continue, loop-else |
+| 4 | Loop Control Medium Task 4 | MEDIUM | break, continue, loop-else |
+| 5 | Loop Control Medium Task 5 | MEDIUM | break, continue, loop-else |
+| 6 | Loop Control Hard Task 1 | HARD | break, continue, loop-else |
+| 7 | Loop Control Hard Task 2 | HARD | break, continue, loop-else |
+| 8 | Loop Control Hard Task 3 | HARD | break, continue, loop-else |
+| 9 | Loop Control Hard Task 4 | HARD | break, continue, loop-else |
+| 10 | Loop Control Hard Task 5 | HARD | break, continue, loop-else |
 
 ## Robotics challenge — ROBO-X Challenge: Loop Control Controller
 

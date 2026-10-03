@@ -36,16 +36,16 @@ Parameterized queries protect applications from critical SQL injection security 
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Parameterized Queries and SQL Injection Medium Exercise 1 | MEDIUM | SQL Injection, Parameterized Queries, Placeholders |
-| 2 | Parameterized Queries and SQL Injection Medium Exercise 2 | MEDIUM | SQL Injection, Parameterized Queries, Placeholders |
-| 3 | Parameterized Queries and SQL Injection Medium Exercise 3 | MEDIUM | SQL Injection, Parameterized Queries, Placeholders |
-| 4 | Parameterized Queries and SQL Injection Medium Exercise 4 | MEDIUM | SQL Injection, Parameterized Queries, Placeholders |
-| 5 | Parameterized Queries and SQL Injection Medium Exercise 5 | MEDIUM | SQL Injection, Parameterized Queries, Placeholders |
-| 6 | Parameterized Queries and SQL Injection Hard Exercise 1 | HARD | SQL Injection, Parameterized Queries, Placeholders |
-| 7 | Parameterized Queries and SQL Injection Hard Exercise 2 | HARD | SQL Injection, Parameterized Queries, Placeholders |
-| 8 | Parameterized Queries and SQL Injection Hard Exercise 3 | HARD | SQL Injection, Parameterized Queries, Placeholders |
-| 9 | Parameterized Queries and SQL Injection Hard Exercise 4 | HARD | SQL Injection, Parameterized Queries, Placeholders |
-| 10 | Parameterized Queries and SQL Injection Hard Exercise 5 | HARD | SQL Injection, Parameterized Queries, Placeholders |
+| 1 | Parameterized Queries and SQL Injection Medium Task 1 | MEDIUM | SQL Injection, Parameterized Queries, Placeholders |
+| 2 | Parameterized Queries and SQL Injection Medium Task 2 | MEDIUM | SQL Injection, Parameterized Queries, Placeholders |
+| 3 | Parameterized Queries and SQL Injection Medium Task 3 | MEDIUM | SQL Injection, Parameterized Queries, Placeholders |
+| 4 | Parameterized Queries and SQL Injection Medium Task 4 | MEDIUM | SQL Injection, Parameterized Queries, Placeholders |
+| 5 | Parameterized Queries and SQL Injection Medium Task 5 | MEDIUM | SQL Injection, Parameterized Queries, Placeholders |
+| 6 | Parameterized Queries and SQL Injection Hard Task 1 | HARD | SQL Injection, Parameterized Queries, Placeholders |
+| 7 | Parameterized Queries and SQL Injection Hard Task 2 | HARD | SQL Injection, Parameterized Queries, Placeholders |
+| 8 | Parameterized Queries and SQL Injection Hard Task 3 | HARD | SQL Injection, Parameterized Queries, Placeholders |
+| 9 | Parameterized Queries and SQL Injection Hard Task 4 | HARD | SQL Injection, Parameterized Queries, Placeholders |
+| 10 | Parameterized Queries and SQL Injection Hard Task 5 | HARD | SQL Injection, Parameterized Queries, Placeholders |
 
 ## Robotics challenge — ROBO-X Challenge: Parameterized Queries and SQL Injection Controller
 

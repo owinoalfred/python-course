@@ -36,16 +36,16 @@ NumPy and Pandas power modern scientific data processing pipelines.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Core Data Libraries Medium Exercise 1 | MEDIUM | NumPy, Pandas, Matplotlib |
-| 2 | Core Data Libraries Medium Exercise 2 | MEDIUM | NumPy, Pandas, Matplotlib |
-| 3 | Core Data Libraries Medium Exercise 3 | MEDIUM | NumPy, Pandas, Matplotlib |
-| 4 | Core Data Libraries Medium Exercise 4 | MEDIUM | NumPy, Pandas, Matplotlib |
-| 5 | Core Data Libraries Medium Exercise 5 | MEDIUM | NumPy, Pandas, Matplotlib |
-| 6 | Core Data Libraries Hard Exercise 1 | HARD | NumPy, Pandas, Matplotlib, Seaborn |
-| 7 | Core Data Libraries Hard Exercise 2 | HARD | NumPy, Pandas, Matplotlib, Seaborn |
-| 8 | Core Data Libraries Hard Exercise 3 | HARD | NumPy, Pandas, Matplotlib, Seaborn |
-| 9 | Core Data Libraries Hard Exercise 4 | HARD | NumPy, Pandas, Matplotlib, Seaborn |
-| 10 | Core Data Libraries Hard Exercise 5 | HARD | NumPy, Pandas, Matplotlib, Seaborn |
+| 1 | Core Data Libraries Medium Task 1 | MEDIUM | NumPy, Pandas, Matplotlib |
+| 2 | Core Data Libraries Medium Task 2 | MEDIUM | NumPy, Pandas, Matplotlib |
+| 3 | Core Data Libraries Medium Task 3 | MEDIUM | NumPy, Pandas, Matplotlib |
+| 4 | Core Data Libraries Medium Task 4 | MEDIUM | NumPy, Pandas, Matplotlib |
+| 5 | Core Data Libraries Medium Task 5 | MEDIUM | NumPy, Pandas, Matplotlib |
+| 6 | Core Data Libraries Hard Task 1 | HARD | NumPy, Pandas, Matplotlib, Seaborn |
+| 7 | Core Data Libraries Hard Task 2 | HARD | NumPy, Pandas, Matplotlib, Seaborn |
+| 8 | Core Data Libraries Hard Task 3 | HARD | NumPy, Pandas, Matplotlib, Seaborn |
+| 9 | Core Data Libraries Hard Task 4 | HARD | NumPy, Pandas, Matplotlib, Seaborn |
+| 10 | Core Data Libraries Hard Task 5 | HARD | NumPy, Pandas, Matplotlib, Seaborn |
 
 ## Robotics challenge — ROBO-X Challenge: Core Data Libraries Controller
 

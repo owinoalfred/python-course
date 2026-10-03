@@ -36,16 +36,16 @@ enumerate() and zip() eliminate manual index tracking variables.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | range(), enumerate(), and zip() Medium Exercise 1 | MEDIUM | range, enumerate, zip |
-| 2 | range(), enumerate(), and zip() Medium Exercise 2 | MEDIUM | range, enumerate, zip |
-| 3 | range(), enumerate(), and zip() Medium Exercise 3 | MEDIUM | range, enumerate, zip |
-| 4 | range(), enumerate(), and zip() Medium Exercise 4 | MEDIUM | range, enumerate, zip |
-| 5 | range(), enumerate(), and zip() Medium Exercise 5 | MEDIUM | range, enumerate, zip |
-| 6 | range(), enumerate(), and zip() Hard Exercise 1 | HARD | range, enumerate, zip |
-| 7 | range(), enumerate(), and zip() Hard Exercise 2 | HARD | range, enumerate, zip |
-| 8 | range(), enumerate(), and zip() Hard Exercise 3 | HARD | range, enumerate, zip |
-| 9 | range(), enumerate(), and zip() Hard Exercise 4 | HARD | range, enumerate, zip |
-| 10 | range(), enumerate(), and zip() Hard Exercise 5 | HARD | range, enumerate, zip |
+| 1 | range(), enumerate(), and zip() Medium Task 1 | MEDIUM | range, enumerate, zip |
+| 2 | range(), enumerate(), and zip() Medium Task 2 | MEDIUM | range, enumerate, zip |
+| 3 | range(), enumerate(), and zip() Medium Task 3 | MEDIUM | range, enumerate, zip |
+| 4 | range(), enumerate(), and zip() Medium Task 4 | MEDIUM | range, enumerate, zip |
+| 5 | range(), enumerate(), and zip() Medium Task 5 | MEDIUM | range, enumerate, zip |
+| 6 | range(), enumerate(), and zip() Hard Task 1 | HARD | range, enumerate, zip |
+| 7 | range(), enumerate(), and zip() Hard Task 2 | HARD | range, enumerate, zip |
+| 8 | range(), enumerate(), and zip() Hard Task 3 | HARD | range, enumerate, zip |
+| 9 | range(), enumerate(), and zip() Hard Task 4 | HARD | range, enumerate, zip |
+| 10 | range(), enumerate(), and zip() Hard Task 5 | HARD | range, enumerate, zip |
 
 ## Robotics challenge — ROBO-X Challenge: range(), enumerate(), and zip() Controller
 

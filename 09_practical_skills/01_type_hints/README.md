@@ -36,16 +36,16 @@ Type hints document API expectations, catch bugs statically, and improve IDE com
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Type Hints Medium Exercise 1 | MEDIUM | Type Hints, typing, Static Analysis |
-| 2 | Type Hints Medium Exercise 2 | MEDIUM | Type Hints, typing, Static Analysis |
-| 3 | Type Hints Medium Exercise 3 | MEDIUM | Type Hints, typing, Static Analysis |
-| 4 | Type Hints Medium Exercise 4 | MEDIUM | Type Hints, typing, Static Analysis |
-| 5 | Type Hints Medium Exercise 5 | MEDIUM | Type Hints, typing, Static Analysis |
-| 6 | Type Hints Hard Exercise 1 | HARD | Type Hints, typing, Static Analysis |
-| 7 | Type Hints Hard Exercise 2 | HARD | Type Hints, typing, Static Analysis |
-| 8 | Type Hints Hard Exercise 3 | HARD | Type Hints, typing, Static Analysis |
-| 9 | Type Hints Hard Exercise 4 | HARD | Type Hints, typing, Static Analysis |
-| 10 | Type Hints Hard Exercise 5 | HARD | Type Hints, typing, Static Analysis |
+| 1 | Type Hints Medium Task 1 | MEDIUM | Type Hints, typing, Static Analysis |
+| 2 | Type Hints Medium Task 2 | MEDIUM | Type Hints, typing, Static Analysis |
+| 3 | Type Hints Medium Task 3 | MEDIUM | Type Hints, typing, Static Analysis |
+| 4 | Type Hints Medium Task 4 | MEDIUM | Type Hints, typing, Static Analysis |
+| 5 | Type Hints Medium Task 5 | MEDIUM | Type Hints, typing, Static Analysis |
+| 6 | Type Hints Hard Task 1 | HARD | Type Hints, typing, Static Analysis |
+| 7 | Type Hints Hard Task 2 | HARD | Type Hints, typing, Static Analysis |
+| 8 | Type Hints Hard Task 3 | HARD | Type Hints, typing, Static Analysis |
+| 9 | Type Hints Hard Task 4 | HARD | Type Hints, typing, Static Analysis |
+| 10 | Type Hints Hard Task 5 | HARD | Type Hints, typing, Static Analysis |
 
 ## Robotics challenge — ROBO-X Challenge: Type Hints Controller
 

@@ -36,16 +36,16 @@ Python uses indentation to define block structure, replacing curly braces used i
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Python Syntax, Indentation, Comments, and Code Structure Medium Exercise 1 | MEDIUM | Indentation, PEP 8, Comments |
-| 2 | Python Syntax, Indentation, Comments, and Code Structure Medium Exercise 2 | MEDIUM | Indentation, PEP 8, Comments |
-| 3 | Python Syntax, Indentation, Comments, and Code Structure Medium Exercise 3 | MEDIUM | Indentation, PEP 8, Comments |
-| 4 | Python Syntax, Indentation, Comments, and Code Structure Medium Exercise 4 | MEDIUM | Indentation, PEP 8, Comments |
-| 5 | Python Syntax, Indentation, Comments, and Code Structure Medium Exercise 5 | MEDIUM | Indentation, PEP 8, Comments |
-| 6 | Python Syntax, Indentation, Comments, and Code Structure Hard Exercise 1 | HARD | Indentation, PEP 8, Comments |
-| 7 | Python Syntax, Indentation, Comments, and Code Structure Hard Exercise 2 | HARD | Indentation, PEP 8, Comments |
-| 8 | Python Syntax, Indentation, Comments, and Code Structure Hard Exercise 3 | HARD | Indentation, PEP 8, Comments |
-| 9 | Python Syntax, Indentation, Comments, and Code Structure Hard Exercise 4 | HARD | Indentation, PEP 8, Comments |
-| 10 | Python Syntax, Indentation, Comments, and Code Structure Hard Exercise 5 | HARD | Indentation, PEP 8, Comments |
+| 1 | Python Syntax, Indentation, Comments, and Code Structure Medium Task 1 | MEDIUM | Indentation, PEP 8, Comments |
+| 2 | Python Syntax, Indentation, Comments, and Code Structure Medium Task 2 | MEDIUM | Indentation, PEP 8, Comments |
+| 3 | Python Syntax, Indentation, Comments, and Code Structure Medium Task 3 | MEDIUM | Indentation, PEP 8, Comments |
+| 4 | Python Syntax, Indentation, Comments, and Code Structure Medium Task 4 | MEDIUM | Indentation, PEP 8, Comments |
+| 5 | Python Syntax, Indentation, Comments, and Code Structure Medium Task 5 | MEDIUM | Indentation, PEP 8, Comments |
+| 6 | Python Syntax, Indentation, Comments, and Code Structure Hard Task 1 | HARD | Indentation, PEP 8, Comments |
+| 7 | Python Syntax, Indentation, Comments, and Code Structure Hard Task 2 | HARD | Indentation, PEP 8, Comments |
+| 8 | Python Syntax, Indentation, Comments, and Code Structure Hard Task 3 | HARD | Indentation, PEP 8, Comments |
+| 9 | Python Syntax, Indentation, Comments, and Code Structure Hard Task 4 | HARD | Indentation, PEP 8, Comments |
+| 10 | Python Syntax, Indentation, Comments, and Code Structure Hard Task 5 | HARD | Indentation, PEP 8, Comments |
 
 ## Robotics challenge — ROBO-X Challenge: Python Syntax, Indentation, Comments, and Code Structure Controller
 

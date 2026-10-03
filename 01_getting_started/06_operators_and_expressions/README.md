@@ -36,16 +36,16 @@ Operators combine values into expressions that evaluate to new results.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Operators and Expressions Medium Exercise 1 | MEDIUM | Operators, Expressions, Short-Circuiting |
-| 2 | Operators and Expressions Medium Exercise 2 | MEDIUM | Operators, Expressions, Short-Circuiting |
-| 3 | Operators and Expressions Medium Exercise 3 | MEDIUM | Operators, Expressions, Short-Circuiting |
-| 4 | Operators and Expressions Medium Exercise 4 | MEDIUM | Operators, Expressions, Short-Circuiting |
-| 5 | Operators and Expressions Medium Exercise 5 | MEDIUM | Operators, Expressions, Short-Circuiting |
-| 6 | Operators and Expressions Hard Exercise 1 | HARD | Operators, Expressions, Short-Circuiting |
-| 7 | Operators and Expressions Hard Exercise 2 | HARD | Operators, Expressions, Short-Circuiting |
-| 8 | Operators and Expressions Hard Exercise 3 | HARD | Operators, Expressions, Short-Circuiting |
-| 9 | Operators and Expressions Hard Exercise 4 | HARD | Operators, Expressions, Short-Circuiting |
-| 10 | Operators and Expressions Hard Exercise 5 | HARD | Operators, Expressions, Short-Circuiting |
+| 1 | Operators and Expressions Medium Task 1 | MEDIUM | Operators, Expressions, Short-Circuiting |
+| 2 | Operators and Expressions Medium Task 2 | MEDIUM | Operators, Expressions, Short-Circuiting |
+| 3 | Operators and Expressions Medium Task 3 | MEDIUM | Operators, Expressions, Short-Circuiting |
+| 4 | Operators and Expressions Medium Task 4 | MEDIUM | Operators, Expressions, Short-Circuiting |
+| 5 | Operators and Expressions Medium Task 5 | MEDIUM | Operators, Expressions, Short-Circuiting |
+| 6 | Operators and Expressions Hard Task 1 | HARD | Operators, Expressions, Short-Circuiting |
+| 7 | Operators and Expressions Hard Task 2 | HARD | Operators, Expressions, Short-Circuiting |
+| 8 | Operators and Expressions Hard Task 3 | HARD | Operators, Expressions, Short-Circuiting |
+| 9 | Operators and Expressions Hard Task 4 | HARD | Operators, Expressions, Short-Circuiting |
+| 10 | Operators and Expressions Hard Task 5 | HARD | Operators, Expressions, Short-Circuiting |
 
 ## Robotics challenge — ROBO-X Challenge: Operators and Expressions Controller
 

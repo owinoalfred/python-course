@@ -36,16 +36,16 @@ Modules organize code into reusable maintainable namespaces.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Modules and Packages Medium Exercise 1 | MEDIUM | Modules, Packages, __init__.py |
-| 2 | Modules and Packages Medium Exercise 2 | MEDIUM | Modules, Packages, __init__.py |
-| 3 | Modules and Packages Medium Exercise 3 | MEDIUM | Modules, Packages, __init__.py |
-| 4 | Modules and Packages Medium Exercise 4 | MEDIUM | Modules, Packages, __init__.py |
-| 5 | Modules and Packages Medium Exercise 5 | MEDIUM | Modules, Packages, __init__.py |
-| 6 | Modules and Packages Hard Exercise 1 | HARD | Modules, Packages, __init__.py |
-| 7 | Modules and Packages Hard Exercise 2 | HARD | Modules, Packages, __init__.py |
-| 8 | Modules and Packages Hard Exercise 3 | HARD | Modules, Packages, __init__.py |
-| 9 | Modules and Packages Hard Exercise 4 | HARD | Modules, Packages, __init__.py |
-| 10 | Modules and Packages Hard Exercise 5 | HARD | Modules, Packages, __init__.py |
+| 1 | Modules and Packages Medium Task 1 | MEDIUM | Modules, Packages, __init__.py |
+| 2 | Modules and Packages Medium Task 2 | MEDIUM | Modules, Packages, __init__.py |
+| 3 | Modules and Packages Medium Task 3 | MEDIUM | Modules, Packages, __init__.py |
+| 4 | Modules and Packages Medium Task 4 | MEDIUM | Modules, Packages, __init__.py |
+| 5 | Modules and Packages Medium Task 5 | MEDIUM | Modules, Packages, __init__.py |
+| 6 | Modules and Packages Hard Task 1 | HARD | Modules, Packages, __init__.py |
+| 7 | Modules and Packages Hard Task 2 | HARD | Modules, Packages, __init__.py |
+| 8 | Modules and Packages Hard Task 3 | HARD | Modules, Packages, __init__.py |
+| 9 | Modules and Packages Hard Task 4 | HARD | Modules, Packages, __init__.py |
+| 10 | Modules and Packages Hard Task 5 | HARD | Modules, Packages, __init__.py |
 
 ## Robotics challenge — ROBO-X Challenge: Modules and Packages Controller
 

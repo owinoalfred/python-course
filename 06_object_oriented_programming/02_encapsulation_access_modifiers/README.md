@@ -36,16 +36,16 @@ Encapsulation hides internal state and exposes clean public interfaces.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Encapsulation and Access Modifiers Medium Exercise 1 | MEDIUM | Encapsulation, Protected, Private |
-| 2 | Encapsulation and Access Modifiers Medium Exercise 2 | MEDIUM | Encapsulation, Protected, Private |
-| 3 | Encapsulation and Access Modifiers Medium Exercise 3 | MEDIUM | Encapsulation, Protected, Private |
-| 4 | Encapsulation and Access Modifiers Medium Exercise 4 | MEDIUM | Encapsulation, Protected, Private |
-| 5 | Encapsulation and Access Modifiers Medium Exercise 5 | MEDIUM | Encapsulation, Protected, Private |
-| 6 | Encapsulation and Access Modifiers Hard Exercise 1 | HARD | Encapsulation, Protected, Private, Name Mangling |
-| 7 | Encapsulation and Access Modifiers Hard Exercise 2 | HARD | Encapsulation, Protected, Private, Name Mangling |
-| 8 | Encapsulation and Access Modifiers Hard Exercise 3 | HARD | Encapsulation, Protected, Private, Name Mangling |
-| 9 | Encapsulation and Access Modifiers Hard Exercise 4 | HARD | Encapsulation, Protected, Private, Name Mangling |
-| 10 | Encapsulation and Access Modifiers Hard Exercise 5 | HARD | Encapsulation, Protected, Private, Name Mangling |
+| 1 | Encapsulation and Access Modifiers Medium Task 1 | MEDIUM | Encapsulation, Protected, Private |
+| 2 | Encapsulation and Access Modifiers Medium Task 2 | MEDIUM | Encapsulation, Protected, Private |
+| 3 | Encapsulation and Access Modifiers Medium Task 3 | MEDIUM | Encapsulation, Protected, Private |
+| 4 | Encapsulation and Access Modifiers Medium Task 4 | MEDIUM | Encapsulation, Protected, Private |
+| 5 | Encapsulation and Access Modifiers Medium Task 5 | MEDIUM | Encapsulation, Protected, Private |
+| 6 | Encapsulation and Access Modifiers Hard Task 1 | HARD | Encapsulation, Protected, Private, Name Mangling |
+| 7 | Encapsulation and Access Modifiers Hard Task 2 | HARD | Encapsulation, Protected, Private, Name Mangling |
+| 8 | Encapsulation and Access Modifiers Hard Task 3 | HARD | Encapsulation, Protected, Private, Name Mangling |
+| 9 | Encapsulation and Access Modifiers Hard Task 4 | HARD | Encapsulation, Protected, Private, Name Mangling |
+| 10 | Encapsulation and Access Modifiers Hard Task 5 | HARD | Encapsulation, Protected, Private, Name Mangling |
 
 ## Robotics challenge — ROBO-X Challenge: Encapsulation and Access Modifiers Controller
 

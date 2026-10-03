@@ -36,16 +36,16 @@ Robust file handling defends against missing files, permissions issues, and corr
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Error Handling in File Operations Medium Exercise 1 | MEDIUM | FileNotFoundError, PermissionError, OSError |
-| 2 | Error Handling in File Operations Medium Exercise 2 | MEDIUM | FileNotFoundError, PermissionError, OSError |
-| 3 | Error Handling in File Operations Medium Exercise 3 | MEDIUM | FileNotFoundError, PermissionError, OSError |
-| 4 | Error Handling in File Operations Medium Exercise 4 | MEDIUM | FileNotFoundError, PermissionError, OSError |
-| 5 | Error Handling in File Operations Medium Exercise 5 | MEDIUM | FileNotFoundError, PermissionError, OSError |
-| 6 | Error Handling in File Operations Hard Exercise 1 | HARD | FileNotFoundError, PermissionError, OSError |
-| 7 | Error Handling in File Operations Hard Exercise 2 | HARD | FileNotFoundError, PermissionError, OSError |
-| 8 | Error Handling in File Operations Hard Exercise 3 | HARD | FileNotFoundError, PermissionError, OSError |
-| 9 | Error Handling in File Operations Hard Exercise 4 | HARD | FileNotFoundError, PermissionError, OSError |
-| 10 | Error Handling in File Operations Hard Exercise 5 | HARD | FileNotFoundError, PermissionError, OSError |
+| 1 | Error Handling in File Operations Medium Task 1 | MEDIUM | FileNotFoundError, PermissionError, OSError |
+| 2 | Error Handling in File Operations Medium Task 2 | MEDIUM | FileNotFoundError, PermissionError, OSError |
+| 3 | Error Handling in File Operations Medium Task 3 | MEDIUM | FileNotFoundError, PermissionError, OSError |
+| 4 | Error Handling in File Operations Medium Task 4 | MEDIUM | FileNotFoundError, PermissionError, OSError |
+| 5 | Error Handling in File Operations Medium Task 5 | MEDIUM | FileNotFoundError, PermissionError, OSError |
+| 6 | Error Handling in File Operations Hard Task 1 | HARD | FileNotFoundError, PermissionError, OSError |
+| 7 | Error Handling in File Operations Hard Task 2 | HARD | FileNotFoundError, PermissionError, OSError |
+| 8 | Error Handling in File Operations Hard Task 3 | HARD | FileNotFoundError, PermissionError, OSError |
+| 9 | Error Handling in File Operations Hard Task 4 | HARD | FileNotFoundError, PermissionError, OSError |
+| 10 | Error Handling in File Operations Hard Task 5 | HARD | FileNotFoundError, PermissionError, OSError |
 
 ## Robotics challenge — ROBO-X Challenge: Error Handling in File Operations Controller
 

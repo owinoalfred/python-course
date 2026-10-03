@@ -36,16 +36,16 @@ Inheritance allows subclasses to reuse and extend parent class behavior.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Inheritance Medium Exercise 1 | MEDIUM | Inheritance, super(), MRO |
-| 2 | Inheritance Medium Exercise 2 | MEDIUM | Inheritance, super(), MRO |
-| 3 | Inheritance Medium Exercise 3 | MEDIUM | Inheritance, super(), MRO |
-| 4 | Inheritance Medium Exercise 4 | MEDIUM | Inheritance, super(), MRO |
-| 5 | Inheritance Medium Exercise 5 | MEDIUM | Inheritance, super(), MRO |
-| 6 | Inheritance Hard Exercise 1 | HARD | Inheritance, super(), MRO |
-| 7 | Inheritance Hard Exercise 2 | HARD | Inheritance, super(), MRO |
-| 8 | Inheritance Hard Exercise 3 | HARD | Inheritance, super(), MRO |
-| 9 | Inheritance Hard Exercise 4 | HARD | Inheritance, super(), MRO |
-| 10 | Inheritance Hard Exercise 5 | HARD | Inheritance, super(), MRO |
+| 1 | Inheritance Medium Task 1 | MEDIUM | Inheritance, super(), MRO |
+| 2 | Inheritance Medium Task 2 | MEDIUM | Inheritance, super(), MRO |
+| 3 | Inheritance Medium Task 3 | MEDIUM | Inheritance, super(), MRO |
+| 4 | Inheritance Medium Task 4 | MEDIUM | Inheritance, super(), MRO |
+| 5 | Inheritance Medium Task 5 | MEDIUM | Inheritance, super(), MRO |
+| 6 | Inheritance Hard Task 1 | HARD | Inheritance, super(), MRO |
+| 7 | Inheritance Hard Task 2 | HARD | Inheritance, super(), MRO |
+| 8 | Inheritance Hard Task 3 | HARD | Inheritance, super(), MRO |
+| 9 | Inheritance Hard Task 4 | HARD | Inheritance, super(), MRO |
+| 10 | Inheritance Hard Task 5 | HARD | Inheritance, super(), MRO |
 
 ## Robotics challenge — ROBO-X Challenge: Inheritance Controller
 

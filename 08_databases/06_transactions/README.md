@@ -36,16 +36,16 @@ Transactions guarantee atomic state transitions, preventing partial updates duri
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Transactions Medium Exercise 1 | MEDIUM | Transactions, ACID, Commit |
-| 2 | Transactions Medium Exercise 2 | MEDIUM | Transactions, ACID, Commit |
-| 3 | Transactions Medium Exercise 3 | MEDIUM | Transactions, ACID, Commit |
-| 4 | Transactions Medium Exercise 4 | MEDIUM | Transactions, ACID, Commit |
-| 5 | Transactions Medium Exercise 5 | MEDIUM | Transactions, ACID, Commit |
-| 6 | Transactions Hard Exercise 1 | HARD | Transactions, ACID, Commit, Rollback |
-| 7 | Transactions Hard Exercise 2 | HARD | Transactions, ACID, Commit, Rollback |
-| 8 | Transactions Hard Exercise 3 | HARD | Transactions, ACID, Commit, Rollback |
-| 9 | Transactions Hard Exercise 4 | HARD | Transactions, ACID, Commit, Rollback |
-| 10 | Transactions Hard Exercise 5 | HARD | Transactions, ACID, Commit, Rollback |
+| 1 | Transactions Medium Task 1 | MEDIUM | Transactions, ACID, Commit |
+| 2 | Transactions Medium Task 2 | MEDIUM | Transactions, ACID, Commit |
+| 3 | Transactions Medium Task 3 | MEDIUM | Transactions, ACID, Commit |
+| 4 | Transactions Medium Task 4 | MEDIUM | Transactions, ACID, Commit |
+| 5 | Transactions Medium Task 5 | MEDIUM | Transactions, ACID, Commit |
+| 6 | Transactions Hard Task 1 | HARD | Transactions, ACID, Commit, Rollback |
+| 7 | Transactions Hard Task 2 | HARD | Transactions, ACID, Commit, Rollback |
+| 8 | Transactions Hard Task 3 | HARD | Transactions, ACID, Commit, Rollback |
+| 9 | Transactions Hard Task 4 | HARD | Transactions, ACID, Commit, Rollback |
+| 10 | Transactions Hard Task 5 | HARD | Transactions, ACID, Commit, Rollback |
 
 ## Robotics challenge — ROBO-X Challenge: Transactions Controller
 

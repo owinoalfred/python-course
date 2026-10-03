@@ -36,16 +36,16 @@ SOLID principles guide object-oriented architecture toward maintainable, extensi
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | SOLID Design Principles Medium Exercise 1 | MEDIUM | SOLID, Design Principles, Software Architecture |
-| 2 | SOLID Design Principles Medium Exercise 2 | MEDIUM | SOLID, Design Principles, Software Architecture |
-| 3 | SOLID Design Principles Medium Exercise 3 | MEDIUM | SOLID, Design Principles, Software Architecture |
-| 4 | SOLID Design Principles Medium Exercise 4 | MEDIUM | SOLID, Design Principles, Software Architecture |
-| 5 | SOLID Design Principles Medium Exercise 5 | MEDIUM | SOLID, Design Principles, Software Architecture |
-| 6 | SOLID Design Principles Hard Exercise 1 | HARD | SOLID, Design Principles, Software Architecture |
-| 7 | SOLID Design Principles Hard Exercise 2 | HARD | SOLID, Design Principles, Software Architecture |
-| 8 | SOLID Design Principles Hard Exercise 3 | HARD | SOLID, Design Principles, Software Architecture |
-| 9 | SOLID Design Principles Hard Exercise 4 | HARD | SOLID, Design Principles, Software Architecture |
-| 10 | SOLID Design Principles Hard Exercise 5 | HARD | SOLID, Design Principles, Software Architecture |
+| 1 | SOLID Design Principles Medium Task 1 | MEDIUM | SOLID, Design Principles, Software Architecture |
+| 2 | SOLID Design Principles Medium Task 2 | MEDIUM | SOLID, Design Principles, Software Architecture |
+| 3 | SOLID Design Principles Medium Task 3 | MEDIUM | SOLID, Design Principles, Software Architecture |
+| 4 | SOLID Design Principles Medium Task 4 | MEDIUM | SOLID, Design Principles, Software Architecture |
+| 5 | SOLID Design Principles Medium Task 5 | MEDIUM | SOLID, Design Principles, Software Architecture |
+| 6 | SOLID Design Principles Hard Task 1 | HARD | SOLID, Design Principles, Software Architecture |
+| 7 | SOLID Design Principles Hard Task 2 | HARD | SOLID, Design Principles, Software Architecture |
+| 8 | SOLID Design Principles Hard Task 3 | HARD | SOLID, Design Principles, Software Architecture |
+| 9 | SOLID Design Principles Hard Task 4 | HARD | SOLID, Design Principles, Software Architecture |
+| 10 | SOLID Design Principles Hard Task 5 | HARD | SOLID, Design Principles, Software Architecture |
 
 ## Robotics challenge — ROBO-X Challenge: SOLID Design Principles Controller
 

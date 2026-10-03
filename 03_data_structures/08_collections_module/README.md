@@ -36,16 +36,16 @@ Standard collections extend basic structures with optimized data abstractions.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | collections Module Medium Exercise 1 | MEDIUM | Counter, defaultdict, namedtuple |
-| 2 | collections Module Medium Exercise 2 | MEDIUM | Counter, defaultdict, namedtuple |
-| 3 | collections Module Medium Exercise 3 | MEDIUM | Counter, defaultdict, namedtuple |
-| 4 | collections Module Medium Exercise 4 | MEDIUM | Counter, defaultdict, namedtuple |
-| 5 | collections Module Medium Exercise 5 | MEDIUM | Counter, defaultdict, namedtuple |
-| 6 | collections Module Hard Exercise 1 | HARD | Counter, defaultdict, namedtuple, deque |
-| 7 | collections Module Hard Exercise 2 | HARD | Counter, defaultdict, namedtuple, deque |
-| 8 | collections Module Hard Exercise 3 | HARD | Counter, defaultdict, namedtuple, deque |
-| 9 | collections Module Hard Exercise 4 | HARD | Counter, defaultdict, namedtuple, deque |
-| 10 | collections Module Hard Exercise 5 | HARD | Counter, defaultdict, namedtuple, deque |
+| 1 | collections Module Medium Task 1 | MEDIUM | Counter, defaultdict, namedtuple |
+| 2 | collections Module Medium Task 2 | MEDIUM | Counter, defaultdict, namedtuple |
+| 3 | collections Module Medium Task 3 | MEDIUM | Counter, defaultdict, namedtuple |
+| 4 | collections Module Medium Task 4 | MEDIUM | Counter, defaultdict, namedtuple |
+| 5 | collections Module Medium Task 5 | MEDIUM | Counter, defaultdict, namedtuple |
+| 6 | collections Module Hard Task 1 | HARD | Counter, defaultdict, namedtuple, deque |
+| 7 | collections Module Hard Task 2 | HARD | Counter, defaultdict, namedtuple, deque |
+| 8 | collections Module Hard Task 3 | HARD | Counter, defaultdict, namedtuple, deque |
+| 9 | collections Module Hard Task 4 | HARD | Counter, defaultdict, namedtuple, deque |
+| 10 | collections Module Hard Task 5 | HARD | Counter, defaultdict, namedtuple, deque |
 
 ## Robotics challenge — ROBO-X Challenge: collections Module Controller
 

@@ -36,16 +36,16 @@ JSON and CSV are universal formats for configuration, serialization, and telemet
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | JSON and CSV Medium Exercise 1 | MEDIUM | JSON, CSV, Serialization |
-| 2 | JSON and CSV Medium Exercise 2 | MEDIUM | JSON, CSV, Serialization |
-| 3 | JSON and CSV Medium Exercise 3 | MEDIUM | JSON, CSV, Serialization |
-| 4 | JSON and CSV Medium Exercise 4 | MEDIUM | JSON, CSV, Serialization |
-| 5 | JSON and CSV Medium Exercise 5 | MEDIUM | JSON, CSV, Serialization |
-| 6 | JSON and CSV Hard Exercise 1 | HARD | JSON, CSV, Serialization |
-| 7 | JSON and CSV Hard Exercise 2 | HARD | JSON, CSV, Serialization |
-| 8 | JSON and CSV Hard Exercise 3 | HARD | JSON, CSV, Serialization |
-| 9 | JSON and CSV Hard Exercise 4 | HARD | JSON, CSV, Serialization |
-| 10 | JSON and CSV Hard Exercise 5 | HARD | JSON, CSV, Serialization |
+| 1 | JSON and CSV Medium Task 1 | MEDIUM | JSON, CSV, Serialization |
+| 2 | JSON and CSV Medium Task 2 | MEDIUM | JSON, CSV, Serialization |
+| 3 | JSON and CSV Medium Task 3 | MEDIUM | JSON, CSV, Serialization |
+| 4 | JSON and CSV Medium Task 4 | MEDIUM | JSON, CSV, Serialization |
+| 5 | JSON and CSV Medium Task 5 | MEDIUM | JSON, CSV, Serialization |
+| 6 | JSON and CSV Hard Task 1 | HARD | JSON, CSV, Serialization |
+| 7 | JSON and CSV Hard Task 2 | HARD | JSON, CSV, Serialization |
+| 8 | JSON and CSV Hard Task 3 | HARD | JSON, CSV, Serialization |
+| 9 | JSON and CSV Hard Task 4 | HARD | JSON, CSV, Serialization |
+| 10 | JSON and CSV Hard Task 5 | HARD | JSON, CSV, Serialization |
 
 ## Robotics challenge — ROBO-X Challenge: JSON and CSV Controller
 

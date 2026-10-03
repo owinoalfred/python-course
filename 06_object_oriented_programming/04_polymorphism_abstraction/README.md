@@ -36,16 +36,16 @@ Polymorphism allows uniform treatment of different underlying class implementati
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Polymorphism and Abstraction Medium Exercise 1 | MEDIUM | Polymorphism, Abstraction, abc |
-| 2 | Polymorphism and Abstraction Medium Exercise 2 | MEDIUM | Polymorphism, Abstraction, abc |
-| 3 | Polymorphism and Abstraction Medium Exercise 3 | MEDIUM | Polymorphism, Abstraction, abc |
-| 4 | Polymorphism and Abstraction Medium Exercise 4 | MEDIUM | Polymorphism, Abstraction, abc |
-| 5 | Polymorphism and Abstraction Medium Exercise 5 | MEDIUM | Polymorphism, Abstraction, abc |
-| 6 | Polymorphism and Abstraction Hard Exercise 1 | HARD | Polymorphism, Abstraction, abc, Duck Typing |
-| 7 | Polymorphism and Abstraction Hard Exercise 2 | HARD | Polymorphism, Abstraction, abc, Duck Typing |
-| 8 | Polymorphism and Abstraction Hard Exercise 3 | HARD | Polymorphism, Abstraction, abc, Duck Typing |
-| 9 | Polymorphism and Abstraction Hard Exercise 4 | HARD | Polymorphism, Abstraction, abc, Duck Typing |
-| 10 | Polymorphism and Abstraction Hard Exercise 5 | HARD | Polymorphism, Abstraction, abc, Duck Typing |
+| 1 | Polymorphism and Abstraction Medium Task 1 | MEDIUM | Polymorphism, Abstraction, abc |
+| 2 | Polymorphism and Abstraction Medium Task 2 | MEDIUM | Polymorphism, Abstraction, abc |
+| 3 | Polymorphism and Abstraction Medium Task 3 | MEDIUM | Polymorphism, Abstraction, abc |
+| 4 | Polymorphism and Abstraction Medium Task 4 | MEDIUM | Polymorphism, Abstraction, abc |
+| 5 | Polymorphism and Abstraction Medium Task 5 | MEDIUM | Polymorphism, Abstraction, abc |
+| 6 | Polymorphism and Abstraction Hard Task 1 | HARD | Polymorphism, Abstraction, abc, Duck Typing |
+| 7 | Polymorphism and Abstraction Hard Task 2 | HARD | Polymorphism, Abstraction, abc, Duck Typing |
+| 8 | Polymorphism and Abstraction Hard Task 3 | HARD | Polymorphism, Abstraction, abc, Duck Typing |
+| 9 | Polymorphism and Abstraction Hard Task 4 | HARD | Polymorphism, Abstraction, abc, Duck Typing |
+| 10 | Polymorphism and Abstraction Hard Task 5 | HARD | Polymorphism, Abstraction, abc, Duck Typing |
 
 ## Robotics challenge — ROBO-X Challenge: Polymorphism and Abstraction Controller
 

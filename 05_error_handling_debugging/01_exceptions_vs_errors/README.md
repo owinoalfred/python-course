@@ -36,16 +36,16 @@ Distinguishing syntax errors from runtime exceptions is vital for system reliabi
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Exceptions vs Errors Medium Exercise 1 | MEDIUM | Exceptions, Errors, Tracebacks |
-| 2 | Exceptions vs Errors Medium Exercise 2 | MEDIUM | Exceptions, Errors, Tracebacks |
-| 3 | Exceptions vs Errors Medium Exercise 3 | MEDIUM | Exceptions, Errors, Tracebacks |
-| 4 | Exceptions vs Errors Medium Exercise 4 | MEDIUM | Exceptions, Errors, Tracebacks |
-| 5 | Exceptions vs Errors Medium Exercise 5 | MEDIUM | Exceptions, Errors, Tracebacks |
-| 6 | Exceptions vs Errors Hard Exercise 1 | HARD | Exceptions, Errors, Tracebacks |
-| 7 | Exceptions vs Errors Hard Exercise 2 | HARD | Exceptions, Errors, Tracebacks |
-| 8 | Exceptions vs Errors Hard Exercise 3 | HARD | Exceptions, Errors, Tracebacks |
-| 9 | Exceptions vs Errors Hard Exercise 4 | HARD | Exceptions, Errors, Tracebacks |
-| 10 | Exceptions vs Errors Hard Exercise 5 | HARD | Exceptions, Errors, Tracebacks |
+| 1 | Exceptions vs Errors Medium Task 1 | MEDIUM | Exceptions, Errors, Tracebacks |
+| 2 | Exceptions vs Errors Medium Task 2 | MEDIUM | Exceptions, Errors, Tracebacks |
+| 3 | Exceptions vs Errors Medium Task 3 | MEDIUM | Exceptions, Errors, Tracebacks |
+| 4 | Exceptions vs Errors Medium Task 4 | MEDIUM | Exceptions, Errors, Tracebacks |
+| 5 | Exceptions vs Errors Medium Task 5 | MEDIUM | Exceptions, Errors, Tracebacks |
+| 6 | Exceptions vs Errors Hard Task 1 | HARD | Exceptions, Errors, Tracebacks |
+| 7 | Exceptions vs Errors Hard Task 2 | HARD | Exceptions, Errors, Tracebacks |
+| 8 | Exceptions vs Errors Hard Task 3 | HARD | Exceptions, Errors, Tracebacks |
+| 9 | Exceptions vs Errors Hard Task 4 | HARD | Exceptions, Errors, Tracebacks |
+| 10 | Exceptions vs Errors Hard Task 5 | HARD | Exceptions, Errors, Tracebacks |
 
 ## Robotics challenge — ROBO-X Challenge: Exceptions vs Errors Controller
 

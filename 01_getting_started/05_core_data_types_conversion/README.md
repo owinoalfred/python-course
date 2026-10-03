@@ -36,16 +36,16 @@ Data types govern how bits in memory are interpreted and operated upon.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Core Data Types and Type Conversion Medium Exercise 1 | MEDIUM | int, float, str |
-| 2 | Core Data Types and Type Conversion Medium Exercise 2 | MEDIUM | int, float, str |
-| 3 | Core Data Types and Type Conversion Medium Exercise 3 | MEDIUM | int, float, str |
-| 4 | Core Data Types and Type Conversion Medium Exercise 4 | MEDIUM | int, float, str |
-| 5 | Core Data Types and Type Conversion Medium Exercise 5 | MEDIUM | int, float, str |
-| 6 | Core Data Types and Type Conversion Hard Exercise 1 | HARD | int, float, str, bool, Type Casting |
-| 7 | Core Data Types and Type Conversion Hard Exercise 2 | HARD | int, float, str, bool, Type Casting |
-| 8 | Core Data Types and Type Conversion Hard Exercise 3 | HARD | int, float, str, bool, Type Casting |
-| 9 | Core Data Types and Type Conversion Hard Exercise 4 | HARD | int, float, str, bool, Type Casting |
-| 10 | Core Data Types and Type Conversion Hard Exercise 5 | HARD | int, float, str, bool, Type Casting |
+| 1 | Core Data Types and Type Conversion Medium Task 1 | MEDIUM | int, float, str |
+| 2 | Core Data Types and Type Conversion Medium Task 2 | MEDIUM | int, float, str |
+| 3 | Core Data Types and Type Conversion Medium Task 3 | MEDIUM | int, float, str |
+| 4 | Core Data Types and Type Conversion Medium Task 4 | MEDIUM | int, float, str |
+| 5 | Core Data Types and Type Conversion Medium Task 5 | MEDIUM | int, float, str |
+| 6 | Core Data Types and Type Conversion Hard Task 1 | HARD | int, float, str, bool, Type Casting |
+| 7 | Core Data Types and Type Conversion Hard Task 2 | HARD | int, float, str, bool, Type Casting |
+| 8 | Core Data Types and Type Conversion Hard Task 3 | HARD | int, float, str, bool, Type Casting |
+| 9 | Core Data Types and Type Conversion Hard Task 4 | HARD | int, float, str, bool, Type Casting |
+| 10 | Core Data Types and Type Conversion Hard Task 5 | HARD | int, float, str, bool, Type Casting |
 
 ## Robotics challenge — ROBO-X Challenge: Core Data Types and Type Conversion Controller
 
