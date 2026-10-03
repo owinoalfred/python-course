@@ -68,6 +68,9 @@ def numbered(items: Iterable[str], *, start: int = 1, indent: int = 0) -> str:
     return "\n".join(f"{pad}{i}. {item}" for i, item in enumerate(items, start=start))
 
 
+steps = numbered
+
+
 def table(headers: Sequence[str], rows: Iterable[Sequence[Any]]) -> str:
     """Render a GitHub-flavoured markdown table."""
     def clean(value: Any) -> str:
