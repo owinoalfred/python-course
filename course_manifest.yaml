@@ -1,0 +1,394 @@
+# course_manifest.yaml
+#
+# GENERATED FILE - do not edit by hand.
+# Source of truth: course_content/ (authored) -> tools/coursegen/build.py.
+# Regenerate with:  python tools/build_course.py
+#
+# Every validator in tools/ reads this file. If a topic is added to
+# course_content/, it appears here automatically on the next build.
+
+course:
+  title: "Python Master Course"
+  subtitle: "Notebook-Based Python + Software Engineering + Robotics"
+  project: ROBO-X
+  python_requires: ">=3.10"
+  module_count: 9
+  topic_count: 13
+
+required_notebooks:
+    - "lesson.ipynb"
+    - "mini_project.ipynb"
+    - "exercises.ipynb"
+    - "research.ipynb"
+    - "quiz.ipynb"
+    - "robotics_challenge.ipynb"
+    - "solution.ipynb"
+required_docs:
+    - "README.md"
+    - "instructor_notes.md"
+    - "rubric.md"
+
+modules:
+
+  - number: 1
+    id: M1
+    title: "Getting Started with Python"
+    directory: "01_getting_started"
+    robo_x_milestone: "M1"
+    topic_count: 8
+    topics:
+      - id: "1.1"
+        title: "Introduction to Python"
+        directory: "01_getting_started/01_introduction_to_python"
+        prerequisites: ["No", "Basic"]
+        learning_objectives: ["Explain", "Understand", "Identify"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "01_getting_started/01_introduction_to_python/lesson.ipynb"
+          - "01_getting_started/01_introduction_to_python/mini_project.ipynb"
+          - "01_getting_started/01_introduction_to_python/exercises.ipynb"
+          - "01_getting_started/01_introduction_to_python/research.ipynb"
+          - "01_getting_started/01_introduction_to_python/quiz.ipynb"
+          - "01_getting_started/01_introduction_to_python/robotics_challenge.ipynb"
+          - "01_getting_started/01_introduction_to_python/solution.ipynb"
+        mini_project: "01_getting_started/01_introduction_to_python/mini_project.ipynb"
+        research_task: "How does the performance of Introduction to Python scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Introduction to Python Controller"
+        robo_x_milestone: "M1"
+      - id: "1.2"
+        title: "Installing Python, IDEs, and the REPL"
+        directory: "01_getting_started/02_installing_python_ides_repl"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Install", "Configure", "Use"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "01_getting_started/02_installing_python_ides_repl/lesson.ipynb"
+          - "01_getting_started/02_installing_python_ides_repl/mini_project.ipynb"
+          - "01_getting_started/02_installing_python_ides_repl/exercises.ipynb"
+          - "01_getting_started/02_installing_python_ides_repl/research.ipynb"
+          - "01_getting_started/02_installing_python_ides_repl/quiz.ipynb"
+          - "01_getting_started/02_installing_python_ides_repl/robotics_challenge.ipynb"
+          - "01_getting_started/02_installing_python_ides_repl/solution.ipynb"
+        mini_project: "01_getting_started/02_installing_python_ides_repl/mini_project.ipynb"
+        research_task: "How does the performance of Installing Python, IDEs, and the REPL scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Installing Python, IDEs, and the REPL Controller"
+        robo_x_milestone: "M1"
+      - id: "1.3"
+        title: "Python Syntax, Indentation, Comments, and Code Structure"
+        directory: "01_getting_started/03_syntax_indentation_comments"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Understand", "Write", "Structure"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "01_getting_started/03_syntax_indentation_comments/lesson.ipynb"
+          - "01_getting_started/03_syntax_indentation_comments/mini_project.ipynb"
+          - "01_getting_started/03_syntax_indentation_comments/exercises.ipynb"
+          - "01_getting_started/03_syntax_indentation_comments/research.ipynb"
+          - "01_getting_started/03_syntax_indentation_comments/quiz.ipynb"
+          - "01_getting_started/03_syntax_indentation_comments/robotics_challenge.ipynb"
+          - "01_getting_started/03_syntax_indentation_comments/solution.ipynb"
+        mini_project: "01_getting_started/03_syntax_indentation_comments/mini_project.ipynb"
+        research_task: "How does the performance of Python Syntax, Indentation, Comments, and Code Structure scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Python Syntax, Indentation, Comments, and Code Structure Controller"
+        robo_x_milestone: "M1"
+      - id: "1.4"
+        title: "Variables, Naming Conventions, and Dynamic Typing"
+        directory: "01_getting_started/04_variables_naming_dynamic_typing"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Explain", "Apply", "Understand"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "01_getting_started/04_variables_naming_dynamic_typing/lesson.ipynb"
+          - "01_getting_started/04_variables_naming_dynamic_typing/mini_project.ipynb"
+          - "01_getting_started/04_variables_naming_dynamic_typing/exercises.ipynb"
+          - "01_getting_started/04_variables_naming_dynamic_typing/research.ipynb"
+          - "01_getting_started/04_variables_naming_dynamic_typing/quiz.ipynb"
+          - "01_getting_started/04_variables_naming_dynamic_typing/robotics_challenge.ipynb"
+          - "01_getting_started/04_variables_naming_dynamic_typing/solution.ipynb"
+        mini_project: "01_getting_started/04_variables_naming_dynamic_typing/mini_project.ipynb"
+        research_task: "How does the performance of Variables, Naming Conventions, and Dynamic Typing scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Variables, Naming Conventions, and Dynamic Typing Controller"
+        robo_x_milestone: "M1"
+      - id: "1.5"
+        title: "Core Data Types and Type Conversion"
+        directory: "01_getting_started/05_core_data_types_conversion"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Work", "Perform", "Handle"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "01_getting_started/05_core_data_types_conversion/lesson.ipynb"
+          - "01_getting_started/05_core_data_types_conversion/mini_project.ipynb"
+          - "01_getting_started/05_core_data_types_conversion/exercises.ipynb"
+          - "01_getting_started/05_core_data_types_conversion/research.ipynb"
+          - "01_getting_started/05_core_data_types_conversion/quiz.ipynb"
+          - "01_getting_started/05_core_data_types_conversion/robotics_challenge.ipynb"
+          - "01_getting_started/05_core_data_types_conversion/solution.ipynb"
+        mini_project: "01_getting_started/05_core_data_types_conversion/mini_project.ipynb"
+        research_task: "How does the performance of Core Data Types and Type Conversion scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Core Data Types and Type Conversion Controller"
+        robo_x_milestone: "M1"
+      - id: "1.6"
+        title: "Operators and Expressions"
+        directory: "01_getting_started/06_operators_and_expressions"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Use", "Understand", "Distinguish"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "01_getting_started/06_operators_and_expressions/lesson.ipynb"
+          - "01_getting_started/06_operators_and_expressions/mini_project.ipynb"
+          - "01_getting_started/06_operators_and_expressions/exercises.ipynb"
+          - "01_getting_started/06_operators_and_expressions/research.ipynb"
+          - "01_getting_started/06_operators_and_expressions/quiz.ipynb"
+          - "01_getting_started/06_operators_and_expressions/robotics_challenge.ipynb"
+          - "01_getting_started/06_operators_and_expressions/solution.ipynb"
+        mini_project: "01_getting_started/06_operators_and_expressions/mini_project.ipynb"
+        research_task: "How does the performance of Operators and Expressions scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Operators and Expressions Controller"
+        robo_x_milestone: "M1"
+      - id: "1.7"
+        title: "Basic Input/Output"
+        directory: "01_getting_started/07_basic_input_output"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Format", "Read", "Configure"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "01_getting_started/07_basic_input_output/lesson.ipynb"
+          - "01_getting_started/07_basic_input_output/mini_project.ipynb"
+          - "01_getting_started/07_basic_input_output/exercises.ipynb"
+          - "01_getting_started/07_basic_input_output/research.ipynb"
+          - "01_getting_started/07_basic_input_output/quiz.ipynb"
+          - "01_getting_started/07_basic_input_output/robotics_challenge.ipynb"
+          - "01_getting_started/07_basic_input_output/solution.ipynb"
+        mini_project: "01_getting_started/07_basic_input_output/mini_project.ipynb"
+        research_task: "How does the performance of Basic Input/Output scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Basic Input/Output Controller"
+        robo_x_milestone: "M1"
+      - id: "1.8"
+        title: "Writing and Running Your First Scripts"
+        directory: "01_getting_started/08_writing_running_first_scripts"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Write", "Pass", "Return"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "01_getting_started/08_writing_running_first_scripts/lesson.ipynb"
+          - "01_getting_started/08_writing_running_first_scripts/mini_project.ipynb"
+          - "01_getting_started/08_writing_running_first_scripts/exercises.ipynb"
+          - "01_getting_started/08_writing_running_first_scripts/research.ipynb"
+          - "01_getting_started/08_writing_running_first_scripts/quiz.ipynb"
+          - "01_getting_started/08_writing_running_first_scripts/robotics_challenge.ipynb"
+          - "01_getting_started/08_writing_running_first_scripts/solution.ipynb"
+        mini_project: "01_getting_started/08_writing_running_first_scripts/mini_project.ipynb"
+        research_task: "How does the performance of Writing and Running Your First Scripts scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Writing and Running Your First Scripts Controller"
+        robo_x_milestone: "M1"
+
+  - number: 2
+    id: M2
+    title: "Control Flow and Loops"
+    directory: "02_control_flow"
+    robo_x_milestone: "M2"
+    topic_count: 5
+    topics:
+      - id: "2.1"
+        title: "Conditional Statements"
+        directory: "02_control_flow/01_conditional_statements"
+        prerequisites: ["Module"]
+        learning_objectives: ["Evaluate", "Implement", "Understand"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "02_control_flow/01_conditional_statements/lesson.ipynb"
+          - "02_control_flow/01_conditional_statements/mini_project.ipynb"
+          - "02_control_flow/01_conditional_statements/exercises.ipynb"
+          - "02_control_flow/01_conditional_statements/research.ipynb"
+          - "02_control_flow/01_conditional_statements/quiz.ipynb"
+          - "02_control_flow/01_conditional_statements/robotics_challenge.ipynb"
+          - "02_control_flow/01_conditional_statements/solution.ipynb"
+        mini_project: "02_control_flow/01_conditional_statements/mini_project.ipynb"
+        research_task: "How does the performance of Conditional Statements scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Conditional Statements Controller"
+        robo_x_milestone: "M2"
+      - id: "2.2"
+        title: "for Loops and while Loops"
+        directory: "02_control_flow/02_for_and_while_loops"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Construct", "Construct", "Avoid"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "02_control_flow/02_for_and_while_loops/lesson.ipynb"
+          - "02_control_flow/02_for_and_while_loops/mini_project.ipynb"
+          - "02_control_flow/02_for_and_while_loops/exercises.ipynb"
+          - "02_control_flow/02_for_and_while_loops/research.ipynb"
+          - "02_control_flow/02_for_and_while_loops/quiz.ipynb"
+          - "02_control_flow/02_for_and_while_loops/robotics_challenge.ipynb"
+          - "02_control_flow/02_for_and_while_loops/solution.ipynb"
+        mini_project: "02_control_flow/02_for_and_while_loops/mini_project.ipynb"
+        research_task: "How does the performance of for Loops and while Loops scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: for Loops and while Loops Controller"
+        robo_x_milestone: "M2"
+      - id: "2.3"
+        title: "Loop Control"
+        directory: "02_control_flow/03_loop_control"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Terminate", "Skip", "Use"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "02_control_flow/03_loop_control/lesson.ipynb"
+          - "02_control_flow/03_loop_control/mini_project.ipynb"
+          - "02_control_flow/03_loop_control/exercises.ipynb"
+          - "02_control_flow/03_loop_control/research.ipynb"
+          - "02_control_flow/03_loop_control/quiz.ipynb"
+          - "02_control_flow/03_loop_control/robotics_challenge.ipynb"
+          - "02_control_flow/03_loop_control/solution.ipynb"
+        mini_project: "02_control_flow/03_loop_control/mini_project.ipynb"
+        research_task: "How does the performance of Loop Control scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Loop Control Controller"
+        robo_x_milestone: "M2"
+      - id: "2.4"
+        title: "Nested Loops and Common Patterns"
+        directory: "02_control_flow/04_nested_loops_patterns"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Process", "Understand", "Apply"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "02_control_flow/04_nested_loops_patterns/lesson.ipynb"
+          - "02_control_flow/04_nested_loops_patterns/mini_project.ipynb"
+          - "02_control_flow/04_nested_loops_patterns/exercises.ipynb"
+          - "02_control_flow/04_nested_loops_patterns/research.ipynb"
+          - "02_control_flow/04_nested_loops_patterns/quiz.ipynb"
+          - "02_control_flow/04_nested_loops_patterns/robotics_challenge.ipynb"
+          - "02_control_flow/04_nested_loops_patterns/solution.ipynb"
+        mini_project: "02_control_flow/04_nested_loops_patterns/mini_project.ipynb"
+        research_task: "How does the performance of Nested Loops and Common Patterns scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: Nested Loops and Common Patterns Controller"
+        robo_x_milestone: "M2"
+      - id: "2.5"
+        title: "range(), enumerate(), and zip()"
+        directory: "02_control_flow/05_range_enumerate_zip"
+        prerequisites: ["Topic"]
+        learning_objectives: ["Use", "Use", "Use"]
+        exercise_count: 10
+        medium_count: 5
+        hard_count: 5
+        quiz_count: 10
+        notebooks:
+          - "02_control_flow/05_range_enumerate_zip/lesson.ipynb"
+          - "02_control_flow/05_range_enumerate_zip/mini_project.ipynb"
+          - "02_control_flow/05_range_enumerate_zip/exercises.ipynb"
+          - "02_control_flow/05_range_enumerate_zip/research.ipynb"
+          - "02_control_flow/05_range_enumerate_zip/quiz.ipynb"
+          - "02_control_flow/05_range_enumerate_zip/robotics_challenge.ipynb"
+          - "02_control_flow/05_range_enumerate_zip/solution.ipynb"
+        mini_project: "02_control_flow/05_range_enumerate_zip/mini_project.ipynb"
+        research_task: "How does the performance of range(), enumerate(), and zip() scale with dataset size?"
+        robotics_challenge: "ROBO-X Challenge: range(), enumerate(), and zip() Controller"
+        robo_x_milestone: "M2"
+
+  - number: 3
+    id: M3
+    title: "Core Data Structures"
+    directory: "03_data_structures"
+    robo_x_milestone: "M3"
+    topic_count: 0
+    topics:
+
+  - number: 4
+    id: M4
+    title: "Functions and Modules"
+    directory: "04_functions_modules"
+    robo_x_milestone: "M4"
+    topic_count: 0
+    topics:
+
+  - number: 5
+    id: M5
+    title: "Error Handling and Debugging"
+    directory: "05_error_handling_debugging"
+    robo_x_milestone: "M5"
+    topic_count: 0
+    topics:
+
+  - number: 6
+    id: M6
+    title: "Object-Oriented Programming"
+    directory: "06_object_oriented_programming"
+    robo_x_milestone: "M6"
+    topic_count: 0
+    topics:
+
+  - number: 7
+    id: M7
+    title: "File Handling and Working with Data"
+    directory: "07_files_data"
+    robo_x_milestone: "M7"
+    topic_count: 0
+    topics:
+
+  - number: 8
+    id: M8
+    title: "Databases"
+    directory: "08_databases"
+    robo_x_milestone: "M8"
+    topic_count: 0
+    topics:
+
+  - number: 9
+    id: M9
+    title: "Intermediate Practical Skills and Best Practices"
+    directory: "09_practical_skills"
+    robo_x_milestone: "M9"
+    topic_count: 0
+    topics:
+
+capstones:
+  - directory: "10_capstone_projects/project_01_robot_monitor"
+    required: ["README.md", "requirements.md", "rubric.md", "research.md", "starter/", "tests/", "solution/"]
+  - directory: "10_capstone_projects/project_02_sensor_analyzer"
+    required: ["README.md", "requirements.md", "rubric.md", "research.md", "starter/", "tests/", "solution/"]
+  - directory: "10_capstone_projects/project_03_robot_fleet_manager"
+    required: ["README.md", "requirements.md", "rubric.md", "research.md", "starter/", "tests/", "solution/"]
+  - directory: "10_capstone_projects/project_04_robot_database"
+    required: ["README.md", "requirements.md", "rubric.md", "research.md", "starter/", "tests/", "solution/"]
+  - directory: "10_capstone_projects/project_05_robot_api"
+    required: ["README.md", "requirements.md", "rubric.md", "research.md", "starter/", "tests/", "solution/"]
+  - directory: "10_capstone_projects/project_06_telemetry_analytics"
+    required: ["README.md", "requirements.md", "rubric.md", "research.md", "starter/", "tests/", "solution/"]
+  - directory: "10_capstone_projects/project_07_robot_simulator"
+    required: ["README.md", "requirements.md", "rubric.md", "research.md", "starter/", "tests/", "solution/"]
+  - directory: "10_capstone_projects/final_robo_x"
+    required: ["README.md", "requirements.md", "rubric.md", "research.md", "starter/", "tests/", "solution/"]

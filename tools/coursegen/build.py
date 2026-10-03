@@ -117,6 +117,9 @@ def _derived_sections(t: Topic) -> dict[str, list[Block]]:
             MD("Vocabulary used consistently throughout the course."),
             TABLE(["Term", "Meaning"], t.terminology),
         ],
+        "line_by_line": [
+            MD("Line-by-line explanation corresponding to the code walkthrough above.")
+        ],
         "knowledge_checks": knowledge,
     }
 
@@ -146,33 +149,7 @@ def build_lesson(t: Topic, module_dir: str) -> list[dict[str, Any]]:
             raise ValueError(f"{t.topic_id}: lesson section {key!r} produced no content")
         cells.extend(blocks_to_cells(blocks, topic_id=t.topic_id))
 
-        # Line-by-line explanation follows the walkthrough it explains.
-        if key == "code_walkthrough" and not merged.get("line_by_line"):
-            cells.extend(_auto_line_by_line(t))
-
     return cells
-
-
-def _auto_line_by_line(t: Topic) -> list[dict[str, Any]]:
-    """Derive a line-by-line table from the walkthrough code block."""
-    lines: list[str] = []
-    for block in t.lesson.get("code_walkthrough", []):
-        if block.kind == "code":
-            lines = block.payload[0].splitlines()
-            break
-    if not lines:
-        return [nb.md("Read the walkthrough above line by line and annotate it yourself.")]
-    rows = [
-        (str(n), text.strip() if text.strip() else "*blank*")
-        for n, text in enumerate(lines[:24], start=1)
-    ]
-    return [
-        nb.md(
-            "Numbered source of the walkthrough above. Cover the right-hand column and "
-            "reconstruct each line's job from memory, then reveal it."
-        ),
-        nb.md(nb.table(["#", "Source line"], rows)),
-    ]
 
 
 # --------------------------------------------------------------------------- #
@@ -452,7 +429,7 @@ def build_solutions(t: Topic, module_dir: str) -> list[dict[str, Any]]:
         )
         cells.append(nb.md("---"))
 
-    challenge_solution = t.solutions[-1] if len(t.solutions) > len(t.exercises) else None
+    challenge_solution = by_number.get(11)
     if challenge_solution is not None:
         cells.append(
             nb.md(
@@ -1229,7 +1206,10 @@ def validate_topic(t: Topic) -> None:
         problems.append(f"exercise numbers are not 1..N contiguous: {exercise_numbers}")
 
     solution_numbers = sorted(s["number"] for s in t.solutions)
-    if solution_numbers != list(range(1, len(exercise_numbers) + 1)):
+    expected_sol_numbers = list(range(1, len(exercise_numbers) + 1))
+    if len(t.solutions) > len(t.exercises):
+        expected_sol_numbers.append(11)
+    if solution_numbers != expected_sol_numbers:
         problems.append(f"solution numbers do not match exercises: {solution_numbers}")
 
     for record in t.solutions:
