@@ -1155,3 +1155,103 @@ def build_rubric(t: Topic, module_dir: str) -> str:
         ]
     )
     return "\n".join(parts)
+
+
+# --------------------------------------------------------------------------- #
+# Persistence
+# --------------------------------------------------------------------------- #
+GITKEEP = "# Assets directory (datasets, images, starter files) for this topic.\n"
+
+
+def write_topic(t: Topic, root: Path, module_dir: str) -> list[Path]:
+    """Write every artefact for one topic. Returns the paths written."""
+    target = root / module_dir / t.directory
+    assets = target / "assets"
+    assets.mkdir(parents=True, exist_ok=True)
+    (assets / ".gitkeep").write_text(GITKEEP, encoding="utf-8")
+
+    written: list[Path] = []
+    written.append(nb.save(target / "lesson.ipynb", build_lesson(t, module_dir)))
+    written.append(nb.save(target / "exercises.ipynb", build_exercises(t, module_dir)))
+    written.append(nb.save(target / "solution.ipynb", build_solutions(t, module_dir)))
+    written.append(nb.save(target / "research.ipynb", build_research(t, module_dir)))
+    written.append(nb.save(target / "quiz.ipynb", build_quiz(t, module_dir)))
+    written.append(
+        nb.save(target / "mini_project.ipynb", build_mini_project(t, module_dir))
+    )
+    written.append(
+        nb.save(
+            target / "robotics_challenge.ipynb",
+            build_robotics_challenge(t, module_dir),
+        )
+    )
+
+    for name, builder in (
+        ("README.md", build_readme),
+        ("instructor_notes.md", build_instructor_notes),
+        ("rubric.md", build_rubric),
+    ):
+        path = target / name
+        path.write_text(builder(t, module_dir), encoding="utf-8")
+        written.append(path)
+    return written
+
+
+def validate_topic(t: Topic) -> None:
+    """Fail fast on incomplete content before anything is written."""
+    from .schema import (
+        HARD_PER_TOPIC,
+        MAX_QUIZ_QUESTIONS,
+        MEDIUM_PER_TOPIC,
+        MIN_QUIZ_QUESTIONS,
+        SOLUTION_FIELDS,
+        ContentError,
+        require_non_empty,
+    )
+
+    problems: list[str] = []
+    missing = missing_authored_sections(t)
+    if missing:
+        problems.append(f"missing lesson sections: {missing}")
+
+    if t.medium_count < MEDIUM_PER_TOPIC:
+        problems.append(f"only {t.medium_count} MEDIUM exercises (need {MEDIUM_PER_TOPIC})")
+    if t.hard_count < HARD_PER_TOPIC:
+        problems.append(f"only {t.hard_count} HARD exercises (need {HARD_PER_TOPIC})")
+    if not (MIN_QUIZ_QUESTIONS <= t.quiz_count <= MAX_QUIZ_QUESTIONS):
+        problems.append(
+            f"quiz has {t.quiz_count} questions "
+            f"(need {MIN_QUIZ_QUESTIONS}-{MAX_QUIZ_QUESTIONS})"
+        )
+
+    exercise_numbers = [e.number for e in t.exercises]
+    if sorted(exercise_numbers) != list(range(1, len(exercise_numbers) + 1)):
+        problems.append(f"exercise numbers are not 1..N contiguous: {exercise_numbers}")
+
+    solution_numbers = sorted(s["number"] for s in t.solutions)
+    if solution_numbers != list(range(1, len(exercise_numbers) + 1)):
+        problems.append(f"solution numbers do not match exercises: {solution_numbers}")
+
+    for record in t.solutions:
+        for field_name in SOLUTION_FIELDS:
+            try:
+                require_non_empty(record.get(field_name), f"solution {record.get('number')}")
+            except ContentError as exc:
+                problems.append(str(exc))
+
+    for stage in ("question", "hypothesis", "experiment", "conclusion"):
+        if not t.research.get(stage):
+            problems.append(f"research stage {stage!r} is empty")
+
+    for key in ("requirements", "success_criteria"):
+        if not t.robotics_challenge.get(key):
+            problems.append(f"robotics challenge missing {key!r}")
+    for key in ("requirements", "steps", "acceptance"):
+        if not t.mini_project.get(key):
+            problems.append(f"mini-project missing {key!r}")
+
+    if problems:
+        raise ContentError(
+            f"{t.topic_id} ({t.title}) failed validation:\n  - "
+            + "\n  - ".join(problems)
+        )
