@@ -217,8 +217,7 @@ TOPICS = [
             "m5_test": "assert solve_m5('a, b , c') == ['a', 'b', 'c']",
             "h1_code": "def solve_h1(s):\n    words = s.split()\n    return ' '.join(word.capitalize() for word in words)",
             "h1_test": "assert solve_h1('python master course') == 'Python Master Course'",
-            "h2_code": "def solve_h2(s):\n    freq = {}\n    for char in s:\n        freq[char] = freq.get(char, 0) + 1
-    return freq",
+            "h2_code": "def solve_h2(s):\n    freq = {}\n    for char in s:\n        freq[char] = freq.get(char, 0) + 1\n    return freq",
             "h2_test": "assert solve_h2('aba')['a'] == 2",
             "h3_code": "def solve_h3(log_str):\n    import re\n    return re.findall(r'\\b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\b', log_str)",
             "h3_test": "assert solve_h3('IP is 192.168.1.1 here') == ['192.168.1.1']",
