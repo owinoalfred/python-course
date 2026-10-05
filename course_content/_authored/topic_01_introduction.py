@@ -72,6 +72,28 @@ LESSON["conceptual_explanation"] = [
         "most fleet dashboards are Python. The low-level control loop may be C++, but "
         "the code that decides *what the robot should do next* is very often Python.",
     ),
+    MD(
+        "Three further design decisions shape everything you write. First, "
+        "**indentation is syntax**: Python removed braces precisely so that the "
+        "visual structure of a program and its meaning could not drift apart. "
+        "Second, the language is **batteries-included** — file handling, dates, "
+        "JSON, sockets and unit testing all ship with the interpreter, so a small "
+        "robot utility rarely needs a third-party dependency. Third, Python is a "
+        "**glue language**: it is usually at the top of a stack, calling into C, "
+        "C++ or Fortran for the parts where raw speed matters, which is exactly the "
+        "trade-off a robotics stack makes."
+    ),
+    MD(
+        "One consequence deserves emphasis early. Because there is no compile-time "
+        "type declaration, a name can silently change type part-way through a "
+        "program, and nothing will complain until an operation is attempted on the "
+        "value. That is not sloppiness in the language; it is the price of the "
+        "flexibility that makes Python productive. Throughout this course you will "
+        "learn to manage that flexibility deliberately: convert types explicitly at "
+        "the boundaries where data enters your program, annotate the functions that "
+        "others depend on, and test the cases where a value might be missing or of "
+        "an unexpected type."
+    ),
 ]
 
 LESSON["formal_theory"] = [
@@ -259,8 +281,10 @@ LESSON["common_mistakes"] = [
     CODE(
         "# wrong: this rebinds battery_pct instead of testing it\n"
         "if battery_pct = 0:\n"
-        "    print('flat')\n"
-        "\n"
+        "    print('flat')",
+        lang="text",
+    ),
+    CODE(
         "# right\n"
         "if battery_pct == 0:\n"
         "    print('flat')"
@@ -277,11 +301,13 @@ LESSON["common_mistakes"] = [
     ),
     MD("**Mistake 3 — inconsistent indentation across an editor change.**"),
     CODE(
-        "# wrong: mixing tabs and spaces\n"
+        "# wrong: mixing tabs and spaces in the same block\n"
         "for i in range(2):\n"
-        "\tprint(i)      # a tab\n"
-        "        print(i)  # spaces -> TabError / inconsistent block\n"
-        "\n"
+        "\tprint(i)        # a tab\n"
+        "        print(i)  # spaces -> TabError",
+        lang="text",
+    ),
+    CODE(
         "# right: four spaces everywhere\n"
         "for i in range(2):\n"
         "    print(i)"
@@ -295,6 +321,17 @@ LESSON["common_mistakes"] = [
         "# right\n"
         "def battery_ok(pct):\n"
         "    return pct > 20"
+    ),
+    MD(
+        "These four share a pattern worth naming: each one is *syntactically* "
+        "valid, so the interpreter accepts the file without complaint. Nothing warns "
+        "you at load time that a condition was written as an assignment, that a "
+        "built-in has been shadowed, that two indentation styles disagree, or that a "
+        "comparison was evaluated and thrown away. Python will run the program and "
+        "let the consequences appear later — often far from the line that caused "
+        "them. This is precisely why the debugging techniques below exist, and why "
+        "tests that assert on returned values catch defects that reading the source "
+        "line by line sometimes misses."
     ),
 ]
 
@@ -351,6 +388,16 @@ LESSON["performance_considerations"] = [
         "Measure, do not guess",
         "Use `time.perf_counter()` around the small piece of code you suspect. The "
         "`timeit` module automates repeats. Never optimise before measuring.",
+    ),
+    MD(
+        "A concrete illustration. Summing one column of a 5,000-row telemetry file "
+        "with a Python loop performs roughly one interpreted operation per element; "
+        "the same arithmetic delegated to a library routine performs the loop inside "
+        "compiled code. The gap between those two approaches is usually large enough "
+        "to matter, while the gap between two differently written Python loops on the "
+        "same data is usually not. Measure which case you are in before spending "
+        "effort on it, and prefer the clearest implementation until measurement "
+        "proves otherwise."
     ),
 ]
 
@@ -463,21 +510,16 @@ LESSON["mental_model"] = [
     ),
 ]
 
-LESSON["terminology"] = [
-    TABLE(
-        ["Term", "Definition"],
-        [
-            ["Interpreter", "A program that executes source code instruction by instruction."],
-            ["CPython", "The reference Python implementation, written in C."],
-            ["Bytecode", "Compact instructions produced by the compiler and run by the VM."],
-            ["REPL", "Read-Eval-Print Loop: the interactive prompt."],
-            ["Name binding", "Attaching a name to an object with `=`."],
-            ["Dynamic typing", "Types are attached to objects and checked at runtime."],
-            ["PEP 8", "The style guide for Python code."],
-            ["Duck typing", "If it walks and quacks like a duck, treat it as one."],
-            ["Standard library", "The batteries-included modules shipped with Python."],
-        ],
-    ),
+TERMS = [
+    ["Interpreter", "A program that executes source code instruction by instruction."],
+    ["CPython", "The reference Python implementation, written in C."],
+    ["Bytecode", "Compact instructions produced by the compiler and run by the VM."],
+    ["REPL", "Read-Eval-Print Loop: the interactive prompt."],
+    ["Name binding", "Attaching a name to an object with `=`."],
+    ["Dynamic typing", "Types are attached to objects and checked at runtime."],
+    ["PEP 8", "The style guide for Python code."],
+    ["Duck typing", "If it walks and quacks like a duck, treat it as one."],
+    ["Standard library", "The batteries-included modules shipped with Python."],
 ]
 
 LESSON["summary"] = [
@@ -1415,10 +1457,14 @@ RESEARCH = {
         "roughly linearly once the module count is above about fifty."
     ),
     "experiment": [
-        "Create three scripts that import 0, 50 and 200 trivial modules.",
-        "Run each script ten times with `python -X importtime` and capture the total.",
-        "Record the raw milliseconds for every run in a table.",
-        "Repeat on a second machine if you can, to check the trend generalises.",
+        STEPS(
+            [
+                "Create three scripts that import 0, 50 and 200 trivial modules.",
+                "Run each ten times with `python -X importtime` and capture the totals.",
+                "Record the raw milliseconds for every run in the table below.",
+                "Repeat on a second machine to check the trend generalises.",
+            ]
+        ),
     ],
     "data": [
         CODE_CELL(
@@ -1498,6 +1544,169 @@ CHALLENGE = {
         "before recording None, and report the retry count."
     ),
 }
+
+INSTRUCTOR_NOTES = {
+    "objectives": [
+        "Establish the interpreter model: source, bytecode, evaluation loop.",
+        "Make name binding concrete so later modules can rely on it.",
+        "Install the habit of inspecting types before trusting a value.",
+    ],
+    "misconceptions": [
+        [
+            "Python is interpreted, therefore simply slow.",
+            "CPython compiles to bytecode first; the cost profile is not that of a pure interpreter.",
+        ],
+        [
+            "A variable has a type that is declared once.",
+            "Types belong to objects and are checked when the operation runs.",
+        ],
+        [
+            "Naming a variable `list` is only a style issue.",
+            "It rebinds the built-in and causes real TypeErrors later in the module.",
+        ],
+        [
+            "A function that prints is equivalent to one that returns.",
+            "Returning keeps the logic testable; printing hides it inside the function.",
+        ],
+    ],
+    "difficult_concepts": [
+        "Separating syntax errors, raised before execution, from runtime errors.",
+        "Seeing a name as a label rather than a fixed container.",
+        "Understanding why the main guard exists at all.",
+    ],
+    "demonstrations": [
+        "Run `dis.dis()` live on a one-line function and read the instructions aloud.",
+        "Assign to `list` in the REPL, then call `list(...)` and read the TypeError.",
+        "Show `sys.executable` differing from the interpreter the student expected.",
+    ],
+    "discussion": [
+        "Which parts of a robot controller would you never write in Python, and why?",
+        "If types are checked only at runtime, what could you add to catch problems earlier?",
+    ],
+    "student_errors": [
+        [
+            "TypeError where a number was expected",
+            "Input arrived from a sensor or file as text and was never converted",
+            "Inspect with type() and convert explicitly at the boundary",
+        ],
+        [
+            "IndentationError after editing in another editor",
+            "That editor inserted tabs while the file used spaces",
+            "Convert the file to spaces on save and enable trim-trailing-whitespace",
+        ],
+        [
+            "Nothing happens when the file is imported",
+            "Side effects sit at module level instead of behind the main guard",
+            "Wrap side effects in main() and guard the call",
+        ],
+    ],
+    "pacing": (
+        "90 minutes of lesson with live demonstrations, then 2 hours of exercises "
+        "and the mini-project. Do not rush the REPL demonstration: beginners must "
+        "see an error happen before they can read one."
+    ),
+    "extensions": [
+        "Disassemble a loop and count the bytecodes per iteration.",
+        "Compare `sys.implementation.cache_tag` across two Python versions.",
+    ],
+    "assessment": (
+        "Grade against rubric.md. Expect weak reasoning on exercises 6 to 10; "
+        "the parsing and validation tasks are the real signal of learning."
+    ),
+    "support": (
+        "Provide the first exercise fully worked, and pair students so the "
+        "stronger partner explains the type conversion out loud."
+    ),
+    "extension_fast": (
+        "Ask for a one-paragraph design note on where Python should stop and a "
+        "compiled language should begin inside a control loop."
+    ),
+}
+
+RUBRIC = {
+    "artifacts": [
+        ["exercises.ipynb", "40%", "All 10 exercises implemented and edge-cased."],
+        ["mini_project.ipynb", "25%", "Diagnostics tool plus its test suite."],
+        ["robotics_challenge.ipynb", "25%", "Telemetry controller degrades safely."],
+        ["research.ipynb", "10%", "Real measurements with a defensible conclusion."],
+    ],
+    "criteria": [
+        ["Correctness", "35", "Every documented edge case is handled and tested."],
+        ["Code quality", "25", "PEP 8 naming, docstrings, small focused functions."],
+        ["Testing", "25", "Assertions cover the happy path, edge cases and failure."],
+        ["Reasoning", "15", "Complexity claims are true and explained in writing."],
+    ],
+    "bands": [
+        ["Distinction", "85-100", "Correct, tested, clearly reasoned, production-shaped."],
+        ["Merit", "70-84", "Correct with minor gaps in testing or documentation."],
+        ["Pass", "50-69", "Core requirement met; edge cases or tests incomplete."],
+        ["Fail", "0-49", "Core requirement not met, or the code does not run."],
+    ],
+    "band_details": [
+        [
+            "Distinction",
+            "Every exercise implemented, every listed edge case tested, and the "
+            "telemetry controller degrades safely under an injected fault.",
+        ],
+        [
+            "Merit",
+            "Most exercises correct; testing covers the main paths and several edge "
+            "cases; reasoning is present but not always justified.",
+        ],
+        [
+            "Pass",
+            "Core requirements met on the main paths, but testing is thin or some "
+            "edge cases are unhandled.",
+        ],
+        [
+            "Fail",
+            "Multiple exercises missing or non-functional, no tests, or edge cases "
+            "ignored entirely.",
+        ],
+    ],
+}
+
+TOPIC = topic(
+    topic_id="1.1",
+    title="Introduction to Python",
+    module=1,
+    module_title="Getting Started with Python",
+    directory="01_introduction_to_python",
+    summary=(
+        "Where Python came from, how CPython actually runs your code, and why a "
+        "language built for readability ended up running most of modern robotics."
+    ),
+    why_it_matters=(
+        "Choosing a language is a long-term commitment. Python powers ROS 2 client "
+        "code, most perception tooling, and every fleet dashboard you will ever be "
+        "on call for. The interpreter model you learn here also explains every "
+        "surprising error message you will meet in this course."
+    ),
+    objectives=[
+        "Explain CPython's four-stage execution pipeline from source to bytecode.",
+        "Distinguish name binding from typed assignment, and predict rebinding.",
+        "Write a PEP 8 script with a docstring and a main guard.",
+        "Read a traceback and locate the failing line and expression.",
+        "Explain why robotics orchestration is written in Python.",
+    ],
+    prerequisites=[
+        "No programming experience assumed.",
+        "Basic familiarity with installing software and using a terminal.",
+    ],
+    mental_model=LESSON["mental_model"],
+    terminology=TERMS,
+    lesson=LESSON,
+    exercises=EXERCISES,
+    solutions=SOLUTIONS,
+    mini_project=MINI_PROJECT,
+    research=RESEARCH,
+    quiz_questions=QUIZ,
+    robotics_challenge=CHALLENGE,
+    instructor_notes=INSTRUCTOR_NOTES,
+    rubric=RUBRIC,
+    robo_x_milestone="M1",
+    robo_x_package="robo_x.core",
+)
 
 
 

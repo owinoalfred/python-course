@@ -2,22 +2,24 @@
 
 **Module 1: Getting Started with Python**
 
-Where Python came from, why an entire industry chose it, and how to think about it as a language designed to be read.
+Where Python came from, how CPython actually runs your code, and why a language built for readability ended up running most of modern robotics.
 
 ## Why this topic matters
 
-Choosing a language is a long-term commitment. Python powers modern robotics and software engineering.
+Choosing a language is a long-term commitment. Python powers ROS 2 client code, most perception tooling, and every fleet dashboard you will ever be on call for. The interpreter model you learn here also explains every surprising error message you will meet in this course.
 
 ## Learning objectives
 
-1. Explain Python origins and philosophy.
-2. Understand CPython interpreter mechanics.
-3. Identify where Python fits in robotics stacks.
+1. Explain CPython's four-stage execution pipeline from source to bytecode.
+2. Distinguish name binding from typed assignment, and predict rebinding.
+3. Write a PEP 8 script with a docstring and a main guard.
+4. Read a traceback and locate the failing line and expression.
+5. Explain why robotics orchestration is written in Python.
 
 ## Prerequisites
 
 - No programming experience assumed.
-- Basic familiarity with using a computer.
+- Basic familiarity with installing software and using a terminal.
 
 ## Files in this topic
 
@@ -28,8 +30,8 @@ Choosing a language is a long-term commitment. Python powers modern robotics and
 | [`solution.ipynb`](solution.ipynb) | Reference implementations with tests and complexity notes | Only after you have attempted the exercises |
 | [`research.ipynb`](research.ipynb) | A measurement-driven investigation | End of topic |
 | [`quiz.ipynb`](quiz.ipynb) | 10 questions with an answer key | Self-check before moving on |
-| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Introduction to Python System | Deliverable |
-| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Introduction to Python Controller | ROBO-X milestone |
+| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: ROBO-X Boot Diagnostics | Deliverable |
+| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Telemetry Readiness Controller | ROBO-X milestone |
 | [`instructor_notes.md`](instructor_notes.md) | Teaching notes and common misconceptions | Lecturers only |
 | [`rubric.md`](rubric.md) | How this topic is graded | Before submitting work |
 
@@ -37,26 +39,26 @@ Choosing a language is a long-term commitment. Python powers modern robotics and
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Introduction to Python Medium Task 1 | MEDIUM | Interpreter, Bytecode, Dynamic Typing |
-| 2 | Introduction to Python Medium Task 2 | MEDIUM | Interpreter, Bytecode, Dynamic Typing |
-| 3 | Introduction to Python Medium Task 3 | MEDIUM | Interpreter, Bytecode, Dynamic Typing |
-| 4 | Introduction to Python Medium Task 4 | MEDIUM | Interpreter, Bytecode, Dynamic Typing |
-| 5 | Introduction to Python Medium Task 5 | MEDIUM | Interpreter, Bytecode, Dynamic Typing |
-| 6 | Introduction to Python Hard Task 1 | HARD | Interpreter, Bytecode, Dynamic Typing |
-| 7 | Introduction to Python Hard Task 2 | HARD | Interpreter, Bytecode, Dynamic Typing |
-| 8 | Introduction to Python Hard Task 3 | HARD | Interpreter, Bytecode, Dynamic Typing |
-| 9 | Introduction to Python Hard Task 4 | HARD | Interpreter, Bytecode, Dynamic Typing |
-| 10 | Introduction to Python Hard Task 5 | HARD | Interpreter, Bytecode, Dynamic Typing |
+| 1 | Boot banner formatter | MEDIUM | variables, f-strings, functions |
+| 2 | Sensor string to float | MEDIUM | type conversion, exception handling, defaults |
+| 3 | Total distance travelled | MEDIUM | loops, accumulators, floats |
+| 4 | Clamp a battery percentage | MEDIUM | conditionals, comparison, clamping |
+| 5 | Pair sensor names with readings | MEDIUM | dictionaries, zip, iteration |
+| 6 | Parse a configuration line | HARD | strings, dictionaries, validation |
+| 7 | Distance between two waypoints | HARD | tuples, arithmetic, math |
+| 8 | Run-length encode a string | HARD | strings, loops, state |
+| 9 | Word frequency table | HARD | strings, dictionaries, sorting |
+| 10 | Validate robot state records | HARD | dictionaries, validation, error reporting |
 
-## Robotics challenge — ROBO-X Challenge: Introduction to Python Controller
+## Robotics challenge — ROBO-X Challenge: Telemetry Readiness Controller
 
-Develop a robust controller function using Introduction to Python.
+Implement `process_telemetry(data)` so it reads the requested sensor channels from the simulator, survives individual sensor failures, and returns a report the fleet supervisor can act on.
 
 **ROBO-X milestone:** M1
 
 ## Research task
 
-How does the performance of Introduction to Python scale with dataset size?
+How does interpreter start-up time change with the size of the modules a program imports?
 
 ## Recommended workflow
 

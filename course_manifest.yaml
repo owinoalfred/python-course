@@ -41,7 +41,7 @@ modules:
         title: "Introduction to Python"
         directory: "01_getting_started/01_introduction_to_python"
         prerequisites: ["No", "Basic"]
-        learning_objectives: ["Explain", "Understand", "Identify"]
+        learning_objectives: ["Explain", "Distinguish", "Write", "Read", "Explain"]
         exercise_count: 10
         medium_count: 5
         hard_count: 5
@@ -55,8 +55,8 @@ modules:
           - "01_getting_started/01_introduction_to_python/robotics_challenge.ipynb"
           - "01_getting_started/01_introduction_to_python/solution.ipynb"
         mini_project: "01_getting_started/01_introduction_to_python/mini_project.ipynb"
-        research_task: "How does the performance of Introduction to Python scale with dataset size?"
-        robotics_challenge: "ROBO-X Challenge: Introduction to Python Controller"
+        research_task: "How does interpreter start-up time change with the size of the modules a program imports?"
+        robotics_challenge: "ROBO-X Challenge: Telemetry Readiness Controller"
         robo_x_milestone: "M1"
       - id: "1.2"
         title: "Installing Python, IDEs, and the REPL"

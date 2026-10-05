@@ -248,7 +248,14 @@ def check_research(t: Topic) -> list[Finding]:
         data_blocks = [data_blocks]
     has_numbers = False
     for block in data_blocks:
-        text = block_text(block) if isinstance(block, Block) else str(block)
+        if isinstance(block, Block):
+            # Only prose and markdown tables are checked; a code cell is a
+            # scaffold the learner fills in, not a fabricated measurement.
+            if block.kind in {"code", "code_cell"}:
+                continue
+            text = block_text(block)
+        else:
+            text = str(block)
         if re.search(r"\|\s*\d", text):
             has_numbers = True
             break

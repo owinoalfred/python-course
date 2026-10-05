@@ -6,25 +6,35 @@
 
 | Artefact | Weight | Evidence expected |
 | --- | --- | --- |
-| exercises.ipynb | 50% | All 10 exercises solved. |
-| robotics_challenge.ipynb | 50% | Robotics challenge solved. |
+| exercises.ipynb | 40% | All 10 exercises implemented and edge-cased. |
+| mini_project.ipynb | 25% | Diagnostics tool plus its test suite. |
+| robotics_challenge.ipynb | 25% | Telemetry controller degrades safely. |
+| research.ipynb | 10% | Real measurements with a defensible conclusion. |
 
 ## Performance criteria
 
 | Criterion | Weight | Description |
 | --- | --- | --- |
-| Correctness | 50 | Passes all tests. |
-| Quality | 50 | PEP 8 compliant. |
+| Correctness | 35 | Every documented edge case is handled and tested. |
+| Code quality | 25 | PEP 8 naming, docstrings, small focused functions. |
+| Testing | 25 | Assertions cover the happy path, edge cases and failure. |
+| Reasoning | 15 | Complexity claims are true and explained in writing. |
 
 ## Band descriptors
 
 | Band | Range | Overall descriptor |
 | --- | --- | --- |
-| Pass | 50-100 | Satisfactory completion. |
+| Distinction | 85-100 | Correct, tested, clearly reasoned, production-shaped. |
+| Merit | 70-84 | Correct with minor gaps in testing or documentation. |
+| Pass | 50-69 | Core requirement met; edge cases or tests incomplete. |
+| Fail | 0-49 | Core requirement not met, or the code does not run. |
 
 ## Grade descriptors by band
 
-* **Pass** — All core objectives met.
+* **Distinction** — Every exercise implemented, every listed edge case tested, and the telemetry controller degrades safely under an injected fault.
+* **Merit** — Most exercises correct; testing covers the main paths and several edge cases; reasoning is present but not always justified.
+* **Pass** — Core requirements met on the main paths, but testing is thin or some edge cases are unhandled.
+* **Fail** — Multiple exercises missing or non-functional, no tests, or edge cases ignored entirely.
 
 ## Academic integrity
 
