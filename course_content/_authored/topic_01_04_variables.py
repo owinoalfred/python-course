@@ -1308,3 +1308,406 @@ QUIZ.append(
         reference="lesson.ipynb - Syntax",
     )
 )
+
+QUIZ.append(
+    quiz(
+        question=(
+            "What is the value of `a is b` after these two lines?\n\n"
+            "a = [1, 2]\nb = a"
+        ),
+        choices=[
+            "False, because a copy was made.",
+            "It depends on the interpreter.",
+            "It is a NameError.",
+            "True, because both names refer to one object.",
+        ],
+        answer=3,
+        kind="code_output",
+        explanation=(
+            "The identity operator asks whether two references point at the same object, "
+            "not whether they compare equal. Since the assignment bound b to the very "
+            "list a already referred to, the answer is True."
+        ),
+        reference="lesson.ipynb - Formal Theory",
+    )
+)
+
+QUIZ.append(
+    quiz(
+        question="Which change makes a function safe to call with a list the caller wants to keep?",
+        choices=[
+            "Rename the parameter.",
+            "Add a type annotation to the parameter.",
+            "Convert the parameter to a tuple inside the function.",
+            "Return the mutated list instead of mutating it in place.",
+        ],
+        answer=2,
+        kind="reasoning",
+        explanation=(
+            "Converting to a tuple inside the function forces a new object, so the "
+            "caller's list is untouched; the mutation must then be expressed as a "
+            "return value. An annotation alone changes nothing at runtime, and renaming "
+            "is cosmetic."
+        ),
+        reference="lesson.ipynb - Common Mistakes",
+    )
+)
+
+QUIZ.append(
+    quiz(
+        question="Why does the telemetry pipeline copy incoming readings at the boundary?",
+        choices=[
+            "A copy stops one processing stage from changing what another stage holds.",
+            "Copies use less memory than the original.",
+            "Python requires a copy before a list can be iterated.",
+            "It makes the readings deterministic.",
+        ],
+        answer=0,
+        kind="robotics",
+        explanation=(
+            "Stages in a pipeline share object references, so an in-place sort or append "
+            "in one stage silently changes the data another stage is relying on. Copying "
+            "once at ingestion makes each stage independent and the pipeline "
+            "order-independent."
+        ),
+        reference="lesson.ipynb - Robotics Connection",
+    )
+)
+
+QUIZ.append(
+    quiz(
+        question="Which approach renames symbols without corrupting longer names?",
+        choices=[
+            "Replace shorter names first so they cannot be missed.",
+            "Replace longer names first, matching whole words.",
+            "Use str.replace for every name in dictionary order.",
+            "Replace on a per-character basis.",
+        ],
+        answer=1,
+        kind="implementation_choice",
+        explanation=(
+            "If the short alias is applied first it matches inside the longer word and "
+            "destroys it. Sorting keys by descending length and matching whole words "
+            "avoids both problems."
+        ),
+        reference="solution.ipynb - Solution 10",
+    )
+)
+
+MINI_PROJECT = {
+    "title": "Mini-Project: Robot Settings Registry",
+    "brief": (
+        "Build a small registry that stores robot settings with their types, "
+        "validates incoming raw values, and reports exactly which settings are wrong "
+        "rather than failing on the first problem."
+    ),
+    "scenario": (
+        "Settings arrive from a deployment system as strings. Some are correct, some "
+        "are missing, some are mistyped, and the operator needs all of the problems at "
+        "once rather than one error per restart."
+    ),
+    "rationale": (
+        "Configuration handling is the first place where names, types and copying "
+        "discipline combine, and every robot in the fleet depends on it behaving the "
+        "same way on every machine."
+    ),
+    "requirements": [
+        "Hold defaults and a cast table in module-level constants.",
+        "Merge raw values over the defaults without mutating either argument.",
+        "Cast every known key and record one message per failure.",
+        "Reject unknown keys by name.",
+        "Return a sorted list of messages that is empty on success.",
+    ],
+    "constraints": [
+        "Standard library only.",
+        "Never raise for bad input; always report.",
+        "Do not mutate the defaults dict.",
+    ],
+    "deliverables": [
+        "`settings.py` with the registry and its validation entry point.",
+        "`test_settings.py` with at least ten assertions.",
+        "A README section listing every setting, its type and its valid range.",
+    ],
+    "steps": [
+        "Define DEFAULTS and CASTS as module constants.",
+        "Implement build_settings(raw) returning (settings, errors).",
+        "Prove that calling it twice with the same raw input gives the same result.",
+        "Write tests for a clean load, a mistyped value, an unknown key and empty input.",
+        "Add a range check and a test for a value that is valid but out of range.",
+    ],
+    "expected_behavior": (
+        "A clean load returns fully typed settings and an empty error list. A bad load "
+        "returns the usable defaults plus one message per problem."
+    ),
+    "acceptance": [
+        "All assertions pass from a clean run.",
+        "Two identical calls produce equal results, proving no hidden state.",
+        "Defaults are unchanged after any call.",
+        "Every message names the setting it refers to.",
+    ],
+    "extensions": [
+        "Serialise the settings to JSON for the fleet dashboard.",
+        "Add a from_file classmethod that reads a simple key=value file.",
+        "Warn when a setting is present in raw but missing from CASTS.",
+    ],
+}
+
+RESEARCH = {
+    "question": (
+        "How much do copy-on-boundary practices change the observable behaviour of a "
+        "small data pipeline?"
+    ),
+    "hypothesis": (
+        "A pipeline that copies at ingestion produces identical results regardless of "
+        "the order in which its stages run, while one that mutates in place does not."
+    ),
+    "experiment": [
+        STEPS(
+            [
+                "Write a three-stage pipeline over a list of readings: filter, then sort, then summarise.",
+                "Run it once mutating each stage's input in place.",
+                "Run it again with a copy taken at ingestion.",
+                "Run both versions with the stages in a different order and record the summaries.",
+            ]
+        ),
+    ],
+    "data": [
+        CODE_CELL(
+            "# Record your raw results - one row per pipeline variant and stage order.\n"
+            "# Copy real values from your actual runs; do not invent them.\n"
+            "#\n"
+            "# | variant | stage order | summary |"
+        ),
+    ],
+    "analysis": [
+        MD(
+            "Compare the four summaries pairwise. The hypothesis predicts that the "
+            "in-place variant changes when the order changes, and that the copying "
+            "variant does not. Record the exact summaries that show the difference."
+        ),
+    ],
+    "result": [
+        MD(
+            "State whether the hypothesis survived and quote the summaries that decided "
+            "it. If the in-place version happened to be stable, say so and propose what "
+            "input would have exposed it."
+        ),
+    ],
+    "interpretation": [
+        MD(
+            "Explain the mechanism in terms of shared object references, and identify "
+            "why this class of bug survives review: the code reads correctly because "
+            "every individual line is valid."
+        ),
+    ],
+    "conclusion": [
+        MD(
+            "Give your verdict and state where else in a real system the same aliasing "
+            "could cause a hard-to-find defect."
+        ),
+    ],
+    "extensions": [
+        "Repeat with a deep nested structure to show shallow-copy limits.",
+        "Measure the cost of copying for a large pipeline using time.perf_counter.",
+    ],
+}
+
+CHALLENGE = {
+    "title": "ROBO-X Challenge: Telemetry Settings Gate",
+    "context": (
+        "During warehouse AGV dispatch, each robot is configured from raw settings "
+        "supplied by the fleet controller. A mistyped battery capacity must be reported "
+        "precisely, not silently coerced into a wrong value."
+    ),
+    "mission": (
+        "Implement `load_settings(raw, robot)` that merges settings, casts them, "
+        "reads a sample from the simulator, and returns a readiness decision that names "
+        "every problem found."
+    ),
+    "requirements": [
+        "Merge raw settings over module defaults without mutating either.",
+        "Cast each known key and collect one message per failure.",
+        "Read the robot's battery voltage and include it in the result.",
+        "Return a dict with `settings`, `readings`, `problems` and `ready`.",
+    ],
+    "constraints": [
+        "Never raise for malformed raw settings.",
+        "Do not mutate the defaults dict between calls.",
+        "Use `shared/robo_x_sim`; no hardware required.",
+    ],
+    "interface": "def load_settings(raw: dict, robot) -> dict:",
+    "success_criteria": [
+        "A clean load returns ready True with an empty problems list.",
+        "A mistyped value leaves the default in place and names the key.",
+        "Two calls with identical raw input return equal results.",
+    ],
+    "extension": (
+        "Add a range check on battery_wh and report out-of-range values with the "
+        "observed and permitted bounds."
+    ),
+}
+
+INSTRUCTOR_NOTES = {
+    "objectives": [
+        "Replace the 'typed box' mental model with 'label bound to an object'.",
+        "Make aliasing and shared mutation a demonstrated, not described, hazard.",
+        "Install PEP 8 naming as habit from the first week.",
+    ],
+    "misconceptions": [
+        [
+            "Assignment copies the value into the variable.",
+            "Assignment binds a name; two names can share one object.",
+        ],
+        [
+            "A variable has one fixed type for its whole life.",
+            "Types belong to objects; rebinding can change the type of a name.",
+        ],
+        [
+            "Function arguments are passed by value.",
+            "Objects are passed by reference, which is why mutation escapes.",
+        ],
+        [
+            "A leading underscore makes a name private.",
+            "It is a convention, not enforcement; the attribute stays accessible.",
+        ],
+    ],
+    "difficult_concepts": [
+        "Understanding that `is` is about object identity, not equality.",
+        "Accepting that shallow copying leaves nested state shared.",
+        "Reading a namespace as an ordinary dictionary.",
+    ],
+    "demonstrations": [
+        "Alias a list, append through one name, and print both.",
+        "Show id() and `is` for a literal, a computed value and an aliased name.",
+        "Bind a module-level `list = []` and call list() to produce the TypeError live.",
+    ],
+    "discussion": [
+        "Where should a telemetry pipeline copy, and what does that cost?",
+        "If Python had declared types, which of today's bugs would have been caught?",
+    ],
+    "student_errors": [
+        [
+            "A function mutates the caller's list unexpectedly",
+            "The argument was modified in place",
+            "Copy at the boundary or return a new value",
+        ],
+        [
+            "TypeError far from the assignment that caused it",
+            "A built-in name was shadowed in module scope",
+            "Search for `name =` assignments that reuse built-ins",
+        ],
+        [
+            "Config defaults change between test runs",
+            "A module-level dict was mutated instead of copied",
+            "Copy with dict(DEFAULTS) inside the function",
+        ],
+    ],
+    "pacing": (
+        "90 minutes of lesson with live demonstrations, then 2 hours on exercises. "
+        "Spend real time on the aliasing demonstration; it is the concept that makes "
+        "Modules 3 and 4 make sense."
+    ),
+    "extensions": [
+        "Ask students to find every mutation in a small module and justify each one.",
+        "Introduce dataclasses as the disciplined alternative to loose attribute assignment.",
+    ],
+    "assessment": (
+        "Grade against rubric.md. Exercises 9 and 10 carry the signal: they combine "
+        "copying, casting, validation and ordering."
+    ),
+    "support": (
+        "Give students sticky notes and a physical object so the label model is tangible "
+        "before they write code.",
+    ),
+    "extension_fast": (
+        "Ask for a short note on which of today's aliases would be caught by mypy and "
+        "which would not.",
+    ),
+}
+
+RUBRIC = {
+    "artifacts": [
+        ["exercises.ipynb", "40%", "All 10 exercises implemented and edge-cased."],
+        ["mini_project.ipynb", "25%", "settings.py plus its test suite."],
+        ["robotics_challenge.ipynb", "25%", "Settings gate reports every problem."],
+        ["research.ipynb", "10%", "Real measurements with a defensible conclusion."],
+    ],
+    "criteria": [
+        ["Correctness", "30", "Every documented edge case is handled and tested."],
+        ["Naming discipline", "25", "PEP 8 conventions applied consistently; no shadowing."],
+        ["State safety", "25", "No accidental mutation of arguments or module state."],
+        ["Reasoning", "20", "Complexity claims are true and explained in writing."],
+    ],
+    "bands": [
+        ["Distinction", "85-100", "Correct, tested, clearly reasoned, production-shaped."],
+        ["Merit", "70-84", "Correct with minor gaps in testing or documentation."],
+        ["Pass", "50-69", "Core requirement met; edge cases or tests incomplete."],
+        ["Fail", "0-49", "Core requirement not met, or the code does not run."],
+    ],
+    "band_details": [
+        [
+            "Distinction",
+            "Every exercise implemented, no shared-state leakage between calls, and the "
+            "settings gate reports every malformed key without raising.",
+        ],
+        [
+            "Merit",
+            "Most exercises correct; testing covers the main paths; arguments are not "
+            "mutated but the docstrings do not document the aliasing behaviour.",
+        ],
+        [
+            "Pass",
+            "Core requirements met, but a shared default or an in-place mutation leaks "
+            "between calls and is not covered by a test.",
+        ],
+        [
+            "Fail",
+            "Module-level state is mutated across calls, or a built-in is shadowed and "
+            "the resulting error is not diagnosed.",
+        ],
+    ],
+}
+
+TOPIC = topic(
+    topic_id="1.4",
+    title="Variables, Naming Conventions, and Dynamic Typing",
+    module=1,
+    module_title="Getting Started with Python",
+    directory="04_variables_naming_dynamic_typing",
+    summary=(
+        "A name is a label, not a box. Binding, aliasing, shared mutation and the "
+        "naming conventions that keep a fleet's code readable to the next engineer."
+    ),
+    why_it_matters=(
+        "Almost every confusing bug in a Python codebase comes from one of three "
+        "facts on this page: assignment does not copy, names can be rebound to a "
+        "different type, and two names can share one object. Robotics code passes "
+        "values between stages constantly, so these three facts decide whether a "
+        "pipeline is predictable."
+    ),
+    objectives=[
+        "Explain the difference between a name and the object it refers to.",
+        "Predict the effect of rebinding a name to a value of another type.",
+        "Demonstrate aliasing and choose correctly between copy and reference.",
+        "Apply PEP 8 naming for functions, classes, constants and internals.",
+        "Avoid shadowing built-ins and identify the failure mode when it happens.",
+        "Validate and cast configuration values once at a system boundary.",
+    ],
+    prerequisites=[
+        "Topic 1.1 Introduction to Python",
+        "Topic 1.3 Syntax, Indentation and Comments",
+    ],
+    mental_model=LESSON["mental_model"],
+    terminology=TERMS,
+    lesson=LESSON,
+    exercises=EXERCISES,
+    solutions=SOLUTIONS,
+    mini_project=MINI_PROJECT,
+    research=RESEARCH,
+    quiz_questions=QUIZ,
+    robotics_challenge=CHALLENGE,
+    instructor_notes=INSTRUCTOR_NOTES,
+    rubric=RUBRIC,
+    robo_x_milestone="M1",
+    robo_x_package="robo_x.core",
+)
