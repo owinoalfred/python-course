@@ -2,17 +2,20 @@
 
 **Module 1: Getting Started with Python**
 
-Shebang lines, command-line execution, exit codes, and script organization.
+Turning a module into a program: the main guard, sys.argv, exit codes and the three-channel contract between a script and whoever started it.
 
 ## Why this topic matters
 
-Scripts automate command-line workflows and system operations.
+A fleet supervisor launches robot services as child processes and decides what happens next from the exit code alone. Getting that contract right is the difference between a tool that composes with a system and one that is run by hand and hoped over.
 
 ## Learning objectives
 
-1. Write executable Python scripts.
-2. Pass command-line arguments.
-3. Return proper exit codes.
+1. Explain how __name__ distinguishes a module from a program.
+2. Guard side effects so importing a script cannot start a robot.
+3. Pass sys.argv[1:] into logic instead of indexing it inline.
+4. Return an exit status and call sys.exit exactly once.
+5. Keep results on stdout, diagnostics on stderr, and decisions in the exit code.
+6. Test a tool without a shell by injecting argv and the streams.
 
 ## Prerequisites
 
@@ -27,8 +30,8 @@ Scripts automate command-line workflows and system operations.
 | [`solution.ipynb`](solution.ipynb) | Reference implementations with tests and complexity notes | Only after you have attempted the exercises |
 | [`research.ipynb`](research.ipynb) | A measurement-driven investigation | End of topic |
 | [`quiz.ipynb`](quiz.ipynb) | 10 questions with an answer key | Self-check before moving on |
-| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Writing and Running Your First Scripts System | Deliverable |
-| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Writing and Running Your First Scripts Controller | ROBO-X milestone |
+| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Fleet Control Tool | Deliverable |
+| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Fleet Bring-Up Tool | ROBO-X milestone |
 | [`instructor_notes.md`](instructor_notes.md) | Teaching notes and common misconceptions | Lecturers only |
 | [`rubric.md`](rubric.md) | How this topic is graded | Before submitting work |
 
@@ -36,26 +39,26 @@ Scripts automate command-line workflows and system operations.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Writing and Running Your First Scripts Medium Task 1 | MEDIUM | Scripts, sys.argv, sys.exit |
-| 2 | Writing and Running Your First Scripts Medium Task 2 | MEDIUM | Scripts, sys.argv, sys.exit |
-| 3 | Writing and Running Your First Scripts Medium Task 3 | MEDIUM | Scripts, sys.argv, sys.exit |
-| 4 | Writing and Running Your First Scripts Medium Task 4 | MEDIUM | Scripts, sys.argv, sys.exit |
-| 5 | Writing and Running Your First Scripts Medium Task 5 | MEDIUM | Scripts, sys.argv, sys.exit |
-| 6 | Writing and Running Your First Scripts Hard Task 1 | HARD | Scripts, sys.argv, sys.exit |
-| 7 | Writing and Running Your First Scripts Hard Task 2 | HARD | Scripts, sys.argv, sys.exit |
-| 8 | Writing and Running Your First Scripts Hard Task 3 | HARD | Scripts, sys.argv, sys.exit |
-| 9 | Writing and Running Your First Scripts Hard Task 4 | HARD | Scripts, sys.argv, sys.exit |
-| 10 | Writing and Running Your First Scripts Hard Task 5 | HARD | Scripts, sys.argv, sys.exit |
+| 1 | Separate the program path from the arguments | MEDIUM | sys.argv, slicing, lists |
+| 2 | Report the program name | MEDIUM | pathlib, strings |
+| 3 | Detect a boolean flag | MEDIUM | membership, lists, validation |
+| 4 | Map a status name to an exit code | MEDIUM | dicts, error handling |
+| 5 | Build a usage line | MEDIUM | strings, join, f-strings |
+| 6 | Split an inline option token | HARD | strings, partition, validation |
+| 7 | Parse flags and options with an index | HARD | loops, indexing, validation |
+| 8 | Run a child process and observe its result | HARD | subprocess, sys, streams |
+| 9 | Dispatch a command and return an exit status | HARD | dispatch, streams, exit codes |
+| 10 | Prove a module is import-safe | HARD | import, __name__, subprocess |
 
-## Robotics challenge — ROBO-X Challenge: Writing and Running Your First Scripts Controller
+## Robotics challenge — ROBO-X Challenge: Fleet Bring-Up Tool
 
-Develop a robust controller function using Writing and Running Your First Scripts.
+Implement `bringup(argv, out, errors)` returning the exit status a shell would observe, with every decision expressed on the correct channel.
 
 **ROBO-X milestone:** M1
 
 ## Research task
 
-How does the performance of Writing and Running Your First Scripts scale with dataset size?
+How much does the main guard reduce the risk of accidental side effects when a module is imported?
 
 ## Recommended workflow
 

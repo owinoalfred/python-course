@@ -6,25 +6,35 @@
 
 | Artefact | Weight | Evidence expected |
 | --- | --- | --- |
-| exercises.ipynb | 50% | All 10 exercises solved. |
-| robotics_challenge.ipynb | 50% | Robotics challenge solved. |
+| exercises.ipynb | 40% | All 10 exercises implemented and edge-cased. |
+| mini_project.ipynb | 25% | roboctl.py plus its test suite. |
+| robotics_challenge.ipynb | 25% | Bring-up tool honours its exit codes. |
+| research.ipynb | 10% | Real measurements with a defensible conclusion. |
 
 ## Performance criteria
 
 | Criterion | Weight | Description |
 | --- | --- | --- |
-| Correctness | 50 | Passes all tests. |
-| Quality | 50 | PEP 8 compliant. |
+| Process contract | 30 | Exit codes, stream separation and argv handling are correct. |
+| Import safety | 25 | Importing the module starts nothing and prints nothing. |
+| Code quality | 25 | PEP 8 naming, docstrings, small focused functions. |
+| Reasoning | 20 | Cost and trade-off claims explained in writing. |
 
 ## Band descriptors
 
 | Band | Range | Overall descriptor |
 | --- | --- | --- |
-| Pass | 50-100 | Satisfactory completion. |
+| Distinction | 85-100 | Correct, tested, clearly reasoned, production-shaped. |
+| Merit | 70-84 | Correct with minor gaps in testing or documentation. |
+| Pass | 50-69 | Core requirement met; edge cases or tests incomplete. |
+| Fail | 0-49 | Core requirement not met, or the code does not run. |
 
 ## Grade descriptors by band
 
-* **Pass** — All core objectives met.
+* **Distinction** — Every exercise implemented, importing the module is proven harmless, and every exit code is verified both in-process and through a subprocess.
+* **Merit** — Most exercises correct; the guard is in place but import safety is asserted only by reading the code, not by a test.
+* **Pass** — Core requirements met, but the tool prints diagnostics to stdout so a supervisor parsing it gets corrupted data.
+* **Fail** — No main guard, or sys.exit is called from inside the logic so the exit code cannot be asserted.
 
 ## Academic integrity
 

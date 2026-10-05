@@ -146,7 +146,7 @@ modules:
         title: "Operators and Expressions"
         directory: "01_getting_started/06_operators_and_expressions"
         prerequisites: ["Topic"]
-        learning_objectives: ["Use", "Understand", "Distinguish"]
+        learning_objectives: ["Predict", "Explain", "Use", "Apply", "Build", "Interpret"]
         exercise_count: 10
         medium_count: 5
         hard_count: 5
@@ -160,14 +160,14 @@ modules:
           - "01_getting_started/06_operators_and_expressions/robotics_challenge.ipynb"
           - "01_getting_started/06_operators_and_expressions/solution.ipynb"
         mini_project: "01_getting_started/06_operators_and_expressions/mini_project.ipynb"
-        research_task: "How does the performance of Operators and Expressions scale with dataset size?"
-        robotics_challenge: "ROBO-X Challenge: Operators and Expressions Controller"
+        research_task: "How much does operator choice change the runtime of a tight numeric loop compared with the loop overhead itself?"
+        robotics_challenge: "ROBO-X Challenge: Status Word Controller"
         robo_x_milestone: "M1"
       - id: "1.7"
         title: "Basic Input/Output"
         directory: "01_getting_started/07_basic_input_output"
         prerequisites: ["Topic"]
-        learning_objectives: ["Format", "Read", "Configure"]
+        learning_objectives: ["Explain", "Redirect", "Format", "Apply", "Detect", "Build"]
         exercise_count: 10
         medium_count: 5
         hard_count: 5
@@ -181,14 +181,14 @@ modules:
           - "01_getting_started/07_basic_input_output/robotics_challenge.ipynb"
           - "01_getting_started/07_basic_input_output/solution.ipynb"
         mini_project: "01_getting_started/07_basic_input_output/mini_project.ipynb"
-        research_task: "How does the performance of Basic Input/Output scale with dataset size?"
-        robotics_challenge: "ROBO-X Challenge: Basic Input/Output Controller"
+        research_task: "How much output volume can a console program emit before buffering becomes noticeable to a user?"
+        robotics_challenge: "ROBO-X Challenge: Dispatch Console"
         robo_x_milestone: "M1"
       - id: "1.8"
         title: "Writing and Running Your First Scripts"
         directory: "01_getting_started/08_writing_running_first_scripts"
         prerequisites: ["Topic"]
-        learning_objectives: ["Write", "Pass", "Return"]
+        learning_objectives: ["Explain", "Guard", "Pass", "Return", "Keep", "Test"]
         exercise_count: 10
         medium_count: 5
         hard_count: 5
@@ -202,8 +202,8 @@ modules:
           - "01_getting_started/08_writing_running_first_scripts/robotics_challenge.ipynb"
           - "01_getting_started/08_writing_running_first_scripts/solution.ipynb"
         mini_project: "01_getting_started/08_writing_running_first_scripts/mini_project.ipynb"
-        research_task: "How does the performance of Writing and Running Your First Scripts scale with dataset size?"
-        robotics_challenge: "ROBO-X Challenge: Writing and Running Your First Scripts Controller"
+        research_task: "How much does the main guard reduce the risk of accidental side effects when a module is imported?"
+        robotics_challenge: "ROBO-X Challenge: Fleet Bring-Up Tool"
         robo_x_milestone: "M1"
 
   - number: 2
