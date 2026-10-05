@@ -266,13 +266,20 @@ LESSON["code_walkthrough"] = [
         "\n"
         "\n"
         "if __name__ == '__main__':\n"
-        "    raise SystemExit(main())"
+        "    main()"
+    ),
+    NOTE(
+        "Why not raise SystemExit here?",
+        "A real script ends with `raise SystemExit(main())` so the shell receives an "
+        "exit status. Running that inside a notebook would terminate the kernel, so "
+        "the cell calls `main()` directly. Keep the SystemExit version for the "
+        "command-line tools you build later in the course.",
     ),
     MD(
         "The important property is that `main()` returns a status code rather than "
-        "calling `sys.exit` deep inside a helper. A shell script can therefore use "
-        "the exit code to decide whether to arm the robot, and a test can assert on "
-        "the same integer without spawning a process."
+        "exiting from inside a helper. A shell script can therefore use the exit code "
+        "to decide whether to arm the robot, and a test can assert on the same integer "
+        "without spawning a process."
     ),
 ]
 
@@ -1130,7 +1137,7 @@ SOLUTIONS.append(
             "def preflight_report(minimum=DEFAULT_MINIMUM, required=DEFAULT_REQUIRED) -> dict:\n"
             "    problems: list[str] = []\n"
             "    running = tuple(sys.version_info[:2])\n"
-            "    version = '.'.join(str(part) for part in running)\n"
+            "    version = sys.version.split()[0]\n"
             "    if running < tuple(minimum[:2]):\n"
             "        problems.append(f'version {version} older than {minimum}')\n"
             "    for name in required:\n"
@@ -1202,4 +1209,537 @@ SOLUTIONS.append(
         alternative_approaches="Catching SensorError specifically is stricter and better in production code.",
         testing="report = environment_readiness()\nassert report['ready'] is True\nassert report['failed_channels'] == []\nassert report['battery_pct'] > 0",
     )
+)
+
+QUIZ = []
+
+QUIZ.append(
+    quiz(
+        question="Which check reliably identifies the interpreter actually running your code?",
+        choices=[
+            "`python --version` typed in a second terminal window.",
+            "`sys.executable` read from inside the running process.",
+            "`which python` executed from the shell.",
+            "The version shown in your editor's status bar.",
+        ],
+        answer=1,
+        kind="conceptual",
+        explanation=(
+            "sys.executable is reported by the interpreter that is executing your "
+            "code, so it cannot be confused by PATH order or by a different terminal. "
+            "Shell-level answers describe what would run next, not what is running now."
+        ),
+        reference="lesson.ipynb - Conceptual Explanation",
+    )
+)
+
+QUIZ.append(
+    quiz(
+        question="On Python 3.12.3, what does `sys.version_info[:2] >= (3, 12)` evaluate to?",
+        choices=[
+            "True",
+            "False",
+            "TypeError",
+            "It raises a ValueError.",
+        ],
+        answer=0,
+        kind="code_output",
+        explanation=(
+            "Slicing gives the tuple (3, 12), and comparing it with the tuple (3, 12) "
+            "is an equality test that succeeds. No exception is involved because both "
+            "operands are tuples of integers."
+        ),
+        reference="lesson.ipynb - Syntax",
+    )
+)
+
+QUIZ.append(
+    quiz(
+        question=(
+            "`pip install requests` reports success, but `python -c \"import requests\"` "
+            "raises ModuleNotFoundError. What is the most likely cause?"
+        ),
+        choices=[
+            "The package is corrupt and must be downloaded again.",
+            "requests requires a newer major version of Python.",
+            "pip and python refer to different interpreters or environments.",
+            "The import statement has been typed incorrectly.",
+        ],
+        answer=2,
+        kind="debugging",
+        explanation=(
+            "A bare pip may belong to a different interpreter than the python on your "
+            "PATH, so the install lands in one site-packages tree while the import "
+            "searches another. Using `python -m pip` removes the ambiguity entirely."
+        ),
+        reference="lesson.ipynb - Common Mistakes",
+    )
+)
+
+QUIZ.append(
+    quiz(
+        question="Why can a local file named `random.py` break `import random`?",
+        choices=[
+            "Local files cannot be imported at all.",
+            "Python refuses to load a file that shares a standard library name.",
+            "The file must be marked executable.",
+            "The working directory is searched before the standard library, so it shadows it.",
+        ],
+        answer=3,
+        kind="identify_error",
+        explanation=(
+            "When you run a script, its own directory is normally the first entry on "
+            "sys.path. The local module is therefore found first and shadows the "
+            "standard library version, which is why printing random.__file__ is the "
+            "fastest diagnostic."
+        ),
+        reference="lesson.ipynb - Formal Theory",
+    )
+)
+
+QUIZ.append(
+    quiz(
+        question="Why is `python -m pip install X` preferable to bare `pip install X`?",
+        choices=[
+            "It guarantees the installer runs inside the interpreter you are testing.",
+            "It upgrades pip to the latest release every time.",
+            "The bare `pip` command has been removed from Python.",
+            "It bypasses the PATH lookup entirely.",
+        ],
+        answer=0,
+        kind="reasoning",
+        explanation=(
+            "The -m flag asks the interpreter you already named to run pip as a module, "
+            "so the package is installed into that interpreter's environment. This "
+            "closes the gap that causes the most common installation confusion."
+        ),
+        reference="lesson.ipynb - Best Practices",
+    )
+)
+
+QUIZ.append(
+    quiz(
+        question="What does `importlib.util.find_spec('requests')` give you?",
+        choices=[
+            "The imported module object itself.",
+            "A spec describing where the module would load from, without importing it.",
+            "A boolean recording whether the module was imported earlier.",
+            "The module's docstring.",
+        ],
+        answer=1,
+        kind="multiple_choice",
+        explanation=(
+            "find_spec inspects the module search path and returns a specification "
+            "object, or None when nothing would resolve. The module's code is never "
+            "executed, which makes it the safe way to test for optional dependencies."
+        ),
+        reference="lesson.ipynb - Advanced Examples",
+    )
+)
+
+QUIZ.append(
+    quiz(
+        question=(
+            "You create and activate a virtual environment, then run `python`. "
+            "Which statement is guaranteed to hold?"
+        ),
+        choices=[
+            "sys.executable now points inside the venv directory.",
+            "sys.path becomes empty.",
+            "The base site-packages directory is deleted.",
+            "sys.prefix reflects the environment, while sys.executable may still name the base interpreter.",
+        ],
+        answer=3,
+        kind="code_output",
+        explanation=(
+            "A standard venv reuses the base interpreter binary and overrides "
+            "sys.prefix so packages resolve inside the environment. The executable path "
+            "is often unchanged, which is precisely why sys.prefix is the more reliable "
+            "signal here."
+        ),
+        reference="lesson.ipynb - Conceptual Explanation",
+    )
+)
+
+QUIZ.append(
+    quiz(
+        question="Which comparison correctly decides whether a machine is new enough for this course?",
+        choices=[
+            "`'3.9' >= '3.12'`",
+            "`sys.version_info >= '3.12'`",
+            "`sys.version_info[:2] >= (3, 12)`",
+            "`str(sys.version) >= '3.12'`",
+        ],
+        answer=2,
+        kind="reasoning",
+        explanation=(
+            "Only the tuple comparison is numeric. String comparison places '9' after "
+            "'1', so '3.9' sorts above '3.12' and the guard would pass on an older "
+            "interpreter, which is exactly the failure this course needs to avoid."
+        ),
+        reference="lesson.ipynb - Syntax",
+    )
+)
+
+QUIZ.append(
+    quiz(
+        question="Why should a pre-flight script return an exit status instead of only printing a verdict?",
+        choices=[
+            "A shell script or CI job can branch on it automatically.",
+            "Python requires an exit status whenever sys is imported.",
+            "Printing is a deprecated feature in Python 3.",
+            "Returning a status makes the individual checks run faster.",
+        ],
+        answer=0,
+        kind="robotics",
+        explanation=(
+            "Automation acts on the exit status, not on human-readable output. A fleet "
+            "deployment script can refuse to arm a robot when the pre-flight check "
+            "returns a non-zero status, without parsing any printed text."
+        ),
+        reference="solution.ipynb - Solution 10",
+    )
+)
+
+QUIZ.append(
+    quiz(
+        question="Which approach checks that an optional dependency is present without executing its code?",
+        choices=[
+            "`try: import x` / `except ImportError: pass`",
+            "`importlib.util.find_spec(name) is not None`",
+            "`'x' in sys.modules`",
+            "`os.path.exists('x.py')`",
+        ],
+        answer=1,
+        kind="implementation_choice",
+        explanation=(
+            "find_spec inspects the search path only. The guarded import actually runs "
+            "the module's top-level code, sys.modules reports past imports rather than "
+            "future availability, and the file check ignores package layouts entirely."
+        ),
+        reference="lesson.ipynb - Advanced Examples",
+    )
+)
+
+MINI_PROJECT = {
+    "title": "Mini-Project: Machine Readiness Checker",
+    "brief": (
+        "Build a command-line readiness checker that a fleet deployment script can "
+        "call before it arms any hardware. It must report the interpreter, the "
+        "version and the dependency status, and exit non-zero when the machine is "
+        "not fit for duty."
+    ),
+    "scenario": (
+        "You are onboarding a new operator. Their laptop, the build machine and the "
+        "robot's own controller must all agree about which interpreter is running and "
+        "which packages are visible before a mission can start."
+    ),
+    "rationale": (
+        "This is the first tool in the fleet's deployment chain. Everything later in "
+        "the course assumes the environment has been verified, and a readable, "
+        "testable checker is what makes that assumption safe."
+    ),
+    "requirements": [
+        "Print the interpreter path, the version, and the platform.",
+        "Verify the running version satisfies 3.12 or newer using tuple comparison.",
+        "Check each required module with importlib.util.find_spec.",
+        "Return an exit code: 0 when ready, 1 otherwise.",
+        "Accept the required module list as a command-line argument.",
+    ],
+    "constraints": [
+        "Standard library only.",
+        "No bare except; catch only what you can explain.",
+        "Every check must contribute a message when it fails.",
+    ],
+    "deliverables": [
+        "`check_ready.py` with the implementation.",
+        "`test_check_ready.py` with at least eight assertions.",
+        "A README section listing each check and its failure message.",
+    ],
+    "steps": [
+        "Write the checks as small functions that return (ok, message) pairs.",
+        "Compose them in `check_ready()` returning a dict.",
+        "Print the report and map `ready` to an exit code in `main()`.",
+        "Write tests for a healthy machine and for a deliberately broken one.",
+        "Run the checker in your shell and confirm the exit code behaves as documented.",
+    ],
+    "expected_behavior": (
+        "On a healthy machine the checker prints a report ending in READY and exits 0. "
+        "When a required module is missing it names that module and exits 1."
+    ),
+    "acceptance": [
+        "Every assertion passes from a clean run.",
+        "The exit code is 0 for ready and 1 for not ready, verified from a shell.",
+        "A missing dependency is named explicitly rather than reported as a generic failure.",
+        "No module-level side effects outside the main guard.",
+    ],
+    "extensions": [
+        "Add a JSON output mode for machine consumption.",
+        "Time each check with time.perf_counter and report the slowest.",
+        "Support reading the required-module list from a requirements file.",
+    ],
+}
+
+RESEARCH = {
+    "question": (
+        "How much does interpreter start-up time change between a bare script and a "
+        "script that imports common data-science libraries?"
+    ),
+    "hypothesis": (
+        "Importing numpy and pandas adds a fixed, substantial cost that does not grow "
+        "with the size of the rest of the program."
+    ),
+    "experiment": [
+        STEPS(
+            [
+                "Write three scripts that import nothing, numpy, and numpy plus pandas.",
+                "Run each of them twenty times and record the wall-clock duration.",
+                "Record every raw measurement in the table below before computing anything.",
+                "Repeat the whole run a second time to check machine warm-up effects.",
+            ]
+        ),
+    ],
+    "data": [
+        CODE_CELL(
+            "# Record your raw measurements here - one row per run.\n"
+            "# Copy the numbers from your actual output; do not invent them.\n"
+            "#\n"
+            "# | imports        | run | seconds |\n"
+            "# |----------------|-----|---------|\n"
+            "# | none           | 1   |         |\n"
+            "# | numpy          | 1   |         |\n"
+            "# | numpy+pandas   | 1   |         |"
+        ),
+    ],
+    "analysis": [
+        MD(
+            "Compute the mean and the spread for each script, then compare the "
+            "difference between the three groups against the run-to-run variation. If "
+            "the spread within a group is comparable to the gap between groups, your "
+            "conclusion is not supported."
+        ),
+    ],
+    "result": [
+        MD(
+            "State whether the hypothesis survived, quoting the mean and the spread. "
+            "Record anything that contradicted the expectation rather than discarding it."
+        ),
+    ],
+    "interpretation": [
+        MD(
+            "Explain which phase of import dominates: locating the file, reading it, "
+            "compiling it, or executing its top-level code. Name at least two threats "
+            "to the validity of the measurement, such as a warm file cache or a "
+            "background process competing for CPU."
+        ),
+    ],
+    "conclusion": [
+        MD(
+            "Give your verdict and name one follow-up experiment that would test it "
+            "more sharply."
+        ),
+    ],
+    "extensions": [
+        "Compare the first run with a warm operating-system cache.",
+        "Measure with python -X importtime to attribute the cost to individual modules.",
+        "Repeat under python -OO to see whether optimisation level matters.",
+    ],
+}
+
+CHALLENGE = {
+    "title": "ROBO-X Challenge: Bring-Up Readiness Gate",
+    "context": (
+        "During drone pre-flight, ROBO-X must prove that the machine it is about to "
+        "control is running a supported interpreter and that the subsystems it "
+        "depends on actually answer."
+    ),
+    "mission": (
+        "Implement `check_readiness(channels)` that combines an environment report "
+        "with a live sensor read from the simulator and returns a single decision "
+        "the fleet supervisor can gate on."
+    ),
+    "requirements": [
+        "Report the running interpreter path and version.",
+        "Read each requested sensor channel, recording None for any that fail.",
+        "Return a dict with `ready`, `version`, `battery_pct`, `readings` and `failed_channels`.",
+        "Set `ready` to False when any channel failed to produce a value.",
+    ],
+    "constraints": [
+        "Use `shared/robo_x_sim`; no hardware required.",
+        "Must not raise for an unknown channel name.",
+        "Complete well inside the 10 ms control budget.",
+    ],
+    "interface": "def check_readiness(channels: list | None = None) -> dict:",
+    "success_criteria": [
+        "Returns ready True with no failed channels on a healthy read.",
+        "Returns ready False and names the failing channel after a fault is injected.",
+        "Never raises for an unknown channel name.",
+    ],
+    "extension": (
+        "Add a `strict` flag that also fails readiness when the battery is below a "
+        "threshold you choose, and document the threshold."
+    ),
+}
+
+INSTRUCTOR_NOTES = {
+    "objectives": [
+        "Make the three-ring model of an installation concrete.",
+        "Convert 'which Python am I' from guesswork into a single command.",
+        "Give students a reusable pre-flight check they keep for the whole course.",
+    ],
+    "misconceptions": [
+        [
+            "There is only one Python on the machine.",
+            "System, user, venv and bundled-IDE interpreters routinely coexist.",
+        ],
+        [
+            "Activating a venv changes the interpreter binary.",
+            "It usually reuses the base binary and overrides sys.prefix instead.",
+        ],
+        [
+            "'No module named' means the package is not installed.",
+            "It can equally mean it is installed in a different environment.",
+        ],
+        [
+            "A guarded import is the cleanest optional-dependency test.",
+            "It runs the module's code; find_spec does not.",
+        ],
+    ],
+    "difficult_concepts": [
+        "Reading PATH order and understanding why the first match wins.",
+        "Accepting that sys.prefix and sys.executable can disagree.",
+        "Seeing sys.path as a search order rather than a set of folders.",
+    ],
+    "demonstrations": [
+        "Run the same import under the system interpreter and inside a venv to show the divergence.",
+        "Create random.py in the working directory and show it shadowing the stdlib.",
+        "Print sys.path before and after inserting an entry to show the search order changing.",
+    ],
+    "discussion": [
+        "Why does an IDE let you choose an interpreter, and what goes wrong when that choice is wrong?",
+        "Should a pre-flight check ever raise, or only report? Where is the line?",
+    ],
+    "student_errors": [
+        [
+            "ModuleNotFoundError after a successful install",
+            "pip and python point at different environments",
+            "Always install with `python -m pip` and verify with `python -m pip list`",
+        ],
+        [
+            "SyntaxError on code they know is valid",
+            "The editor is running an old interpreter",
+            "Check sys.executable from inside the failing process",
+        ],
+        [
+            "Tests pass locally, fail on the build machine",
+            "Different interpreter version or missing dependency on CI",
+            "Run the pre-flight check as the first CI step",
+        ],
+    ],
+    "pacing": (
+        "90 minutes of lesson, with a live venv creation, then 2 hours of exercises "
+        "and the mini-project. Insist that every student runs the three diagnostic "
+        "commands on their own machine before moving on."
+    ),
+    "extensions": [
+        "Have students diff sys.path between a terminal and a notebook kernel.",
+        "Ask what changes when a package is installed with --user.",
+    ],
+    "assessment": (
+        "Grade against rubric.md. Exercises 8 to 10 carry the real signal: they "
+        "require composing checks into one machine-readable decision."
+    ),
+    "support": (
+        "Provide the finished preflight() function from the engineering example and "
+        "ask students to extend it rather than write it from scratch."
+    ),
+    "extension_fast": (
+        "Ask students to write the CI job that consumes the readiness exit code."
+    ),
+}
+
+RUBRIC = {
+    "artifacts": [
+        ["exercises.ipynb", "40%", "All 10 exercises implemented and edge-cased."],
+        ["mini_project.ipynb", "25%", "check_ready.py plus its test suite."],
+        ["robotics_challenge.ipynb", "25%", "Readiness gate degrades safely."],
+        ["research.ipynb", "10%", "Real measurements with a defensible conclusion."],
+    ],
+    "criteria": [
+        ["Correctness", "35", "Every documented edge case is handled and tested."],
+        ["Diagnostics quality", "25", "Failures name the specific cause, not a generic error."],
+        ["Code quality", "20", "PEP 8 naming, docstrings, small focused functions."],
+        ["Reasoning", "20", "Complexity claims are true and explained in writing."],
+    ],
+    "bands": [
+        ["Distinction", "85-100", "Correct, tested, clearly reasoned, production-shaped."],
+        ["Merit", "70-84", "Correct with minor gaps in testing or documentation."],
+        ["Pass", "50-69", "Core requirement met; edge cases or tests incomplete."],
+        ["Fail", "0-49", "Core requirement not met, or the code does not run."],
+    ],
+    "band_details": [
+        [
+            "Distinction",
+            "Every exercise implemented, every listed edge case tested, and the "
+            "readiness gate degrades safely under an injected sensor fault.",
+        ],
+        [
+            "Merit",
+            "Most exercises correct; testing covers the main paths and several edge "
+            "cases; failure messages are specific but not exhaustive.",
+        ],
+        [
+            "Pass",
+            "Core requirements met on the main paths, but testing is thin or some "
+            "edge cases are unhandled.",
+        ],
+        [
+            "Fail",
+            "Multiple exercises missing or non-functional, no tests, or a bare "
+            "except that hides the real cause of a failure.",
+        ],
+    ],
+}
+
+TOPIC = topic(
+    topic_id="1.2",
+    title="Installing Python, IDEs, and the REPL",
+    module=1,
+    module_title="Getting Started with Python",
+    directory="02_installing_python_ides_repl",
+    summary=(
+        "Turn 'it works on my machine' into a fact you can print. This topic covers "
+        "how an installation is actually put together, how to identify the running "
+        "interpreter, and how to build a pre-flight check any deployment can call."
+    ),
+    why_it_matters=(
+        "Most Python problems that are not logic problems are environment problems. "
+        "Knowing exactly which interpreter runs, which packages it can see, and how "
+        "to prove both in one command is the difference between a five-minute fix and "
+        "an afternoon of guessing."
+    ),
+    objectives=[
+        "Identify the running interpreter and its version programmatically.",
+        "Explain how PATH and sys.path decide which program and module wins.",
+        "Create and inspect a virtual environment using the standard library.",
+        "Detect an optional dependency without importing it.",
+        "Build a pre-flight readiness check that returns an exit status.",
+    ],
+    prerequisites=[
+        "Topic 1.1 Introduction to Python",
+        "Ability to open a terminal and run a command.",
+    ],
+    mental_model=LESSON["mental_model"],
+    terminology=TERMS,
+    lesson=LESSON,
+    exercises=EXERCISES,
+    solutions=SOLUTIONS,
+    mini_project=MINI_PROJECT,
+    research=RESEARCH,
+    quiz_questions=QUIZ,
+    robotics_challenge=CHALLENGE,
+    instructor_notes=INSTRUCTOR_NOTES,
+    rubric=RUBRIC,
+    robo_x_milestone="M1",
+    robo_x_package="robo_x.core",
 )

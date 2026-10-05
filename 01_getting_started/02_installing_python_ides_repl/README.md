@@ -2,21 +2,24 @@
 
 **Module 1: Getting Started with Python**
 
-Setting up Python 3.12, VS Code, Jupyter, and mastering interactive development with the REPL.
+Turn 'it works on my machine' into a fact you can print. This topic covers how an installation is actually put together, how to identify the running interpreter, and how to build a pre-flight check any deployment can call.
 
 ## Why this topic matters
 
-A reliable development environment is essential for professional software engineering.
+Most Python problems that are not logic problems are environment problems. Knowing exactly which interpreter runs, which packages it can see, and how to prove both in one command is the difference between a five-minute fix and an afternoon of guessing.
 
 ## Learning objectives
 
-1. Install and verify Python 3.12.
-2. Configure VS Code and Jupyter notebooks.
-3. Use the Python REPL effectively.
+1. Identify the running interpreter and its version programmatically.
+2. Explain how PATH and sys.path decide which program and module wins.
+3. Create and inspect a virtual environment using the standard library.
+4. Detect an optional dependency without importing it.
+5. Build a pre-flight readiness check that returns an exit status.
 
 ## Prerequisites
 
 - Topic 1.1 Introduction to Python
+- Ability to open a terminal and run a command.
 
 ## Files in this topic
 
@@ -27,8 +30,8 @@ A reliable development environment is essential for professional software engine
 | [`solution.ipynb`](solution.ipynb) | Reference implementations with tests and complexity notes | Only after you have attempted the exercises |
 | [`research.ipynb`](research.ipynb) | A measurement-driven investigation | End of topic |
 | [`quiz.ipynb`](quiz.ipynb) | 10 questions with an answer key | Self-check before moving on |
-| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Installing Python, IDEs, and the REPL System | Deliverable |
-| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Installing Python, IDEs, and the REPL Controller | ROBO-X milestone |
+| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Machine Readiness Checker | Deliverable |
+| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Bring-Up Readiness Gate | ROBO-X milestone |
 | [`instructor_notes.md`](instructor_notes.md) | Teaching notes and common misconceptions | Lecturers only |
 | [`rubric.md`](rubric.md) | How this topic is graded | Before submitting work |
 
@@ -36,26 +39,26 @@ A reliable development environment is essential for professional software engine
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Installing Python, IDEs, and the REPL Medium Task 1 | MEDIUM | Environment, REPL, Jupyter |
-| 2 | Installing Python, IDEs, and the REPL Medium Task 2 | MEDIUM | Environment, REPL, Jupyter |
-| 3 | Installing Python, IDEs, and the REPL Medium Task 3 | MEDIUM | Environment, REPL, Jupyter |
-| 4 | Installing Python, IDEs, and the REPL Medium Task 4 | MEDIUM | Environment, REPL, Jupyter |
-| 5 | Installing Python, IDEs, and the REPL Medium Task 5 | MEDIUM | Environment, REPL, Jupyter |
-| 6 | Installing Python, IDEs, and the REPL Hard Task 1 | HARD | Environment, REPL, Jupyter |
-| 7 | Installing Python, IDEs, and the REPL Hard Task 2 | HARD | Environment, REPL, Jupyter |
-| 8 | Installing Python, IDEs, and the REPL Hard Task 3 | HARD | Environment, REPL, Jupyter |
-| 9 | Installing Python, IDEs, and the REPL Hard Task 4 | HARD | Environment, REPL, Jupyter |
-| 10 | Installing Python, IDEs, and the REPL Hard Task 5 | HARD | Environment, REPL, Jupyter |
+| 1 | Format an environment report line | MEDIUM | f-strings, tuples, sys |
+| 2 | Tuple-safe version comparison | MEDIUM | tuples, comparison, validation |
+| 3 | Describe the running interpreter | MEDIUM | sys, dicts, modules |
+| 4 | Check an optional dependency safely | MEDIUM | importlib, modules, booleans |
+| 5 | Join path segments portably | MEDIUM | pathlib, strings, composition |
+| 6 | Parse a pinned dependency block | HARD | strings, dicts, parsing |
+| 7 | Verify required modules against what is present | HARD | sets, dicts, validation |
+| 8 | Resolve the first available interpreter launcher | HARD | shutil.which, loops, error reporting |
+| 9 | Summarise the module search path | HARD | sys.path, sets, ordering |
+| 10 | Assemble a machine pre-flight report | HARD | dicts, composition, validation, sys |
 
-## Robotics challenge — ROBO-X Challenge: Installing Python, IDEs, and the REPL Controller
+## Robotics challenge — ROBO-X Challenge: Bring-Up Readiness Gate
 
-Develop a robust controller function using Installing Python, IDEs, and the REPL.
+Implement `check_readiness(channels)` that combines an environment report with a live sensor read from the simulator and returns a single decision the fleet supervisor can gate on.
 
 **ROBO-X milestone:** M1
 
 ## Research task
 
-How does the performance of Installing Python, IDEs, and the REPL scale with dataset size?
+How much does interpreter start-up time change between a bare script and a script that imports common data-science libraries?
 
 ## Recommended workflow
 

@@ -6,25 +6,35 @@
 
 | Artefact | Weight | Evidence expected |
 | --- | --- | --- |
-| exercises.ipynb | 50% | All 10 exercises solved. |
-| robotics_challenge.ipynb | 50% | Robotics challenge solved. |
+| exercises.ipynb | 40% | All 10 exercises implemented and edge-cased. |
+| mini_project.ipynb | 25% | check_ready.py plus its test suite. |
+| robotics_challenge.ipynb | 25% | Readiness gate degrades safely. |
+| research.ipynb | 10% | Real measurements with a defensible conclusion. |
 
 ## Performance criteria
 
 | Criterion | Weight | Description |
 | --- | --- | --- |
-| Correctness | 50 | Passes all tests. |
-| Quality | 50 | PEP 8 compliant. |
+| Correctness | 35 | Every documented edge case is handled and tested. |
+| Diagnostics quality | 25 | Failures name the specific cause, not a generic error. |
+| Code quality | 20 | PEP 8 naming, docstrings, small focused functions. |
+| Reasoning | 20 | Complexity claims are true and explained in writing. |
 
 ## Band descriptors
 
 | Band | Range | Overall descriptor |
 | --- | --- | --- |
-| Pass | 50-100 | Satisfactory completion. |
+| Distinction | 85-100 | Correct, tested, clearly reasoned, production-shaped. |
+| Merit | 70-84 | Correct with minor gaps in testing or documentation. |
+| Pass | 50-69 | Core requirement met; edge cases or tests incomplete. |
+| Fail | 0-49 | Core requirement not met, or the code does not run. |
 
 ## Grade descriptors by band
 
-* **Pass** — All core objectives met.
+* **Distinction** — Every exercise implemented, every listed edge case tested, and the readiness gate degrades safely under an injected sensor fault.
+* **Merit** — Most exercises correct; testing covers the main paths and several edge cases; failure messages are specific but not exhaustive.
+* **Pass** — Core requirements met on the main paths, but testing is thin or some edge cases are unhandled.
+* **Fail** — Multiple exercises missing or non-functional, no tests, or a bare except that hides the real cause of a failure.
 
 ## Academic integrity
 

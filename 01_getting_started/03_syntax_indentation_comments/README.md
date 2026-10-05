@@ -2,21 +2,25 @@
 
 **Module 1: Getting Started with Python**
 
-Understanding significant indentation, comment conventions, module structure, and PEP 8 guidelines.
+Why the left margin is part of the grammar: indentation as structure, the difference between comments and docstrings, and how to parse code without running it.
 
 ## Why this topic matters
 
-Python uses indentation to define block structure, replacing curly braces used in other languages.
+In every other language you learned, whitespace was decoration. In Python it is syntax, which means a formatting mistake is a parse error and a readable file is a correct file. Robotics teams also rely on structured, indented diagnostics, so this topic is where layout becomes data.
 
 ## Learning objectives
 
-1. Understand indentation rules.
-2. Write effective inline and block comments.
-3. Structure a Python file properly.
+1. Explain how INDENT and DEDENT tokens produce block structure.
+2. Apply PEP 8 indentation consistently and repair a mixed-indentation file.
+3. Distinguish comments from docstrings and use each correctly.
+4. Use implicit line joining to wrap long expressions readably.
+5. Parse an indented log into nested data with an explicit stack.
+6. Read docstrings from source with ast without importing the module.
 
 ## Prerequisites
 
-- Topic 1.2 Installing Python
+- Topic 1.1 Introduction to Python
+- Topic 1.2 Installing Python, IDEs, and the REPL
 
 ## Files in this topic
 
@@ -27,8 +31,8 @@ Python uses indentation to define block structure, replacing curly braces used i
 | [`solution.ipynb`](solution.ipynb) | Reference implementations with tests and complexity notes | Only after you have attempted the exercises |
 | [`research.ipynb`](research.ipynb) | A measurement-driven investigation | End of topic |
 | [`quiz.ipynb`](quiz.ipynb) | 10 questions with an answer key | Self-check before moving on |
-| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Python Syntax, Indentation, Comments, and Code Structure System | Deliverable |
-| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Python Syntax, Indentation, Comments, and Code Structure Controller | ROBO-X milestone |
+| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Structured Diagnostics Reader | Deliverable |
+| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Bring-Up Log Reader | ROBO-X milestone |
 | [`instructor_notes.md`](instructor_notes.md) | Teaching notes and common misconceptions | Lecturers only |
 | [`rubric.md`](rubric.md) | How this topic is graded | Before submitting work |
 
@@ -36,26 +40,26 @@ Python uses indentation to define block structure, replacing curly braces used i
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Python Syntax, Indentation, Comments, and Code Structure Medium Task 1 | MEDIUM | Indentation, PEP 8, Comments |
-| 2 | Python Syntax, Indentation, Comments, and Code Structure Medium Task 2 | MEDIUM | Indentation, PEP 8, Comments |
-| 3 | Python Syntax, Indentation, Comments, and Code Structure Medium Task 3 | MEDIUM | Indentation, PEP 8, Comments |
-| 4 | Python Syntax, Indentation, Comments, and Code Structure Medium Task 4 | MEDIUM | Indentation, PEP 8, Comments |
-| 5 | Python Syntax, Indentation, Comments, and Code Structure Medium Task 5 | MEDIUM | Indentation, PEP 8, Comments |
-| 6 | Python Syntax, Indentation, Comments, and Code Structure Hard Task 1 | HARD | Indentation, PEP 8, Comments |
-| 7 | Python Syntax, Indentation, Comments, and Code Structure Hard Task 2 | HARD | Indentation, PEP 8, Comments |
-| 8 | Python Syntax, Indentation, Comments, and Code Structure Hard Task 3 | HARD | Indentation, PEP 8, Comments |
-| 9 | Python Syntax, Indentation, Comments, and Code Structure Hard Task 4 | HARD | Indentation, PEP 8, Comments |
-| 10 | Python Syntax, Indentation, Comments, and Code Structure Hard Task 5 | HARD | Indentation, PEP 8, Comments |
+| 1 | Strip a trailing comment from a line | MEDIUM | strings, comments, parsing |
+| 2 | Measure indentation width | MEDIUM | strings, indentation, counting |
+| 3 | Normalise a block to a fixed indent width | MEDIUM | indentation, strings, mapping |
+| 4 | Build a multi-line banner | MEDIUM | strings, f-strings, implicit joining |
+| 5 | Count code, comment and blank lines | MEDIUM | tokenize, strings, classification |
+| 6 | Report indentation problems | HARD | indentation, validation, strings |
+| 7 | Parse an indented log into a tree | HARD | stacks, indentation, dicts |
+| 8 | Extract docstrings without importing | HARD | ast, docstrings, dicts |
+| 9 | Split semicolon-packed statements safely | HARD | parsing, strings, tokenize |
+| 10 | Produce a module outline | HARD | ast, tuples, reporting |
 
-## Robotics challenge — ROBO-X Challenge: Python Syntax, Indentation, Comments, and Code Structure Controller
+## Robotics challenge — ROBO-X Challenge: Bring-Up Log Reader
 
-Develop a robust controller function using Python Syntax, Indentation, Comments, and Code Structure.
+Implement `read_diagnostics(robot)` that renders the simulator's state as an indented log, parses it straight back, and returns a validated summary.
 
 **ROBO-X milestone:** M1
 
 ## Research task
 
-How does the performance of Python Syntax, Indentation, Comments, and Code Structure scale with dataset size?
+How much does comment density correlate with defect rate in a small body of Python source?
 
 ## Recommended workflow
 

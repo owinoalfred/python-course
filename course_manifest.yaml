@@ -61,8 +61,8 @@ modules:
       - id: "1.2"
         title: "Installing Python, IDEs, and the REPL"
         directory: "01_getting_started/02_installing_python_ides_repl"
-        prerequisites: ["Topic"]
-        learning_objectives: ["Install", "Configure", "Use"]
+        prerequisites: ["Topic", "Ability"]
+        learning_objectives: ["Identify", "Explain", "Create", "Detect", "Build"]
         exercise_count: 10
         medium_count: 5
         hard_count: 5
@@ -76,8 +76,8 @@ modules:
           - "01_getting_started/02_installing_python_ides_repl/robotics_challenge.ipynb"
           - "01_getting_started/02_installing_python_ides_repl/solution.ipynb"
         mini_project: "01_getting_started/02_installing_python_ides_repl/mini_project.ipynb"
-        research_task: "How does the performance of Installing Python, IDEs, and the REPL scale with dataset size?"
-        robotics_challenge: "ROBO-X Challenge: Installing Python, IDEs, and the REPL Controller"
+        research_task: "How much does interpreter start-up time change between a bare script and a script that imports common data-science libraries?"
+        robotics_challenge: "ROBO-X Challenge: Bring-Up Readiness Gate"
         robo_x_milestone: "M1"
       - id: "1.3"
         title: "Python Syntax, Indentation, Comments, and Code Structure"

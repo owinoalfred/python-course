@@ -6,25 +6,35 @@
 
 | Artefact | Weight | Evidence expected |
 | --- | --- | --- |
-| exercises.ipynb | 50% | All 10 exercises solved. |
-| robotics_challenge.ipynb | 50% | Robotics challenge solved. |
+| exercises.ipynb | 40% | All 10 exercises implemented and edge-cased. |
+| mini_project.ipynb | 25% | diagnostics.py plus its test suite. |
+| robotics_challenge.ipynb | 25% | Log reader degrades safely. |
+| research.ipynb | 10% | Real measurements with a defensible conclusion. |
 
 ## Performance criteria
 
 | Criterion | Weight | Description |
 | --- | --- | --- |
-| Correctness | 50 | Passes all tests. |
-| Quality | 50 | PEP 8 compliant. |
+| Correctness | 35 | Parsing handles ragged, empty and comment-heavy input. |
+| Code quality | 25 | PEP 8 naming, docstrings, small focused functions. |
+| Testing | 25 | Assertions cover happy path, edge cases and failure. |
+| Reasoning | 15 | Complexity claims are true and explained in writing. |
 
 ## Band descriptors
 
 | Band | Range | Overall descriptor |
 | --- | --- | --- |
-| Pass | 50-100 | Satisfactory completion. |
+| Distinction | 85-100 | Correct, tested, clearly reasoned, production-shaped. |
+| Merit | 70-84 | Correct with minor gaps in testing or documentation. |
+| Pass | 50-69 | Core requirement met; edge cases or tests incomplete. |
+| Fail | 0-49 | Core requirement not met, or the code does not run. |
 
 ## Grade descriptors by band
 
-* **Pass** — All core objectives met.
+* **Distinction** — Every exercise implemented, ragged input handled without raising, and the log reader round-trips the simulator's own output correctly.
+* **Merit** — Most exercises correct; testing covers the main paths and several edge cases; the stack logic is correct on well-formed input.
+* **Pass** — Core requirements met on well-formed input, but ragged indentation or comment-only input is unhandled and untested.
+* **Fail** — The parser cannot handle nesting, or uses recursion and overflows on deep input without any test covering it.
 
 ## Academic integrity
 
