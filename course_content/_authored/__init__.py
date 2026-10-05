@@ -22,6 +22,8 @@ from . import (
     topic_01_06_operators,
     topic_01_07_io,
     topic_01_08_scripts,
+    topic_02_01_conditionals,
+    topic_02_02_loops,
 )
 
 #: topic_id -> authored Topic. This dict is the single migration switchboard.
@@ -34,6 +36,8 @@ AUTHORED = {
     topic_01_06_operators.TOPIC.topic_id: topic_01_06_operators.TOPIC,
     topic_01_07_io.TOPIC.topic_id: topic_01_07_io.TOPIC,
     topic_01_08_scripts.TOPIC.topic_id: topic_01_08_scripts.TOPIC,
+    topic_02_01_conditionals.TOPIC.topic_id: topic_02_01_conditionals.TOPIC,
+    topic_02_02_loops.TOPIC.topic_id: topic_02_02_loops.TOPIC,
 }
 
 __all__ = ["AUTHORED"]

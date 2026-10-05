@@ -6,25 +6,35 @@
 
 | Artefact | Weight | Evidence expected |
 | --- | --- | --- |
-| exercises.ipynb | 50% | All 10 exercises solved. |
-| robotics_challenge.ipynb | 50% | Robotics challenge solved. |
+| exercises.ipynb | 40% | All 10 exercises implemented and edge-cased. |
+| mini_project.ipynb | 25% | poller.py plus its test suite. |
+| robotics_challenge.ipynb | 25% | Bounded poller degrades safely. |
+| research.ipynb | 10% | Real measurements with a defensible conclusion. |
 
 ## Performance criteria
 
 | Criterion | Weight | Description |
 | --- | --- | --- |
-| Correctness | 50 | Passes all tests. |
-| Quality | 50 | PEP 8 compliant. |
+| Correctness | 30 | Accumulation, early exit and boundaries all behave as specified. |
+| Bounded iteration | 25 | No loop can exceed its budget, and the reason is stated. |
+| Code quality | 25 | PEP 8 naming, docstrings, small focused functions. |
+| Reasoning | 20 | Cost and termination claims explained in writing. |
 
 ## Band descriptors
 
 | Band | Range | Overall descriptor |
 | --- | --- | --- |
-| Pass | 50-100 | Satisfactory completion. |
+| Distinction | 85-100 | Correct, tested, clearly reasoned, production-shaped. |
+| Merit | 70-84 | Correct with minor gaps in testing or documentation. |
+| Pass | 50-69 | Core requirement met; edge cases or tests incomplete. |
+| Fail | 0-49 | Core requirement not met, or the code does not run. |
 
 ## Grade descriptors by band
 
-* **Pass** — All core objectives met.
+* **Distinction** — Every exercise implemented, an injected sensor fault is handled inside the retry budget, and the budget itself is proven by a test.
+* **Merit** — Most exercises correct; the poller works but reuses an exhausted iterator, which is untested.
+* **Pass** — Core requirements met, but a while loop is used for the retry with no bound, so the failure mode is a hang rather than a report.
+* **Fail** — An unbounded loop, or a route follower that drops the final waypoint.
 
 ## Academic integrity
 

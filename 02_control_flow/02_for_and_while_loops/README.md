@@ -2,21 +2,25 @@
 
 **Module 2: Control Flow and Loops**
 
-Iteration primitives, loop conditions, polling loops, and collection processing.
+Iteration as a protocol: a for loop asks the sequence for the next element, a while loop asks a question - and only one of the two can stop on its own.
 
 ## Why this topic matters
 
-Loops automate repeating tasks and enable continuous sensor processing.
+Telemetry, routes and retry policies are all loops, and the difference between a loop that stops and a loop that hangs is the difference between a robot that degrades and a robot that is stuck holding a live process. Choosing the right loop is a safety decision, not a style preference.
 
 ## Learning objectives
 
-1. Construct for loops over sequences.
-2. Construct event-driven while loops.
-3. Avoid infinite loop bugs.
+1. Explain why a for loop cannot run away over a finite sequence.
+2. Give every while loop a bound, a break, or visible progress.
+3. Implement __iter__ and __next__ to make an object loopable.
+4. Explain why an exhausted iterator stays exhausted.
+5. Choose direct iteration over index iteration and say why.
+6. Express a retry policy as a bounded for loop.
 
 ## Prerequisites
 
 - Topic 2.1 Conditional Statements
+- Topic 1.8 Writing and Running Your First Scripts
 
 ## Files in this topic
 
@@ -27,8 +31,8 @@ Loops automate repeating tasks and enable continuous sensor processing.
 | [`solution.ipynb`](solution.ipynb) | Reference implementations with tests and complexity notes | Only after you have attempted the exercises |
 | [`research.ipynb`](research.ipynb) | A measurement-driven investigation | End of topic |
 | [`quiz.ipynb`](quiz.ipynb) | 10 questions with an answer key | Self-check before moving on |
-| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: for Loops and while Loops System | Deliverable |
-| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: for Loops and while Loops Controller | ROBO-X milestone |
+| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Bounded Sensor Poller | Deliverable |
+| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Bounded Telemetry Poller | ROBO-X milestone |
 | [`instructor_notes.md`](instructor_notes.md) | Teaching notes and common misconceptions | Lecturers only |
 | [`rubric.md`](rubric.md) | How this topic is graded | Before submitting work |
 
@@ -36,26 +40,26 @@ Loops automate repeating tasks and enable continuous sensor processing.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | for Loops and while Loops Medium Task 1 | MEDIUM | for loop, while loop, Iteration |
-| 2 | for Loops and while Loops Medium Task 2 | MEDIUM | for loop, while loop, Iteration |
-| 3 | for Loops and while Loops Medium Task 3 | MEDIUM | for loop, while loop, Iteration |
-| 4 | for Loops and while Loops Medium Task 4 | MEDIUM | for loop, while loop, Iteration |
-| 5 | for Loops and while Loops Medium Task 5 | MEDIUM | for loop, while loop, Iteration |
-| 6 | for Loops and while Loops Hard Task 1 | HARD | for loop, while loop, Iteration |
-| 7 | for Loops and while Loops Hard Task 2 | HARD | for loop, while loop, Iteration |
-| 8 | for Loops and while Loops Hard Task 3 | HARD | for loop, while loop, Iteration |
-| 9 | for Loops and while Loops Hard Task 4 | HARD | for loop, while loop, Iteration |
-| 10 | for Loops and while Loops Hard Task 5 | HARD | for loop, while loop, Iteration |
+| 1 | Total the distance of a route | MEDIUM | for, accumulators, floats |
+| 2 | Count the positive readings | MEDIUM | for, conditionals, counting |
+| 3 | Track the running maximum | MEDIUM | for, comparisons, accumulators |
+| 4 | Count down with a bounded while loop | MEDIUM | while, countdown, termination |
+| 5 | Find the first reading above a threshold | MEDIUM | for, return, search |
+| 6 | Total the length of a path | HARD | for, math.dist, accumulators |
+| 7 | Split a sequence into fixed-size chunks | HARD | for, slicing, range |
+| 8 | Scan readings until the first drop | HARD | for, state, early exit |
+| 9 | Poll a condition with a bounded retry | HARD | for over range, callables, retry |
+| 10 | Follow a waypoint route with the simulator | HARD | for, simulator API, aggregation |
 
-## Robotics challenge — ROBO-X Challenge: for Loops and while Loops Controller
+## Robotics challenge — ROBO-X Challenge: Bounded Telemetry Poller
 
-Develop a robust controller function using for Loops and while Loops.
+Implement `poll_channels(robot, channels, attempts)` that reads each channel with a bounded retry and reports which channels failed.
 
 **ROBO-X milestone:** M2
 
 ## Research task
 
-How does the performance of for Loops and while Loops scale with dataset size?
+How much faster is direct iteration over a list than the equivalent manual index loop?
 
 ## Recommended workflow
 

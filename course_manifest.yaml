@@ -216,8 +216,8 @@ modules:
       - id: "2.1"
         title: "Conditional Statements"
         directory: "02_control_flow/01_conditional_statements"
-        prerequisites: ["Module"]
-        learning_objectives: ["Evaluate", "Implement", "Understand"]
+        prerequisites: ["Topic", "Topic"]
+        learning_objectives: ["Explain", "List", "Use", "Distinguish", "Structure", "Encode"]
         exercise_count: 10
         medium_count: 5
         hard_count: 5
@@ -231,14 +231,14 @@ modules:
           - "02_control_flow/01_conditional_statements/robotics_challenge.ipynb"
           - "02_control_flow/01_conditional_statements/solution.ipynb"
         mini_project: "02_control_flow/01_conditional_statements/mini_project.ipynb"
-        research_task: "How does the performance of Conditional Statements scale with dataset size?"
-        robotics_challenge: "ROBO-X Challenge: Conditional Statements Controller"
+        research_task: "How often does a threshold comparison on a simulated sensor reading land exactly on the boundary value?"
+        robotics_challenge: "ROBO-X Challenge: Field Robot Drive Interlock"
         robo_x_milestone: "M2"
       - id: "2.2"
         title: "for Loops and while Loops"
         directory: "02_control_flow/02_for_and_while_loops"
-        prerequisites: ["Topic"]
-        learning_objectives: ["Construct", "Construct", "Avoid"]
+        prerequisites: ["Topic", "Topic"]
+        learning_objectives: ["Explain", "Give", "Implement", "Explain", "Choose", "Express"]
         exercise_count: 10
         medium_count: 5
         hard_count: 5
@@ -252,8 +252,8 @@ modules:
           - "02_control_flow/02_for_and_while_loops/robotics_challenge.ipynb"
           - "02_control_flow/02_for_and_while_loops/solution.ipynb"
         mini_project: "02_control_flow/02_for_and_while_loops/mini_project.ipynb"
-        research_task: "How does the performance of for Loops and while Loops scale with dataset size?"
-        robotics_challenge: "ROBO-X Challenge: for Loops and while Loops Controller"
+        research_task: "How much faster is direct iteration over a list than the equivalent manual index loop?"
+        robotics_challenge: "ROBO-X Challenge: Bounded Telemetry Poller"
         robo_x_milestone: "M2"
       - id: "2.3"
         title: "Loop Control"
