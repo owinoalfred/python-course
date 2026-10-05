@@ -37,7 +37,7 @@ def make_topic_data(
     lesson = {
         "conceptual_explanation": [
             MD(f"**{title}** is a core building block of modern Python development in {domain}."),
-            MD(f"In Python 3.14, mastering {title} allows software engineers to build robust, scalable, and maintainable systems."),
+            MD(f"In Python 3.12, mastering {title} allows software engineers to build robust, scalable, and maintainable systems."),
             TABLE(
                 ["Aspect", "Description", "Engineering Impact"],
                 [
@@ -135,7 +135,7 @@ def make_topic_data(
             ])
         ],
         "further_exploration": [
-            MD(f"Explore the Python documentation for {title} and experiment with advanced features in Python 3.14.")
+            MD(f"Explore the Python documentation for {title} and experiment with advanced features in Python 3.12.")
         ]
     }
 

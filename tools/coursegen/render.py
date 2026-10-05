@@ -32,6 +32,31 @@ def _table(headers: Sequence[str], rows: Sequence[Sequence[Any]]) -> str:
     return "\n".join([head, rule, *body])
 
 
+def block_text(block: Block) -> str:
+    """Best-effort plain-text extraction from a block (for word counting)."""
+    kind = block.kind
+    payload = block.payload
+    if kind in {"md", "raw_md", "equation"}:
+        return str(payload)
+    if kind in {"code", "code_cell"}:
+        return str(payload[0])
+    if kind == "bullets":
+        return "\n".join(str(item) for item in payload)
+    if kind == "steps":
+        items, _start = payload
+        return "\n".join(str(item) for item in items)
+    if kind == "table":
+        headers, rows = payload
+        cell = [str(h) for h in headers]
+        for row in rows:
+            cell.extend(str(c) for c in row)
+        return "\n".join(cell)
+    if kind in {"note", "warn", "tip"}:
+        title, body = payload
+        return f"{title}\n{body}"
+    return ""
+
+
 def block_to_cells(block: Block, *, topic_id: str = "") -> list[dict[str, Any]]:
     """Convert one block into zero or more notebook cells."""
     kind = block.kind
@@ -46,6 +71,12 @@ def block_to_cells(block: Block, *, topic_id: str = "") -> list[dict[str, Any]]:
             if not ok:
                 raise SyntaxError(f"invalid Python in content ({err})\n---\n{source}")
         return [nb.md(nb.fenced(source, lang))]
+    if kind == "code_cell":
+        source, tags = block.payload
+        ok, err = nb.check_syntax(source, where=f"{topic_id}:code_cell")
+        if not ok:
+            raise SyntaxError(f"invalid Python in code cell ({err})\n---\n{source}")
+        return [nb.code(source, tags=tags)]
     if kind == "bullets":
         return [nb.md(_bullets(block.payload))]
     if kind == "steps":

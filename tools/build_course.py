@@ -25,7 +25,9 @@ sys.path.insert(0, str(ROOT))
 
 from tools.coursegen import catalogue  # noqa: E402
 from tools.coursegen.build import validate_topic, write_topic  # noqa: E402
+from tools.coursegen.capstone import write_capstone_index  # noqa: E402
 from tools.coursegen.manifest import write_manifest  # noqa: E402
+from tools.coursegen.module_index import write_module_indexes  # noqa: E402
 from tools.coursegen.schema import ContentError  # noqa: E402
 
 
@@ -58,6 +60,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--list", action="store_true", help="print the topic inventory and exit"
     )
+    parser.add_argument(
+        "--lint",
+        action="store_true",
+        help="run the content linter and print the quality dashboard",
+    )
     args = parser.parse_args(argv)
 
     if args.list:
@@ -89,7 +96,10 @@ def main(argv: list[str] | None = None) -> int:
             print(f"      {exc}", file=sys.stderr)
 
     if not args.check and not args.topic:
-        write_manifest(load_topics(), ROOT)
+        all_topics = load_topics()
+        write_manifest(all_topics, ROOT)
+        write_module_indexes(ROOT, all_topics)
+        write_capstone_index(ROOT)
 
     elapsed = time.perf_counter() - started
     mode = "validated" if args.check else "built"
@@ -101,6 +111,14 @@ def main(argv: list[str] | None = None) -> int:
         for failure in failures:
             print(f"  - {failure.splitlines()[0]}", file=sys.stderr)
         return 1
+
+    if args.lint:
+        from tools.coursegen.lint import lint_topics, render_report
+
+        all_topics = load_topics()
+        findings = lint_topics(all_topics)
+        print("\n" + render_report(findings, all_topics))
+
     return 0
 
 

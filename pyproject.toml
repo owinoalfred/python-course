@@ -1,0 +1,28 @@
+# ---------------------------------------------------------------------------
+# Python Master Course — build, test and style configuration.
+#
+# The course packages (`shared`, `course_content`, `tools`, `robo_x`) are
+# imported directly from the repository root, so the root is added to
+# `sys.path` for pytest runs (see conftest.py as well).
+# ---------------------------------------------------------------------------
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests", "10_capstone_projects"]
+pythonpath = ["."]
+# importlib import mode avoids the classic "import file mismatch" error when
+# many test files share a basename across directories.
+addopts = "--import-mode=importlib -q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+exclude = [".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501", "E402"]
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]

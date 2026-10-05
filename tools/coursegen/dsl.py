@@ -50,6 +50,17 @@ def CODE(source: str, lang: str = "python") -> Block:
     return Block("code", (source.strip("\n"), lang))
 
 
+def CODE_CELL(source: str, tags: Sequence[str] = ()) -> Block:
+    """An *executable* code cell (not a fenced markdown block).
+
+    Use this for lesson examples that a learner should run. Unlike :func:`CODE`,
+    which renders a highlighted snippet inside a markdown cell, ``CODE_CELL``
+    emits a real notebook code cell that can be executed and can carry the
+    output of that execution.
+    """
+    return Block("code_cell", (source.strip("\n"), tuple(str(t) for t in tags)))
+
+
 def BULLETS(items: Iterable[str]) -> Block:
     return Block("bullets", [str(i) for i in items])
 

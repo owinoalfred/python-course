@@ -61,11 +61,31 @@ def audit_repository() -> int:
             if not (topic_path / doc_name).exists():
                 missing_docs += 1
 
+    # Module index READMEs and the capstone index must exist (navigation graph).
+    missing_indexes = 0
+    for directory in catalogue.MODULE_DIRS.values():
+        if not (ROOT / directory / "README.md").exists():
+            print(f"MISSING MODULE INDEX: {directory}/README.md")
+            missing_indexes += 1
+    if not (ROOT / "10_capstone_projects" / "README.md").exists():
+        print("MISSING CAPSTONE INDEX: 10_capstone_projects/README.md")
+        missing_indexes += 1
+
     print("-" * 60)
     print(f"Missing Notebooks: {missing_notebooks}")
     print(f"Missing Docs/Dirs: {missing_docs}")
+    print(f"Missing Index READMEs: {missing_indexes}")
 
-    status = "PASS" if (missing_notebooks == 0 and missing_docs == 0 and total_topics > 0) else "FAIL"
+    status = (
+        "PASS"
+        if (
+            missing_notebooks == 0
+            and missing_docs == 0
+            and missing_indexes == 0
+            and total_topics > 0
+        )
+        else "FAIL"
+    )
     print(f"Overall Status: {status}")
     print("=" * 60)
     return 0 if status == "PASS" else 1

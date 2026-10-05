@@ -2,7 +2,7 @@
 
 **Module 1: Getting Started with Python**
 
-Setting up Python 3.14, VS Code, Jupyter, and mastering interactive development with the REPL.
+Setting up Python 3.12, VS Code, Jupyter, and mastering interactive development with the REPL.
 
 ## Why this topic matters
 
@@ -10,7 +10,7 @@ A reliable development environment is essential for professional software engine
 
 ## Learning objectives
 
-1. Install and verify Python 3.14.
+1. Install and verify Python 3.12.
 2. Configure VS Code and Jupyter notebooks.
 3. Use the Python REPL effectively.
 

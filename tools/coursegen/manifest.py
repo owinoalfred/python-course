@@ -52,7 +52,7 @@ def build_manifest(topics: Sequence[Topic]) -> str:
         f"  title: {_yaml_str('Python Master Course')}",
         f"  subtitle: {_yaml_str('Notebook-Based Python + Software Engineering + Robotics')}",
         "  project: ROBO-X",
-        "  python_requires: \">=3.10\"",
+        "  python_requires: \">=3.12\"",
         f"  module_count: {len(modules())}",
         f"  topic_count: {len(topics)}",
         "",

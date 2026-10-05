@@ -11,7 +11,7 @@ course:
   title: "Python Master Course"
   subtitle: "Notebook-Based Python + Software Engineering + Robotics"
   project: ROBO-X
-  python_requires: ">=3.10"
+  python_requires: ">=3.12"
   module_count: 9
   topic_count: 65
 
