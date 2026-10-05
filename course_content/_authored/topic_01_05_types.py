@@ -1138,6 +1138,25 @@ SOLUTIONS.append(
             "RANGES = {'distance': (0.0, 30.0), 'temperature': (-40.0, 125.0)}\n"
             "\n"
             "\n"
+            "def parse_readings(text):\n"
+            "    \"\"\"Parse 'name=value' pairs into floats, reporting bad ones.\"\"\"\n"
+            "    readings, problems = {}, []\n"
+            "    for chunk in text.split(';'):\n"
+            "        chunk = chunk.strip()\n"
+            "        if not chunk:\n"
+            "            continue\n"
+            "        name, separator, raw = chunk.partition('=')\n"
+            "        if not separator:\n"
+            "            problems.append(f'{chunk!r}: missing =')\n"
+            "            continue\n"
+            "        name = name.strip()\n"
+            "        try:\n"
+            "            readings[name] = float(raw.strip())\n"
+            "        except ValueError:\n"
+            "            problems.append(f\"{name}: {raw.strip()!r} is not a number\")\n"
+            "    return readings, sorted(problems)\n"
+            "\n"
+            "\n"
             "def wire_frame(robot, channels) -> str:\n"
             "    \"\"\"Render live readings as the semicolon text a real bus would send.\"\"\"\n"
             "    parts = []\n"
@@ -1287,4 +1306,400 @@ QUIZ.append(
         ),
         reference="lesson.ipynb - Advanced Examples",
     )
+)
+
+QUIZ.append(
+    quiz(
+        question="What does `int('42') + 1.0` evaluate to?",
+        choices=[
+            "43",
+            "42.0",
+            "43.0",
+            "It raises a TypeError.",
+        ],
+        answer=2,
+        kind="code_output",
+        explanation=(
+            "Mixing an int with a float promotes the int to a float rather than "
+            "truncating, so the result is 43.0. This numeric-tower behaviour is why an "
+            "int result can unexpectedly gain a decimal point."
+        ),
+        reference="lesson.ipynb - Formal Theory",
+    )
+)
+
+QUIZ.append(
+    quiz(
+        question="Why does the standard library provide decimal.Decimal?",
+        choices=[
+            "Because binary floating point cannot represent most decimal fractions exactly.",
+            "Because Decimal arithmetic is faster than float.",
+            "Because Decimal stores values as text on disk.",
+            "Because Decimal removes the need for input validation.",
+        ],
+        answer=0,
+        kind="reasoning",
+        explanation=(
+            "Decimal performs base-10 arithmetic, so 0.1 is stored as exactly one tenth. "
+            "It is slower and only worth using where the decimal value is contractual, "
+            "such as accounting or specified tolerances."
+        ),
+        reference="lesson.ipynb - Advanced Examples",
+    )
+)
+
+QUIZ.append(
+    quiz(
+        question="Why validate ranges after parsing when the simulator already clamps readings?",
+        choices=[
+            "The simulator's clamping is known to be incorrect.",
+            "Range checks make the parsing loop faster.",
+            "Real sensors can emit out-of-range values that clamping would hide.",
+            "Range checks are unnecessary once a value is a float.",
+        ],
+        answer=2,
+        kind="robotics",
+        explanation=(
+            "The simulator clamps because it is a teaching model; a real sensor can "
+            "report a physically impossible value, and a fault is far better detected "
+            "than silently normalised. Testing the validation logic is the reason to keep "
+            "it even though the simulator would never trigger it."
+        ),
+        reference="solution.ipynb - Solution 11",
+    )
+)
+
+QUIZ.append(
+    quiz(
+        question="Which implementation correctly reads a numeric field and rejects booleans?",
+        choices=[
+            "Check isinstance(raw, bool) first, then float(raw) inside a try/except "
+            "catching TypeError and ValueError.",
+            "float(raw) on its own.",
+            "int(raw) on its own.",
+            "bool(raw) and then compare against 1.",
+        ],
+        answer=0,
+        kind="implementation_choice",
+        explanation=(
+            "The explicit bool guard is required because bool is a subclass of int, so "
+            "float(True) would otherwise silently succeed as 1.0. The try/except then "
+            "handles the text that cannot be parsed at all."
+        ),
+        reference="exercises.ipynb - Exercise 2",
+    )
+)
+
+MINI_PROJECT = {
+    "title": "Mini-Project: Telemetry Frame Validator",
+    "brief": (
+        "Build a validator for the semicolon-separated text frames a robot receives "
+        "over its serial bus. It must parse every channel, validate the physical range "
+        "of each, and report every problem instead of raising."
+    ),
+    "scenario": (
+        "The fleet controller receives one text frame per second from each robot. A "
+        "corrupt field must not cost you the rest of the frame, and the operator needs "
+        "to know exactly which channel was wrong."
+    ),
+    "rationale": (
+        "This is the boundary component of every telemetry system: it is the one place "
+        "where untrusted text becomes trusted numbers, and everything downstream depends "
+        "on it being both forgiving and precise."
+    ),
+    "requirements": [
+        "Parse 'channel=value' pairs split on ';' into floats.",
+        "Validate each reading against a per-channel minimum and maximum.",
+        "Return a dict with `readings`, `problems` and `count`.",
+        "Never raise for malformed text.",
+        "Reject booleans when validating numeric fields.",
+    ],
+    "constraints": [
+        "Standard library only.",
+        "Keep the channel ranges in a module-level table.",
+        "Problems must name the channel they refer to.",
+    ],
+    "deliverables": [
+        "`telemetry.py` with the parser and validator.",
+        "`test_telemetry.py` with at least ten assertions.",
+        "A README section listing every channel and its valid range.",
+    ],
+    "steps": [
+        "Define RANGES for the channels you support.",
+        "Implement parse_readings returning readings and problems.",
+        "Add validate_readings applying RANGES and dropping failures.",
+        "Compose them into validate_frame(text).",
+        "Write tests for a clean frame, a bad value, an unknown channel and empty text.",
+    ],
+    "expected_behavior": (
+        "A clean frame returns every reading with an empty problem list. A frame with a "
+        "corrupt channel returns the good readings plus a message naming the bad one."
+    ),
+    "acceptance": [
+        "All assertions pass from a clean run.",
+        "Malformed text never raises.",
+        "Every problem message names its channel.",
+        "An empty frame returns count 0 with no problems.",
+    ],
+    "extensions": [
+        "Add a timestamp to every frame and reject stale ones.",
+        "Emit the result as JSON for the fleet dashboard.",
+        "Track a rolling count of failures per channel.",
+    ],
+}
+
+RESEARCH = {
+    "question": (
+        "How often do floating-point comparisons of the form a == b fail for values "
+        "that should be equal?"
+    ),
+    "hypothesis": (
+        "Decimal arithmetic, as used in currency, fails exact equality frequently, while "
+        "tolerance-based comparison succeeds almost always."
+    ),
+    "experiment": [
+        STEPS(
+            [
+                "Generate a few hundred pairs of values that are mathematically equal but computed differently.",
+                "Compare each pair with == , with a 1e-9 tolerance, and with Decimal equality.",
+                "Record every raw result in the table below before computing any rate.",
+            ]
+        ),
+    ],
+    "data": [
+        CODE_CELL(
+            "# Record your raw results - one row per comparison strategy.\n"
+            "# Copy real values from your actual runs; do not invent them.\n"
+            "#\n"
+            "# | strategy | comparisons | exact matches | tolerance matches |"
+        ),
+    ],
+    "analysis": [
+        MD(
+            "Compute the failure rate of each strategy and compare them. With a few "
+            "hundred samples the difference is usually unambiguous; state the sample "
+            "size alongside the rate so the reader can judge it."
+        ),
+    ],
+    "result": [
+        MD(
+            "State which strategy failed, how often, and under what circumstances. Record "
+            "any case that surprised you rather than discarding it."
+        ),
+    ],
+    "interpretation": [
+        MD(
+            "Explain the mechanism in terms of binary versus decimal representation, and "
+            "note that exact equality is still the correct test for values that were never "
+            "rounded. Name at least two threats to the validity of the comparison."
+        ),
+    ],
+    "conclusion": [
+        MD(
+            "Give your verdict and state the rule you would adopt for a production "
+            "tolerance pipeline."
+        ),
+    ],
+    "extensions": [
+        "Repeat with values of very different magnitudes to expose relative tolerance issues.",
+        "Measure the cost of Decimal against float on the same workload.",
+    ],
+}
+
+CHALLENGE = {
+    "title": "ROBO-X Challenge: Telemetry Frame Gate",
+    "context": (
+        "During drone pre-flight the controller receives semicolon-separated text "
+        "frames from the sensor bus. Each frame must be converted to trusted numbers "
+        "before any control decision is taken."
+    ),
+    "mission": (
+        "Implement `validate_frame(text)` that parses a raw frame, validates every "
+        "channel against its physical range, and returns a readiness decision naming "
+        "each problem found."
+    ),
+    "requirements": [
+        "Parse 'channel=value' pairs split on ';' into floats.",
+        "Validate each reading against a per-channel range table.",
+        "Reject booleans in the numeric path.",
+        "Return a dict with `readings`, `problems` and `count`.",
+    ],
+    "constraints": [
+        "Never raise for malformed text.",
+        "No hardware required; use `shared/robo_x_sim` to produce a real frame.",
+        "Complete well inside the 10 ms control budget.",
+    ],
+    "interface": "def validate_frame(text: str) -> dict:",
+    "success_criteria": [
+        "A clean frame returns count equal to the number of channels and no problems.",
+        "A frame containing ERR reports that channel by name.",
+        "Malformed text never raises.",
+    ],
+    "extension": (
+        "Add a timestamp field to every frame and reject frames older than a supplied "
+        "threshold, explaining the choice of threshold."
+    ),
+}
+
+INSTRUCTOR_NOTES = {
+    "objectives": [
+        "Make external-text conversion the centrepiece of the topic.",
+        "Install the conversion ladder as the default reflex for configuration.",
+        "Show that bool being a subclass of int is a real, not theoretical, hazard.",
+    ],
+    "misconceptions": [
+        [
+            "Python converts types automatically when arithmetic needs them.",
+            "Only int and float promote; everything else needs an explicit call.",
+        ],
+        [
+            "0 is truthy because it is a number.",
+            "Zero is falsy, which is why `if value:` skips a legitimate zero reading.",
+        ],
+        [
+            "0.1 + 0.2 equals 0.3.",
+            "Binary floating point cannot represent either value exactly.",
+        ],
+        [
+            "A numeric check automatically rejects booleans.",
+            "bool inherits from int, so True passes an int check unless excluded.",
+        ],
+    ],
+    "difficult_concepts": [
+        "Convincing students that partial success beats raising at a system boundary.",
+        "Reasoning about representation error rather than treating it as a quirk.",
+        "Seeing where the type boundary is in their own pipeline.",
+    ],
+    "demonstrations": [
+        "Print 0.1 + 0.2 at full precision and then compare with 0.3.",
+        "Show float(True) returning 1.0 while isinstance(True, int) is True.",
+        "Parse a deliberately corrupt telemetry frame and show the good channels survive.",
+    ],
+    "discussion": [
+        "Where in a real robot system would you place the conversion boundary?",
+        "When is Decimal worth its cost, and when is a tolerance sufficient?",
+    ],
+    "student_errors": [
+        [
+            "A zero reading is ignored by a guard",
+            "Truthiness was used where an explicit comparison was meant",
+            "Test with `value is not None` or compare to a bound",
+        ],
+        [
+            "ValueError raised on a text sensor field",
+            "Conversion happened inside the control loop rather than at the boundary",
+            "Parse once at the edge and pass typed values downstream",
+        ],
+        [
+            "A boolean passes a numeric range check",
+            "isinstance(value, int) also admits bool",
+            "Exclude bool before the numeric check",
+        ],
+    ],
+    "pacing": (
+        "90 minutes of lesson, then 2 hours on exercises. Spend time on the conversion "
+        "ladder; it recurs in Modules 4, 7, 8 and 9."
+    ),
+    "extensions": [
+        "Ask students to write a validator for their own domain's units.",
+        "Introduce the difference between float and Decimal for a billing use case.",
+    ],
+    "assessment": (
+        "Grade against rubric.md. Exercises 6, 9 and 10 carry the signal: they require "
+        "partial success, tolerance reasoning and ordered fallback."
+    ),
+    "support": (
+        "Give students a table of values with their type, repr and bool result, and have "
+        "them predict the missing column before running anything.",
+    ),
+    "extension_fast": (
+        "Ask for a short design note on how the same validator would handle binary "
+        "protobuf payloads instead of text.",
+    ),
+}
+
+RUBRIC = {
+    "artifacts": [
+        ["exercises.ipynb", "40%", "All 10 exercises implemented and edge-cased."],
+        ["mini_project.ipynb", "25%", "telemetry.py plus its test suite."],
+        ["robotics_challenge.ipynb", "25%", "Frame gate reports every problem."],
+        ["research.ipynb", "10%", "Real measurements with a defensible conclusion."],
+    ],
+    "criteria": [
+        ["Correctness", "30", "Conversions, ranges and fallbacks all behave as specified."],
+        ["Boundary discipline", "25", "Parsing happens once, at the edge, and never raises."],
+        ["Code quality", "25", "PEP 8 naming, docstrings, small focused functions."],
+        ["Reasoning", "20", "Float and Decimal trade-offs explained in writing."],
+    ],
+    "bands": [
+        ["Distinction", "85-100", "Correct, tested, clearly reasoned, production-shaped."],
+        ["Merit", "70-84", "Correct with minor gaps in testing or documentation."],
+        ["Pass", "50-69", "Core requirement met; edge cases or tests incomplete."],
+        ["Fail", "0-49", "Core requirement not met, or the code does not run."],
+    ],
+    "band_details": [
+        [
+            "Distinction",
+            "Every exercise implemented, a corrupt channel is reported by name while the "
+            "rest survive, and the float comparison uses a justified tolerance.",
+        ],
+        [
+            "Merit",
+            "Most exercises correct; testing covers the main paths; malformed input is "
+            "handled but the boolean edge case is untested.",
+        ],
+        [
+            "Pass",
+            "Core requirements met, but the parser raises on one bad channel, or floats "
+            "are compared with ==.",
+        ],
+        [
+            "Fail",
+            "Conversion happens inside the control loop with no validation, or booleans "
+            "silently pass as sensor readings.",
+        ],
+    ],
+}
+
+TOPIC = topic(
+    topic_id="1.5",
+    title="Core Data Types and Type Conversion",
+    module=1,
+    module_title="Getting Started with Python",
+    directory="05_core_data_types_conversion",
+    summary=(
+        "Everything that enters a robot arrives as text. This topic covers the core "
+        "built-in types, the traps of truthiness and floating point, and the "
+        "conversion ladder that makes external data safe to use."
+    ),
+    why_it_matters=(
+        "Type conversion is the seam where a robot meets the outside world: serial "
+        "lines, HTTP parameters, configuration files and operator input all produce "
+        "text. Get this boundary right and the rest of a system can trust its inputs; "
+        "get it wrong and a single corrupt field silently becomes a wrong motor command."
+    ),
+    objectives=[
+        "Name the core built-in types and say which are mutable.",
+        "Convert external text safely with a conversion ladder.",
+        "Explain why bool is a subclass of int and what it breaks.",
+        "Avoid truthiness bugs on numeric values.",
+        "Compare floats with a tolerance and know when Decimal is worth it.",
+        "Parse a telemetry frame without losing the valid channels.",
+    ],
+    prerequisites=[
+        "Topic 1.4 Variables, Naming Conventions, and Dynamic Typing",
+    ],
+    mental_model=LESSON["mental_model"],
+    terminology=TERMS,
+    lesson=LESSON,
+    exercises=EXERCISES,
+    solutions=SOLUTIONS,
+    mini_project=MINI_PROJECT,
+    research=RESEARCH,
+    quiz_questions=QUIZ,
+    robotics_challenge=CHALLENGE,
+    instructor_notes=INSTRUCTOR_NOTES,
+    rubric=RUBRIC,
+    robo_x_milestone="M1",
+    robo_x_package="robo_x.core",
 )

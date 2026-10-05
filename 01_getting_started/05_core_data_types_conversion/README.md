@@ -2,21 +2,24 @@
 
 **Module 1: Getting Started with Python**
 
-int, float, str, bool, NoneType, implicit and explicit type casting.
+Everything that enters a robot arrives as text. This topic covers the core built-in types, the traps of truthiness and floating point, and the conversion ladder that makes external data safe to use.
 
 ## Why this topic matters
 
-Data types govern how bits in memory are interpreted and operated upon.
+Type conversion is the seam where a robot meets the outside world: serial lines, HTTP parameters, configuration files and operator input all produce text. Get this boundary right and the rest of a system can trust its inputs; get it wrong and a single corrupt field silently becomes a wrong motor command.
 
 ## Learning objectives
 
-1. Work with int, float, str, bool, and None.
-2. Perform explicit type casting safely.
-3. Handle type errors.
+1. Name the core built-in types and say which are mutable.
+2. Convert external text safely with a conversion ladder.
+3. Explain why bool is a subclass of int and what it breaks.
+4. Avoid truthiness bugs on numeric values.
+5. Compare floats with a tolerance and know when Decimal is worth it.
+6. Parse a telemetry frame without losing the valid channels.
 
 ## Prerequisites
 
-- Topic 1.4 Variables
+- Topic 1.4 Variables, Naming Conventions, and Dynamic Typing
 
 ## Files in this topic
 
@@ -27,8 +30,8 @@ Data types govern how bits in memory are interpreted and operated upon.
 | [`solution.ipynb`](solution.ipynb) | Reference implementations with tests and complexity notes | Only after you have attempted the exercises |
 | [`research.ipynb`](research.ipynb) | A measurement-driven investigation | End of topic |
 | [`quiz.ipynb`](quiz.ipynb) | 10 questions with an answer key | Self-check before moving on |
-| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Core Data Types and Type Conversion System | Deliverable |
-| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Core Data Types and Type Conversion Controller | ROBO-X milestone |
+| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Telemetry Frame Validator | Deliverable |
+| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Telemetry Frame Gate | ROBO-X milestone |
 | [`instructor_notes.md`](instructor_notes.md) | Teaching notes and common misconceptions | Lecturers only |
 | [`rubric.md`](rubric.md) | How this topic is graded | Before submitting work |
 
@@ -36,26 +39,26 @@ Data types govern how bits in memory are interpreted and operated upon.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Core Data Types and Type Conversion Medium Task 1 | MEDIUM | int, float, str |
-| 2 | Core Data Types and Type Conversion Medium Task 2 | MEDIUM | int, float, str |
-| 3 | Core Data Types and Type Conversion Medium Task 3 | MEDIUM | int, float, str |
-| 4 | Core Data Types and Type Conversion Medium Task 4 | MEDIUM | int, float, str |
-| 5 | Core Data Types and Type Conversion Medium Task 5 | MEDIUM | int, float, str |
-| 6 | Core Data Types and Type Conversion Hard Task 1 | HARD | int, float, str, bool, Type Casting |
-| 7 | Core Data Types and Type Conversion Hard Task 2 | HARD | int, float, str, bool, Type Casting |
-| 8 | Core Data Types and Type Conversion Hard Task 3 | HARD | int, float, str, bool, Type Casting |
-| 9 | Core Data Types and Type Conversion Hard Task 4 | HARD | int, float, str, bool, Type Casting |
-| 10 | Core Data Types and Type Conversion Hard Task 5 | HARD | int, float, str, bool, Type Casting |
+| 1 | Name the type of a value | MEDIUM | type(), builtins |
+| 2 | Convert external text to a float safely | MEDIUM | float(), exceptions, defaults |
+| 3 | Clamp a value into a range | MEDIUM | comparisons, conditionals, types |
+| 4 | Describe a value in words | MEDIUM | isinstance, strings, dispatch |
+| 5 | Validate a sensor reading strictly | MEDIUM | isinstance, bool, validation |
+| 6 | Parse a telemetry line without losing good channels | HARD | strings, exceptions, error reporting |
+| 7 | Normalise units to metres | HARD | dicts, arithmetic, validation |
+| 8 | Summarise the types in a batch | HARD | collections.Counter, dicts, type() |
+| 9 | Compare floats with a tolerance | HARD | floats, abs, math.isclose |
+| 10 | Coerce a value through an ordered list of types | HARD | try/except, callables, error reporting |
 
-## Robotics challenge — ROBO-X Challenge: Core Data Types and Type Conversion Controller
+## Robotics challenge — ROBO-X Challenge: Telemetry Frame Gate
 
-Develop a robust controller function using Core Data Types and Type Conversion.
+Implement `validate_frame(text)` that parses a raw frame, validates every channel against its physical range, and returns a readiness decision naming each problem found.
 
 **ROBO-X milestone:** M1
 
 ## Research task
 
-How does the performance of Core Data Types and Type Conversion scale with dataset size?
+How often do floating-point comparisons of the form a == b fail for values that should be equal?
 
 ## Recommended workflow
 

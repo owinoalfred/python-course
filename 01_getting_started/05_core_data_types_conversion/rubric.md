@@ -6,25 +6,35 @@
 
 | Artefact | Weight | Evidence expected |
 | --- | --- | --- |
-| exercises.ipynb | 50% | All 10 exercises solved. |
-| robotics_challenge.ipynb | 50% | Robotics challenge solved. |
+| exercises.ipynb | 40% | All 10 exercises implemented and edge-cased. |
+| mini_project.ipynb | 25% | telemetry.py plus its test suite. |
+| robotics_challenge.ipynb | 25% | Frame gate reports every problem. |
+| research.ipynb | 10% | Real measurements with a defensible conclusion. |
 
 ## Performance criteria
 
 | Criterion | Weight | Description |
 | --- | --- | --- |
-| Correctness | 50 | Passes all tests. |
-| Quality | 50 | PEP 8 compliant. |
+| Correctness | 30 | Conversions, ranges and fallbacks all behave as specified. |
+| Boundary discipline | 25 | Parsing happens once, at the edge, and never raises. |
+| Code quality | 25 | PEP 8 naming, docstrings, small focused functions. |
+| Reasoning | 20 | Float and Decimal trade-offs explained in writing. |
 
 ## Band descriptors
 
 | Band | Range | Overall descriptor |
 | --- | --- | --- |
-| Pass | 50-100 | Satisfactory completion. |
+| Distinction | 85-100 | Correct, tested, clearly reasoned, production-shaped. |
+| Merit | 70-84 | Correct with minor gaps in testing or documentation. |
+| Pass | 50-69 | Core requirement met; edge cases or tests incomplete. |
+| Fail | 0-49 | Core requirement not met, or the code does not run. |
 
 ## Grade descriptors by band
 
-* **Pass** — All core objectives met.
+* **Distinction** — Every exercise implemented, a corrupt channel is reported by name while the rest survive, and the float comparison uses a justified tolerance.
+* **Merit** — Most exercises correct; testing covers the main paths; malformed input is handled but the boolean edge case is untested.
+* **Pass** — Core requirements met, but the parser raises on one bad channel, or floats are compared with ==.
+* **Fail** — Conversion happens inside the control loop with no validation, or booleans silently pass as sensor readings.
 
 ## Academic integrity
 
