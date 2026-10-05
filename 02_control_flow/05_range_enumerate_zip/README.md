@@ -1,22 +1,25 @@
-# 2.5 — range(), enumerate(), and zip()
+# 2.5 — range, enumerate and zip
 
 **Module 2: Control Flow and Loops**
 
-Built-in iteration utilities for indexed and parallel looping.
+Three built-ins that remove the bookkeeping loops force on you, and the one silent failure each of them can still produce.
 
 ## Why this topic matters
 
-enumerate() and zip() eliminate manual index tracking variables.
+A mission log that silently drops a step, or shifts every timestamp after a dropped reading, is a safety defect rather than a cosmetic one. These built-ins exist because the manual versions of these loops get this wrong.
 
 ## Learning objectives
 
-1. Use range() for numerical iteration.
-2. Use enumerate() for indexed loops.
-3. Use zip() for parallel iteration.
+1. Use enumerate instead of a hand-maintained counter and manual indexing.
+2. Explain why the stop value of range is exclusive.
+3. State why range is lazy and why that matters for large bounds.
+4. Predict what zip does when its inputs differ in length.
+5. Use strict=True to convert a silent truncation into a loud failure.
+6. Derive a time base from the data index so a dropped item leaves a gap.
 
 ## Prerequisites
 
-- Topic 2.4 Nested Loops
+- Topic 2.4 Nested Loops and Common Patterns
 
 ## Files in this topic
 
@@ -27,8 +30,8 @@ enumerate() and zip() eliminate manual index tracking variables.
 | [`solution.ipynb`](solution.ipynb) | Reference implementations with tests and complexity notes | Only after you have attempted the exercises |
 | [`research.ipynb`](research.ipynb) | A measurement-driven investigation | End of topic |
 | [`quiz.ipynb`](quiz.ipynb) | 10 questions with an answer key | Self-check before moving on |
-| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: range(), enumerate(), and zip() System | Deliverable |
-| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: range(), enumerate(), and zip() Controller | ROBO-X milestone |
+| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Step-Indexed Telemetry Log | Deliverable |
+| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Step-Indexed Mission Log | ROBO-X milestone |
 | [`instructor_notes.md`](instructor_notes.md) | Teaching notes and common misconceptions | Lecturers only |
 | [`rubric.md`](rubric.md) | How this topic is graded | Before submitting work |
 
@@ -36,26 +39,26 @@ enumerate() and zip() eliminate manual index tracking variables.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | range(), enumerate(), and zip() Medium Task 1 | MEDIUM | range, enumerate, zip |
-| 2 | range(), enumerate(), and zip() Medium Task 2 | MEDIUM | range, enumerate, zip |
-| 3 | range(), enumerate(), and zip() Medium Task 3 | MEDIUM | range, enumerate, zip |
-| 4 | range(), enumerate(), and zip() Medium Task 4 | MEDIUM | range, enumerate, zip |
-| 5 | range(), enumerate(), and zip() Medium Task 5 | MEDIUM | range, enumerate, zip |
-| 6 | range(), enumerate(), and zip() Hard Task 1 | HARD | range, enumerate, zip |
-| 7 | range(), enumerate(), and zip() Hard Task 2 | HARD | range, enumerate, zip |
-| 8 | range(), enumerate(), and zip() Hard Task 3 | HARD | range, enumerate, zip |
-| 9 | range(), enumerate(), and zip() Hard Task 4 | HARD | range, enumerate, zip |
-| 10 | range(), enumerate(), and zip() Hard Task 5 | HARD | range, enumerate, zip |
+| 1 | Find a value's index with enumerate | MEDIUM | enumerate, search, search |
+| 2 | Take every other item with a stepped range | MEDIUM | range, slicing, stepping |
+| 3 | Pair commands with battery readings | MEDIUM | zip, strict, validation |
+| 4 | Build a countdown with a negative step | MEDIUM | range, stepping, boundaries |
+| 5 | Zip two sequences with a fill value | MEDIUM | zip, itertools, padding |
+| 6 | Run-length encode a sequence | HARD | enumerate, grouping, itertools |
+| 7 | Transpose a table with zip | HARD | zip, unpacking, transformations |
+| 8 | Attach generated timestamps to readings | HARD | zip, generators, validation |
+| 9 | Build a mission log from a command schedule | HARD | zip, strict, simulator API |
+| 10 | Pair attempts with backoff delays | HARD | range, zip, generators |
 
-## Robotics challenge — ROBO-X Challenge: range(), enumerate(), and zip() Controller
+## Robotics challenge — ROBO-X Challenge: Step-Indexed Mission Log
 
-Develop a robust controller function using range(), enumerate(), and zip().
+Implement `build_mission_log(robot, readings, period_s)` returning a log whose steps are 1-based and whose timestamps come from the batch index.
 
 **ROBO-X milestone:** M2
 
 ## Research task
 
-How does the performance of range(), enumerate(), and zip() scale with dataset size?
+How much does generating the second stream of a zip cost compared with slicing it first?
 
 ## Recommended workflow
 

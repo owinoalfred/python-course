@@ -2,21 +2,24 @@
 
 **Module 2: Control Flow and Loops**
 
-break, continue, pass statements, and loop-else semantics.
+break, continue and the under-used loop else: three ways a loop says how it finished, and why that is usually more expressive than a flag variable.
 
 ## Why this topic matters
 
-Loop control constructs alter execution flow during iteration.
+A fault scanner that keeps reading after it has found the fault spends the control cycle it needed for a stop command, and a search that forgets to break reports the wrong answer with no error at all. Loop control is where a small mistake becomes a silent one.
 
 ## Learning objectives
 
-1. Terminate loops early with break.
-2. Skip iterations with continue.
-3. Use loop-else correctly.
+1. Distinguish break, continue and return by what each one leaves.
+2. Explain that break affects only the innermost loop.
+3. Use the loop else to express a not-found result without a flag.
+4. Recognise that return also suppresses the else clause.
+5. Rewrite a flag-based search as an early-exit loop.
+6. Use early exit deliberately as a performance and safety measure.
 
 ## Prerequisites
 
-- Topic 2.2 for Loops
+- Topic 2.2 for Loops and while Loops
 
 ## Files in this topic
 
@@ -27,8 +30,8 @@ Loop control constructs alter execution flow during iteration.
 | [`solution.ipynb`](solution.ipynb) | Reference implementations with tests and complexity notes | Only after you have attempted the exercises |
 | [`research.ipynb`](research.ipynb) | A measurement-driven investigation | End of topic |
 | [`quiz.ipynb`](quiz.ipynb) | 10 questions with an answer key | Self-check before moving on |
-| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Loop Control System | Deliverable |
-| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Loop Control Controller | ROBO-X milestone |
+| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Telemetry Fault Scanner | Deliverable |
+| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Mission Fault Scanner | ROBO-X milestone |
 | [`instructor_notes.md`](instructor_notes.md) | Teaching notes and common misconceptions | Lecturers only |
 | [`rubric.md`](rubric.md) | How this topic is graded | Before submitting work |
 
@@ -36,26 +39,26 @@ Loop control constructs alter execution flow during iteration.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Loop Control Medium Task 1 | MEDIUM | break, continue, loop-else |
-| 2 | Loop Control Medium Task 2 | MEDIUM | break, continue, loop-else |
-| 3 | Loop Control Medium Task 3 | MEDIUM | break, continue, loop-else |
-| 4 | Loop Control Medium Task 4 | MEDIUM | break, continue, loop-else |
-| 5 | Loop Control Medium Task 5 | MEDIUM | break, continue, loop-else |
-| 6 | Loop Control Hard Task 1 | HARD | break, continue, loop-else |
-| 7 | Loop Control Hard Task 2 | HARD | break, continue, loop-else |
-| 8 | Loop Control Hard Task 3 | HARD | break, continue, loop-else |
-| 9 | Loop Control Hard Task 4 | HARD | break, continue, loop-else |
-| 10 | Loop Control Hard Task 5 | HARD | break, continue, loop-else |
+| 1 | Find the first negative reading | MEDIUM | break, for, search |
+| 2 | Sum only the usable readings | MEDIUM | continue, for, filtering |
+| 3 | Find the first multiple of n | MEDIUM | for/else, modulo, search |
+| 4 | Stop scanning at a sentinel | MEDIUM | break, sentinel, search |
+| 5 | Detect duplicates with for/else | MEDIUM | for/else, membership, sets |
+| 6 | Locate a target in a grid | HARD | nested loops, return, enumeration |
+| 7 | Take readings until the budget is spent | HARD | break, accumulator, budget |
+| 8 | Group consecutive equal readings | HARD | state, loops, grouping |
+| 9 | Scan a telemetry batch for the first fault | HARD | continue, break, validation |
+| 10 | Drive until the battery is too low | HARD | break, simulator API, safety |
 
-## Robotics challenge — ROBO-X Challenge: Loop Control Controller
+## Robotics challenge — ROBO-X Challenge: Mission Fault Scanner
 
-Develop a robust controller function using Loop Control.
+Implement `scan_batch(robot, batch, limits)` that walks the batch with the right loop control and returns a verdict the mission supervisor can gate on.
 
 **ROBO-X milestone:** M2
 
 ## Research task
 
-How does the performance of Loop Control scale with dataset size?
+How much time does early exit save when a search usually finds its match early?
 
 ## Recommended workflow
 

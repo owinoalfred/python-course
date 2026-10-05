@@ -6,25 +6,35 @@
 
 | Artefact | Weight | Evidence expected |
 | --- | --- | --- |
-| exercises.ipynb | 50% | All 10 exercises solved. |
-| robotics_challenge.ipynb | 50% | Robotics challenge solved. |
+| exercises.ipynb | 40% | All 10 exercises implemented and edge-cased. |
+| mini_project.ipynb | 25% | coverage.py plus its test suite. |
+| robotics_challenge.ipynb | 25% | Planner degrades safely. |
+| research.ipynb | 10% | Real measurements with a defensible conclusion. |
 
 ## Performance criteria
 
 | Criterion | Weight | Description |
 | --- | --- | --- |
-| Correctness | 50 | Passes all tests. |
-| Quality | 50 | PEP 8 compliant. |
+| Correctness | 30 | Ragged grids, empty grids and boundaries are all handled. |
+| Cost awareness | 25 | Cost is derived or measured, not assumed. |
+| Code quality | 25 | PEP 8 naming, docstrings, small focused functions. |
+| Reasoning | 20 | Complexity claims explained in writing. |
 
 ## Band descriptors
 
 | Band | Range | Overall descriptor |
 | --- | --- | --- |
-| Pass | 50-100 | Satisfactory completion. |
+| Distinction | 85-100 | Correct, tested, clearly reasoned, production-shaped. |
+| Merit | 70-84 | Correct with minor gaps in testing or documentation. |
+| Pass | 50-69 | Core requirement met; edge cases or tests incomplete. |
+| Fail | 0-49 | Core requirement not met, or the code does not run. |
 
 ## Grade descriptors by band
 
-* **Pass** — All core objectives met.
+* **Distinction** — Every exercise implemented, a ragged grid is measured rather than truncated, and the cost of the scan is stated in the write-up.
+* **Merit** — Most exercises correct; the grid logic is right but a fixed inner bound is guarded rather than removed, and the ragged case is untested.
+* **Pass** — Core requirements met, but the nested scan is quadratic where a linear one was available, and the empty grid case raises.
+* **Fail** — A hard-coded inner bound is used, so the program crashes on real sensor data.
 
 ## Academic integrity
 

@@ -1,4 +1,4 @@
-# Rubric — 2.5 range(), enumerate(), and zip()
+# Rubric — 2.5 range, enumerate and zip
 
 **Module 2: Control Flow and Loops**
 
@@ -6,25 +6,35 @@
 
 | Artefact | Weight | Evidence expected |
 | --- | --- | --- |
-| exercises.ipynb | 50% | All 10 exercises solved. |
-| robotics_challenge.ipynb | 50% | Robotics challenge solved. |
+| exercises.ipynb | 40% | All 10 exercises implemented and edge-cased. |
+| mini_project.ipynb | 25% | telemetry.py plus its test suite. |
+| robotics_challenge.ipynb | 25% | Log never truncates silently. |
+| research.ipynb | 10% | Real measurements with a defensible conclusion. |
 
 ## Performance criteria
 
 | Criterion | Weight | Description |
 | --- | --- | --- |
-| Correctness | 50 | Passes all tests. |
-| Quality | 50 | PEP 8 compliant. |
+| Correctness | 30 | Steps, timestamps and pairing all agree. |
+| Idiom | 25 | enumerate, range and zip are used rather than hand-rolled. |
+| Code quality | 25 | PEP 8 naming, docstrings, small focused functions. |
+| Reasoning | 20 | Truncation and laziness explained in writing. |
 
 ## Band descriptors
 
 | Band | Range | Overall descriptor |
 | --- | --- | --- |
-| Pass | 50-100 | Satisfactory completion. |
+| Distinction | 85-100 | Correct, tested, clearly reasoned, production-shaped. |
+| Merit | 70-84 | Correct with minor gaps in testing or documentation. |
+| Pass | 50-69 | Core requirement met; edge cases or tests incomplete. |
+| Fail | 0-49 | Core requirement not met, or the code does not run. |
 
 ## Grade descriptors by band
 
-* **Pass** — All core objectives met.
+* **Distinction** — Every exercise implemented, the log cannot truncate silently, and a dropped reading leaves a gap rather than renumbering later steps.
+* **Merit** — Most exercises correct; the log is built with a hand-maintained counter and the drift case is untested.
+* **Pass** — Core requirements met, but the two streams are zipped without strict and a deliberate mismatch is not detected.
+* **Fail** — The log is shorter than the batch and the lost steps are never reported.
 
 ## Academic integrity
 

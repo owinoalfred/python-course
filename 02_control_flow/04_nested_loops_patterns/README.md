@@ -2,17 +2,20 @@
 
 **Module 2: Control Flow and Loops**
 
-Nested iteration, grid processing, matrix operations, and algorithmic loop patterns.
+Nested loops multiply the work: when they are the right tool, when a sliding window or a closed form replaces them, and why almost every bug in one is a boundary error.
 
 ## Why this topic matters
 
-Multi-dimensional data structures and grids require nested iteration patterns.
+Grid mapping, coverage surveys and neighbour planning are all nested loops over real sensor data that is rarely the tidy shape a textbook draws. A loop that assumes a fixed width crashes the moment a row comes back short.
 
 ## Learning objectives
 
-1. Process 2D matrices and grids.
-2. Understand time complexity in nested loops.
-3. Apply accumulator patterns.
+1. Compute the cost of nested loops as a product, and count the passes to prove it.
+2. Iterate rows rather than a hard-coded inner bound so ragged data is safe.
+3. Explain why the inner loop restarts on every outer pass.
+4. Replace a nested window scan with a sliding window in one pass.
+5. Recognise a closed form, such as the square of the sum for a pairwise product.
+6. Return from a nested search to stop both loops at once.
 
 ## Prerequisites
 
@@ -27,8 +30,8 @@ Multi-dimensional data structures and grids require nested iteration patterns.
 | [`solution.ipynb`](solution.ipynb) | Reference implementations with tests and complexity notes | Only after you have attempted the exercises |
 | [`research.ipynb`](research.ipynb) | A measurement-driven investigation | End of topic |
 | [`quiz.ipynb`](quiz.ipynb) | 10 questions with an answer key | Self-check before moving on |
-| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Nested Loops and Common Patterns System | Deliverable |
-| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Nested Loops and Common Patterns Controller | ROBO-X milestone |
+| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Survey Coverage Checker | Deliverable |
+| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Survey Grid Planner | ROBO-X milestone |
 | [`instructor_notes.md`](instructor_notes.md) | Teaching notes and common misconceptions | Lecturers only |
 | [`rubric.md`](rubric.md) | How this topic is graded | Before submitting work |
 
@@ -36,26 +39,26 @@ Multi-dimensional data structures and grids require nested iteration patterns.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Nested Loops and Common Patterns Medium Task 1 | MEDIUM | Nested Loops, Matrices, Accumulators |
-| 2 | Nested Loops and Common Patterns Medium Task 2 | MEDIUM | Nested Loops, Matrices, Accumulators |
-| 3 | Nested Loops and Common Patterns Medium Task 3 | MEDIUM | Nested Loops, Matrices, Accumulators |
-| 4 | Nested Loops and Common Patterns Medium Task 4 | MEDIUM | Nested Loops, Matrices, Accumulators |
-| 5 | Nested Loops and Common Patterns Medium Task 5 | MEDIUM | Nested Loops, Matrices, Accumulators |
-| 6 | Nested Loops and Common Patterns Hard Task 1 | HARD | Nested Loops, Matrices, Accumulators |
-| 7 | Nested Loops and Common Patterns Hard Task 2 | HARD | Nested Loops, Matrices, Accumulators |
-| 8 | Nested Loops and Common Patterns Hard Task 3 | HARD | Nested Loops, Matrices, Accumulators |
-| 9 | Nested Loops and Common Patterns Hard Task 4 | HARD | Nested Loops, Matrices, Accumulators |
-| 10 | Nested Loops and Common Patterns Hard Task 5 | HARD | Nested Loops, Matrices, Accumulators |
+| 1 | Count the cells of a grid | MEDIUM | nested loops, counting, ragged data |
+| 2 | Sum every cell with a nested loop | MEDIUM | nested loops, accumulators |
+| 3 | Enumerate every coordinate | MEDIUM | enumerate, generators, nested loops |
+| 4 | Sliding window of fixed size | MEDIUM | slicing, range, single pass |
+| 5 | Derive the pairwise product sum | MEDIUM | algebra, nested loops, optimisation |
+| 6 | Find the first occupied cell | HARD | nested loops, return, early exit |
+| 7 | Count row and column totals | HARD | nested loops, aggregation, ragged data |
+| 8 | Find the strongest neighbour | HARD | nested loops, bounds checks, max selection |
+| 9 | Check survey coverage against a threshold | HARD | nested loops, division, validation |
+| 10 | Plan a route across a terrain grid | HARD | nested loops, simulator API, planning |
 
-## Robotics challenge — ROBO-X Challenge: Nested Loops and Common Patterns Controller
+## Robotics challenge — ROBO-X Challenge: Survey Grid Planner
 
-Develop a robust controller function using Nested Loops and Common Patterns.
+Implement `plan_survey(robot, grid, limits)` that returns the passable cells in row-major order and a readiness verdict, using a nested scan.
 
 **ROBO-X milestone:** M2
 
 ## Research task
 
-How does the performance of Nested Loops and Common Patterns scale with dataset size?
+How much faster is a single-pass sliding window than a nested scan of the same windows?
 
 ## Recommended workflow
 

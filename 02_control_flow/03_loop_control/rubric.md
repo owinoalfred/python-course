@@ -6,25 +6,35 @@
 
 | Artefact | Weight | Evidence expected |
 | --- | --- | --- |
-| exercises.ipynb | 50% | All 10 exercises solved. |
-| robotics_challenge.ipynb | 50% | Robotics challenge solved. |
+| exercises.ipynb | 40% | All 10 exercises implemented and edge-cased. |
+| mini_project.ipynb | 25% | scanner.py plus its test suite. |
+| robotics_challenge.ipynb | 25% | Scanner degrades safely. |
+| research.ipynb | 10% | Real measurements with a defensible conclusion. |
 
 ## Performance criteria
 
 | Criterion | Weight | Description |
 | --- | --- | --- |
-| Correctness | 50 | Passes all tests. |
-| Quality | 50 | PEP 8 compliant. |
+| Correctness | 30 | Early exit, skipping and the else all behave as specified. |
+| Control flow clarity | 25 | No flag drift; the exit path is obvious to a reader. |
+| Code quality | 25 | PEP 8 naming, docstrings, small focused functions. |
+| Reasoning | 20 | Cost and complexity claims explained in writing. |
 
 ## Band descriptors
 
 | Band | Range | Overall descriptor |
 | --- | --- | --- |
-| Pass | 50-100 | Satisfactory completion. |
+| Distinction | 85-100 | Correct, tested, clearly reasoned, production-shaped. |
+| Merit | 70-84 | Correct with minor gaps in testing or documentation. |
+| Pass | 50-69 | Core requirement met; edge cases or tests incomplete. |
+| Fail | 0-49 | Core requirement not met, or the code does not run. |
 
 ## Grade descriptors by band
 
-* **Pass** — All core objectives met.
+* **Distinction** — Every exercise implemented, the not-found path is tested, and the scan reports the first genuine fault while skipping junk ahead of it.
+* **Merit** — Most exercises correct; the scan works but uses a flag variable reset by hand, and the reset is untested.
+* **Pass** — Core requirements met, but continue is used where break was meant, so the scan reports a later match or none at all.
+* **Fail** — The loop reports the last match instead of the first, or a malformed sample raises and aborts the scan.
 
 ## Academic integrity
 
