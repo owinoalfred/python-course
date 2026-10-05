@@ -2,21 +2,24 @@
 
 **Module 1: Getting Started with Python**
 
-print(), input(), f-strings, format specifiers, and standard streams.
+I/O in Python is an object you can replace. This topic covers print and the format specification, the stdout/stderr contract, and the redirection technique that makes console programs testable without a terminal.
 
 ## Why this topic matters
 
-I/O allows software to interact with human operators and CLI environments.
+Every robotics service begins as a console program, and a deployment script usually captures its output. Getting the two streams right is what makes `service > state.json` produce something a parser can read, and passing the stream in is what makes the program testable at all.
 
 ## Learning objectives
 
-1. Format text output using f-strings.
-2. Read user input safely.
-3. Configure print() parameters.
+1. Explain that print writes to sys.stdout and input reads from sys.stdin.
+2. Redirect a stream to capture output in a test.
+3. Format aligned columns with f-string format specifications.
+4. Apply the stdout/stderr contract to a reporting function.
+5. Detect end of input correctly in a read loop.
+6. Build a report without quadratic string concatenation.
 
 ## Prerequisites
 
-- Topic 1.6 Operators
+- Topic 1.6 Operators and Expressions
 
 ## Files in this topic
 
@@ -27,8 +30,8 @@ I/O allows software to interact with human operators and CLI environments.
 | [`solution.ipynb`](solution.ipynb) | Reference implementations with tests and complexity notes | Only after you have attempted the exercises |
 | [`research.ipynb`](research.ipynb) | A measurement-driven investigation | End of topic |
 | [`quiz.ipynb`](quiz.ipynb) | 10 questions with an answer key | Self-check before moving on |
-| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Basic Input/Output System | Deliverable |
-| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Basic Input/Output Controller | ROBO-X milestone |
+| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Testable Console Tool | Deliverable |
+| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Dispatch Console | ROBO-X milestone |
 | [`instructor_notes.md`](instructor_notes.md) | Teaching notes and common misconceptions | Lecturers only |
 | [`rubric.md`](rubric.md) | How this topic is graded | Before submitting work |
 
@@ -36,26 +39,26 @@ I/O allows software to interact with human operators and CLI environments.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Basic Input/Output Medium Task 1 | MEDIUM | print, f-strings, I/O |
-| 2 | Basic Input/Output Medium Task 2 | MEDIUM | print, f-strings, I/O |
-| 3 | Basic Input/Output Medium Task 3 | MEDIUM | print, f-strings, I/O |
-| 4 | Basic Input/Output Medium Task 4 | MEDIUM | print, f-strings, I/O |
-| 5 | Basic Input/Output Medium Task 5 | MEDIUM | print, f-strings, I/O |
-| 6 | Basic Input/Output Hard Task 1 | HARD | print, f-strings, I/O |
-| 7 | Basic Input/Output Hard Task 2 | HARD | print, f-strings, I/O |
-| 8 | Basic Input/Output Hard Task 3 | HARD | print, f-strings, I/O |
-| 9 | Basic Input/Output Hard Task 4 | HARD | print, f-strings, I/O |
-| 10 | Basic Input/Output Hard Task 5 | HARD | print, f-strings, I/O |
+| 1 | Render an aligned table | MEDIUM | f-strings, format specs, loops |
+| 2 | Parse a percentage from text | MEDIUM | strings, conversion, error handling |
+| 3 | Echo lines from a stream | MEDIUM | streams, loops, strings |
+| 4 | Centre a title banner | MEDIUM | strings, format specs |
+| 5 | Normalise a yes/no answer | MEDIUM | dicts, strings, validation |
+| 6 | Process commands from a stream | HARD | streams, loops, dicts |
+| 7 | Capture what a function printed | HARD | contextlib, io, testing |
+| 8 | Emit a fleet report on two streams | HARD | sys.stderr, f-strings, iteration |
+| 9 | Parse simple command-line arguments | HARD | strings, sys.argv, validation |
+| 10 | Build a testable command-line entry point | HARD | sys.argv, streams, composition |
 
-## Robotics challenge — ROBO-X Challenge: Basic Input/Output Controller
+## Robotics challenge — ROBO-X Challenge: Dispatch Console
 
-Develop a robust controller function using Basic Input/Output.
+Implement `dispatch(stream, out, errors)` that reads commands from an injected stream, applies them to the simulator, and reports each decision on the correct stream.
 
 **ROBO-X milestone:** M1
 
 ## Research task
 
-How does the performance of Basic Input/Output scale with dataset size?
+How much output volume can a console program emit before buffering becomes noticeable to a user?
 
 ## Recommended workflow
 

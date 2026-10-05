@@ -2,21 +2,24 @@
 
 **Module 1: Getting Started with Python**
 
-Arithmetic, comparison, logical, bitwise, membership, identity operators, and operator precedence.
+The small set of symbols Python puts between values, what each one returns, how precedence groups them, and how a packed status word is read and written with bitwise operators.
 
 ## Why this topic matters
 
-Operators combine values into expressions that evaluate to new results.
+Operators are the vocabulary of every expression you will write, and two of them - `and` and `or` - do not behave the way their names suggest. On top of that, firmware communicates state as a single packed integer, so the bitwise family is a practical requirement for anyone working with a real robot.
 
 ## Learning objectives
 
-1. Use arithmetic and comparison operators.
-2. Understand logical short-circuiting.
-3. Distinguish between '==' and 'is'.
+1. Predict the return type of every operator family.
+2. Explain how precedence groups a mixed expression, and parenthesise deliberately.
+3. Use `and` and `or` as value-producing expressions, not just booleans.
+4. Apply bitwise masks to set, clear, toggle and test individual flags.
+5. Build a defined-bit mask so unknown flags are reported rather than lost.
+6. Interpret an expression safely with ast instead of eval.
 
 ## Prerequisites
 
-- Topic 1.5 Core Data Types
+- Topic 1.5 Core Data Types and Type Conversion
 
 ## Files in this topic
 
@@ -27,8 +30,8 @@ Operators combine values into expressions that evaluate to new results.
 | [`solution.ipynb`](solution.ipynb) | Reference implementations with tests and complexity notes | Only after you have attempted the exercises |
 | [`research.ipynb`](research.ipynb) | A measurement-driven investigation | End of topic |
 | [`quiz.ipynb`](quiz.ipynb) | 10 questions with an answer key | Self-check before moving on |
-| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Operators and Expressions System | Deliverable |
-| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Operators and Expressions Controller | ROBO-X milestone |
+| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Status Word Toolkit | Deliverable |
+| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Status Word Controller | ROBO-X milestone |
 | [`instructor_notes.md`](instructor_notes.md) | Teaching notes and common misconceptions | Lecturers only |
 | [`rubric.md`](rubric.md) | How this topic is graded | Before submitting work |
 
@@ -36,26 +39,26 @@ Operators combine values into expressions that evaluate to new results.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Operators and Expressions Medium Task 1 | MEDIUM | Operators, Expressions, Short-Circuiting |
-| 2 | Operators and Expressions Medium Task 2 | MEDIUM | Operators, Expressions, Short-Circuiting |
-| 3 | Operators and Expressions Medium Task 3 | MEDIUM | Operators, Expressions, Short-Circuiting |
-| 4 | Operators and Expressions Medium Task 4 | MEDIUM | Operators, Expressions, Short-Circuiting |
-| 5 | Operators and Expressions Medium Task 5 | MEDIUM | Operators, Expressions, Short-Circuiting |
-| 6 | Operators and Expressions Hard Task 1 | HARD | Operators, Expressions, Short-Circuiting |
-| 7 | Operators and Expressions Hard Task 2 | HARD | Operators, Expressions, Short-Circuiting |
-| 8 | Operators and Expressions Hard Task 3 | HARD | Operators, Expressions, Short-Circuiting |
-| 9 | Operators and Expressions Hard Task 4 | HARD | Operators, Expressions, Short-Circuiting |
-| 10 | Operators and Expressions Hard Task 5 | HARD | Operators, Expressions, Short-Circuiting |
+| 1 | Divide without raising on zero | MEDIUM | arithmetic, conditionals, defaults |
+| 2 | Test a value against an inclusive range | MEDIUM | comparisons, chaining |
+| 3 | Choose a battery verdict | MEDIUM | conditional expression, comparisons |
+| 4 | Count vowels in a label | MEDIUM | strings, in, membership |
+| 5 | Average readings, ignoring junk | MEDIUM | comprehensions, builtins, validation |
+| 6 | Decode a packed status word | HARD | bitwise, dicts, validation |
+| 7 | Encode flag names into a word | HARD | bitwise, dicts, sets |
+| 8 | Set, clear and test a single flag | HARD | bitwise, tuples, composition |
+| 9 | Evaluate a simple arithmetic expression safely | HARD | ast, recursion, validation |
+| 10 | Report how an expression was grouped | HARD | ast, precedence, reporting |
 
-## Robotics challenge — ROBO-X Challenge: Operators and Expressions Controller
+## Robotics challenge — ROBO-X Challenge: Status Word Controller
 
-Develop a robust controller function using Operators and Expressions.
+Implement `status_for(robot, thresholds)` that builds a status word from live telemetry, decodes it back into named flags, and reports any undefined bits.
 
 **ROBO-X milestone:** M1
 
 ## Research task
 
-How does the performance of Operators and Expressions scale with dataset size?
+How much does operator choice change the runtime of a tight numeric loop compared with the loop overhead itself?
 
 ## Recommended workflow
 

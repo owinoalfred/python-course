@@ -125,7 +125,7 @@ modules:
         title: "Core Data Types and Type Conversion"
         directory: "01_getting_started/05_core_data_types_conversion"
         prerequisites: ["Topic"]
-        learning_objectives: ["Work", "Perform", "Handle"]
+        learning_objectives: ["Name", "Convert", "Explain", "Avoid", "Compare", "Parse"]
         exercise_count: 10
         medium_count: 5
         hard_count: 5
@@ -139,8 +139,8 @@ modules:
           - "01_getting_started/05_core_data_types_conversion/robotics_challenge.ipynb"
           - "01_getting_started/05_core_data_types_conversion/solution.ipynb"
         mini_project: "01_getting_started/05_core_data_types_conversion/mini_project.ipynb"
-        research_task: "How does the performance of Core Data Types and Type Conversion scale with dataset size?"
-        robotics_challenge: "ROBO-X Challenge: Core Data Types and Type Conversion Controller"
+        research_task: "How often do floating-point comparisons of the form a == b fail for values that should be equal?"
+        robotics_challenge: "ROBO-X Challenge: Telemetry Frame Gate"
         robo_x_milestone: "M1"
       - id: "1.6"
         title: "Operators and Expressions"
