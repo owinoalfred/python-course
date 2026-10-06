@@ -6,25 +6,35 @@
 
 | Artefact | Weight | Evidence expected |
 | --- | --- | --- |
-| exercises.ipynb | 50% | All 10 exercises solved. |
-| robotics_challenge.ipynb | 50% | Robotics challenge solved. |
+| [`exercises.ipynb`](exercises.ipynb) | 40% | All 10 exercises with validation and unpacking shown. |
+| [`mini_project.ipynb`](mini_project.ipynb) | 25% | MissionRecordStore with hashable, isolated records. |
+| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | 25% | Frozen envelope dedupes in O(n) and cannot be mutated. |
+| [`research.ipynb`](research.ipynb) | 10% | Tuple vs string key timings with a defensible verdict. |
 
 ## Performance criteria
 
 | Criterion | Weight | Description |
 | --- | --- | --- |
-| Correctness | 50 | Passes all tests. |
-| Quality | 50 | PEP 8 compliant. |
+| Correctness | 30 | Every example, error path and edge case behaves as specified. |
+| Immutability reasoning | 25 | Shallow-vs-deep immutability explained and enforced in code. |
+| Code quality | 25 | PEP 8, docstrings, validation at boundaries. |
+| Reasoning | 20 | Hashability and quadratic accumulation justified in writing. |
 
 ## Band descriptors
 
 | Band | Range | Overall descriptor |
 | --- | --- | --- |
-| Pass | 50-100 | Satisfactory completion. |
+| Distinction | 85-100 | Correct, tested, clearly reasoned, production-shaped. |
+| Merit | 70-84 | Correct with minor gaps in testing or documentation. |
+| Pass | 50-69 | Core requirement met; edge cases or tests incomplete. |
+| Fail | 0-49 | Core requirement not met, or the code does not run. |
 
 ## Grade descriptors by band
 
-* **Pass** — All core objectives met.
+* **Distinction** — All exercises correct, freeze proven by hash() assertions, and the version comparison handles the 3.9-vs-3.10 trap explicitly.
+* **Merit** — Most exercises correct; one validation path missing or the quadratic accumulation not discussed.
+* **Pass** — Core behaviour right but a list survives inside a returned structure, or duplicate-id detection is absent.
+* **Fail** — Records returned as lists, or hashability never demonstrated.
 
 ## Academic integrity
 

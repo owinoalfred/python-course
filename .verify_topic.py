@@ -22,6 +22,9 @@ DIRS = {
     "2.3": "02_control_flow/03_loop_control",
     "2.4": "02_control_flow/04_nested_loops_patterns",
     "2.5": "02_control_flow/05_range_enumerate_zip",
+    "3.1": "03_data_structures/01_lists",
+    "3.2": "03_data_structures/02_tuples",
+    "3.3": "03_data_structures/03_sets",
 }
 
 failures: list[str] = []

@@ -2,17 +2,20 @@
 
 **Module 3: Core Data Structures**
 
-Unordered collections of unique hashable elements and set operations.
+Unordered collections of unique hashable objects: O(1) membership, set algebra as validation logic, and the traps of orderlessness, unhashable elements and mutation during iteration.
 
 ## Why this topic matters
 
-Sets provide O(1) membership testing and set-theoretic mathematical operations.
+Duplicate detection, fault state, coverage reports and configuration validation all reduce to set operations, and the difference between a quadratic scan and a hash lookup is the difference between an audit that finishes and one that does not. Orderlessness is a real trade, not a defect - provided output is sorted at the boundary.
 
 ## Learning objectives
 
-1. Perform union, intersection, difference.
-2. Deduplicate data structures efficiently.
-3. Understand set hashing.
+1. Construct sets four ways, including set() for the empty set.
+2. State the cost of membership on a set versus a list.
+3. Apply union, intersection, difference and symmetric difference with correct direction.
+4. Express validation with subset, equality and disjoint relations.
+5. Deduplicate with a set while preserving order via the seen-set idiom.
+6. Explain why set elements must be hashable and why iteration order must not be relied upon.
 
 ## Prerequisites
 
@@ -27,8 +30,8 @@ Sets provide O(1) membership testing and set-theoretic mathematical operations.
 | [`solution.ipynb`](solution.ipynb) | Reference implementations with tests and complexity notes | Only after you have attempted the exercises |
 | [`research.ipynb`](research.ipynb) | A measurement-driven investigation | End of topic |
 | [`quiz.ipynb`](quiz.ipynb) | 10 questions with an answer key | Self-check before moving on |
-| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Sets System | Deliverable |
-| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Sets Controller | ROBO-X milestone |
+| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Mission Anomaly Auditor | Deliverable |
+| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Fault Supervisor Core | ROBO-X milestone |
 | [`instructor_notes.md`](instructor_notes.md) | Teaching notes and common misconceptions | Lecturers only |
 | [`rubric.md`](rubric.md) | How this topic is graded | Before submitting work |
 
@@ -36,26 +39,26 @@ Sets provide O(1) membership testing and set-theoretic mathematical operations.
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Sets Medium Task 1 | MEDIUM | Set, Uniqueness, Set Operations |
-| 2 | Sets Medium Task 2 | MEDIUM | Set, Uniqueness, Set Operations |
-| 3 | Sets Medium Task 3 | MEDIUM | Set, Uniqueness, Set Operations |
-| 4 | Sets Medium Task 4 | MEDIUM | Set, Uniqueness, Set Operations |
-| 5 | Sets Medium Task 5 | MEDIUM | Set, Uniqueness, Set Operations |
-| 6 | Sets Hard Task 1 | HARD | Set, Uniqueness, Set Operations |
-| 7 | Sets Hard Task 2 | HARD | Set, Uniqueness, Set Operations |
-| 8 | Sets Hard Task 3 | HARD | Set, Uniqueness, Set Operations |
-| 9 | Sets Hard Task 4 | HARD | Set, Uniqueness, Set Operations |
-| 10 | Sets Hard Task 5 | HARD | Set, Uniqueness, Set Operations |
+| 1 | Deduplicate sensor tags with a set | MEDIUM | set construction, deduplication, sorted output |
+| 2 | Check whether all required keys were supplied | MEDIUM | subset, difference, validation |
+| 3 | Find codes present in both subsystems | MEDIUM | intersection, set conversion, sorted |
+| 4 | Remove every occurrence of blacklisted values | MEDIUM | difference, list comprehension with membership, order preservation |
+| 5 | Detect duplicate frames in O(n) | MEDIUM | seen set, linear scan, order preservation |
+| 6 | Compute a coverage report with set algebra | HARD | union, difference, coverage ratio |
+| 7 | Group anagram signatures into sets | HARD | set signatures, default grouping, sorted keys |
+| 8 | Find the first value present in exactly one of two streams | HARD | symmetric difference, order recovery, index mapping |
+| 9 | Maintain a rolling window of distinct values | HARD | windowing, set per slice, counting distinct |
+| 10 | Implement set algebra without the operators | HARD | set semantics, membership loops, complexity reasoning |
 
-## Robotics challenge — ROBO-X Challenge: Sets Controller
+## Robotics challenge — ROBO-X Challenge: Fault Supervisor Core
 
-Develop a robust controller function using Sets.
+Implement `FaultSupervisor` with O(1) raise/clear, an O(1) critical query, and an idempotent acknowledge that never duplicates state.
 
 **ROBO-X milestone:** M3
 
 ## Research task
 
-How does the performance of Sets scale with dataset size?
+At what input size does converting a list to a set pay off for repeated membership testing, and does the crossover match the O(n^2) versus O(n) model?
 
 ## Recommended workflow
 

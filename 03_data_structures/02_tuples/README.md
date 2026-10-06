@@ -2,17 +2,20 @@
 
 **Module 3: Core Data Structures**
 
-Immutable sequences, tuple unpacking, and records.
+Python's record type: an immutable binding of references that unlocks hashable keys, safe unpacking, and the one trap - shallow immutability - that teams discover in production.
 
 ## Why this topic matters
 
-Tuples provide immutable sequence guarantees and efficient fixed structure memory layout.
+Returns of several values, dictionary keys, coordinate grids and mission records are all tuples in real Python systems. The failure students must not carry into industry is trusting 'immutable' data that contains a mutable list - a corrupted audit trail that raises no error at all.
 
 ## Learning objectives
 
-1. Work with immutable tuples.
-2. Master tuple unpacking.
-3. Use tuples as dictionary keys.
+1. Construct and unpack tuples, including the one-element comma form.
+2. Explain why assignment still aliases immutable objects.
+3. Distinguish shallow from deep immutability with a live example.
+4. Predict which objects are hashable and use tuples as dict keys.
+5. Choose tuple returns over out-parameter mutation for multi-value results.
+6. Accumulate into lists and convert once instead of concatenating tuples.
 
 ## Prerequisites
 
@@ -27,8 +30,8 @@ Tuples provide immutable sequence guarantees and efficient fixed structure memor
 | [`solution.ipynb`](solution.ipynb) | Reference implementations with tests and complexity notes | Only after you have attempted the exercises |
 | [`research.ipynb`](research.ipynb) | A measurement-driven investigation | End of topic |
 | [`quiz.ipynb`](quiz.ipynb) | 10 questions with an answer key | Self-check before moving on |
-| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Tuples System | Deliverable |
-| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Tuples Controller | ROBO-X milestone |
+| [`mini_project.ipynb`](mini_project.ipynb) | Mini-Project: Mission Record Store | Deliverable |
+| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | ROBO-X Challenge: Immutable Telemetry Envelope | ROBO-X milestone |
 | [`instructor_notes.md`](instructor_notes.md) | Teaching notes and common misconceptions | Lecturers only |
 | [`rubric.md`](rubric.md) | How this topic is graded | Before submitting work |
 
@@ -36,26 +39,26 @@ Tuples provide immutable sequence guarantees and efficient fixed structure memor
 
 | # | Title | Difficulty | Concepts |
 | --- | --- | --- | --- |
-| 1 | Tuples Medium Task 1 | MEDIUM | Tuple, Immutability, Unpacking |
-| 2 | Tuples Medium Task 2 | MEDIUM | Tuple, Immutability, Unpacking |
-| 3 | Tuples Medium Task 3 | MEDIUM | Tuple, Immutability, Unpacking |
-| 4 | Tuples Medium Task 4 | MEDIUM | Tuple, Immutability, Unpacking |
-| 5 | Tuples Medium Task 5 | MEDIUM | Tuple, Immutability, Unpacking |
-| 6 | Tuples Hard Task 1 | HARD | Tuple, Immutability, Unpacking |
-| 7 | Tuples Hard Task 2 | HARD | Tuple, Immutability, Unpacking |
-| 8 | Tuples Hard Task 3 | HARD | Tuple, Immutability, Unpacking |
-| 9 | Tuples Hard Task 4 | HARD | Tuple, Immutability, Unpacking |
-| 10 | Tuples Hard Task 5 | HARD | Tuple, Immutability, Unpacking |
+| 1 | Normalise a coordinate tuple | MEDIUM | tuple rebuilding, rounding, immutability |
+| 2 | Swap two records without a temporary variable | MEDIUM | unpacking, swap, evaluation order |
+| 3 | Pack measurement metadata into a validated record | MEDIUM | record construction, validation, type coercion |
+| 4 | Unpack a heterogeneous log record safely | MEDIUM | unpacking, star unpacking, sentinel names |
+| 5 | Build an index from coordinate tuples | MEDIUM | hashable keys, dict from pairs, duplicate detection |
+| 6 | Compare semantic versions as tuples | HARD | parsing, lexicographic comparison, tuple equality |
+| 7 | Make a nested structure hashable | HARD | deep freeze, recursion, hashability |
+| 8 | Swap-free rotation of field order | HARD | unpacking, cyclic shift, field rotation |
+| 9 | Group readings into (min, max, mean) summary tuples | HARD | aggregation, record emission, empty input |
+| 10 | Diff two record streams field by field | HARD | zip, field-wise diff, named reporting |
 
-## Robotics challenge — ROBO-X Challenge: Tuples Controller
+## Robotics challenge — ROBO-X Challenge: Immutable Telemetry Envelope
 
-Develop a robust controller function using Tuples.
+Implement `pack_batch(readings, mission_id)` returning a nested tuple `((value, timestamp), ...)` plus mission id, validated and frozen, with a `batch_key` suitable for set membership.
 
 **ROBO-X milestone:** M3
 
 ## Research task
 
-How does the performance of Tuples scale with dataset size?
+Does using tuples instead of lists as dictionary keys measurably change lookup time, and how does each compare with stringified keys?
 
 ## Recommended workflow
 

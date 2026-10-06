@@ -27,6 +27,9 @@ from . import (
     topic_02_03_loop_control,
     topic_02_04_nested,
     topic_02_05_range_enumerate_zip,
+    topic_03_01_lists,
+    topic_03_02_tuples,
+    topic_03_03_sets,
 )
 
 #: topic_id -> authored Topic. This dict is the single migration switchboard.
@@ -44,6 +47,9 @@ AUTHORED = {
     topic_02_03_loop_control.TOPIC.topic_id: topic_02_03_loop_control.TOPIC,
     topic_02_04_nested.TOPIC.topic_id: topic_02_04_nested.TOPIC,
     topic_02_05_range_enumerate_zip.TOPIC.topic_id: topic_02_05_range_enumerate_zip.TOPIC,
+    topic_03_01_lists.TOPIC.topic_id: topic_03_01_lists.TOPIC,
+    topic_03_02_tuples.TOPIC.topic_id: topic_03_02_tuples.TOPIC,
+    topic_03_03_sets.TOPIC.topic_id: topic_03_03_sets.TOPIC,
 }
 
 __all__ = ["AUTHORED"]

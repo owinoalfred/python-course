@@ -6,25 +6,35 @@
 
 | Artefact | Weight | Evidence expected |
 | --- | --- | --- |
-| exercises.ipynb | 50% | All 10 exercises solved. |
-| robotics_challenge.ipynb | 50% | Robotics challenge solved. |
+| [`exercises.ipynb`](exercises.ipynb) | 40% | All 10 exercises implemented with copy discipline proven. |
+| [`mini_project.ipynb`](mini_project.ipynb) | 25% | FlightRecorder with copy-on-read tests. |
+| [`robotics_challenge.ipynb`](robotics_challenge.ipynb) | 25% | PlanRegistry isolates subscribers from the canonical plan. |
+| [`research.ipynb`](research.ipynb) | 10% | Real concat-vs-append timings with a defensible conclusion. |
 
 ## Performance criteria
 
 | Criterion | Weight | Description |
 | --- | --- | --- |
-| Correctness | 50 | Passes all tests. |
-| Quality | 50 | PEP 8 compliant. |
+| Correctness | 30 | Every example and edge case behaves exactly as specified. |
+| Mutation discipline | 25 | No alias leaks; every boundary copy is deliberate and tested. |
+| Code quality | 25 | PEP 8 naming, docstrings, small focused helpers. |
+| Reasoning | 20 | Aliasing and None-assignment explained in writing, not guessed. |
 
 ## Band descriptors
 
 | Band | Range | Overall descriptor |
 | --- | --- | --- |
-| Pass | 50-100 | Satisfactory completion. |
+| Distinction | 85-100 | Correct, tested, clearly reasoned, production-shaped. |
+| Merit | 70-84 | Correct with minor gaps in testing or documentation. |
+| Pass | 50-69 | Core requirement met; edge cases or tests incomplete. |
+| Fail | 0-49 | Core requirement not met, or the code does not run. |
 
 ## Grade descriptors by band
 
-* **Pass** — All core objectives met.
+* **Distinction** — Every exercise correct, mutation isolation proven by assertion, and the in-place rotation demonstrably uses O(1) extra memory.
+* **Merit** — Most exercises correct; one boundary returns an alias or one test skips the shallow-copy case.
+* **Pass** — Core behaviour right, but copies are made defensively everywhere without justification, or sort() None-assignment still appears once.
+* **Fail** — The canonical store is mutated through a returned reference, or several exercises are missing entirely.
 
 ## Academic integrity
 
