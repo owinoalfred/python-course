@@ -19,7 +19,7 @@ Learn to direct the flow of a program with conditionals and loops. You will bran
 | 2.2 | [for Loops and while Loops](02_for_and_while_loops/README.md) | 5 M / 5 H | 10 |
 | 2.3 | [Loop Control](03_loop_control/README.md) | 5 M / 5 H | 10 |
 | 2.4 | [Nested Loops and Common Patterns](04_nested_loops_patterns/README.md) | 5 M / 5 H | 10 |
-| 2.5 | [range(), enumerate(), and zip()](05_range_enumerate_zip/README.md) | 5 M / 5 H | 10 |
+| 2.5 | [range, enumerate and zip](05_range_enumerate_zip/README.md) | 5 M / 5 H | 10 |
 
 ## How to work through this module
 

@@ -336,13 +336,13 @@ LESSON["performance_considerations"] = [
         "All three built-ins are lazy, which is the performance point that matters. "
         "`range(10**9)` allocates nothing; it is a small object that computes each "
         "value when asked. `zip` likewise holds no intermediate list, so pairing two "
-        "ten-million-element sequences costs one tuple per step rather than a "
+        "million-element sequences costs one tuple per step rather than a "
         "materialised result."
     ),
     CODE_CELL(
         "big = range(10**9)\n"
         "print('len is O(1):', len(big))\n"
-        "print('first three :', [next(iter(big))] and list(big)[:3])\n"
+        "print('first three :', list(big[:3]))\n"
         "\n"
         "a = range(1_000_000)\n"
         "b = range(1_000_000)\n"

@@ -259,7 +259,7 @@ modules:
         title: "Loop Control"
         directory: "02_control_flow/03_loop_control"
         prerequisites: ["Topic"]
-        learning_objectives: ["Terminate", "Skip", "Use"]
+        learning_objectives: ["Distinguish", "Explain", "Use", "Recognise", "Rewrite", "Use"]
         exercise_count: 10
         medium_count: 5
         hard_count: 5
@@ -273,14 +273,14 @@ modules:
           - "02_control_flow/03_loop_control/robotics_challenge.ipynb"
           - "02_control_flow/03_loop_control/solution.ipynb"
         mini_project: "02_control_flow/03_loop_control/mini_project.ipynb"
-        research_task: "How does the performance of Loop Control scale with dataset size?"
-        robotics_challenge: "ROBO-X Challenge: Loop Control Controller"
+        research_task: "How much time does early exit save when a search usually finds its match early?"
+        robotics_challenge: "ROBO-X Challenge: Mission Fault Scanner"
         robo_x_milestone: "M2"
       - id: "2.4"
         title: "Nested Loops and Common Patterns"
         directory: "02_control_flow/04_nested_loops_patterns"
         prerequisites: ["Topic"]
-        learning_objectives: ["Process", "Understand", "Apply"]
+        learning_objectives: ["Compute", "Iterate", "Explain", "Replace", "Recognise", "Return"]
         exercise_count: 10
         medium_count: 5
         hard_count: 5
@@ -294,14 +294,14 @@ modules:
           - "02_control_flow/04_nested_loops_patterns/robotics_challenge.ipynb"
           - "02_control_flow/04_nested_loops_patterns/solution.ipynb"
         mini_project: "02_control_flow/04_nested_loops_patterns/mini_project.ipynb"
-        research_task: "How does the performance of Nested Loops and Common Patterns scale with dataset size?"
-        robotics_challenge: "ROBO-X Challenge: Nested Loops and Common Patterns Controller"
+        research_task: "How much faster is a single-pass sliding window than a nested scan of the same windows?"
+        robotics_challenge: "ROBO-X Challenge: Survey Grid Planner"
         robo_x_milestone: "M2"
       - id: "2.5"
-        title: "range(), enumerate(), and zip()"
+        title: "range, enumerate and zip"
         directory: "02_control_flow/05_range_enumerate_zip"
         prerequisites: ["Topic"]
-        learning_objectives: ["Use", "Use", "Use"]
+        learning_objectives: ["Use", "Explain", "State", "Predict", "Use", "Derive"]
         exercise_count: 10
         medium_count: 5
         hard_count: 5
@@ -315,8 +315,8 @@ modules:
           - "02_control_flow/05_range_enumerate_zip/robotics_challenge.ipynb"
           - "02_control_flow/05_range_enumerate_zip/solution.ipynb"
         mini_project: "02_control_flow/05_range_enumerate_zip/mini_project.ipynb"
-        research_task: "How does the performance of range(), enumerate(), and zip() scale with dataset size?"
-        robotics_challenge: "ROBO-X Challenge: range(), enumerate(), and zip() Controller"
+        research_task: "How much does generating the second stream of a zip cost compared with slicing it first?"
+        robotics_challenge: "ROBO-X Challenge: Step-Indexed Mission Log"
         robo_x_milestone: "M2"
 
   - number: 3
