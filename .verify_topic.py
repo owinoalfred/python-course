@@ -25,6 +25,7 @@ DIRS = {
     "3.1": "03_data_structures/01_lists",
     "3.2": "03_data_structures/02_tuples",
     "3.3": "03_data_structures/03_sets",
+    "3.4": "03_data_structures/04_dictionaries",
 }
 
 failures: list[str] = []

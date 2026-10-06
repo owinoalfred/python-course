@@ -30,6 +30,7 @@ from . import (
     topic_03_01_lists,
     topic_03_02_tuples,
     topic_03_03_sets,
+    topic_03_04_dictionaries,
 )
 
 #: topic_id -> authored Topic. This dict is the single migration switchboard.
@@ -50,6 +51,7 @@ AUTHORED = {
     topic_03_01_lists.TOPIC.topic_id: topic_03_01_lists.TOPIC,
     topic_03_02_tuples.TOPIC.topic_id: topic_03_02_tuples.TOPIC,
     topic_03_03_sets.TOPIC.topic_id: topic_03_03_sets.TOPIC,
+    topic_03_04_dictionaries.TOPIC.topic_id: topic_03_04_dictionaries.TOPIC,
 }
 
 __all__ = ["AUTHORED"]
